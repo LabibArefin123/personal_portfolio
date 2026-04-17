@@ -40,7 +40,7 @@
 
             <!-- RIGHT CONTENT -->
             <div class="col-lg-6 text-center hero-image">
-                <img src="{{ asset('images/hero/dev-illustration.png') }}" alt="Developer Illustration">
+                <img src="{{ asset('uploads/images/about/developer.jpg') }}" alt="Developer Illustration">
             </div>
 
         </div>
