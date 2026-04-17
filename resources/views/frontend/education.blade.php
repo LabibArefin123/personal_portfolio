@@ -133,7 +133,50 @@
                 </div>
             </div>
 
+            <div class="education-card mt-5">
+                <div class="section-header d-flex justify-content-between align-items-center flex-wrap">
+                    <div>
+                        <h3>GitHub Activity</h3>
+                        <p class="git-subtitle">Recent coding consistency, project activity, and contribution streak.</p>
+                    </div>
+
+                    <a href="https://github.com/LabibArefin123" target="_blank" class="github-profile-btn">
+                        View GitHub Profile
+                    </a>
+                </div>
+
+                <div class="github-stats-wrapper">
+                    <div class="row g-4">
+
+                        <div class="col-lg-4">
+                            <div class="github-info-card">
+                                <h5>Active Development</h5>
+                                <p>
+                                    Consistently working on Laravel, React, POS systems, CRM software,
+                                    visitor management, and enterprise applications.
+                                </p>
+
+                                <ul class="github-list">
+                                    <li>Laravel Projects</li>
+                                    <li>React Frontend</li>
+                                    <li>REST API Development</li>
+                                    <li>Business Software</li>
+                                    <li>Git & GitHub Workflow</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8">
+                            <div class="github-image-card">
+                                <img src="https://ghchart.rshah.org/6366f1/LabibArefin123" alt="GitHub Contribution Graph">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <!-- EXTRA SECTION -->
+            
             <div class="row g-4 mt-4">
 
                 <div class="col-md-4">

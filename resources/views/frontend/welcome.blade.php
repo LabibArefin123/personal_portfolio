@@ -21,13 +21,10 @@
     @include('frontend.welcome_page.hero')
     @include('frontend.welcome_page.about')
     @include('frontend.welcome_page.skill')
+    @include('frontend.welcome_page.technical_skill')
     @include('frontend.welcome_page.experience')
     @include('frontend.welcome_page.project')
-    {{-- 🔥 HERO SECTION --}}
-    {{-- @include('frontend.home.hero') --}}
-
-    {{-- 👨‍💻 ABOUT ME --}}
-    {{-- @include('frontend.home.about') --}}
+    @include('frontend.welcome_page.footer')
 
 
     {{-- 🧠 SERVICES --}}
@@ -40,5 +37,4 @@
     {{-- @include('frontend.home.blog') --}}
 
     {{-- 🔚 FOOTER --}}
-    @include('frontend.welcome_page.footer')
 @endsection
