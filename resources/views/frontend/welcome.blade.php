@@ -19,7 +19,9 @@
     @include('frontend.welcome_page.top-bar')
     @include('frontend.welcome_page.navbar')
     @include('frontend.welcome_page.hero')
+    @include('frontend.welcome_page.about')
     @include('frontend.welcome_page.skill')
+    @include('frontend.welcome_page.experience')
     @include('frontend.welcome_page.project')
     {{-- 🔥 HERO SECTION --}}
     {{-- @include('frontend.home.hero') --}}
@@ -27,14 +29,6 @@
     {{-- 👨‍💻 ABOUT ME --}}
     {{-- @include('frontend.home.about') --}}
 
-    {{-- 🛠 SKILLS --}}
-    {{-- @include('frontend.home.skills') --}}
-
-    {{-- 🚀 PROJECTS --}}
-    {{-- @include('frontend.home.projects') --}}
-
-    {{-- 💼 EXPERIENCE --}}
-    {{-- @include('frontend.home.experience') --}}
 
     {{-- 🧠 SERVICES --}}
     {{-- @include('frontend.home.services') --}}
@@ -45,10 +39,6 @@
     {{-- ✍️ BLOG / ARTICLES (optional future) --}}
     {{-- @include('frontend.home.blog') --}}
 
-    {{-- 📞 CONTACT --}}
-    {{-- @include('frontend.contact') --}}
-
     {{-- 🔚 FOOTER --}}
     @include('frontend.welcome_page.footer')
-
 @endsection

@@ -48,7 +48,9 @@
     <link rel="stylesheet" href="{{ asset('css/frontend/frontend.css') }}">
     <link rel="stylesheet" href="{{ asset('css/frontend/skill/custom_skill_w.css') }}">
     <link rel="stylesheet" href="{{ asset('css/frontend/hero/custom_hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/frontend/about/custom_about_w.css') }}">
     <link rel="stylesheet" href="{{ asset('css/frontend/project/custom_project.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/frontend/experience/custom_experience.css') }}">
 </head>
 
 <body>
