@@ -29,6 +29,10 @@
                 </li>
 
                 <li class="nav-item">
+                    <a href="{{ route('education') }}" class="nav-link">Education</a>
+                </li>
+
+                <li class="nav-item">
                     <a href="{{ route('skills') }}" class="nav-link">Skills</a>
                 </li>
 

@@ -25,8 +25,11 @@ Route::get('/about', [WelcomePageController::class, 'about'])->name('about');
 //FAQ Section
 Route::get('/faq', [WelcomePageController::class, 'faq'])->name('faq');
 
-//Gallery Section
+//Skills Section
 Route::get('/skills', [WelcomePageController::class, 'skills'])->name('skills');
+
+//Education Section
+Route::get('/education', [WelcomePageController::class, 'education'])->name('education');
 
 //Gallery Section
 Route::get('/gallery', [WelcomePageController::class, 'gallery'])->name('gallery');

@@ -24,6 +24,11 @@ class WelcomePageController extends Controller
         return view('frontend.about');
     }
 
+    public function education()
+    {
+        return view('frontend.education');
+    }
+
     public function skills()
     {
         return view('frontend.skills');
