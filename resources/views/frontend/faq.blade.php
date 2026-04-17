@@ -1,158 +1,122 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Frequently Asked Questions | Dr. Asif Almas Haque')
+@section('title', 'FAQ | Md. Labib Arefin - Full Stack Developer')
 
 @section('meta')
-    <!-- Meta Description & Keywords -->
     <meta name="description"
-        content="Frequently Asked Questions about colorectal surgery, piles, fistula, fissure, and colorectal cancer with Dr. Asif Almas Haque in Dhaka.">
-    <meta name="keywords"
-        content="FAQ Dr Asif Almas Haque, colorectal surgeon questions, piles, fistula, IBS, colorectal cancer">
+        content="Frequently asked questions about Md. Labib Arefin, services, technologies, experience, and project workflow.">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Frequently Asked Questions | Dr. Asif Almas Haque">
-    <meta property="og:description"
-        content="Answers to common questions about colorectal treatments, laser and laparoscopic surgery, and appointments with Dr. Asif Almas Haque.">
-    <meta property="og:image" content="{{ asset('uploads/images/welcome_page/doctors/image_2.jpg') }}">
+    <meta property="og:title" content="FAQ | Labib Arefin">
+    <meta property="og:description" content="Common questions regarding services, technologies, projects, and availability.">
+    <meta property="og:image" content="{{ asset('images/portfolio/preview.png') }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Frequently Asked Questions | Dr. Asif Almas Haque">
-    <meta name="twitter:description"
-        content="Common questions answered about colorectal conditions, surgeries, and appointments with Dr. Asif Almas Haque.">
-    <meta name="twitter:image" content="{{ asset('uploads/images/welcome_page/doctors/image_2.jpg') }}">
-
-    <!-- FAQ Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What conditions do you commonly treat?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "I commonly treat colorectal conditions including piles, fissure, fistula, colorectal cancer, pilonidal sinus, obstructed defecation syndrome, and other anorectal disorders using modern surgical techniques."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you perform laparoscopic or minimally invasive surgery?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. I regularly perform laparoscopic and minimally invasive colorectal procedures to ensure faster recovery, reduced pain, and minimal scarring."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is laser surgery available for piles and fistula?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Laser surgery is available for selected cases of piles and fistula. Treatment suitability is determined after detailed evaluation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I book an appointment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can book an appointment through the website’s booking section or by contacting the chamber directly via phone."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you treat colorectal cancer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. I perform advanced colorectal cancer surgeries and follow multidisciplinary treatment approaches for optimal patient outcomes."
-          }
-        }
-      ]
-    }
-    </script>
 @endsection
 
 <link rel="stylesheet" href="{{ asset('css/frontend/faq/custom_faq.css') }}">
 
 @section('content')
 
-    @include('frontend.welcome_page.header')
+    @include('frontend.welcome_page.top-bar')
+    @include('frontend.welcome_page.navbar')
 
-    <!-- Banner -->
-    <div class="doctor-banner" style="background-image: url('{{ asset('uploads/images/welcome_page/cover.png') }}');">
-        <nav class="breadcrumb-custom">
-            <a href="{{ route('welcome') }}" class="doc-link text-decoration-none">Home</a>
-            <span>></span>
-            <a href="{{ route('faq') }}" class="doc-link text-decoration-none">FAQ</a>
-        </nav>
-    </div>
+    <!-- HERO -->
+    <section class="faq-hero">
+        <div class="container text-center">
+            <h1>Frequently Asked Questions</h1>
+            <p>Answers about my development process, services, technologies, and collaboration.</p>
+        </div>
+    </section>
 
-    <section class="doctor-profile">
-        <div class="doctor-card">
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container">
 
-            <h2 class="doctor-name text-center mb-5">
-                Frequently Asked Questions
-            </h2>
+            <div class="faq-wrapper">
 
-            <div class="faq-container">
-
-                <!-- FAQ Item -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What conditions do you commonly treat?
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        What type of software do you build?
                         <span class="faq-icon">+</span>
-                    </div>
+                    </button>
+
                     <div class="faq-answer">
-                        I commonly treat colorectal conditions including piles, fissure, fistula,
-                        colorectal cancer, pilonidal sinus, obstructed defecation syndrome,
-                        and other anorectal disorders using modern surgical techniques.
+                        <p>
+                            I mainly build business software such as POS systems, CRM software,
+                            Visitor Management Systems, Tender Management platforms, ERP modules,
+                            inventory systems, and custom web applications.
+                        </p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        Do you perform laparoscopic or minimally invasive surgery?
+                    <button class="faq-question">
+                        Which technologies do you use?
                         <span class="faq-icon">+</span>
-                    </div>
+                    </button>
+
                     <div class="faq-answer">
-                        Yes. I regularly perform laparoscopic and minimally invasive colorectal
-                        procedures to ensure faster recovery, reduced pain, and minimal scarring.
+                        <p>
+                            I primarily work with Laravel, PHP, React.js, JavaScript, MySQL,
+                            Bootstrap, Tailwind CSS, REST APIs, and Git/GitHub workflows.
+                        </p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        Is laser surgery available for piles and fistula?
+                    <button class="faq-question">
+                        Do you work on freelance or client projects?
                         <span class="faq-icon">+</span>
-                    </div>
+                    </button>
+
                     <div class="faq-answer">
-                        Yes. Laser surgery is available for selected cases of piles and fistula.
-                        Treatment suitability is determined after detailed evaluation.
+                        <p>
+                            Yes, I am open to freelance projects, client work, startup collaborations,
+                            and long-term software development opportunities.
+                        </p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        How can I book an appointment?
+                    <button class="faq-question">
+                        Can you build full-stack applications?
                         <span class="faq-icon">+</span>
-                    </div>
+                    </button>
+
                     <div class="faq-answer">
-                        You can book an appointment through the website’s booking section
-                        or by contacting the chamber directly via phone.
+                        <p>
+                            Yes, I handle both frontend and backend development including UI design,
+                            database architecture, API development, authentication, dashboards,
+                            and deployment-ready systems.
+                        </p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        Do you treat colorectal cancer?
+                    <button class="faq-question">
+                        Do you work with APIs and third-party integrations?
                         <span class="faq-icon">+</span>
-                    </div>
+                    </button>
+
                     <div class="faq-answer">
-                        Yes. I perform advanced colorectal cancer surgeries and follow
-                        multidisciplinary treatment approaches for optimal patient outcomes.
+                        <p>
+                            Yes, I work with REST APIs, biometric device integration, payment gateways,
+                            QR code systems, reporting systems, and third-party services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Are your projects mobile responsive?
+                        <span class="faq-icon">+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Yes, all of my websites and applications are designed to work smoothly
+                            across desktop, tablet, and mobile devices.
+                        </p>
                     </div>
                 </div>
 
@@ -162,8 +126,6 @@
     </section>
 
     @include('frontend.welcome_page.footer')
-
-    <!-- FAQ JavaScript -->
     <script>
         document.querySelectorAll(".faq-question").forEach(item => {
             item.addEventListener("click", function() {
@@ -193,5 +155,4 @@
             });
         });
     </script>
-
 @endsection

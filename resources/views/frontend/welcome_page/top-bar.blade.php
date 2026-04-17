@@ -3,23 +3,40 @@
 <div class="portfolio-topbar">
     <div class="container d-flex justify-content-between align-items-center">
 
-        <!-- LEFT: Contact Info -->
+        <!-- LEFT -->
         <div class="top-info">
-            <!-- Location -->
-            <a href="#" class="top-link" id="openEmailModal">
+            <a href="mailto:labibarefin@gmail.com" class="top-link">
                 <i class="fas fa-envelope"></i>
-                mdlabibarefin@gmail.com
+                labibarefin@gmail.com
             </a>
+
+            <span class="divider">|</span>
+
+            <a href="tel:+8801776197999" class="top-link">
+                <i class="fas fa-phone-alt"></i>
+                +880 1776-197999
+            </a>
+
+            <span class="divider d-none d-lg-inline">|</span>
+
+            <span class="top-location d-none d-lg-inline">
+                <i class="fas fa-map-marker-alt"></i>
+                Dhaka, Bangladesh
+            </span>
         </div>
 
-        <!-- RIGHT: Social + Language -->
+        <!-- RIGHT -->
         <div class="top-social">
-            <a href="https://www.facebook.com/DrAsifAlmasHaque" target="_blank" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
+            <a href="https://www.linkedin.com/in/labib-arefin" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
             </a>
 
-            <a href="https://www.youtube.com/@DrAsifAlmasHaque" target="_blank" class="social-icon">
-                <i class="fab fa-youtube"></i>
+            <a href="https://github.com/LabibArefin123" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
             </a>
 
             <button id="langToggle" class="lang-btn">EN</button>
@@ -27,4 +44,3 @@
 
     </div>
 </div>
-
