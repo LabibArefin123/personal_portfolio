@@ -1,87 +1,55 @@
-/* ===============================
-   PORTFOLIO TOP BAR
-================================ */
-
+/* TOPBAR FIXED */
 .portfolio-topbar {
-    background: #111;
-    color: #eee;
-    font-size: 13px;
-    padding: 8px 0;
-
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1030;
+    background: #020617;
+    color: #94a3b8;
+    font-size: 13px;
+    padding: 6px 0;
+    z-index: 1000; /* higher than navbar */
 }
 
+/* SPACING INSIDE */
 .top-info {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.divider {
-    opacity: 0.4;
-}
-
+/* LINKS */
 .top-link {
-    color: #fff;
+    color: #94a3b8;
+    margin-right: 10px;
+    font-size: 13px;
+    transition: 0.3s;
     text-decoration: none;
-    transition: opacity 0.3s ease;
 }
 
 .top-link:hover {
-    opacity: 0.7;
+    color: #6366f1;
 }
 
-/* Social icons */
+/* DIVIDER */
+.divider {
+    margin: 0 8px;
+    color: #334155;
+}
+
+/* RIGHT SIDE */
 .top-social {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
+/* ICONS */
 .social-icon {
-    color: #fff;
-    font-size: 14px;
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
+    color: #94a3b8;
+    margin-left: 10px;
+    transition: 0.3s;
 }
 
 .social-icon:hover {
-    transform: translateY(-2px);
-    opacity: 0.7;
-}
-
-/* Language Button */
-.lang-btn {
-    background: #fff;
-    color: #111;
-    border: none;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.lang-btn:hover {
-    background: #ddd;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .top-info {
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 6px;
-    }
-
-    .portfolio-topbar .container {
-        flex-direction: column;
-    }
+    color: #6366f1;
 }

@@ -46,6 +46,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/frontend/frontend.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/frontend/hero/custom_hero.css') }}">
 </head>
 
 <body>

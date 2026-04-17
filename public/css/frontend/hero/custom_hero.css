@@ -1,0 +1,121 @@
+/* HERO SECTION */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    padding-top: 100px;
+}
+
+/* TEXT */
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-title span {
+    background: linear-gradient(90deg, #6366f1, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #cbd5f5;
+}
+
+.hero-description {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #94a3b8;
+    max-width: 500px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.hero-btn-primary {
+    background: linear-gradient(90deg, #6366f1, #06b6d4);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: #fff;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.hero-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+.hero-btn-outline {
+    border: 1px solid #6366f1;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: #6366f1;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.hero-btn-outline:hover {
+    background: #6366f1;
+    color: #fff;
+}
+
+/* TECH TAGS */
+.hero-tech {
+    margin-top: 25px;
+}
+
+.hero-tech span {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 13px;
+}
+
+/* IMAGE */
+.hero-image img {
+    max-width: 100%;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}

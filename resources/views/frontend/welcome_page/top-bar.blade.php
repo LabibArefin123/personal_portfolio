@@ -11,25 +11,12 @@
                 86 (New), 726/A (Old), Satmasjid Road
             </a>
 
-            <span class="divider">|</span>
-
-            <a href="#" class="top-link open-phone-modal">
-                <i class="fas fa-phone-alt"></i>
-                01755697173
-            </a>
-
-            <span class="divider">|</span>
-
-            <a href="#" class="top-link open-phone-modal">
-                <i class="fas fa-phone-alt"></i>
-                01755697176
-            </a>
 
             <span class="divider">|</span>
 
             <a href="#" class="top-link" id="openEmailModal">
                 <i class="fas fa-envelope"></i>
-                info@fazlulhaquehospital.com
+                mdlabibarefin@gmail.com
             </a>
         </div>
 
