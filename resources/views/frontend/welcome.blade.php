@@ -19,6 +19,7 @@
     @include('frontend.welcome_page.top-bar')
     @include('frontend.welcome_page.navbar')
     @include('frontend.welcome_page.hero')
+    @include('frontend.welcome_page.skill')
     @include('frontend.welcome_page.project')
     {{-- 🔥 HERO SECTION --}}
     {{-- @include('frontend.home.hero') --}}

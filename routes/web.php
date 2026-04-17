@@ -26,24 +26,14 @@ Route::get('/about', [WelcomePageController::class, 'about'])->name('about');
 Route::get('/faq', [WelcomePageController::class, 'faq'])->name('faq');
 
 //Gallery Section
+Route::get('/skills', [WelcomePageController::class, 'skills'])->name('skills');
+
+//Gallery Section
 Route::get('/gallery', [WelcomePageController::class, 'gallery'])->name('gallery');
 
 //Contact Section
 Route::get('/contact', [WelcomePageController::class, 'contact'])->name('contact');
 
-//Profile Section
-Route::get('/educational_background', [WelcomePageController::class, 'profile_page_1'])->name('page_1');
-Route::get('/international_conference', [WelcomePageController::class, 'profile_page_2'])->name('page_2');
-Route::get('/journal_publication', [WelcomePageController::class, 'profile_page_3'])->name('page_3');
-Route::get('/membership', [WelcomePageController::class, 'profile_page_4'])->name('page_4');
-
-//Condition Section
-Route::get('/book', [WelcomePageController::class, 'book'])->name('book');
-Route::get('/piles', [WelcomePageController::class, 'piles'])->name('piles');
-Route::get('/fistula', [WelcomePageController::class, 'fistula'])->name('fistula');
-Route::get('/fissure', [WelcomePageController::class, 'fissure'])->name('fissure');
-Route::get('/colorectal_cancer', [WelcomePageController::class, 'colorectal_cancer'])->name('colorectal_cancer');
-Route::get('/irritable_bowel_syndrome', [WelcomePageController::class, 'ibs'])->name('ibs');
 
 Route::post('/system-problem/store', [WelcomePageController::class, 'system_problem_store'])->name('system_problem.store');
 Route::post('/contact/store', [WelcomePageController::class, 'contactStore'])->name('contact.store');

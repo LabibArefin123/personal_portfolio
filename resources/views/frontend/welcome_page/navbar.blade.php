@@ -21,7 +21,7 @@
             <ul class="navbar-nav navbar-menu">
 
                 <li class="nav-item">
-                    <a href="#hero" class="nav-link active">Home</a>
+                    <a href="{{ route('welcome') }}" class="nav-link active">Home</a>
                 </li>
 
                 <li class="nav-item">
@@ -29,7 +29,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="{{ route('skills') }}" class="nav-link">Skills</a>
                 </li>
 
                 <li class="nav-item">

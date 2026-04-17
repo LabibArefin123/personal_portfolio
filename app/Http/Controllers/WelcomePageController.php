@@ -24,55 +24,11 @@ class WelcomePageController extends Controller
         return view('frontend.about');
     }
 
-    public function profile_page_1()
+    public function skills()
     {
-        return view('frontend.profile.page_1');
+        return view('frontend.skills');
     }
 
-    public function profile_page_2()
-    {
-        return view('frontend.profile.page_2');
-    }
-
-    public function profile_page_3()
-    {
-        return view('frontend.profile.page_3');
-    }
-
-    public function profile_page_4()
-    {
-        return view('frontend.profile.page_4');
-    }
-
-    public function book()
-    {
-        return view('frontend.book');
-    }
-
-    public function piles()
-    {
-        return view('frontend.conditions.piles');
-    }
-
-    public function fistula()
-    {
-        return view('frontend.conditions.fistula');
-    }
-
-    public function fissure()
-    {
-        return view('frontend.conditions.fissure');
-    }
-
-    public function colorectal_cancer()
-    {
-        return view('frontend.conditions.colorectal_cancer');
-    }
-
-    public function ibs()
-    {
-        return view('frontend.conditions.ibs');
-    }
 
     public function faq()
     {
