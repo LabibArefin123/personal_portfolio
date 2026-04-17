@@ -39,10 +39,64 @@
             </div>
 
             <!-- RIGHT CONTENT -->
-            <div class="col-lg-6 text-center hero-image">
-                <img src="{{ asset('uploads/images/about/developer.jpg') }}" alt="Developer Illustration">
+            <div class="col-lg-6 hero-image">
+                <div class="hero-card-stack">
+
+                    <div class="hero-card third-card">
+                        <img src="{{ asset('uploads/images/about/developer3.jpg') }}" alt="Developer 3">
+                    </div>
+
+                    <div class="hero-card second-card">
+                        <img src="{{ asset('uploads/images/about/developer.jpg') }}" alt="Developer">
+                    </div>
+
+                    <div class="hero-card main-card">
+                        <img src="{{ asset('uploads/images/about/developer2.jpg') }}" alt="Developer 2">
+                    </div>
+
+                    <div class="hero-floating-box">
+                        <h5>3+ Years Experience</h5>
+                        <p>Laravel, React & Business Software Development</p>
+                    </div>
+
+                </div>
             </div>
 
         </div>
     </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const stack = document.querySelector(".hero-card-stack");
+
+        if (!stack) return;
+
+        let cards = [
+            stack.querySelector(".main-card"),
+            stack.querySelector(".second-card"),
+            stack.querySelector(".third-card")
+        ];
+
+        function updateCardClasses() {
+            cards.forEach(card => {
+                card.classList.remove("main-card", "second-card", "third-card");
+            });
+
+            cards[0].classList.add("main-card");
+            cards[1].classList.add("second-card");
+            cards[2].classList.add("third-card");
+        }
+
+        stack.addEventListener("click", function() {
+            const firstCard = cards.shift();
+            cards.push(firstCard);
+            updateCardClasses();
+        });
+
+        setInterval(() => {
+            const firstCard = cards.shift();
+            cards.push(firstCard);
+            updateCardClasses();
+        }, 10000);
+    });
+</script>
