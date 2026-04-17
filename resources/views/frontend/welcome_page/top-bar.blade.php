@@ -6,14 +6,6 @@
         <!-- LEFT: Contact Info -->
         <div class="top-info">
             <!-- Location -->
-            <a href="#" class="top-link" id="openLocationModal">
-                <i class="fas fa-map-marker-alt"></i>
-                86 (New), 726/A (Old), Satmasjid Road
-            </a>
-
-
-            <span class="divider">|</span>
-
             <a href="#" class="top-link" id="openEmailModal">
                 <i class="fas fa-envelope"></i>
                 mdlabibarefin@gmail.com

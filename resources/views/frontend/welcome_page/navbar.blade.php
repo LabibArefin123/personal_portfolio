@@ -25,7 +25,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="{{ route('about') }}" class="nav-link">About</a>
                 </li>
 
                 <li class="nav-item">
@@ -37,14 +37,14 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="{{ route('contact') }}" class="nav-link">Contact</a>
                 </li>
 
             </ul>
         </div>
 
         <!-- CTA -->
-        <a href="#contact" class="btn nav-btn">
+        <a href="{{ route('contact') }}" class="btn nav-btn">
             Hire Me
         </a>
 

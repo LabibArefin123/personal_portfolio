@@ -1,143 +1,128 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Contact | Dr. Asif Almas Haque')
+@section('title', 'Contact | Md. Labib Arefin')
 
 @section('meta')
-    <!-- Meta Description & Keywords -->
-    <meta name="description" content="Get in touch with Dr. Asif Almas Haque, leading colorectal surgeon in Dhaka, Bangladesh, for appointments or inquiries.">
-    <meta name="keywords" content="Contact Dr Asif Almas Haque, colorectal surgeon Dhaka, appointment, clinic contact">
+    <meta name="description"
+        content="Contact Md. Labib Arefin, Full Stack Developer specializing in Laravel, React, POS, CRM, and scalable web systems.">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Contact | Dr. Asif Almas Haque">
-    <meta property="og:description" content="Reach out to Dr. Asif Almas Haque, expert in colorectal, laparoscopic, and laser surgery.">
-    <meta property="og:image" content="{{ asset('uploads/images/welcome_page/doctors/image_2.jpg') }}">
+    <meta property="og:title" content="Contact | Labib Arefin">
+    <meta property="og:description"
+        content="Get in touch for freelance projects, collaborations, or full-time opportunities.">
+    <meta property="og:image" content="{{ asset('images/portfolio/preview.png') }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact | Dr. Asif Almas Haque">
-    <meta name="twitter:description" content="Reach out to Dr. Asif Almas Haque for appointments or queries regarding colorectal treatments.">
-    <meta name="twitter:image" content="{{ asset('uploads/images/welcome_page/doctors/image_2.jpg') }}">
-
-    <!-- Structured Data: LocalBusiness -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Dr. Asif Almas Haque",
-      "image": "{{ asset('uploads/images/welcome_page/doctors/image_2.jpg') }}",
-      "description": "Consult Dr. Asif Almas Haque, a leading colorectal surgeon in Dhaka, Bangladesh.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Your Clinic Street Address",
-        "addressLocality": "Dhaka",
-        "postalCode": "Your Postal Code",
-        "addressCountry": "BD"
-      },
-      "telephone": "Your Clinic Phone Number",
-      "url": "{{ url()->current() }}",
-      "sameAs": [
-        "https://www.facebook.com/your-page",
-        "https://www.youtube.com/@asifh7000",
-        "https://www.linkedin.com/in/your-profile"
-      ]
-    }
-    </script>
 @endsection
 
 <link rel="stylesheet" href="{{ asset('css/frontend/contact/custom_contact.css') }}">
 
 @section('content')
 
-    @include('frontend.welcome_page.header')
+    {{-- NAVBAR --}}
+    @include('frontend.welcome_page.top-bar')
+    @include('frontend.welcome_page.navbar')
 
-    <!-- Banner -->
-    <div class="contact-banner" style="background-image: url('{{ asset('uploads/images/welcome_page/cover.png') }}');">
-        <div class="contact-overlay"></div>
-        <div class="contact-breadcrumb">
-            <a href="{{ route('welcome') }}">Home</a>
-            <span>></span>
-            <a href="{{ route('contact') }}">Contact Us</a>
+    <!-- HERO / BANNER -->
+    <div class="contact-hero">
+        <div class="overlay"></div>
+
+        <div class="container text-center">
+            <h1>Let's Work Together 🚀</h1>
+            <p>Have a project, idea, or opportunity? Let’s talk.</p>
         </div>
     </div>
 
-    <section class="contact-section">
-        <div class="contact-container">
+    <!-- CONTACT SECTION -->
+    <section class="contact-dev-section">
+        <div class="container">
 
-            <!-- Left: Appointment Form -->
-            <div class="contact-form-wrapper">
-                <h2 class="contact-title">Make an Appointment</h2>
-                <form method="POST" action="{{ route('contact.store') }}">
-                    @csrf
-                    <input type="hidden" name="type" value="contact">
+            <div class="row g-4">
 
-                    <div class="modal-body row">
+                <!-- LEFT: FORM -->
+                <div class="col-lg-7">
+                    <div class="contact-card">
 
-                        <div class="col-md-6 mb-2">
-                            <label>Full Name</label>
-                            <input name="name" class="form-control">
+                        <h3>Send Me a Message</h3>
+
+                        <form method="POST" action="{{ route('contact.store') }}">
+                            @csrf
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input name="name" placeholder="Your Name" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <input name="email" type="email" placeholder="Your Email" class="form-control"
+                                        required>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <input name="phone" placeholder="Phone (optional)" class="form-control">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <input name="subject" placeholder="Subject" class="form-control">
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <textarea name="message" rows="5" placeholder="Your Message..." class="form-control" required></textarea>
+                                </div>
+                            </div>
+
+                            <button class="btn contact-btn w-100">
+                                🚀 Send Message
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+
+                <!-- RIGHT: INFO -->
+                <div class="col-lg-5">
+                    <div class="contact-info-card">
+
+                        <h3>Contact Info</h3>
+
+                        <p class="contact-desc">
+                            I'm open to freelance projects, collaborations, and full-time opportunities.
+                        </p>
+
+                        <div class="info-box">
+                            <span>📧 Email</span>
+                            <p>labibarefin@gmail.com</p>
                         </div>
 
-                        <div class="col-md-6 mb-2">
-                            <label>Phone</label>
-                            <input name="phone" class="form-control">
+                        <div class="info-box">
+                            <span>📞 Phone</span>
+                            <p>+880 1776-197999</p>
                         </div>
 
-                        <div class="col-md-6 mb-2">
-                            <label>Email</label>
-                            <input name="email" type="email" class="form-control">
+                        <div class="info-box">
+                            <span>📍 Location</span>
+                            <p>Dhaka, Bangladesh</p>
                         </div>
 
-                        <div class="col-md-6 mb-2">
-                            <label>Subject</label>
-                            <input name="subject" class="form-control">
-                        </div>
+                        <!-- SOCIAL -->
+                        <div class="contact-social">
+                            <a href="https://github.com/LabibArefin123" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
 
-                        <div class="col-12">
-                            <label>Message</label>
-                            <textarea name="message" rows="4" class="form-control"></textarea>
+                            <a href="https://linkedin.com/in/labib-arefin" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
                         </div>
 
                     </div>
-
-                    <div class="modal-footer">
-                        <button class="btn btn-success w-100">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Right: Contact Info -->
-            <div class="contact-info-wrapper">
-
-                <h3>Contact Information</h3>
-
-                <div class="info-item">
-                    <strong>Hospital</strong>
-                    <p>Dr. Fazlul Haque Colorectal Hospital</p>
-                </div>
-
-                <div class="info-item">
-                    <strong>Phone</strong>
-                    <p>0241023155</p>
-                </div>
-
-                <div class="info-item">
-                    <strong>Email</strong>
-                    <p>asifh7000@gmail.com</p>
-                </div>
-
-                <div class="info-item">
-                    <strong>Hospital Hours</strong>
-                    <p>Saturday – Thursday: 5PM – 9PM</p>
-                    <p class="closed-day">Friday: Closed</p>
                 </div>
 
             </div>
 
         </div>
     </section>
+
+    {{-- FOOTER --}}
     @include('frontend.welcome_page.footer')
+
 @endsection
