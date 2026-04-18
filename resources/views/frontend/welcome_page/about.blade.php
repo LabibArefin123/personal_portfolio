@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="highlight-box">
-                        <h4>🔗 Integration Expert</h4>
+                        <h4>🔗 Integration Beginner</h4>
                         <p>Biometric devices, APIs & real-time data systems</p>
                     </div>
 

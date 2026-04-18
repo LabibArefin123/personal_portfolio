@@ -16,6 +16,9 @@
             <!-- PROGRAMMING -->
             <div class="col-lg-4 col-md-6">
                 <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="{{ asset('uploads/images/technical_skill/image_1.jpg') }}" alt="Programming">
+                    </div>
                     <div class="tech-icon">
                         <i class="fas fa-code"></i>
                     </div>
@@ -38,6 +41,9 @@
             <!-- FRAMEWORK -->
             <div class="col-lg-4 col-md-6">
                 <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="{{ asset('uploads/images/technical_skill/image_2.png') }}" alt="Frameworks">
+                    </div>
                     <div class="tech-icon">
                         <i class="fas fa-layer-group"></i>
                     </div>
@@ -58,6 +64,9 @@
             <!-- DATABASE -->
             <div class="col-lg-4 col-md-6">
                 <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="{{ asset('uploads/images/technical_skill/image_3.png') }}" alt="Database">
+                    </div>
                     <div class="tech-icon">
                         <i class="fas fa-database"></i>
                     </div>
@@ -76,6 +85,9 @@
             <!-- TOOLS -->
             <div class="col-lg-4 col-md-6">
                 <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="{{ asset('uploads/images/technical_skill/image_4.png') }}" alt="Tools">
+                    </div>
                     <div class="tech-icon">
                         <i class="fas fa-tools"></i>
                     </div>
@@ -96,6 +108,9 @@
             <!-- BUSINESS SOFTWARE -->
             <div class="col-lg-4 col-md-6">
                 <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="{{ asset('uploads/images/technical_skill/image_5.png') }}" alt="Business Software">
+                    </div>
                     <div class="tech-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
@@ -115,6 +130,9 @@
             <!-- NETWORKING -->
             <div class="col-lg-4 col-md-6">
                 <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="{{ asset('uploads/images/technical_skill/image_6.png') }}" alt="Networking">
+                    </div>
                     <div class="tech-icon">
                         <i class="fas fa-network-wired"></i>
                     </div>
@@ -134,3 +152,10 @@
 
     </div>
 </section>
+<script>
+    document.querySelectorAll('.tech-card').forEach(card => {
+        card.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    });
+</script>
