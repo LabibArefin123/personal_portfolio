@@ -1,0 +1,33 @@
+.tech-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 35px 30px;
+    height: 100%;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 130px;
+    height: 130px;
+    background: rgba(99, 102, 241, 0.06);
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+    border-color: rgba(99, 102, 241, 0.25);
+}
+
+.tech-card:hover::before {
+    transform: scale(1.2);
+}

@@ -1,0 +1,36 @@
+/* ==============================
+   SECTION LAYOUT
+============================== */
+.technical-skill-section {
+    padding: 25px 0;
+    background: linear-gradient(180deg, #f8fafc, #ffffff);
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    font-size: 17px;
+    color: #64748b;
+    line-height: 1.9;
+}

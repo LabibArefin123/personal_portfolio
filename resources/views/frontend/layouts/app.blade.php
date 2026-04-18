@@ -49,7 +49,15 @@
     <link rel="stylesheet" href="{{ asset('css/frontend/skill/custom_skill_w.css') }}">
     <link rel="stylesheet" href="{{ asset('css/frontend/hero/custom_hero.css') }}">
     <link rel="stylesheet" href="{{ asset('css/frontend/about/custom_about_w.css') }}">
+
+    //Technology Skill Part
     <link rel="stylesheet" href="{{ asset('css/frontend/technical_skill/custom_skill.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/frontend/technical_skill/part_1_section_layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/frontend/technical_skill/part_2_card_base_layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/frontend/technical_skill/part_3_icon_text_layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/frontend/technical_skill/part_4_image_effect.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/frontend/technical_skill/part_5_hover_interaction.css') }}">
+
     <link rel="stylesheet" href="{{ asset('css/frontend/project/custom_project.css') }}">
     <link rel="stylesheet" href="{{ asset('css/frontend/experience/custom_experience.css') }}">
 </head>

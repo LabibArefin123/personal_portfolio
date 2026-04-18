@@ -1,0 +1,18 @@
+/* CONTENT ABOVE IMAGE */
+.tech-icon,
+.tech-card h4,
+.tech-tags {
+    position: relative;
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+/* TEXT COLOR CHANGE ON HOVER */
+.tech-card:hover h4,
+.tech-card:hover .tech-tags span {
+    color: #fff;
+}
+
+.tech-card.active .tech-image {
+    bottom: 0;
+}
