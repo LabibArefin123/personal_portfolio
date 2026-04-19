@@ -1,0 +1,37 @@
+.navbar-dev {
+    position: fixed;
+    top: var(--topbar-height); // 🔥 dynamic fix
+    left: 0;
+    width: 100%;
+
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+
+    background: var(--color-bg-dark);
+    backdrop-filter: blur(18px);
+
+    border-bottom: none; // 🔥 remove gap source
+
+    z-index: 1090;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    &.scrolled {
+        top: 0;
+        background: rgba(15, 23, 42, 0.96);
+    }
+
+    .brand-name {
+        font-size: 18px;
+        font-weight: 800;
+        color: #fff;
+    }
+
+    .brand-role {
+        font-size: 12px;
+        color: var(--color-primary);
+    }
+}

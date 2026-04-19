@@ -1,0 +1,28 @@
+.contact-card {
+
+    .form-control {
+        background: #020617;
+        border: 1px solid #1e293b;
+        color: #fff;
+
+        &:focus {
+            border-color: #6366f1;
+            box-shadow: none;
+        }
+    }
+
+    .contact-btn {
+        background: linear-gradient(90deg, #6366f1, #06b6d4);
+        color: #fff;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        transition: 0.3s;
+        width: 100%;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+        }
+    }
+}

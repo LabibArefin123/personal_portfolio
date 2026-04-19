@@ -1,0 +1,39 @@
+.navbar-menu {
+    display: flex;
+    align-items: center;
+
+    .nav-item {
+        margin: 0 4px;
+    }
+
+    .nav-link {
+        color: var(--color-text);
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 16px;
+        border-radius: 12px;
+        position: relative;
+        transition: 0.3s;
+
+        &:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        &.active {
+            color: #fff;
+            background: rgba(99, 102, 241, 0.12);
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 16px;
+                right: 16px;
+                bottom: 5px;
+                height: 2px;
+                background: linear-gradient(90deg, #6366f1, #06b6d4);
+                border-radius: 20px;
+            }
+        }
+    }
+}

@@ -1,15 +1,26 @@
 .about-modern {
+
     .about-img-wrapper {
-        img {
+        overflow: hidden; // prevents overflow during animation
+
+        .about-img {
             width: 100%;
             max-width: 350px;
             border-radius: 20px;
             border: 2px solid #1e293b;
-            transition: 0.4s;
 
-            &:hover {
-                transform: scale(1.05);
-            }
+            // 🔥 Initial state (hidden left)
+            opacity: 0;
+            transform: translateX(-120px);
+
+            // smooth animation
+            transition: all 1s ease;
+        }
+
+        // 🔥 Final state
+        .about-img.animate-in {
+            opacity: 1;
+            transform: translateX(0);
         }
     }
 }

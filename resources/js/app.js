@@ -10,6 +10,8 @@ Alpine.start();
 
 
 // 🔹 Styles (load after JS setup)
+import "../scss/frontend/layout/layout.scss";
 import "../scss/frontend/about/about.scss";
 import "../scss/frontend/skill/skill.scss";
 import "../scss/frontend/technical_skill/technical_skill.scss";
+import "../scss/frontend/contact/contact.scss";

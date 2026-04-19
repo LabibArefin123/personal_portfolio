@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+
+    .contact-hero {
+        height: 220px;
+        text-align: center;
+
+        h1 {
+            font-size: 28px;
+        }
+    }
+
+    .contact-card,
+    .contact-info-card {
+        padding: 20px;
+    }
+}

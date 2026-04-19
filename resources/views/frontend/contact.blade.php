@@ -14,8 +14,6 @@
     <meta property="og:url" content="{{ url()->current() }}">
 @endsection
 
-<link rel="stylesheet" href="{{ asset('css/frontend/contact/custom_contact.css') }}">
-
 @section('content')
 
     {{-- NAVBAR --}}
@@ -24,7 +22,7 @@
 
     <!-- HERO / BANNER -->
     <div class="contact-hero">
-        <div class="overlay"></div>
+        {{-- <div class="overlay"></div> --}}
 
         <div class="container text-center">
             <h1>Let's Work Together 🚀</h1>
@@ -49,16 +47,18 @@
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <input name="name" placeholder="Your Name" class="form-control" required>
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <input name="email" type="email" placeholder="Your Email" class="form-control"
+                                    <input name="name" autocomplete="name" placeholder="Your Name" class="form-control"
                                         required>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <input name="phone" placeholder="Phone (optional)" class="form-control">
+                                    <input name="email" autocomplete="email" placeholder="Your Email" class="form-control"
+                                        required>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <input name="phone" autocomplete="tel" placeholder="Phone (optional)"
+                                        class="form-control">
                                 </div>
 
                                 <div class="col-md-6 mb-3">

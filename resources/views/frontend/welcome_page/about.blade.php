@@ -1,10 +1,10 @@
-<section id="about" class="about-modern is-loading">    
+<section id="about" class="about-modern is-loading">
     <div class="container">
         <div class="row align-items-center g-5">
             <!-- LEFT IMAGE -->
             <div class="col-lg-5 text-center">
                 <div class="about-img-wrapper">
-                    <img src="{{ asset('uploads/images/about/developer.jpg') }}" alt="Labib Arefin">
+                    <img src="{{ asset('uploads/images/about/developer.jpg') }}" alt="Labib Arefin" class="about-img">
                 </div>
             </div>
 
@@ -48,3 +48,15 @@
         </div>
     </div>
 </section>
+<script>
+    window.addEventListener("load", () => {
+        const img = document.querySelector(".about-img");
+
+        if (!img) return;
+
+        // ⏳ delay before animation starts
+        setTimeout(() => {
+            img.classList.add("animate-in");
+        }, 500); // 👉 change to 5000 if you REALLY want 5 seconds
+    });
+</script>
