@@ -1,21 +1,21 @@
+<!-- LEFT CONTENT -->
 <section class="hero-section">
     <div class="container">
         <div class="row align-items-center">
-
             <!-- LEFT CONTENT -->
-            <div class="col-lg-6 hero-content">
+            <div class="col-lg-7 hero-content">
 
-                <h1 class="hero-title">
-                    Hi, I'm <span>Labib Arefin</span>
-                </h1>
+                <h2 class="hero-title">
+                    Hi, I'm <span class="robot-text" id="robotText">Labib Arefin</span>
+                </h2>
 
                 <h2 class="hero-subtitle">
-                    Full Stack Developer
+                    Full Stack Developer & Software Engineer
                 </h2>
 
                 <p class="hero-description">
-                    I build powerful web applications using Laravel & React — including POS systems, CRM software,
-                    and Tender Management platforms.
+                    I design and develop scalable web applications using Laravel and React —
+                    specializing in business systems like POS, CRM, and Tender Management platforms.
                 </p>
 
                 <div class="hero-buttons">
@@ -23,9 +23,10 @@
                         🚀 View Projects
                     </a>
 
-                    <a href="#contact" class="btn hero-btn-outline">
-                        📩 Contact Me
+                    <a href="{{ asset('files/CV_Labib.pdf') }}" class="btn hero-btn-outline" download>
+                        📄 Download CV
                     </a>
+
                 </div>
 
                 <!-- TECH TAGS -->
@@ -38,8 +39,9 @@
 
             </div>
 
+
             <!-- RIGHT CONTENT -->
-            <div class="col-lg-6 hero-image">
+            <div class="col-lg-5 hero-image">
                 <div class="hero-card-stack">
 
                     <div class="hero-card third-card">
@@ -62,9 +64,54 @@
                 </div>
             </div>
 
+
         </div>
-    </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const textEl = document.getElementById("robotText");
+        const text = "Labib Arefin";
+
+        let index = 0;
+        let isDeleting = false;
+
+        function typeLoop() {
+            if (!textEl) return;
+
+            if (!isDeleting) {
+                index++;
+                textEl.textContent = text.substring(0, index);
+
+                // 👉 pause when full text is typed
+                if (index === text.length) {
+                    isDeleting = true;
+                    setTimeout(typeLoop, 1800); // longer pause (easy to read)
+                    return;
+                }
+            } else {
+                index--;
+                textEl.textContent = text.substring(0, index);
+
+                // 👉 pause when empty
+                if (index === 0) {
+                    isDeleting = false;
+                    setTimeout(typeLoop, 900); // small breathing gap
+                    return;
+                }
+            }
+
+            // 👉 human-like random speed
+            let baseSpeed = isDeleting ? 120 : 200;
+
+            // add slight randomness (more natural)
+            let variation = Math.random() * 60;
+
+            setTimeout(typeLoop, baseSpeed + variation);
+        }
+
+        typeLoop();
+    });
+</script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const stack = document.querySelector(".hero-card-stack");

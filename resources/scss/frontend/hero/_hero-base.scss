@@ -11,15 +11,77 @@
 .hero-title {
     font-size: 58px;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.2; // 👈 stabilize height
     margin-bottom: 15px;
     letter-spacing: -1px;
+
+    display: flex; // 👈 prevents inline jump
+    align-items: center; // 👈 keeps text stable
+    gap: 10px; // 👈 spacing between "I'm" and name
 
     span {
         background: linear-gradient(90deg, #6366f1, #06b6d4);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+}
+
+
+.robot-text {
+    font-family: "Courier New", monospace;
+    letter-spacing: 2px;
+    color: #00ff9f;
+
+    display: inline-block;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    /* 👇 KEY: no fixed width */
+    min-width: 14ch; // keeps layout stable without locking cursor
+
+    line-height: 1.2;
+    height: 1.2em;
+
+    padding-right: 4px;
+
+    text-shadow: 0 0 8px rgba(0, 255, 159, 0.25);
+
+    font-size: calc(1em + 2px);
+
+    position: relative;
+
+    animation: typingGlow 2.5s ease-in-out infinite;
+}
+
+/* 👇 REAL CURSOR (follows text) */
+.robot-text::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 4px;
+
+    background-color: #00ff9f;
+
+    animation: cursorBlink 0.9s steps(1) infinite;
+}
+
+/* optional: subtle breathing glow */
+@keyframes typingGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 6px rgba(0, 255, 159, 0.25);
+    }
+
+    50% {
+        text-shadow: 0 0 14px rgba(0, 255, 159, 0.45);
+    }
+}
+
+.robot-text {
+    animation: cursorBlink 0.9s steps(1) infinite, typingGlow 2.5s ease-in-out infinite;
 }
 
 .hero-subtitle {
@@ -32,6 +94,5 @@
     font-size: 17px;
     line-height: 1.9;
     color: #94a3b8;
-    max-width: 560px;
-    margin-bottom: 35px;
+    max-width: 520px; // 👈 tighter = cleaner reading
 }

@@ -1,5 +1,5 @@
 .tech-card {
-    background: #858585;
+    background: #2e2e2e;
     border-radius: $radius;
     padding: 35px 30px;
     height: 100%;
@@ -12,7 +12,7 @@
     h4 {
         font-size: 24px;
         font-weight: 700;
-        color: $text-dark;
+        color: #fff;
         margin-bottom: 22px;
     }
 
@@ -32,7 +32,7 @@
 
             &:hover {
                 background: rgba($primary, 0.12);
-                color: $primary;
+                color: #fff;
             }
         }
     }
