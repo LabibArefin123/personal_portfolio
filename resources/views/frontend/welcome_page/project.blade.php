@@ -152,6 +152,19 @@
                 </div>
             </div>
 
+            <!-- TechnoTech Engineering Limited -->
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h4>TechnoTech Engineering Limited</h4>
+                        <p>
+                            Smart construction software for homepage implemented with CMS feature.
+                        </p>
+                        <div class="tech">Laravel • JS • MySQL</div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Admin Panel -->
             <div class="col-lg-4 col-md-6">
                 <div class="project-card highlight">

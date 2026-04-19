@@ -1,0 +1,28 @@
+.about-modern {
+
+    .about-highlights {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .highlight-box {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        padding: 15px;
+        border-radius: 12px;
+        transition: 0.3s;
+
+        h4 {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        p {
+            color: #94a3b8;
+            font-size: 13px;
+            margin: 0;
+        }
+    }
+}

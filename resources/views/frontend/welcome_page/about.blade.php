@@ -1,8 +1,6 @@
-<section id="about" class="about-modern">
+<section id="about" class="about-modern is-loading">    
     <div class="container">
-
         <div class="row align-items-center g-5">
-
             <!-- LEFT IMAGE -->
             <div class="col-lg-5 text-center">
                 <div class="about-img-wrapper">
@@ -45,19 +43,8 @@
                         <h4>🎯 Problem Solver</h4>
                         <p>Turning complex requirements into simple solutions</p>
                     </div>
-
                 </div>
-
-                <!-- CTA -->
-                <div class="about-cta">
-                    <a href="#contact" class="btn about-btn">
-                        Let’s Work Together 🚀
-                    </a>
-                </div>
-
             </div>
-
         </div>
-
     </div>
 </section>
