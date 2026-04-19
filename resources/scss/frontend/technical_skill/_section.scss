@@ -1,6 +1,6 @@
 .technical-skill-section {
     padding: 25px 0;
-    background: linear-gradient(180deg, $bg-light, #ffffff);
+background: linear-gradient(135deg, #020617, #0f172a);
 
     .section-heading {
         max-width: 750px;
@@ -20,14 +20,14 @@
         h2 {
             font-size: 42px;
             font-weight: 800;
-            color: $text-dark;
+            color: #fff9f9;
             margin-bottom: 18px;
         }
 
-        p {
-            font-size: 17px;
-            color: $text-muted;
-            line-height: 1.9;
-        }
+           p {
+               font-size: 17px;
+               color: #ffffff;
+               line-height: 1.9;
+           }
     }
 }
