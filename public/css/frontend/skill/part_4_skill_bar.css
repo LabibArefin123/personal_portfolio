@@ -1,0 +1,15 @@
+/* BAR */
+.bar {
+    height: 6px;
+    background: #020617;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #6366f1, #06b6d4);
+    transition: width 1.5s ease;
+}

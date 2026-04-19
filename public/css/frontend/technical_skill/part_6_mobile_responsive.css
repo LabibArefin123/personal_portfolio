@@ -1,0 +1,31 @@
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 991px) {
+    .technical-skill-section {
+        padding: 80px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .tech-card {
+        padding: 28px 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .section-heading p {
+        font-size: 15px;
+    }
+
+    .tech-card h4 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,10 @@
+/* MOBILE */
+@media (max-width: 768px) {
+    .skills-title {
+        font-size: 28px;
+    }
+
+    .modern-card {
+        padding: 20px;
+    }
+}

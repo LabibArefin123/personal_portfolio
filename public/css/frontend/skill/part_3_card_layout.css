@@ -1,0 +1,16 @@
+/* CARD */
+.modern-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 25px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* SKILL */
+.modern-skill {
+    margin-bottom: 18px;
+}

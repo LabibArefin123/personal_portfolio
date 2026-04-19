@@ -1,3 +1,7 @@
+/* ==============================
+   HOVER INTERACTION
+============================== */
+
 /* CONTENT ABOVE IMAGE */
 .tech-icon,
 .tech-card h4,
@@ -15,4 +19,8 @@
 
 .tech-card.active .tech-image {
     bottom: 0;
+}
+
+.tech-card:hover .tech-tags span {
+    background: rgba(255,255,255,0.15);
 }
