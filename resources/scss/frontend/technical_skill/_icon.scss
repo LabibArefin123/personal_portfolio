@@ -1,0 +1,13 @@
+.tech-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, $primary, $secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 30px rgba($primary, 0.25);
+}

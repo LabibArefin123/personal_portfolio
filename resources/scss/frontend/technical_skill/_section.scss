@@ -1,0 +1,33 @@
+.technical-skill-section {
+    padding: 25px 0;
+    background: linear-gradient(180deg, $bg-light, #ffffff);
+
+    .section-heading {
+        max-width: 750px;
+        margin: 0 auto 60px;
+
+        .section-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            background: rgba($primary, 0.1);
+            color: $primary;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: $text-dark;
+            margin-bottom: 18px;
+        }
+
+        p {
+            font-size: 17px;
+            color: $text-muted;
+            line-height: 1.9;
+        }
+    }
+}

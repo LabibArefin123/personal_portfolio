@@ -1,0 +1,27 @@
+.modern-card {
+    background: $bg-card;
+    border: 1px solid rgba($primary, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: $radius;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: $transition;
+
+    h4 {
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .modern-skill {
+        margin-bottom: 18px;
+    }
+
+    .skill-head {
+        display: flex;
+        justify-content: space-between;
+        color: $text-light;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+}

@@ -1,0 +1,22 @@
+.modern-card {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba($primary, 0.4), transparent);
+        top: -50px;
+        left: -50px;
+        opacity: 0;
+        transition: $transition;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba($primary, 0.2);
+    }
+}

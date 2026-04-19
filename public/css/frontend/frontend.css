@@ -186,3 +186,8 @@ body {
     opacity: 1;
     visibility: visible;
 }
+
+.tech-card.preloaded .tech-image {
+    transform: translateY(100%);
+    opacity: 0;
+}

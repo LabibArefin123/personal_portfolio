@@ -1,0 +1,24 @@
+.tech-card {
+
+    position: relative;
+    overflow: hidden;
+
+    /* IMPORTANT: ensure content always above image */
+    .tech-icon,
+    h4,
+    .tech-tags {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:hover .tech-image,
+    &.active .tech-image {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    &:hover .tech-image img,
+    &.active .tech-image img {
+        transform: scale(1.05);
+    }
+}

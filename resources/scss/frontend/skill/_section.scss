@@ -1,0 +1,14 @@
+.skills-modern {
+    padding: 25px 0;
+    background: radial-gradient(circle at top, #0f172a, $bg-dark);
+
+    .skills-title {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .skills-subtitle {
+        color: $text-muted;
+    }
+}

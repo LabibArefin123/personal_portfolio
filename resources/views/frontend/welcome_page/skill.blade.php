@@ -2,6 +2,7 @@
 <section class="skills-modern">
     <div class="container">
 
+        <!-- TITLE -->
         <div class="text-center mb-5">
             <h2 class="skills-title">My Tech Stack ⚡</h2>
             <p class="skills-subtitle">
@@ -11,149 +12,79 @@
 
         <div class="row g-4">
 
-            <!-- CARD -->
+            {{-- Backend --}}
             <div class="col-lg-6">
                 <div class="modern-card">
-
                     <h4>Backend Development</h4>
 
-                    <div class="modern-skill" data-skill="95">
-                        <div class="skill-head">
-                            <span>Laravel</span>
-                            <span>95%</span>
+                    @foreach ([['Laravel', 95], ['PHP', 90], ['REST API', 88]] as $skill)
+                        <div class="modern-skill" data-skill="{{ $skill[1] }}">
+                            <div class="skill-head">
+                                <span>{{ $skill[0] }}</span>
+                                <span>{{ $skill[1] }}%</span>
+                            </div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
                         </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="modern-skill" data-skill="90">
-                        <div class="skill-head">
-                            <span>PHP</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="modern-skill" data-skill="88">
-                        <div class="skill-head">
-                            <span>REST API</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
 
-            <!-- FRONTEND -->
+            {{-- Frontend --}}
             <div class="col-lg-6">
                 <div class="modern-card">
-
                     <h4>Frontend Development</h4>
 
-                    <div class="modern-skill" data-skill="90">
-                        <div class="skill-head">
-                            <span>JavaScript</span>
-                            <span>90%</span>
+                    @foreach ([['JavaScript', 90], ['Bootstrap', 92], ['jQuery', 85]] as $skill)
+                        <div class="modern-skill" data-skill="{{ $skill[1] }}">
+                            <div class="skill-head">
+                                <span>{{ $skill[0] }}</span>
+                                <span>{{ $skill[1] }}%</span>
+                            </div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
                         </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="modern-skill" data-skill="92">
-                        <div class="skill-head">
-                            <span>Bootstrap</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="modern-skill" data-skill="85">
-                        <div class="skill-head">
-                            <span>jQuery</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
 
-            <!-- DATABASE -->
+            {{-- Database --}}
             <div class="col-lg-6">
                 <div class="modern-card">
-
                     <h4>Database</h4>
 
-                    <div class="modern-skill" data-skill="90">
-                        <div class="skill-head">
-                            <span>MySQL</span>
-                            <span>90%</span>
+                    @foreach ([['MySQL', 90], ['Database Design', 85]] as $skill)
+                        <div class="modern-skill" data-skill="{{ $skill[1] }}">
+                            <div class="skill-head">
+                                <span>{{ $skill[0] }}</span>
+                                <span>{{ $skill[1] }}%</span>
+                            </div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
                         </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="modern-skill" data-skill="85">
-                        <div class="skill-head">
-                            <span>Database Design</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
 
-            <!-- TOOLS -->
+            {{-- Tools --}}
             <div class="col-lg-6">
                 <div class="modern-card">
-
                     <h4>Tools & Systems</h4>
 
-                    <div class="modern-skill" data-skill="85">
-                        <div class="skill-head">
-                            <span>Git & GitHub</span>
-                            <span>85%</span>
+                    @foreach ([['Git & GitHub', 85], ['AJAX', 88], ['System Architecture', 85]] as $skill)
+                        <div class="modern-skill" data-skill="{{ $skill[1] }}">
+                            <div class="skill-head">
+                                <span>{{ $skill[0] }}</span>
+                                <span>{{ $skill[1] }}%</span>
+                            </div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
                         </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="modern-skill" data-skill="88">
-                        <div class="skill-head">
-                            <span>AJAX</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="modern-skill" data-skill="85">
-                        <div class="skill-head">
-                            <span>System Architecture</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="bar">
-                            <div></div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
 
