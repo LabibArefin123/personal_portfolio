@@ -1,0 +1,240 @@
+.hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroFadeUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* =========================
+   HERO TEXT
+========================= */
+.hero-title {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+
+    span {
+        background: linear-gradient(90deg, #6366f1, #06b6d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #94a3b8;
+    max-width: 560px;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   BUTTON LAYER SYSTEM
+========================= */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    perspective: 1000px;
+}
+
+/* =========================
+   🧲 MAGNETIC + GSAP READY BUTTON BASE
+========================= */
+.hero-btn-primary,
+.hero-btn-outline {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+    will-change: transform;
+    transform-style: preserve-3d;
+
+    overflow: hidden;
+}
+
+/* =========================
+   🔥 PRIMARY BUTTON (LIQUID + MAGNETIC)
+========================= */
+.hero-btn-primary {
+    color: #fff;
+
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+
+    box-shadow:
+        0 15px 35px rgba(99, 102, 241, 0.25),
+        0 10px 20px rgba(6, 182, 212, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* liquid light sweep */
+.hero-btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -130%;
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.35),
+            transparent);
+
+    transform: skewX(-20deg);
+    transition: 0.7s ease;
+}
+
+.hero-btn-primary:hover::before {
+    left: 140%;
+}
+
+/* magnetic hover lift (JS will enhance) */
+.hero-btn-primary:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow:
+        0 25px 60px rgba(99, 102, 241, 0.35),
+        0 15px 35px rgba(6, 182, 212, 0.25);
+}
+
+.hero-btn-primary:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* =========================
+   ⚪ OUTLINE BUTTON (APPLE GLASS STYLE)
+========================= */
+.hero-btn-outline {
+    color: #e2e8f0;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* soft liquid glow */
+.hero-btn-outline::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(circle at top left,
+            rgba(99, 102, 241, 0.18),
+            transparent 60%);
+
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.hero-btn-outline:hover::before {
+    opacity: 1;
+}
+
+.hero-btn-outline:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(99, 102, 241, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.hero-btn-outline:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* =========================
+   💡 PARTICLE CLICK HOOK (CSS PREP ONLY)
+   JS will inject particles
+========================= */
+.hero-btn-primary::after,
+.hero-btn-outline::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* =========================
+   🧊 TECH CUBE BLOCKS (KEEP SAME BUT REFINED)
+========================= */
+.hero-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.hero-tech span {
+    position: relative;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+
+    color: #e2e8f0;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 12px;
+
+    box-shadow:
+        6px 6px 0 rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.25s ease;
+    will-change: transform;
+}
+
+/* cube lift */
+.hero-tech span:hover {
+    transform: translateY(-4px) rotateX(8deg);
+    box-shadow:
+        10px 10px 0 rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* subtle identity colors */
+.hero-tech span:nth-child(1) {
+    border-color: rgba(99, 102, 241, 0.35);
+}
+
+.hero-tech span:nth-child(2) {
+    border-color: rgba(236, 72, 153, 0.25);
+}
+
+.hero-tech span:nth-child(3) {
+    border-color: rgba(34, 211, 238, 0.25);
+}
+
+.hero-tech span:nth-child(4) {
+    border-color: rgba(16, 185, 129, 0.25);
+}

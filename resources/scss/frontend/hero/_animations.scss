@@ -1,0 +1,59 @@
+@keyframes cardInMain {
+    from {
+        opacity: 0;
+        transform: rotate(0deg) translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0deg) translateY(0);
+    }
+}
+
+@keyframes cardInSecond {
+    from {
+        opacity: 0;
+        transform: rotate(-8deg) translate(-50px, 100px) scale(0.93);
+    }
+
+    to {
+        opacity: 0.7;
+        transform: rotate(-8deg) translate(-50px, 25px) scale(0.93);
+    }
+}
+
+@keyframes cardInThird {
+    from {
+        opacity: 0;
+        transform: rotate(8deg) translate(55px, 120px) scale(0.88);
+    }
+
+    to {
+        opacity: 0.55;
+        transform: rotate(8deg) translate(55px, 45px) scale(0.88);
+    }
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

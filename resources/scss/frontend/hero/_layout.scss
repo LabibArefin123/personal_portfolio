@@ -1,0 +1,23 @@
+.hero-section {
+    position: relative;
+    /* FIX prevents navbar + topbar gap issue */
+    min-height: calc(100vh - 110px);
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 10px 0 80px;
+
+    background:
+        radial-gradient(circle at top left, rgba(99, 102, 241, 0.15), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(6, 182, 212, 0.12), transparent 30%),
+        linear-gradient(135deg, #0f172a, #111827 45%, #1e293b);
+
+    color: #fff;
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+}

@@ -46,9 +46,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/frontend/frontend.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/frontend/hero/custom_hero.css') }}">
-
-
     <link rel="stylesheet" href="{{ asset('css/frontend/project/custom_project.css') }}">
     <link rel="stylesheet" href="{{ asset('css/frontend/experience/custom_experience.css') }}">
 </head>
@@ -76,7 +73,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- AOS INIT -->
     <script>
         AOS.init({
