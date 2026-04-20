@@ -67,37 +67,21 @@
         <main>
             @yield('content')
         </main>
-
+        <!-- 🔝 Back To Top -->
+        <button id="backToTop" class="back-to-top">
+            <i class="bi bi-arrow-up"></i>
+        </button>
     </div>
 
     <!-- 🔥 GLOBAL MODALS (Keep only if needed) -->
     {{-- Clean version: remove unused doctor-specific modals --}}
     @includeWhen(View::exists('frontend.modal.contact'), 'frontend.modal.contact')
-
     <!-- JS LIBS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <!-- AOS INIT -->
-    <script>
-        window.addEventListener('load', () => {
-            document.body.style.visibility = 'visible';
-        });
-    </script>
-    <script>
-        AOS.init({
-            duration: 900,
-            easing: 'ease-in-out',
-            once: true,
-        });
-    </script>
-
-    <!-- 🔝 Back To Top -->
-    <button id="backToTop" class="back-to-top">
-        <i class="bi bi-arrow-up"></i>
-    </button>
-
+  
     <!-- GLOBAL ALERT DATA -->
     <script>
         window.appData = {
@@ -107,29 +91,12 @@
     </script>
 
     <!-- Custom JS -->
+    <script src="{{ asset('js/custom_frontend/fouc_load.js') }}"></script>
+    <script src="{{ asset('js/custom_frontend/aos_init.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/sweet_alert.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/scroll_progress.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/custom_back_top_button.js') }}"></script>
-
-    <!-- OPTIONAL: Draft Auto Save -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const form = document.querySelector("form");
-            if (!form) return;
-
-            const inputs = form.querySelectorAll("input, textarea, select");
-
-            inputs.forEach(input => {
-                const saved = localStorage.getItem("draft_" + input.name);
-                if (saved) input.value = saved;
-
-                input.addEventListener("input", () => {
-                    localStorage.setItem("draft_" + input.name, input.value);
-                });
-            });
-        });
-    </script>
-
+    <script src="{{ asset('js/custom_frontend/draft_save.js') }}"></script>
 </body>
 
 </html>
