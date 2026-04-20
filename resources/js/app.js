@@ -10,10 +10,12 @@ Alpine.start();
 
 
 // 🔹 Styles (load after JS setup)
-import "../scss/frontend/layout/layout.scss";
-import "../scss/frontend/hero/hero.scss";
-import "../scss/frontend/about/about.scss";
-import "../scss/frontend/skill/skill.scss";
-import "../scss/frontend/technical_skill/technical_skill.scss";
+import "../scss/frontend/welcome_page/layout/layout.scss";
+import "../scss/frontend/welcome_page/hero/hero.scss";
+import "../scss/frontend/welcome_page/about/about.scss";
+import "../scss/frontend/welcome_page/skill/skill.scss";
+import "../scss/frontend/welcome_page/technical_skill/technical_skill.scss";
+import "../scss/frontend/welcome_page/footer/footer.scss";
+
+//Contact Page
 import "../scss/frontend/contact/contact.scss";
-import "../scss/frontend/footer/footer.scss";
