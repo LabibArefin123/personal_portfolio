@@ -42,8 +42,13 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- Vite -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
+    @vite(['resources/sass/app.scss'])
+    @vite(['resources/js/app.js'])
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/frontend/frontend.css') }}">
     <link rel="stylesheet" href="{{ asset('css/frontend/project/custom_project.css') }}">
@@ -75,6 +80,11 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- AOS INIT -->
+    <script>
+        window.addEventListener('load', () => {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
     <script>
         AOS.init({
             duration: 900,
