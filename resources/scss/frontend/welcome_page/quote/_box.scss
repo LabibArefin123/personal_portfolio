@@ -1,0 +1,21 @@
+.quote-box {
+    position: relative;
+    z-index: 2;
+
+    max-width: 600px; // 👈 slightly tighter
+    margin: 0 auto;
+
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    border-radius: 14px;
+    padding: 35px 28px;
+
+    text-align: center;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+
+    transition: all 0.3s ease;
+}
