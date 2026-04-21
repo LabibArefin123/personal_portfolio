@@ -11,28 +11,28 @@
 
             @foreach ([
         [
-            'title' => 'Full Stack Developer',
-            'time' => '2023 - Present',
-            'desc' => 'Developed full-featured POS systems with invoice management, stock tracking, multi-user authentication, and reporting dashboards.',
-            'tech' => ['Laravel', 'MySQL', 'AJAX'],
+            'title' => 'Software Engineer',
+            'time' => '2025 - Present',
+            'desc' => 'Building real-world business software including attendance tracking systems in collaboration with partners. Focused on scalable backend architecture, API design, and production-ready solutions.',
+            'tech' => ['Laravel', 'MySQL', 'REST API'],
         ],
         [
-            'title' => 'System Integration Developer',
-            'time' => '2023',
-            'desc' => 'Integrated biometric devices with Laravel APIs and built real-time pipelines using Node.js and socket servers.',
-            'tech' => ['Node.js', 'Laravel', 'WebSocket'],
+            'title' => 'Software Developer (Full Stack)',
+            'time' => '2024 - 2025',
+            'desc' => 'Developed CMS platforms, portfolio systems, and business tools with complete frontend-backend integration. Worked on real client-style requirements and structured application design.',
+            'tech' => ['Laravel', 'Blade', 'AJAX', 'JavaScript'],
         ],
         [
-            'title' => 'CRM & Tender System Developer',
+            'title' => 'Application Development Practice',
+            'time' => '2023 - 2024',
+            'desc' => 'Focused on strengthening fundamentals by building small applications like clocks, chat systems, and company websites based on provided requirements. Explored mobile development basics using React Native.',
+            'tech' => ['HTML', 'CSS', 'JavaScript', 'React Native'],
+        ],
+        [
+            'title' => 'Early Development & UI Exploration',
             'time' => '2022 - 2023',
-            'desc' => 'Built tender management system with filtering, document handling, and reporting features.',
-            'tech' => ['Laravel', 'DataTables', 'jQuery'],
-        ],
-        [
-            'title' => 'Frontend & UI Developer',
-            'time' => 'Ongoing',
-            'desc' => 'Designed modern dashboards and responsive UI focusing on usability and performance.',
-            'tech' => ['Bootstrap', 'Tailwind', 'JavaScript'],
+            'desc' => 'Started web development journey by learning frontend design, responsive layouts, and basic system structure while experimenting with UI concepts and small projects.',
+            'tech' => ['Bootstrap', 'Tailwind', 'jQuery'],
         ],
     ] as $item)
                 <div class="xt-exp-item">

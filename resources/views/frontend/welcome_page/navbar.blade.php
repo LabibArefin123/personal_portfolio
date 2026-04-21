@@ -7,7 +7,7 @@
         <a class="navbar-brand d-flex align-items-center" href="{{ route('welcome') }}">
             <div class="brand-text">
                 <div class="brand-name">Labib Arefin</div>
-                <div class="brand-role">Full Stack Developer</div>
+                <div class="brand-role">Software Engineer</div>
             </div>
         </a>
 

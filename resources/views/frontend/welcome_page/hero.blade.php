@@ -17,24 +17,31 @@
                     I design and develop scalable web applications using Laravel and React —
                     specializing in business systems like POS, CRM, and Tender Management platforms.
                 </p>
-
                 <div class="hero-buttons">
+
                     <a href="#projects" class="btn hero-btn-primary">
                         🚀 View Projects
                     </a>
 
-                    <a href="{{ asset('files/CV_Labib.pdf') }}" class="btn hero-btn-outline" download>
-                        📄 Download CV
-                    </a>
+                    <!-- CV WRAPPER -->
+                    <div class="cv-wrapper">
+                        <a href="{{ asset('files/CV_Labib.pdf') }}" target="_blank" class="btn hero-btn-outline">
+                            👁️ View CV
+                        </a>
+
+                        <a href="{{ asset('files/CV_Labib.pdf') }}" download class="cv-download">
+                            ⬇
+                        </a>
+                    </div>
 
                 </div>
 
                 <!-- TECH TAGS -->
                 <div class="hero-tech">
                     <span>Laravel</span>
-                    <span>React</span>
-                    <span>REST API</span>
+                    <span>API Integration</span>
                     <span>MySQL</span>
+                    <span>React (App Developer)</span>
                 </div>
 
             </div>
