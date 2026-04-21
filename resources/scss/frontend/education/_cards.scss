@@ -1,0 +1,48 @@
+.education-intro-card,
+.education-card,
+.edu-small-card {
+    background: #0f172a; // 🔥 DARK CARD
+    border-radius: 20px;
+    padding: 35px;
+
+    border: 1px solid #1e293b;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* intro text */
+.education-intro-card {
+    margin-bottom: 40px;
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #f1f5f9;
+    }
+
+    p {
+        color: #94a3b8;
+        line-height: 1.8;
+    }
+}
+
+/* highlight stays same (already good) */
+.education-highlight {
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+    color: #fff;
+
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+
+    h3 {
+        font-size: 38px;
+        font-weight: 800;
+    }
+
+    span {
+        font-size: 14px;
+        opacity: 0.9;
+    }
+}

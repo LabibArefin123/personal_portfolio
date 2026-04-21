@@ -1,0 +1,17 @@
+.education-section {
+    padding: 80px 0;
+
+    /* 🔥 MATCH SITE DARK THEME */
+    background: linear-gradient(180deg, #020617, #0f172a);
+}
+
+/* section header */
+.section-header {
+    margin-bottom: 25px;
+
+    h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #e5e7eb; // 🔥 FIX
+    }
+}

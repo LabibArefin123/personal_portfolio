@@ -10,13 +10,15 @@
                 </h2>
 
                 <h2 class="hero-subtitle">
-                    Full Stack Developer & Software Engineer
+                    Software Engineer (Laravel Systems)
                 </h2>
 
                 <p class="hero-description">
-                    I design and develop scalable web applications using Laravel and React —
-                    specializing in business systems like POS, CRM, and Tender Management platforms.
+                    I build scalable business applications using Laravel,
+                    with experience across frontend and backend technologies
+                    including React and API integration.
                 </p>
+                
                 <div class="hero-buttons">
 
                     <a href="#projects" class="btn hero-btn-primary">
@@ -46,7 +48,6 @@
 
             </div>
 
-
             <!-- RIGHT CONTENT -->
             <div class="col-lg-5 hero-image">
                 <div class="hero-card-stack">
@@ -65,13 +66,11 @@
 
                     <div class="hero-floating-box">
                         <h5>3+ Years Experience</h5>
-                        <p>Laravel, React & Business Software Development</p>
+                        <p>Building scalable Laravel systems for real-world businesses</p>
                     </div>
 
                 </div>
             </div>
-
-
         </div>
 </section>
 <script>

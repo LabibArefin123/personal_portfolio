@@ -1,0 +1,49 @@
+.education-table {
+    width: 100%;
+
+    /* 🔥 KILL BOOTSTRAP WHITE */
+    --bs-table-bg: transparent;
+    --bs-table-striped-bg: transparent;
+    --bs-table-hover-bg: transparent;
+
+    background: transparent;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    thead tr {
+        background: #020617;
+        color: #e5e7eb;
+    }
+
+    th {
+        padding: 18px;
+        color: #e5e7eb;
+        border-bottom: 1px solid #1e293b;
+    }
+
+    tbody tr {
+        background: #0f172a; // 🔥 MAIN ROW COLOR
+        transition: 0.3s ease;
+
+        &:hover {
+            background: #1e293b;
+        }
+    }
+
+    td {
+        padding: 18px;
+        vertical-align: middle;
+        color: #cbd5e1;
+        border-bottom: 1px solid #1e293b;
+    }
+}
+
+/* badge stays same */
+.badge.completed {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}

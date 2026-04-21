@@ -1,0 +1,21 @@
+.edu-small-card {
+    height: 100%;
+    transition: 0.3s ease;
+background: #0f172a;
+    border: 1px solid #1e293b;
+    &:hover {
+        transform: translateY(-8px);
+    }
+
+    h5 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #f1f5f9;
+    }
+
+    p {
+        color: #94a3b8;
+        line-height: 1.8;
+    }
+}

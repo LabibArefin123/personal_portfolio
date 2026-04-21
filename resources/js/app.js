@@ -20,5 +20,8 @@ import "../scss/frontend/welcome_page/technical_skill/technical_skill.scss";
 import "../scss/frontend/welcome_page/experience/experience.scss";
 import "../scss/frontend/welcome_page/footer/footer.scss";
 
+//Education Page
+import "../scss/frontend/education/education.scss";
+
 //Contact Page
 import "../scss/frontend/contact/contact.scss";
