@@ -1,0 +1,20 @@
+.xt-service-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    color: #fff;
+    font-size: 1.5rem;
+
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+    transition: 0.3s;
+}
+
+.xt-service-card:hover .xt-service-icon {
+    transform: scale(1.1) rotate(5deg);
+}

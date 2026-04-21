@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+    .xt-tech {
+        padding: 70px 0;
+
+        &-title {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .xt-tech-tabs button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}

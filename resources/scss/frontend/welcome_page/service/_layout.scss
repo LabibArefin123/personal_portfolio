@@ -1,0 +1,16 @@
+.xt-service {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #020617, #0f172a);
+
+    &-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #fff;
+    }
+
+    &-subtitle {
+        color: #94a3b8;
+        max-width: 650px;
+        margin: auto;
+    }
+}

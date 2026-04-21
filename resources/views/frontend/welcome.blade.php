@@ -18,23 +18,33 @@
 @section('content')
     @include('frontend.welcome_page.top-bar')
     @include('frontend.welcome_page.navbar')
+
+    {{-- HERO (HOOK) --}}
     @include('frontend.welcome_page.hero')
+
+    {{-- ABOUT (WHO YOU ARE) --}}
     @include('frontend.welcome_page.about')
+
+    {{-- SERVICES (WHAT YOU OFFER) --}}
+    @include('frontend.welcome_page.service')
+
+    {{-- CORE SKILLS (QUICK OVERVIEW) --}}
     @include('frontend.welcome_page.skill')
+
+    {{-- TECH STACK (DETAILED TOOLS) --}}
+    @include('frontend.welcome_page.tech')
+
+    {{-- DEEP TECH / CATEGORIES --}}
     @include('frontend.welcome_page.technical_skill')
+
+    {{-- EXPERIENCE (TRUST) --}}
     @include('frontend.welcome_page.experience')
+
+    {{-- PROJECTS (PROOF) --}}
     @include('frontend.welcome_page.project')
+
+    {{-- FOOTER --}}
     @include('frontend.welcome_page.footer')
-
-
-    {{-- 🧠 SERVICES --}}
-    {{-- @include('frontend.home.services') --}}
-
-    {{-- 📊 TECH STACK / TOOLS --}}
-    {{-- @include('frontend.home.tech') --}}
-
     {{-- ✍️ BLOG / ARTICLES (optional future) --}}
     {{-- @include('frontend.home.blog') --}}
-
-    {{-- 🔚 FOOTER --}}
 @endsection

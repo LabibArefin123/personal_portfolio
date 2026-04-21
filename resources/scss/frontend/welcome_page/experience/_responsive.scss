@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+    .xt-exp {
+        &-timeline::before {
+            left: 10px;
+        }
+
+        &-item {
+            padding-left: 40px;
+        }
+
+        &-dot {
+            left: 2px;
+        }
+    }
+}

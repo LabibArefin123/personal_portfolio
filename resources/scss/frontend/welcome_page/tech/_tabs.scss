@@ -1,0 +1,18 @@
+.xt-tech-tabs {
+    button {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #94a3b8;
+        padding: 8px 20px;
+        border-radius: 30px;
+        margin: 5px;
+        transition: 0.3s;
+
+        &.active,
+        &:hover {
+            background: #3b82f6;
+            color: #fff;
+            border-color: #3b82f6;
+        }
+    }
+}
