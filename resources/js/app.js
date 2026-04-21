@@ -11,6 +11,7 @@ Alpine.start();
 // 🔹 Styles (load after JS setup)
 import "../scss/frontend/welcome_page/layout/layout.scss";
 import "../scss/frontend/welcome_page/hero/hero.scss";
+import "../scss/frontend/welcome_page/quote/quote.scss";
 import "../scss/frontend/welcome_page/about/about.scss";
 import "../scss/frontend/welcome_page/service/service.scss";
 import "../scss/frontend/welcome_page/skill/skill.scss";

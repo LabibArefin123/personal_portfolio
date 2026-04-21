@@ -22,6 +22,9 @@
     {{-- HERO (HOOK) --}}
     @include('frontend.welcome_page.hero')
 
+    {{-- 🔥 QUOTE (PERSONAL IDENTITY MOMENT) --}}
+    @include('frontend.welcome_page.quote')
+
     {{-- ABOUT (WHO YOU ARE) --}}
     @include('frontend.welcome_page.about')
 
