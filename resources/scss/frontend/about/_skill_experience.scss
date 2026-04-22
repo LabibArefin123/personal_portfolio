@@ -1,0 +1,54 @@
+// =============================
+// TITLES
+// =============================
+.section-title {
+    color: $text-primary;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+// =============================
+// SKILLS
+// =============================
+.skills {
+    @include flex-wrap;
+    gap: 10px;
+
+    span {
+        background: $bg-card;
+        padding: 6px 14px;
+        border-radius: $radius-sm;
+        color: #cbd5f5;
+        font-size: 13px;
+        border: 1px solid $border-color;
+        transition: $transition;
+
+        &:hover {
+            background: $accent;
+            color: white;
+        }
+    }
+}
+
+// =============================
+// EXPERIENCE
+// =============================
+.exp-box {
+    @include card;
+    margin-bottom: 15px;
+
+    h6 {
+        color: $text-primary;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    p {
+        color: $text-secondary;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    @include hover-lift;
+}

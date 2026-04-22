@@ -1,0 +1,22 @@
+// =============================
+// MIXINS
+// =============================
+@mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin card {
+    background: $bg-card;
+    border-radius: $radius-md;
+    padding: 20px;
+    border: 1px solid $border-color;
+    transition: $transition;
+}
+
+@mixin hover-lift {
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
+    }
+}

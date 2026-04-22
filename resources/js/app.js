@@ -20,6 +20,9 @@ import "../scss/frontend/welcome_page/technical_skill/technical_skill.scss";
 import "../scss/frontend/welcome_page/experience/experience.scss";
 import "../scss/frontend/welcome_page/footer/footer.scss";
 
+//About Page
+import "../scss/frontend/about/about.scss";
+
 //Education Page
 import "../scss/frontend/education/education.scss";
 

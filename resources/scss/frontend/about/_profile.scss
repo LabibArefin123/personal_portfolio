@@ -1,0 +1,40 @@
+// =============================
+// MAIN SECTION
+// =============================
+.about-section {
+    padding: 80px 0;
+    background: $bg-dark;
+}
+
+// IMAGE
+.about-image {
+    img {
+        width: 240px;
+        border-radius: $radius-lg;
+        border: 3px solid $border-color;
+        transition: $transition;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+// TEXT
+.about-name {
+    color: $text-primary;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.about-role {
+    color: $accent;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.about-desc {
+    color: $text-secondary;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}

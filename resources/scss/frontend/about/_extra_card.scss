@@ -1,0 +1,24 @@
+// =============================
+// EXTRA SECTION
+// =============================
+.about-extra {
+    margin-top: 70px;
+}
+
+.about-card {
+    @include card;
+    text-align: center;
+
+    h5 {
+        color: $text-primary;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    p {
+        color: $text-secondary;
+        font-size: 14px;
+    }
+
+    @include hover-lift;
+}

@@ -10,7 +10,7 @@
                 </h2>
 
                 <h2 class="hero-subtitle">
-                    Software Engineer (Laravel Systems)
+                    Full Stack Developer & Software Engineer
                 </h2>
 
                 <p class="hero-description">
