@@ -3,11 +3,9 @@
 @section('title', 'Skills | Md. Labib Arefin')
 
 @section('meta')
-<meta name="description"
-    content="Explore the technical skills of Md. Labib Arefin including Laravel, PHP, JavaScript, MySQL, and full-stack system development.">
+    <meta name="description"
+        content="Technical skills of Md. Labib Arefin including Laravel, PHP, JavaScript, MySQL, API integration, and system development.">
 @endsection
-
-<link rel="stylesheet" href="{{ asset('css/frontend/skill/custom_skill.css') }}">
 
 @section('content')
 
@@ -17,8 +15,8 @@
     <!-- HERO -->
     <section class="skills-hero">
         <div class="container text-center">
-            <h1>My Skills</h1>
-            <p>Technologies & tools I use to build scalable systems</p>
+            <h1>Skills & Technologies</h1>
+            <p>Tools and technologies I use to build real-world systems</p>
         </div>
     </section>
 
@@ -31,28 +29,16 @@
                 <!-- BACKEND -->
                 <div class="col-md-6">
                     <div class="skill-card">
-                        <h3>Backend Development</h3>
+                        <h3>Backend & Systems</h3>
 
-                        <div class="skill">
-                            <span>Laravel</span>
-                            <div class="progress"><div style="width: 95%"></div></div>
-                        </div>
-
-                        <div class="skill">
-                            <span>PHP</span>
-                            <div class="progress"><div style="width: 90%"></div></div>
-                        </div>
-
-                        <div class="skill">
-                            <span>REST API</span>
-                            <div class="progress"><div style="width: 88%"></div></div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Authentication & Authorization</span>
-                            <div class="progress"><div style="width: 85%"></div></div>
-                        </div>
-
+                        @foreach ([['Laravel', 95], ['PHP', 90], ['API Development & Integration', 88], ['Authentication & Authorization', 85]] as $skill)
+                            <div class="skill">
+                                <span>{{ $skill[0] }}</span>
+                                <div class="progress">
+                                    <div style="width: {{ $skill[1] }}%"></div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
 
@@ -61,72 +47,46 @@
                     <div class="skill-card">
                         <h3>Frontend Development</h3>
 
-                        <div class="skill">
-                            <span>JavaScript</span>
-                            <div class="progress"><div style="width: 85%"></div></div>
-                        </div>
-
-                        <div class="skill">
-                            <span>jQuery</span>
-                            <div class="progress"><div style="width: 90%"></div></div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Bootstrap</span>
-                            <div class="progress"><div style="width: 92%"></div></div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Tailwind CSS</span>
-                            <div class="progress"><div style="width: 80%"></div></div>
-                        </div>
-
+                        @foreach ([['JavaScript', 85], ['jQuery', 90], ['Bootstrap', 92], ['Tailwind CSS', 80]] as $skill)
+                            <div class="skill">
+                                <span>{{ $skill[0] }}</span>
+                                <div class="progress">
+                                    <div style="width: {{ $skill[1] }}%"></div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
 
                 <!-- DATABASE -->
                 <div class="col-md-6">
                     <div class="skill-card">
-                        <h3>Database</h3>
+                        <h3>Database & Structure</h3>
 
-                        <div class="skill">
-                            <span>MySQL</span>
-                            <div class="progress"><div style="width: 90%"></div></div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Database Design</span>
-                            <div class="progress"><div style="width: 85%"></div></div>
-                        </div>
-
+                        @foreach ([['MySQL', 90], ['Database Design', 85]] as $skill)
+                            <div class="skill">
+                                <span>{{ $skill[0] }}</span>
+                                <div class="progress">
+                                    <div style="width: {{ $skill[1] }}%"></div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
 
                 <!-- TOOLS -->
                 <div class="col-md-6">
                     <div class="skill-card">
-                        <h3>Tools & Others</h3>
+                        <h3>Tools & Engineering Practice</h3>
 
-                        <div class="skill">
-                            <span>Git & GitHub</span>
-                            <div class="progress"><div style="width: 85%"></div></div>
-                        </div>
-
-                        <div class="skill">
-                            <span>AJAX</span>
-                            <div class="progress"><div style="width: 88%"></div></div>
-                        </div>
-
-                        <div class="skill">
-                            <span>Biometric Integration</span>
-                            <div class="progress"><div style="width: 80%"></div></div>
-                        </div>
-
-                        <div class="skill">
-                            <span>System Architecture</span>
-                            <div class="progress"><div style="width: 85%"></div></div>
-                        </div>
-
+                        @foreach ([['Git & GitHub', 85], ['AJAX', 88], ['System Testing & Debugging', 82], ['Basic Security (Validation & Flow Testing)', 75], ['SEO (Optional Implementation)', 70]] as $skill)
+                            <div class="skill">
+                                <span>{{ $skill[0] }}</span>
+                                <div class="progress">
+                                    <div style="width: {{ $skill[1] }}%"></div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
 
@@ -135,7 +95,6 @@
         </div>
     </section>
 
-    {{-- FOOTER --}}
     @include('frontend.welcome_page.footer')
 
 @endsection

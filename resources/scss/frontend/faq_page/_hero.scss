@@ -1,0 +1,30 @@
+.faq-hero {
+    padding: 50px 0 50px;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #fff;
+
+    .faq-hero-content {
+        max-width: 700px;
+
+        .faq-badge {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.15);
+            color: #6366f1;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+    }
+}

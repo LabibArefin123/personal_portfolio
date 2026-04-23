@@ -28,8 +28,14 @@ import "../scss/frontend/about/about.scss";
 //Education Page
 import "../scss/frontend/education/education.scss";
 
+//Skills Page
+import "../scss/frontend/skill_page/skill.scss";
+
 //Contact Page
 import "../scss/frontend/contact/contact.scss";
+
+//FAQ Page
+import "../scss/frontend/faq_page/faq.scss";
 
 //JS Section Start
 import "../js/custom_frontend/scroll_progress.js";

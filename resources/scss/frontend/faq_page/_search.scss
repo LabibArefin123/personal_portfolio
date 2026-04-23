@@ -1,0 +1,27 @@
+.faq-search {
+    margin-bottom: 25px;
+
+    input {
+        width: 100%;
+        padding: 12px 15px;
+
+        background: #020617;
+        border: 1px solid #1e293b;
+        border-radius: 10px;
+
+        color: #fff;
+        font-size: 14px;
+
+        transition: 0.3s;
+
+        &::placeholder {
+            color: #64748b;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+        }
+    }
+}

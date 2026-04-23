@@ -45,15 +45,22 @@
                         <p class="about-role">Full Stack Developer & Software Engineer</p>
 
                         <p class="about-desc">
-                            I specialize in building scalable web applications using Laravel, JavaScript, and modern UI
-                            frameworks.
-                            My focus is on writing clean, maintainable code and designing systems that solve real-world
-                            problems.
+                            I build scalable business applications using Laravel and modern web technologies, focusing on
+                            clean architecture,
+                            maintainable code, and real-world usability. My work includes full system development — from
+                            database design to UI implementation.
                         </p>
 
                         <p class="about-desc">
-                            I have experience developing POS systems, CRM platforms, biometric integrations,
-                            and custom business solutions.
+                            I have experience developing POS systems, CMS platforms, tender management systems, and
+                            biometric integrations.
+                            I also apply SEO best practices when required, ensuring systems are not only functional but also
+                            optimized for visibility and performance.
+                        </p>
+
+                        <p class="about-desc">
+                            Alongside development, I test and refine systems to ensure reliability, smooth user experience,
+                            and production readiness.
                         </p>
                     </div>
 
@@ -81,57 +88,79 @@
 
                 <div class="exp-box">
                     <h6>Software Engineer</h6>
-                    <p>Building real-world business software including attendance tracking systems. Focused on scalable
-                        backend architecture and API design.</p>
+                    <p>
+                        Building real-world business software including attendance tracking systems in collaboration.
+                        Focused on backend architecture, API design, and production-ready systems.
+                    </p>
                 </div>
 
                 <div class="exp-box">
                     <h6>Software Developer (Full Stack)</h6>
-                    <p>Developed CMS platforms, portfolio systems, and business tools with complete frontend-backend
-                        integration.</p>
+                    <p>
+                        Developed CMS platforms, portfolio systems, and business tools with full frontend-backend
+                        integration.
+                        Worked on structured application design and real-world requirements.
+                    </p>
                 </div>
 
                 <div class="exp-box">
                     <h6>Application Development Practice</h6>
-                    <p>Built small systems like chat apps, clocks, and company websites to strengthen fundamentals.</p>
+                    <p>
+                        Built small applications such as chat systems, clocks, and company websites to strengthen
+                        development fundamentals.
+                        Explored mobile app development using React Native (Expo).
+                    </p>
                 </div>
 
                 <div class="exp-box">
-                    <h6>System Integration</h6>
-                    <p>Worked with biometric devices, APIs, and real-time data systems.</p>
+                    <h6>System Integration & Functional Testing</h6>
+                    <p>
+                        Worked with biometric devices, APIs, and real-time systems. Performed workflow-based testing
+                        including login/logout flows, form submissions, and validation processes. Designed step-by-step
+                        logic to verify system behavior and ensure reliability in real-world usage.
+                    </p>
                 </div>
 
                 <div class="exp-box">
-                    <h6>UI/UX Development</h6>
-                    <p>Designed modern dashboards and responsive interfaces for better UX.</p>
+                    <h6>Basic Security & Penetration Testing</h6>
+                    <p>
+                        Conducted basic security checks on authentication systems, input handling, and user flows.
+                        Identified potential issues in access control and form handling to improve system safety.
+                    </p>
+                </div>
+                
+                <div class="exp-box">
+                    <h6>UI/UX & SEO Implementation</h6>
+                    <p>
+                        Designed responsive user interfaces and improved usability.
+                        Applied SEO techniques when required to enhance performance and visibility.
+                    </p>
                 </div>
             </div>
 
             <!-- EXTRA -->
             <div class="about-extra">
                 <div class="row g-4">
-
                     <div class="col-md-4">
                         <div class="about-card">
-                            <h5>🚀 Projects</h5>
-                            <p>Built real-world systems including POS, CRM, and tender platforms.</p>
+                            <h5>🚀 Systems</h5>
+                            <p>Built real-world platforms including POS, CMS, and tender management systems.</p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="about-card">
-                            <h5>⚡ Focus</h5>
-                            <p>Performance, scalability, and clean architecture are top priorities.</p>
+                            <h5>⚡ Approach</h5>
+                            <p>Focus on clean architecture, scalability, and maintainable code.</p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="about-card">
-                            <h5>🤝 Collaboration</h5>
-                            <p>Open to freelance work, team collaboration, and long-term opportunities.</p>
+                            <h5>🔍 Quality</h5>
+                            <p>Testing, debugging, and optimizing systems for real-world reliability.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
 

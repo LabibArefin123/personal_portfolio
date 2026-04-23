@@ -13,8 +13,6 @@
     <meta property="og:url" content="{{ url()->current() }}">
 @endsection
 
-<link rel="stylesheet" href="{{ asset('css/frontend/faq/custom_faq.css') }}">
-
 @section('content')
 
     @include('frontend.welcome_page.top-bar')
@@ -27,8 +25,8 @@
                 <span class="faq-badge">FAQ</span>
                 <h1>Frequently Asked Questions</h1>
                 <p>
-                    Everything you may want to know about my workflow, technologies,
-                    software development process, and collaboration.
+                    Insights into how I design, build, and optimize real-world software systems —
+                    including business applications, integrations, and optional SEO optimization.
                 </p>
             </div>
         </div>
@@ -45,8 +43,8 @@
                     <div class="faq-sidebar-card">
                         <h3>Need More Information?</h3>
                         <p>
-                            If you have any additional questions regarding software development,
-                            project workflow, pricing, or technology stack, feel free to contact me.
+                            If you have questions about system development, integrations, performance,
+                            SEO optimization, or project workflow — feel free to reach out anytime.
                         </p>
 
                         <div class="faq-contact-box">
@@ -75,7 +73,9 @@
                 <!-- RIGHT FAQ -->
                 <div class="col-lg-8">
                     <div class="faq-wrapper">
-
+                        <div class="faq-search">
+                            <input type="text" id="faqSearch" placeholder="Search questions..." />
+                        </div>
                         <div class="faq-item active">
                             <button class="faq-question">
                                 <span>What type of software do you build?</span>
@@ -86,9 +86,9 @@
 
                             <div class="faq-answer">
                                 <p>
-                                    I mainly build business software such as POS systems, CRM software,
-                                    Visitor Management Systems, Tender Management platforms, ERP modules,
-                                    inventory systems, and custom web applications.
+                                    I build scalable business systems such as POS, CRM, Visitor Management,
+                                    Tender Management, ERP modules, and custom web applications — focusing on
+                                    real-world usability, performance, and clean architecture.
                                 </p>
                             </div>
                         </div>
@@ -103,8 +103,9 @@
 
                             <div class="faq-answer">
                                 <p>
-                                    I primarily work with Laravel, PHP, React.js, JavaScript, MySQL,
-                                    Bootstrap, Tailwind CSS, REST APIs, and Git/GitHub workflows.
+                                    I work with Laravel, PHP, React, JavaScript, MySQL, and modern UI frameworks
+                                    like Bootstrap and Tailwind. I also build REST APIs, handle integrations,
+                                    and include SEO optimization when required.
                                 </p>
                             </div>
                         </div>
@@ -119,8 +120,8 @@
 
                             <div class="faq-answer">
                                 <p>
-                                    Yes, I am open to freelance projects, client work, startup collaborations,
-                                    and long-term software development opportunities.
+                                    Yes, I’m open to freelance work, client projects, startup collaborations,
+                                    and long-term development opportunities involving real-world systems.
                                 </p>
                             </div>
                         </div>
@@ -135,16 +136,16 @@
 
                             <div class="faq-answer">
                                 <p>
-                                    Yes, I handle both frontend and backend development including UI design,
-                                    database architecture, API development, authentication, dashboards,
-                                    and deployment-ready systems.
+                                    Yes, I handle full-stack development — from UI/UX design to backend
+                                    architecture, database design, API development, authentication systems,
+                                    and deployment-ready applications.
                                 </p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <button class="faq-question">
-                                <span>Do you work with APIs and third-party integrations?</span>
+                                <span>Do you work with APIs and integrations?</span>
                                 <div class="faq-icon">
                                     <i class="fas fa-plus"></i>
                                 </div>
@@ -152,17 +153,16 @@
 
                             <div class="faq-answer">
                                 <p>
-                                    I have experience working with REST APIs, biometric device connectivity,
-                                    QR code systems, and data integration workflows. I am continuously learning
-                                    more advanced third-party integrations, payment gateways, and automation systems
-                                    to improve my backend development skills.
+                                    I work with REST APIs, biometric device integrations, QR systems,
+                                    and real-time data workflows. I also explore advanced integrations
+                                    like payment gateways and automation systems.
                                 </p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <button class="faq-question">
-                                <span>Are your projects mobile responsive?</span>
+                                <span>Do you include SEO in your projects?</span>
                                 <div class="faq-icon">
                                     <i class="fas fa-plus"></i>
                                 </div>
@@ -170,8 +170,42 @@
 
                             <div class="faq-answer">
                                 <p>
-                                    Yes, all of my websites and applications are designed to work smoothly
-                                    across desktop, tablet, and mobile devices.
+                                    Yes — I can include SEO optimization when needed, including basic on-page SEO,
+                                    performance improvements, and structure optimization to improve visibility.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Do you test your systems?</span>
+                                <div class="faq-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </button>
+
+                            <div class="faq-answer">
+                                <p>
+                                    Yes, I perform practical testing including flow validation, login/logout behavior,
+                                    form submissions, and real-world usage scenarios. I also follow step-by-step logic
+                                    to ensure system reliability and consistency.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 8 -->
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Are your applications mobile responsive?</span>
+                                <div class="faq-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </button>
+
+                            <div class="faq-answer">
+                                <p>
+                                    Yes, all applications are designed to be fully responsive and optimized
+                                    for smooth performance across desktop, tablet, and mobile devices.
                                 </p>
                             </div>
                         </div>
@@ -221,6 +255,22 @@
 
         document.querySelector(".faq-item.active .faq-answer").style.maxHeight =
             document.querySelector(".faq-item.active .faq-answer").scrollHeight + "px";
+    </script>
+    <script>
+        // 🔍 FAQ SEARCH FILTER
+        document.getElementById("faqSearch").addEventListener("keyup", function() {
+            let value = this.value.toLowerCase();
+
+            document.querySelectorAll(".faq-item").forEach(item => {
+                let text = item.innerText.toLowerCase();
+
+                if (text.includes(value)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
     </script>
 
 @endsection
