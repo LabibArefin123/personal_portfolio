@@ -1,8 +1,5 @@
 <!-- Footer -->
 <footer class="footer-dev">
-
-    <link rel="stylesheet" href="{{ asset('css/frontend/custom_footer.css') }}">
-
     <div class="container">
         <div class="row gy-4">
 
@@ -11,7 +8,7 @@
                 <h5 class="footer-name">Md. Labib Arefin</h5>
                 <p class="footer-role">Full Stack Software Engineer</p>
 
-                <p class="footer-desc">
+                <p class="footer-desc" style="text-align: justify; text-justify: inter-word;">
                     I build scalable and production-ready software systems using Laravel and modern web technologies.
                     My focus is on business applications like POS, CRM, Tender Management, and ERP systems with clean
                     architecture,
@@ -21,50 +18,46 @@
             </div>
             <!-- QUICK LINKS -->
             <div class="col-md-2">
-                <h6 class="footer-title">Navigation</h6>
+                <h6 class="footer-title">Explore</h6>
                 <ul class="footer-links">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+
+                    <li><a href="{{ route('skills') }}">Expertise</a></li>
+                    <li><a href="#projects">Work / Portfolio</a></li>
+                    <li><a href="{{ route('service') }}">What I Do</a></li>
+                    <li><a href="{{ route('about') }}">About Me</a></li>
+                    <li><a href="{{ route('education') }}">Education</a></li>
+
                 </ul>
             </div>
 
             <!-- SERVICES -->
             <div class="col-md-3">
-                <h6 class="footer-title">Services</h6>
+                <h6 class="footer-title">Core Services</h6>
 
                 <ul class="footer-links">
-                    <li>Web Application Development</li>
+                    <li>Laravel Web Applications</li>
                     <li>REST API Development & Integration</li>
-                    <li>POS, CRM & ERP Systems</li>
-                    <li>Business Software Solutions</li>
-                    <li>System Architecture & Design</li>
-                    <li>SEO Optimization (On-page & Performance)</li>
-                    <li>System Testing & QA (Real-world flow testing)</li>
+                    <li>POS / CRM / ERP Systems</li>
+                    <li>Business Automation Software</li>
+                    <li>System Architecture & Optimization</li>
+                    <li>Performance & SEO Engineering</li>
                 </ul>
             </div>
 
             <!-- CONTACT -->
             <div class="col-md-3">
-                <h6 class="footer-title">Contact</h6>
+                <h6 class="footer-title">Let’s Connect</h6>
 
-                <p class="footer-contact">
-                    📧 labibarefin@gmail.com
-                </p>
+                <p class="footer-contact">📧 mdlabibarefin@gmail.com</p>
+                <p class="footer-contact">📞 +880 1776197999</p>
 
-                <p class="footer-contact">
-                    📞 +880 1776-197999
+                <p class="footer-note">
+                    Available for freelance & full-time opportunities
                 </p>
 
                 <div class="footer-social">
-                    <a href="https://github.com/LabibArefin123" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-
-                    <a href="https://linkedin.com/in/labib-arefin" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
 

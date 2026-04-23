@@ -25,23 +25,23 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('about') }}" class="nav-link">About</a>
-                </li>
-
-                <li class="nav-item">
                     <a href="{{ route('skills') }}" class="nav-link">Skills</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('service') }}" class="nav-link">Service</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('service') }}" class="nav-link">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('about') }}" class="nav-link">About</a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('education') }}" class="nav-link">Education</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
                 </li>
 
                 <li class="nav-item">
@@ -62,70 +62,3 @@
 
     </div>
 </nav>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-
-        const dropdown = document.getElementById('conditions_dropdown');
-        const toggleLink = dropdown.querySelector('.dropdown-toggle');
-        const menu = dropdown.querySelector('.dropdown-menu');
-
-        // Toggle on click
-        toggleLink.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const isOpen = menu.classList.contains('show');
-
-            // Close any other open dropdowns
-            document.querySelectorAll('.dropdown-menu.show').forEach(el => {
-                el.classList.remove('show');
-            });
-
-            // Toggle current dropdown
-            menu.classList.toggle('show', !isOpen);
-            toggleLink.setAttribute('aria-expanded', !isOpen);
-        });
-
-        // Close when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!dropdown.contains(e.target)) {
-                menu.classList.remove('show');
-                toggleLink.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-
-        const dropdown = document.getElementById('profile_dropdown');
-        const toggleLink = dropdown.querySelector('.dropdown-toggle');
-        const menu = dropdown.querySelector('.dropdown-menu');
-
-        // Toggle on click
-        toggleLink.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const isOpen = menu.classList.contains('show');
-
-            // Close any other open dropdowns
-            document.querySelectorAll('.dropdown-menu.show').forEach(el => {
-                el.classList.remove('show');
-            });
-
-            // Toggle current dropdown
-            menu.classList.toggle('show', !isOpen);
-            toggleLink.setAttribute('aria-expanded', !isOpen);
-        });
-
-        // Close when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!dropdown.contains(e.target)) {
-                menu.classList.remove('show');
-                toggleLink.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-    });
-</script>

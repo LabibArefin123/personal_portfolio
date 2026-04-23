@@ -28,15 +28,11 @@
         <!-- RIGHT -->
         <div class="top-social">
             <a href="https://www.linkedin.com/in/labib-arefin" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-linkedin"></i>
             </a>
 
             <a href="https://github.com/LabibArefin123" target="_blank" class="social-icon">
                 <i class="fab fa-github"></i>
-            </a>
-
-            <a href="https://www.facebook.com/" target="_blank" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
             </a>
 
             <button id="langToggle" class="lang-btn">EN</button>
