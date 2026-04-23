@@ -19,7 +19,6 @@
     @include('frontend.welcome_page.top-bar')
     @include('frontend.welcome_page.navbar')
 
-    <!-- HERO -->
     <section class="about-hero">
         <div class="container">
             <h1>About Me</h1>
@@ -27,7 +26,6 @@
         </div>
     </section>
 
-    <!-- PROFILE CARD (NEW - LinkedIn Style) -->
     <section class="about-section">
         <div class="container">
 

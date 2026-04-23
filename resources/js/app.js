@@ -28,3 +28,13 @@ import "../scss/frontend/education/education.scss";
 
 //Contact Page
 import "../scss/frontend/contact/contact.scss";
+
+//JS Section Start
+import "../js/custom_frontend/fouc_load.js";
+import "../js/custom_frontend/aos_init.js";
+import "../js/custom_frontend/scroll_progress.js";
+import "../js/custom_frontend/language.js";
+import "../js/custom_frontend/custom_back_top_button.js";
+import "../js/custom_frontend/magnified_image_modal.js";
+import "../js/custom_frontend/contact_success.js";
+import "../js/custom_frontend/sweet_alert.js";

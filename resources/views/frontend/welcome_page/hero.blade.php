@@ -18,7 +18,7 @@
                     with experience across frontend and backend technologies
                     including React and API integration.
                 </p>
-                
+
                 <div class="hero-buttons">
 
                     <a href="#projects" class="btn hero-btn-primary">
@@ -66,7 +66,7 @@
 
                     <div class="hero-floating-box">
                         <h5>3+ Years Experience</h5>
-                        <p>Building scalable Laravel systems for real-world businesses</p>
+                        <p>Laravel systems • API integration • Exploring mobile apps with Expo</p>
                     </div>
 
                 </div>
