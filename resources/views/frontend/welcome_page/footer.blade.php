@@ -9,14 +9,16 @@
             <!-- BRAND -->
             <div class="col-md-4">
                 <h5 class="footer-name">Md. Labib Arefin</h5>
-                <p class="footer-role">Full Stack Developer</p>
+                <p class="footer-role">Full Stack Software Engineer</p>
 
                 <p class="footer-desc">
-                    Building scalable web applications using Laravel & React.
-                    Specialized in POS, CRM, and Tender Management systems.
+                    I build scalable and production-ready software systems using Laravel and modern web technologies.
+                    My focus is on business applications like POS, CRM, Tender Management, and ERP systems with clean
+                    architecture,
+                    performance optimization, API integration, SEO-friendly structure, and real-world system
+                    reliability.
                 </p>
             </div>
-
             <!-- QUICK LINKS -->
             <div class="col-md-2">
                 <h6 class="footer-title">Navigation</h6>
@@ -31,11 +33,15 @@
             <!-- SERVICES -->
             <div class="col-md-3">
                 <h6 class="footer-title">Services</h6>
+
                 <ul class="footer-links">
-                    <li>Web App Development</li>
-                    <li>REST API Development</li>
-                    <li>POS & CRM Systems</li>
-                    <li>System Design</li>
+                    <li>Web Application Development</li>
+                    <li>REST API Development & Integration</li>
+                    <li>POS, CRM & ERP Systems</li>
+                    <li>Business Software Solutions</li>
+                    <li>System Architecture & Design</li>
+                    <li>SEO Optimization (On-page & Performance)</li>
+                    <li>System Testing & QA (Real-world flow testing)</li>
                 </ul>
             </div>
 

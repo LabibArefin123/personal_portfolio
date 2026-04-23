@@ -1,0 +1,15 @@
+@media (max-width: 991px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-hero h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,48 @@
+.service-card {
+    background: linear-gradient(135deg, #0f172a, #0b1220);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+
+    transition: 0.3s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        border-color: rgba(99, 102, 241, 0.35);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    h3 {
+        color: #fff;
+        font-size: 18px;
+        margin: 12px 0;
+        font-weight: 700;
+    }
+
+    p {
+        color: #94a3b8;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+/* ICON */
+.service-icon {
+    font-size: 28px;
+}
+
+/* TAG */
+.service-tag {
+    margin-top: 15px;
+    display: inline-block;
+
+    font-size: 12px;
+    color: #6366f1;
+
+    background: rgba(99, 102, 241, 0.12);
+    padding: 5px 10px;
+    border-radius: 20px;
+}

@@ -28,6 +28,9 @@ Route::get('/faq', [WelcomePageController::class, 'faq'])->name('faq');
 //Skills Section
 Route::get('/skills', [WelcomePageController::class, 'skills'])->name('skills');
 
+//Skills Section
+Route::get('/service', [WelcomePageController::class, 'service'])->name('service');
+
 //Education Section
 Route::get('/education', [WelcomePageController::class, 'education'])->name('education');
 

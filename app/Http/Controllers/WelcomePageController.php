@@ -34,10 +34,14 @@ class WelcomePageController extends Controller
         return view('frontend.skills');
     }
 
-
     public function faq()
     {
         return view('frontend.faq');
+    }
+
+    public function service()
+    {
+        return view('frontend.service');
     }
 
     public function gallery()

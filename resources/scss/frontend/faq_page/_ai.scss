@@ -1,0 +1,88 @@
+.faq-ai-box {
+    background: linear-gradient(135deg, #0f172a, #020617);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+
+.faq-ai-header {
+    font-size: 14px;
+    color: #6366f1;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* INPUT */
+#faqAiInput {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    background: #0f172a;
+    color: #fff;
+    outline: none;
+
+    &:focus {
+        border-color: #6366f1;
+        box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    }
+}
+
+/* SUGGESTIONS */
+.faq-ai-suggestions {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    button {
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 1px solid #1e293b;
+        background: #0f172a;
+        color: #94a3b8;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background: #6366f1;
+            color: #fff;
+        }
+    }
+}
+
+/* 🔥 FIXED AI RESPONSE AREA */
+.faq-ai-response {
+    margin: 15px 0;
+    min-height: 60px;
+}
+
+/* 🔥 CHAT BUBBLE */
+.ai-bubble {
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    color: #e2e8f0;
+
+    padding: 12px 14px;
+    border-radius: 12px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    animation: fadeIn 0.3s ease;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

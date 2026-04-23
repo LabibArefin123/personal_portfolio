@@ -33,6 +33,10 @@
                 </li>
 
                 <li class="nav-item">
+                    <a href="{{ route('service') }}" class="nav-link">Service</a>
+                </li>
+
+                <li class="nav-item">
                     <a href="{{ route('education') }}" class="nav-link">Education</a>
                 </li>
 
