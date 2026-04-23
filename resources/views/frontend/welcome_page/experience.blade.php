@@ -13,19 +13,19 @@
         [
             'title' => 'Software Engineer',
             'time' => '2025 - Present',
-            'desc' => 'Building real-world business software including attendance tracking systems in collaboration with partners. Focused on scalable backend architecture, API design, and production-ready solutions.',
-            'tech' => ['Laravel', 'MySQL', 'REST API'],
+            'desc' => 'Building real-world business software including attendance tracking systems in collaboration with partners. Focused on scalable backend architecture, API design, and production-ready solutions, along with SEO-aware system structure when required.',
+            'tech' => ['Laravel', 'MySQL', 'API Design', 'SEO Structure'],
         ],
         [
             'title' => 'Software Developer (Full Stack)',
             'time' => '2024 - 2025',
-            'desc' => 'Developed CMS platforms, portfolio systems, and business tools with complete frontend-backend integration. Worked on real client-style requirements and structured application design.',
-            'tech' => ['Laravel', 'Blade', 'AJAX', 'JavaScript'],
+            'desc' => 'Developed CMS platforms, portfolio systems, and business tools with complete frontend-backend integration. Started applying SEO fundamentals such as clean URL structure, metadata handling, and performance optimization alongside real project development.',
+            'tech' => ['Laravel', 'Blade', 'JavaScript', 'SEO Basics'],
         ],
         [
             'title' => 'Application Development Practice',
             'time' => '2023 - 2024',
-            'desc' => 'Focused on strengthening fundamentals by building small applications like clocks, chat systems, and company websites based on provided requirements. Explored mobile development basics using React Native.',
+            'desc' => 'Focused on strengthening fundamentals by building small applications like clocks, chat systems, and company websites based on provided requirements. Explored mobile development basics using React Native and learned core development concepts.',
             'tech' => ['HTML', 'CSS', 'JavaScript', 'React Native'],
         ],
         [
