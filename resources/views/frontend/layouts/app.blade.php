@@ -42,15 +42,14 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- Vite -->
-    @vite(['resources/sass/app.scss'])
-    @vite(['resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <style>
         body {
             visibility: hidden;
         }
     </style>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('css/frontend/frontend.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/frontend/frontend.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/frontend/project/custom_project.css') }}">
 </head>
 
@@ -62,10 +61,28 @@
             style="position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: linear-gradient(90deg,#6366f1,#06b6d4); z-index: 9999; transition: width 0.25s;">
         </div>
 
+        <!-- Google Translate -->
+        @if (!request()->routeIs(['login', 'register', 'password.*']))
+            <div id="google_translate_element"></div>
+
+            <script>
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en',
+                        includedLanguages: 'en,bn',
+                        autoDisplay: false
+                    }, 'google_translate_element');
+                }
+            </script>
+
+            <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        @endif
+
         <!-- MAIN -->
         <main>
             @yield('content')
         </main>
+
         <!-- 🔝 Back To Top -->
         <button id="backToTop" class="back-to-top">
             <i class="bi bi-arrow-up"></i>
@@ -80,7 +97,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  
+
     <!-- GLOBAL ALERT DATA -->
     <script>
         window.appData = {
@@ -92,10 +109,6 @@
     <!-- Custom JS -->
     <script src="{{ asset('js/custom_frontend/fouc_load.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/aos_init.js') }}"></script>
-    <script src="{{ asset('js/custom_frontend/sweet_alert.js') }}"></script>
-    <script src="{{ asset('js/custom_frontend/scroll_progress.js') }}"></script>
-    <script src="{{ asset('js/custom_frontend/custom_back_top_button.js') }}"></script>
-    <script src="{{ asset('js/custom_frontend/draft_save.js') }}"></script>
 </body>
 
 </html>

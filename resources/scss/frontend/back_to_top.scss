@@ -1,0 +1,46 @@
+// 🔹 Variables (reusable)
+$btn-size: 52px;
+$primary-color: #ff6b6b;
+$hover-color: #b02a37;
+$text-color: #fff;
+$shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+// 🔹 Back to Top Button
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: $btn-size;
+    height: $btn-size;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    background-color: $primary-color;
+    color: $text-color;
+    border: none;
+
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+
+    box-shadow: $shadow;
+    transition: all 0.3s ease;
+
+    // 🔸 Hover state
+    &:hover {
+        background-color: $hover-color;
+        transform: translateY(-4px);
+    }
+
+    // 🔸 Active / visible state
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
