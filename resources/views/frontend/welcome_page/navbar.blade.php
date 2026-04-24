@@ -29,7 +29,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="{{ route('project') }}" class="nav-link">Projects</a>
                 </li>
 
                 <li class="nav-item">

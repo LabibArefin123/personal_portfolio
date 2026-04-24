@@ -1,0 +1,67 @@
+// =============================
+// COLOR SYSTEM
+// =============================
+$bg-dark: #020617;
+$bg-section: #020617;
+$bg-card: #0f172a;
+
+$border-color: #1e293b;
+$border-soft: rgba(99, 102, 241, 0.1);
+
+$text-primary: #ffffff;
+$text-secondary: #94a3b8;
+$text-muted: #64748b;
+
+$accent: #6366f1;
+$accent-hover: #4f46e5;
+
+
+// =============================
+// GRADIENTS
+// =============================
+$gradient-hero: linear-gradient(135deg, #020617, #0f172a);
+$gradient-accent: linear-gradient(135deg, #6366f1, #4f46e5);
+
+
+// =============================
+// SHADOWS
+// =============================
+$shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+$shadow-md: 0 10px 25px rgba(0, 0, 0, 0.3);
+$shadow-accent: 0 10px 30px rgba(99, 102, 241, 0.15);
+
+
+// =============================
+// BORDER RADIUS
+// =============================
+$radius-lg: 20px;
+$radius-md: 14px;
+$radius-sm: 8px;
+
+
+// =============================
+// TRANSITIONS
+// =============================
+$transition: all 0.3s ease;
+$transition-fast: all 0.2s ease;
+
+
+// =============================
+// SPACING (optional but pro)
+// =============================
+$space-xs: 5px;
+$space-sm: 10px;
+$space-md: 20px;
+$space-lg: 40px;
+$space-xl: 80px;
+
+
+// =============================
+// TYPOGRAPHY SCALE
+// =============================
+$text-xs: 12px;
+$text-sm: 13px;
+$text-md: 14px;
+$text-lg: 16px;
+$text-xl: 18px;
+$text-xxl: 32px;

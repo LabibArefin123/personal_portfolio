@@ -28,6 +28,9 @@ import "../scss/frontend/about/about.scss";
 //Education Page
 import "../scss/frontend/education/education.scss";
 
+//Project Page
+import "../scss/frontend/project_page/project.scss";
+
 //Skills Page
 import "../scss/frontend/skill_page/skill.scss";
 
@@ -35,7 +38,7 @@ import "../scss/frontend/skill_page/skill.scss";
 import "../scss/frontend/service_page/service.scss";
 
 //Contact Page
-import "../scss/frontend/contact/contact.scss";
+import "../scss/frontend/contact_page/contact.scss";
 
 //FAQ Page
 import "../scss/frontend/faq_page/faq.scss";
@@ -51,4 +54,4 @@ import "../js/custom_frontend/welcome_page/hero_section/card_swap.js";
 import "../js/custom_frontend/welcome_page/hero_section/text_animation.js";
 
 //FAQ Page
-import "../js/custom_frontend/faq_page/index.js"
+import "../js/custom_frontend/faq_page/index.js";

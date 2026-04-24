@@ -1,0 +1,20 @@
+// =============================
+// PROJECT HERO
+// =============================
+.project-hero {
+    padding: 120px 0 70px;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    text-align: center;
+
+    h1 {
+        color: $text-primary;
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: $text-secondary;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,30 @@
+// =============================
+// PROJECT CARD
+// =============================
+.project-card {
+    @include card;
+    position: relative;
+    overflow: hidden;
+
+    h4 {
+        color: $text-primary;
+        font-size: 18px;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    p {
+        color: $text-secondary;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .tech {
+        margin-top: 12px;
+        font-size: 13px;
+        color: $accent;
+        font-weight: 500;
+    }
+
+    @include hover-lift;
+}

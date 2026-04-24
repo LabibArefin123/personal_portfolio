@@ -22,10 +22,11 @@
                 <ul class="footer-links">
 
                     <li><a href="{{ route('skills') }}">Expertise</a></li>
-                    <li><a href="#projects">Work / Portfolio</a></li>
-                    <li><a href="{{ route('service') }}">What I Do</a></li>
-                    <li><a href="{{ route('about') }}">About Me</a></li>
+                    <li><a href="{{ route('project') }}">Projects</a></li>
+                    <li><a href="{{ route('service') }}">Services</a></li>
+                    <li><a href="{{ route('about') }}">About</a></li>
                     <li><a href="{{ route('education') }}">Education</a></li>
+                    <li><a href="{{ route('contact') }}">Contact</a></li>
 
                 </ul>
             </div>

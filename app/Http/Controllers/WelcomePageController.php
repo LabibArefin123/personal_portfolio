@@ -11,17 +11,33 @@ use App\Models\Gallery;
 use App\Models\ContactRequest;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Models\Project;
 
 class WelcomePageController extends Controller
 {
     public function index()
     {
-        return view('frontend.welcome');
+        $projects = Project::where('status', 1)
+            ->orderByDesc('is_highlight') // highlight first
+            ->orderBy('position')
+            ->get();
+
+        return view('frontend.welcome', compact('projects'));
     }
 
     public function about()
     {
         return view('frontend.about');
+    }
+
+    public function projects()
+    {
+        $projects = Project::where('status', 1)
+            ->orderByDesc('is_highlight')
+            ->orderBy('position')
+            ->get();
+
+        return view('frontend.project', compact('projects'));
     }
 
     public function education()
