@@ -10,7 +10,7 @@ Alpine.start();
 // 🔹 Styles (load after JS setup)
 import "../scss/frontend/custom_language.scss";
 import "../scss/frontend/back_to_top.scss";
-import "../scss/frontend/welcome_page/layout/layout.scss";
+import "../scss/frontend/custom_layout/layout/layout.scss";
 import "../scss/frontend/welcome_page/hero/hero.scss";
 import "../scss/frontend/welcome_page/quote/quote.scss";
 import "../scss/frontend/welcome_page/about/about.scss";
@@ -20,7 +20,7 @@ import "../scss/frontend/welcome_page/tech/tech.scss";
 import "../scss/frontend/welcome_page/technical_skill/technical_skill.scss";
 import "../scss/frontend/welcome_page/experience/experience.scss";
 import "../scss/frontend/welcome_page/project_section/project.scss";
-import "../scss/frontend/welcome_page/footer/footer.scss";
+import "../scss/frontend/custom_layout/footer/footer.scss";
 
 //About Page
 import "../scss/frontend/about/about.scss";
