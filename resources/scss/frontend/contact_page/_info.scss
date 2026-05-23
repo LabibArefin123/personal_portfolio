@@ -2,35 +2,112 @@
 
     .contact-desc {
         color: #94a3b8;
-        margin-bottom: 20px;
+
+        line-height: 1.9;
+
+        margin-bottom: 35px;
     }
 
     .info-box {
-        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+
+        gap: 16px;
+
+        padding: 18px;
+
+        border-radius: 18px;
+
+        background: rgba(255, 255, 255, 0.03);
+
+        border: 1px solid rgba(255, 255, 255, 0.04);
+
+        margin-bottom: 18px;
+
+        transition: 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(135deg,
+                    #6366f1,
+                    #06b6d4);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+
+            font-size: 18px;
+
+            flex-shrink: 0;
+        }
 
         span {
-            color: #6366f1;
-            font-size: 14px;
+            display: block;
+
+            color: #94a3b8;
+
+            font-size: 13px;
+
+            margin-bottom: 4px;
         }
 
         p {
-            color: #cbd5f5;
+            color: white;
+
             margin: 0;
+
+            font-weight: 500;
         }
     }
 
     .contact-social {
-        margin-top: 20px;
+        margin-top: 35px;
+
+        display: flex;
+        gap: 14px;
 
         a {
-            color: #94a3b8;
-            margin-right: 10px;
-            font-size: 20px;
-            transition: 0.3s;
+            width: 50px;
+            height: 50px;
+
+            border-radius: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255, 255, 255, 0.04);
+
+            border: 1px solid rgba(255, 255, 255, 0.06);
+
+            color: #cbd5e1;
+
+            font-size: 18px;
+
+            transition: 0.35s ease;
 
             &:hover {
-                color: #6366f1;
-                transform: translateY(-2px);
+                background:
+                    linear-gradient(135deg,
+                        #6366f1,
+                        #06b6d4);
+
+                color: white;
+
+                transform: translateY(-3px);
             }
         }
     }

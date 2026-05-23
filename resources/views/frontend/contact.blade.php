@@ -46,26 +46,32 @@
                             @csrf
 
                             <div class="row">
+                                 <label>Name</label>
+
                                 <div class="col-md-6 mb-3">
                                     <input name="name" autocomplete="name" placeholder="Your Name" class="form-control"
                                         required>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
+                                    <label>Email</label>
                                     <input name="email" autocomplete="email" placeholder="Your Email" class="form-control"
                                         required>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
+                                    <label>Phone</label>
                                     <input name="phone" autocomplete="tel" placeholder="Phone (optional)"
                                         class="form-control">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
+                                    <label>Subject</label>
                                     <input name="subject" placeholder="Subject" class="form-control">
                                 </div>
 
                                 <div class="col-12 mb-3">
+                                    <label>Your Message</label>
                                     <textarea name="message" rows="5" placeholder="Your Message..." class="form-control" required></textarea>
                                 </div>
                             </div>
@@ -90,7 +96,7 @@
 
                         <div class="info-box">
                             <span>📧 Email</span>
-                            <p>labibarefin@gmail.com</p>
+                            <p>mdlabibarefin@gmail.com</p>
                         </div>
 
                         <div class="info-box">
