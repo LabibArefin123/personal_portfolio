@@ -118,7 +118,6 @@ class WelcomePageController extends Controller
         return back()->with('success', '✅ Your problem has been submitted successfully.');
     }
 
-
     public function contactStore(Request $request)
     {
         $ip = $request->ip();

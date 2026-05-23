@@ -99,6 +99,7 @@
     <script>
         window.appData = {
             success: @json(session('success')),
+            contactSuccess: @json(session('contact_success')),
             errors: @json($errors->all())
         };
     </script>
@@ -106,6 +107,7 @@
     <!-- Custom JS -->
     <script src="{{ asset('js/custom_frontend/fouc_load.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/aos_init.js') }}"></script>
+    <script src="{{ asset('js/custom_frontend/toaster.js') }}"></script>
 </body>
 
 </html>
