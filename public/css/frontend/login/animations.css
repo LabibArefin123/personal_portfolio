@@ -1,0 +1,18 @@
+@keyframes swingLamp {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    50% {
+        transform: rotate(-7deg);
+    }
+
+    100% {
+        transform: rotate(7deg);
+    }
+}
+
+.switch-chain.pull {
+    transform: translateY(20px);
+    transition: 0.2s ease;
+}

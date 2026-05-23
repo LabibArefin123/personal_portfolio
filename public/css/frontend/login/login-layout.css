@@ -1,0 +1,155 @@
+.auth-login-page {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    z-index: 999999;
+
+    background: radial-gradient(
+        circle at top left,
+        #172033 0%,
+        #0b1220 45%,
+        #060b14 100%
+    );
+
+    display: flex;
+
+    font-family: "Poppins", sans-serif;
+}
+
+/* RESET GLOBAL LAYOUT EFFECT */
+.auth-login-page * {
+    box-sizing: border-box;
+}
+
+/* REMOVE GLOBAL BODY PADDING ISSUE */
+body:has(.auth-login-page) {
+    padding-top: 0 !important;
+    overflow: hidden;
+}
+
+/* LEFT SIDE */
+.lamp-side {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 40px;
+
+    overflow: hidden;
+}
+
+/* RIGHT SIDE */
+.login-side {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    position: relative;
+}
+
+/* ATMOSPHERIC LIGHT */
+.auth-login-page::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        circle at 30% 25%,
+        rgba(255, 196, 0, 0.06),
+        transparent 35%
+    );
+
+    pointer-events: none;
+}
+
+/* TEXT AREA */
+.intro-content {
+    margin-top: 50px;
+
+    text-align: center;
+
+    width: 75%;
+
+    z-index: 5;
+}
+
+.developer-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 24px;
+
+    border-radius: 100px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #fbbf24;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 24px;
+}
+
+.intro-content h1 {
+    font-size: 62px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.intro-content p {
+    color: #94a3b8;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+/* LIGHT OVERLAY */
+.light-on .login-side::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 196, 0, 0.12),
+        transparent 70%
+    );
+
+    filter: blur(40px);
+
+    pointer-events: none;
+}

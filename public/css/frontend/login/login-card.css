@@ -1,0 +1,142 @@
+.login-card {
+    width: 460px;
+
+    padding: 55px;
+
+    border-radius: 36px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.03)
+    );
+
+    backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+
+    transition: 0.5s ease;
+}
+
+/* HIDDEN STATE */
+.login-card.locked {
+    opacity: 0;
+
+    transform: translateY(40px) scale(0.95);
+
+    pointer-events: none;
+}
+
+/* LIGHT MODE */
+.light-on .login-card {
+    box-shadow:
+        0 0 80px rgba(255, 196, 0, 0.08),
+        0 40px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* HEADER */
+.login-header {
+    margin-bottom: 35px;
+}
+
+.login-header h2 {
+    color: white;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #94a3b8;
+
+    line-height: 1.7;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #e2e8f0;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    height: 62px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    padding: 0 22px;
+
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+
+    border-color: rgba(255, 196, 0, 0.35);
+
+    background: rgba(255, 255, 255, 0.06);
+
+    box-shadow: 0 0 0 4px rgba(255, 196, 0, 0.08);
+}
+
+.form-control::placeholder {
+    color: #64748b;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    width: 100%;
+    height: 62px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+
+    color: #111827;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    transition: 0.35s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 16px 30px rgba(245, 158, 11, 0.3);
+}
+
+.toggle-password {
+    position: absolute;
+
+    top: 55px;
+    right: 20px;
+
+    color: #cbd5e1;
+
+    cursor: pointer;
+}
