@@ -33,6 +33,7 @@ Route::get('/service', [WelcomePageController::class, 'service'])->name('service
 
 //Project Section
 Route::get('/projects', [WelcomePageController::class, 'projects'])->name('project');
+Route::get('/project/{id}', [WelcomePageController::class, 'project_show'])->name('project.show');
 
 //Education Section
 Route::get('/education', [WelcomePageController::class, 'education'])->name('education');

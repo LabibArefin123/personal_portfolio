@@ -22,4 +22,9 @@ class Project extends Model
         'is_highlight' => 'boolean',
         'status' => 'boolean',
     ];
+
+    public function information()
+    {
+        return $this->hasOne(ProjectInformation::class);
+    }
 }

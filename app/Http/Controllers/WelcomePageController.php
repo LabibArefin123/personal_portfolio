@@ -37,7 +37,15 @@ class WelcomePageController extends Controller
             ->orderBy('position')
             ->get();
 
-        return view('frontend.project', compact('projects'));
+        return view('frontend.project_page.project', compact('projects'));
+    }
+
+    public function project_show($id)
+    {
+        $project = Project::with('information')
+            ->findOrFail($id);
+
+        return view('frontend.project_page.show', compact('project'));
     }
 
     public function education()

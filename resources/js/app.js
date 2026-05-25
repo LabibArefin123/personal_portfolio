@@ -31,6 +31,14 @@ import "../scss/frontend/education/education.scss";
 //Project Page
 import "../scss/frontend/project_page/project.scss";
 
+//Project Show Page
+import "../scss/frontend/project_page/show/_project_show.scss";
+import "../scss/frontend/project_page/show/_project_hero.scss";
+import "../scss/frontend/project_page/show/_project_feature.scss";
+import "../scss/frontend/project_page/show/_project_gallery.scss";
+import "../scss/frontend/project_page/show/_project_tech.scss";
+import "../scss/frontend/project_page/show/_project_responsive.scss";
+
 //Skills Page
 import "../scss/frontend/skill_page/skill.scss";
 
