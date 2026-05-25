@@ -378,7 +378,15 @@ return [
             'text'    => 'Gallery Management',
             'icon'    => 'fas fa-school',
             'route'  => 'galleries.index',
+            'can'  => 'galleries.index',
             'active' => ['galleries*'],
+        ],
+        [
+            'text'    => 'Project Detail',
+            'icon'    => 'fas fa-file',
+            'route'  => 'project-informations.index',
+            'can'  => 'project-informations.index',
+            'active' => ['project-informations*'],
         ],
       
         [

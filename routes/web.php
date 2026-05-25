@@ -13,6 +13,8 @@ use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SystemProblemController;
+use App\Http\Controllers\ProjectInformationController;
+
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -51,8 +53,7 @@ Route::get('/user_profile', function () {
     return view('user_profile');
 })->middleware(['auth', 'verified'])->name('profile');
 
-//Route::group(['middleware' => ['auth', 'permission']], function () {
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => ['auth', 'permission']], function () {
 
     // Profile Routes
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -65,6 +66,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     // Gallery Routes
     Route::resource('galleries', GalleryController::class);
+
+    Route::resource('project-informations', ProjectInformationController::class);
 
     //Profile Section
     Route::get('/user_profile', [ProfileController::class, 'user_profile_show'])->name('user_profile_show');
