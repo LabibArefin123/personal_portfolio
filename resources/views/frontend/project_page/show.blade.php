@@ -23,17 +23,42 @@
             </div>
 
             <!-- IMAGES -->
-            @if ($project->information?->project_images)
+            <div class="project-gallery">
 
-                <div class="project-gallery">
+                @foreach ($project->information->project_images as $image)
+                    <div class="project-image">
 
-                    @foreach ($project->information->project_images as $image)
-                        <img src="{{ asset($image) }}">
-                    @endforeach
+                        <img src="{{ asset($image) }}" alt="{{ $project->title }}" class="zoomable-image" data-bs-toggle="modal"
+                            data-bs-target="#imageZoomModal" data-image="{{ asset($image) }}">
+
+                    </div>
+                @endforeach
+
+            </div>
+
+            <!-- IMAGE ZOOM MODAL -->
+
+            <div class="modal fade" id="imageZoomModal" tabindex="-1" aria-hidden="true">
+
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+
+                    <div class="modal-content image-zoom-modal">
+
+                        <!-- CLOSE BUTTON -->
+                        <button type="button" class="btn-close modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+
+                        <div class="modal-body">
+
+                            <img src="" id="zoomedImage" class="img-fluid">
+
+                        </div>
+
+                    </div>
 
                 </div>
 
-            @endif
+            </div>
 
             <!-- OVERVIEW -->
             <div class="project-section">
@@ -120,5 +145,22 @@
         </div>
 
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
 
+            const zoomImages = document.querySelectorAll('.zoomable-image');
+
+            const zoomedImage = document.getElementById('zoomedImage');
+
+            zoomImages.forEach(image => {
+
+                image.addEventListener('click', function() {
+
+                    const imageSrc = this.getAttribute('data-image');
+
+                    zoomedImage.src = imageSrc;
+                });
+            });
+        });
+    </script>
 @endsection

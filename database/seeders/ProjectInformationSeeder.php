@@ -21,10 +21,9 @@ class ProjectInformationSeeder extends Seeder
                 'overview' => 'Healthcare platform with doctor consultation, appointments, patient tracking, and dashboard management.',
 
                 'project_images' => [
-
-                    'images/projects/sustho_1.png',
-                    'images/projects/sustho_2.png',
-                    'images/projects/sustho_3.png',
+                    'uploads/images/project_page/susthocare/image1.jpg',
+                    'uploads/images/project_page/susthocare/image2.jpg',
+                    'uploads/images/project_page/susthocare/image3.jpg',
                 ],
 
                 'custom_features' => [
@@ -73,9 +72,9 @@ class ProjectInformationSeeder extends Seeder
 
                 'project_images' => [
 
-                    'images/projects/gallery_1.png',
-                    'images/projects/gallery_2.png',
-                    'images/projects/gallery_3.png',
+                    'uploads/images/project_page/alamgir_art/image1.jpg',
+                    'uploads/images/project_page/alamgir_art/image2.jpg',
+                    'uploads/images/project_page/alamgir_art/image3.jpg',
                 ],
 
                 'custom_features' => [
