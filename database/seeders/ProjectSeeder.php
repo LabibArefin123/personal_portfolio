@@ -73,7 +73,7 @@ class ProjectSeeder extends Seeder
                 'title' => 'NineteenAlpha',
                 'description' => 'Defense company website with modern UI and strong brand presentation.',
                 'tech_stack' => 'Laravel',
-                'is_highlight' => true,
+                'is_highlight' => false,
                 'position' => 8,
             ],
 
@@ -81,7 +81,7 @@ class ProjectSeeder extends Seeder
                 'title' => 'XpressionGlobal',
                 'description' => 'Government-approved defense contractor website for advanced military tech.',
                 'tech_stack' => 'Web Development',
-                'is_highlight' => true,
+                'is_highlight' => false,
                 'position' => 9,
             ],
 
@@ -89,7 +89,7 @@ class ProjectSeeder extends Seeder
                 'title' => 'ZNZ Handels GmbH',
                 'description' => 'Clean responsive corporate website with modern UI and mobile optimization.',
                 'tech_stack' => 'HTML • CSS',
-                'is_highlight' => true,
+                'is_highlight' => false,
                 'position' => 10,
             ],
 
@@ -97,7 +97,7 @@ class ProjectSeeder extends Seeder
                 'title' => 'DFCH Patient System',
                 'description' => 'Patient management system with registration, records, and reporting dashboard.',
                 'tech_stack' => 'Laravel',
-                'is_highlight' => true,
+                'is_highlight' => false,
                 'position' => 11,
             ],
 
@@ -113,8 +113,24 @@ class ProjectSeeder extends Seeder
                 'title' => 'Portfolio Admin Panel',
                 'description' => 'Custom admin dashboard for managing portfolio content and analytics.',
                 'tech_stack' => 'Laravel',
-                'is_highlight' => true,
+                'is_highlight' => false,
                 'position' => 13,
+            ],
+
+            [
+                'title' => 'SusthoTrack',
+                'description' => 'Healthcare platform with doctor consultation, appointments, and role-based dashboards.',
+                'tech_stack' => 'Laravel • Google OAuth • AJAX • MySQL',
+                'is_highlight' => false,
+                'position' => 14,
+            ],
+
+            [
+                'title' => 'Alamgir Art Gallery',
+                'description' => 'AJAX-based gallery with image filtering by date, month, and year without page reload.',
+                'tech_stack' => 'Laravel • AJAX • JavaScript',
+                'is_highlight' => false,
+                'position' => 15,
             ],
 
         ];

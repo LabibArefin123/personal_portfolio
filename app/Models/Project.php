@@ -15,7 +15,7 @@ class Project extends Model
         'github_url',
         'is_highlight',
         'status',
-        'position',
+        
     ];
 
     protected $casts = [
