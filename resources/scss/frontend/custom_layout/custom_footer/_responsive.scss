@@ -31,6 +31,10 @@
         line-height: 1.8;
         text-align: center !important;
         padding: 0 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .footer-title {
@@ -55,6 +59,22 @@
     .footer-contact {
         justify-content: center;
         font-size: 14px;
+    }
+
+    .footer-contact-item {
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-actions {
+        width: 100%;
+
+        a,
+        button {
+            flex: 1;
+            text-align: center;
+        }
     }
 
     .footer-social {
@@ -104,5 +124,14 @@
 
     .footer-social a {
         font-size: 18px;
+    }
+
+    .contact-value {
+        font-size: 13px;
+    }
+
+    .contact-btn {
+        font-size: 11px;
+        padding: 8px 10px;
     }
 }

@@ -1,41 +1,49 @@
-
 <div class="portfolio-topbar">
-    <div class="container d-flex justify-content-between align-items-center">
 
-        <!-- LEFT -->
-        <div class="top-info">
-            <a href="mailto:mdlabibarefin@gmail.com" class="top-link">
-                <i class="fas fa-envelope"></i>
-                mdlabibarefin@gmail.com
-            </a>
+    <div class="container">
 
-            <span class="divider">|</span>
+        <div class="topbar-inner">
 
-            <a href="tel:+8801776197999" class="top-link">
-                <i class="fas fa-phone-alt"></i>
-                +880 1776-197999
-            </a>
+            <!-- LEFT -->
+            <div class="top-info">
 
-            <span class="divider d-none d-lg-inline">|</span>
+                <a href="mailto:mdlabibarefin@gmail.com" class="top-link">
+                    <i class="fas fa-envelope"></i>
 
-            <span class="top-location d-none d-lg-inline">
-                <i class="fas fa-map-marker-alt"></i>
-                Dhaka, Bangladesh
-            </span>
-        </div>
+                    <span class="top-text">
+                        Contact Me
+                    </span>
+                </a>
 
-        <!-- RIGHT -->
-        <div class="top-social">
-            <a href="https://www.linkedin.com/in/labib-arefin" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
+                <a href="tel:+8801776197999" class="top-link d-none d-sm-flex">
+                    <i class="fas fa-phone-alt"></i>
 
-            <a href="https://github.com/LabibArefin123" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-            </a>
+                    <span class="top-text">
+                        +880 1776-197999
+                    </span>
+                </a>
 
-            <button id="langToggle" class="lang-btn">EN</button>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="top-social">
+
+                <a href="https://www.linkedin.com/in/labib-arefin" target="_blank" class="social-icon">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+                <a href="https://github.com/LabibArefin123" target="_blank" class="social-icon">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+            </div>
+
         </div>
 
     </div>
+
 </div>

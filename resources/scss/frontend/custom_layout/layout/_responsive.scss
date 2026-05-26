@@ -1,44 +1,177 @@
 @media (max-width: 991px) {
+
     :root {
-        --topbar-height: 70px;
-        --navbar-height: 65px;
+        --topbar-height: 52px;
+        --navbar-height: 68px;
     }
 
+    /* TOPBAR */
+    .portfolio-topbar {
+
+        .topbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .top-info {
+            gap: 12px;
+        }
+
+        .top-link {
+            font-size: 12px;
+        }
+    }
+
+    /* NAVBAR */
+    .navbar-dev {
+
+        .container {
+            position: relative;
+        }
+
+        .brand-name {
+            font-size: 17px;
+        }
+
+        .brand-role {
+            font-size: 11px;
+        }
+    }
+
+    /* TOGGLER */
+    .navbar-toggler {
+        border: none;
+        padding: 6px 10px;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .navbar-toggler-icon {
+        filter: invert(1);
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    /* MOBILE MENU */
     .navbar-collapse {
-        margin-top: 15px;
+
+        margin-top: 14px;
+
         background: rgba(15, 23, 42, 0.98);
+
+        border: 1px solid rgba(255, 255, 255, 0.05);
+
         border-radius: 18px;
-        padding: 20px;
+
+        padding: 18px;
+
+        backdrop-filter: blur(18px);
+
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.35);
     }
 
     .navbar-menu {
+
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+
+        gap: 6px;
 
         .nav-item {
             width: 100%;
         }
 
         .nav-link {
+
             width: 100%;
-            margin-bottom: 6px;
+
+            padding: 12px 14px;
+
+            border-radius: 12px;
+
+            font-size: 14px;
         }
+    }
+
+    .mobile-nav-cta {
+        margin-top: 14px;
     }
 }
 
 @media (max-width: 767px) {
-    .portfolio-topbar .container {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+
+    :root {
+        --topbar-height: 48px;
+        --navbar-height: 64px;
     }
 
-    .top-info,
-    .top-social {
-        justify-content: center;
+    .portfolio-topbar {
+
+        .top-link {
+            font-size: 11px;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            font-size: 13px;
+        }
     }
 
-    .divider {
+    .navbar-dev {
+
+        .brand-name {
+            font-size: 16px;
+        }
+
+        .brand-role {
+            font-size: 10px;
+        }
+    }
+
+    .nav-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .top-text {
         display: none;
+    }
+
+    .portfolio-topbar {
+
+        .top-info {
+            gap: 8px;
+        }
+    }
+
+    .navbar-dev {
+
+        .brand-name {
+            font-size: 15px;
+        }
+
+        .brand-role {
+            display: none;
+        }
+    }
+
+    .navbar-collapse {
+        padding: 16px;
+    }
+
+    .navbar-menu {
+
+        .nav-link {
+            font-size: 13px;
+            padding: 11px 12px;
+        }
     }
 }

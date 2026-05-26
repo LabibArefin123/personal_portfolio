@@ -87,16 +87,88 @@
 
                     <div class="footer-contact-box">
 
-                        <p class="footer-contact">
-                            <span>📧</span>
-                            mdlabibarefin@gmail.com
-                        </p>
+                        <div class="footer-contact-card">
 
-                        <p class="footer-contact">
-                            <span>📞</span>
-                            +880 1776197999
-                        </p>
+                            <!-- EMAIL -->
+                            <div class="footer-contact-item">
 
+                                <div class="contact-left">
+
+                                    <span class="contact-icon">
+                                        📧
+                                    </span>
+
+                                    <div>
+
+                                        <div class="contact-label">
+                                            Email Address
+                                        </div>
+
+                                        <div class="contact-value">
+                                            mdlabibarefin@gmail.com
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="contact-actions">
+
+                                    <a href="mailto:mdlabibarefin@gmail.com" class="contact-btn">
+
+                                        Send Email
+                                    </a>
+
+                                    <button class="contact-btn copy-email-btn" data-email="mdlabibarefin@gmail.com">
+
+                                        Copy
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <!-- PHONE -->
+                            <div class="footer-contact-item">
+
+                                <div class="contact-left">
+
+                                    <span class="contact-icon">
+                                        📞
+                                    </span>
+
+                                    <div>
+
+                                        <div class="contact-label">
+                                            Phone Number
+                                        </div>
+
+                                        <div class="contact-value">
+                                            +880 1776-197999
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="contact-actions">
+
+                                    <a href="tel:+8801776197999" class="contact-btn">
+
+                                        Call Me
+                                    </a>
+
+                                    <a href="https://wa.me/8801776197999" target="_blank"
+                                        class="contact-btn whatsapp-btn">
+
+                                        WhatsApp
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
 
                     <p class="footer-note">
