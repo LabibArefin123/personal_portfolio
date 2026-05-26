@@ -152,12 +152,6 @@
                                 </div>
 
                                 <div class="contact-actions">
-
-                                    <a href="tel:+8801776197999" class="contact-btn">
-
-                                        Call Me
-                                    </a>
-
                                     <a href="https://wa.me/8801776197999" target="_blank"
                                         class="contact-btn whatsapp-btn">
 

@@ -15,7 +15,7 @@
                     </span>
                 </a>
 
-                <a href="tel:+8801776197999" class="top-link d-none d-sm-flex">
+                <a href="tel:+8801776197999" class="top-link mobile-phone-link">
                     <i class="fas fa-phone-alt"></i>
 
                     <span class="top-text">

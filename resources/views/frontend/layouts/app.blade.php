@@ -108,7 +108,8 @@
     <script src="{{ asset('js/custom_frontend/fouc_load.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/aos_init.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/toaster.js') }}"></script>
-    <script src="{{ asset('js/custom_frontend/copy-email.js') }}"></script>
+    <script src="{{ asset('js/custom_frontend/copy_email.js') }}"></script>
+    <script src="{{ asset('js/custom_frontend/navbar-toggle.js') }}"></script>
 </body>
 
 </html>
