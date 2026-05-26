@@ -1,17 +1,52 @@
 <!-- =========================
      Developer Portfolio Footer
 ========================= -->
+<!-- =========================
+     FOOTER QUICK NAVIGATION
+========================= -->
+
+<div class="footer-nav-wrapper">
+
+    <div class="container">
+
+        <div class="footer-nav-links">
+
+            <a href="{{ route('project') }}">
+                Projects
+            </a>
+
+            <a href="{{ route('skills') }}">
+                Expertise
+            </a>
+
+            <a href="{{ route('about') }}">
+                About
+            </a>
+
+            <a href="{{ route('education') }}">
+                Education
+            </a>
+
+            <a href="{{ route('contact') }}">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
 
 <footer class="footer-dev">
 
     <div class="container">
 
-        <div class="row gy-5 align-items-start">
+        <div class="row gy-4 align-items-center justify-content-between">
 
             <!-- =========================
                  BRAND / INTRO
             ========================== -->
-            <div class="col-lg-5 col-md-12">
+            <div class="col-lg-7 col-md-12">
 
                 <div class="footer-brand">
 
@@ -37,56 +72,12 @@
             <!-- =========================
                  QUICK NAVIGATION
             ========================== -->
-            <div class="col-lg-3 col-md-6">
 
-                <div class="footer-widget">
-
-                    <h5 class="footer-title">
-                        Quick Navigation
-                    </h5>
-
-                    <ul class="footer-links">
-
-                        <li>
-                            <a href="{{ route('project') }}">
-                                Projects
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{ route('skills') }}">
-                                Expertise
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{ route('about') }}">
-                                About Me
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{ route('education') }}">
-                                Education
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{ route('contact') }}">
-                                Contact
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
 
             <!-- =========================
                  CONTACT
             ========================== -->
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-12">
 
                 <div class="footer-widget">
 
