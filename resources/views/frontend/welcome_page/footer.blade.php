@@ -57,8 +57,8 @@
                 </p>
 
                 <div class="footer-social">
-                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a  href="https://github.com/LabibArefin123" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/labib-arefin" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
 
