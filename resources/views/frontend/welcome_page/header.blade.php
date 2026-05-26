@@ -1,3 +1,2 @@
-@include('frontend.welcome_page.top-bar')
-@include('frontend.welcome_page.navbar')
-
+@include('frontend.custom_layout.top-bar')
+@include('frontend.custom_layout.navbar')

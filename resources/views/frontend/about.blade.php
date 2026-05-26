@@ -16,8 +16,8 @@
 
 @section('content')
 
-    @include('frontend.welcome_page.top-bar')
-    @include('frontend.welcome_page.navbar')
+    @include('frontend.custom_layout.top-bar')
+    @include('frontend.custom_layout.navbar')
 
     <section class="about-hero">
         <div class="container">
@@ -128,7 +128,7 @@
                         Identified potential issues in access control and form handling to improve system safety.
                     </p>
                 </div>
-                
+
                 <div class="exp-box">
                     <h6>UI/UX & SEO Implementation</h6>
                     <p>
@@ -167,6 +167,6 @@
         </div>
     </section>
 
-    @include('frontend.welcome_page.footer')
+    @include('frontend.custom_layout.footer')
 
 @endsection

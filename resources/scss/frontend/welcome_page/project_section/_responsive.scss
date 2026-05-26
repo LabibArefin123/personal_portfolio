@@ -1,6 +1,117 @@
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
     .projects-section {
         padding: 70px 0;
+    }
+
+    .project-image img {
+        height: 190px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .projects-section {
+        padding: 55px 0;
+    }
+
+    .section-header {
+        margin-bottom: 35px;
+
+        h2 {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .row.g-4 {
+        --bs-gutter-y: 1rem;
+    }
+
+    .project-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .project-image {
+        margin-bottom: 14px;
+
+        img {
+            height: 170px;
+            border-radius: 8px;
+        }
+    }
+
+    .project-content {
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 1.6;
+
+            -webkit-line-clamp: 2;
+        }
+    }
+
+    .tech {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .project-links {
+        margin-top: 14px !important;
+        gap: 8px;
+    }
+
+    .live-btn,
+    .github-btn,
+    .view-project-btn {
+
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .projects-section {
+        padding: 45px 0;
+    }
+
+    .project-card {
+        padding: 14px;
+    }
+
+    .project-image img {
+        height: 155px;
+    }
+
+    .project-content {
+
+        h4 {
+            font-size: 17px;
+        }
+
+        p {
+            font-size: 12.5px;
+        }
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .live-btn,
+    .github-btn,
+    .view-project-btn {
+        width: 100%;
+        text-align: center;
     }
 }
