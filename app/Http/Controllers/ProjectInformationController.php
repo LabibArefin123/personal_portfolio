@@ -90,6 +90,17 @@ class ProjectInformationController extends Controller
             ->with('success', 'Project Information Added Successfully');
     }
 
+    public function show(ProjectInformation $projectInformation)
+    {
+        $projectInformation->load('project');
+
+        return view(
+            'backend.project_section.project_information.show',
+            compact('projectInformation')
+        );
+    }
+
+
     /* =====================================================
         EDIT
     ===================================================== */

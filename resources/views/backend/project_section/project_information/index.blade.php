@@ -74,9 +74,15 @@
                             <td>
 
                                 <a href="{{ route('project-informations.edit', $info->id) }}"
-                                    class="btn btn-warning btn-sm">
+                                    class="btn btn-primary btn-sm">
 
                                     Edit
+
+                                </a>
+                                <a href="{{ route('project-informations.show', $info->id) }}"
+                                    class="btn btn-warning btn-sm">
+
+                                    View
 
                                 </a>
 

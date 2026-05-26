@@ -55,7 +55,7 @@
                     </h4>
 
                     <p class="footer-role">
-                        Full Stack Software Engineer
+                        FullStack Developer & Software Engineer
                     </p>
 
                     <p class="footer-desc">
