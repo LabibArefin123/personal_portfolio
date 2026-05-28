@@ -39,7 +39,7 @@
 
                 <li class="nav-item">
                     <a href="{{ route('welcome') }}"
-                       class="nav-link active">
+                       class="nav-link">
 
                         Home
                     </a>

@@ -1,18 +1,124 @@
 // =============================
 // RESPONSIVE
 // =============================
+@media (max-width: 1200px) {
+
+    .project-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
 @media (max-width: 768px) {
 
     .project-hero {
-        padding: 100px 0 60px;
+
+        padding: 90px 0 50px;
     }
 
     .project-hero h1 {
-        font-size: 28px;
+
+        font-size: 32px;
     }
 
-    .project-card {
-        padding: 16px;
+    .project-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 14px;
     }
 
+    .project-image img {
+
+        height: 130px;
+    }
+
+    .project-content {
+
+        padding: 14px;
+    }
+
+    .project-content h4 {
+
+        font-size: 15px;
+
+        margin-bottom: 8px;
+    }
+
+    .project-content p {
+
+        font-size: 11px;
+
+        line-height: 1.5;
+
+        -webkit-line-clamp: 2;
+
+        margin-bottom: 10px;
+    }
+
+    .project-tag {
+
+        font-size: 9px;
+
+        padding: 4px 8px;
+    }
+
+    .tech {
+
+        font-size: 10px;
+
+        margin-bottom: 12px;
+    }
+
+    .view-project-btn {
+
+        padding: 9px 10px;
+
+        font-size: 11px;
+
+        border-radius: 10px;
+    }
+}
+
+
+/* =========================================
+   EXTRA SMALL DEVICES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .projects-section .container {
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .project-grid {
+
+        gap: 10px;
+    }
+
+    .project-image img {
+
+        height: 115px;
+    }
+
+    .project-content {
+
+        padding: 12px;
+    }
+
+    .project-content h4 {
+
+        font-size: 14px;
+    }
+
+    .project-content p {
+
+        font-size: 10px;
+    }
 }

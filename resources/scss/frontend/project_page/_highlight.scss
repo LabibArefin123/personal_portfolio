@@ -1,19 +1,32 @@
-// =============================
-// HIGHLIGHT PROJECT
-// =============================
+/* =========================================
+   FEATURED PROJECT
+========================================= */
+
 .project-card.highlight {
+
     border: 1px solid rgba(99, 102, 241, 0.4);
 
     &::before {
+
         content: "Featured";
+
         position: absolute;
+
         top: 12px;
         right: 12px;
-        font-size: 11px;
-        background: $accent;
+
+        font-size: 10px;
+
+        background: #6366f1;
+
         color: #fff;
-        padding: 4px 8px;
-        border-radius: 20px;
-        font-weight: 500;
+
+        padding: 5px 10px;
+
+        border-radius: 30px;
+
+        z-index: 20;
+
+        font-weight: 600;
     }
 }
