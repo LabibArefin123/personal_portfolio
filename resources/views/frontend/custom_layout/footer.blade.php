@@ -41,11 +41,9 @@
 
     <div class="container">
 
-        <div class="row gy-4 align-items-center justify-content-between">
+        <div class="row gy-4 align-items-start justify-content-between">
 
-            <!-- =========================
-                 BRAND / INTRO
-            ========================== -->
+            <!-- LEFT -->
             <div class="col-lg-7 col-md-12">
 
                 <div class="footer-brand">
@@ -60,23 +58,15 @@
 
                     <p class="footer-desc">
                         I build scalable and production-ready software systems using Laravel and
-                        modern web technologies. My expertise includes POS, CRM, ERP, Tender
-                        Management, Business Automation, API Integration, and performance-focused
-                        enterprise solutions with clean architecture and real-world reliability.
+                        modern web technologies including ERP, CRM, POS, API Integration,
+                        Business Automation, and enterprise-grade software solutions.
                     </p>
 
                 </div>
 
             </div>
 
-            <!-- =========================
-                 QUICK NAVIGATION
-            ========================== -->
-
-
-            <!-- =========================
-                 CONTACT
-            ========================== -->
+            <!-- RIGHT -->
             <div class="col-lg-4 col-md-12">
 
                 <div class="footer-widget">
@@ -85,89 +75,81 @@
                         Let’s Connect
                     </h5>
 
-                    <div class="footer-contact-box">
+                    <div class="footer-contact-card">
 
-                        <div class="footer-contact-card">
+                        <!-- EMAIL -->
+                        <div class="footer-contact-item">
 
-                            <!-- EMAIL -->
-                            <div class="footer-contact-item">
+                            <div class="contact-left">
 
-                                <div class="contact-left">
+                                <span class="contact-icon">
+                                    📧
+                                </span>
 
-                                    <span class="contact-icon">
-                                        📧
-                                    </span>
+                                <div>
 
-                                    <div>
-
-                                        <div class="contact-label">
-                                            Email Address
-                                        </div>
-
-                                        <div class="contact-value">
-                                            mdlabibarefin@gmail.com
-                                        </div>
-
+                                    <div class="contact-label">
+                                        Email
                                     </div>
 
-                                </div>
-
-                                <div class="contact-actions">
-
-                                    <a href="mailto:mdlabibarefin@gmail.com" class="contact-btn">
-
-                                        Send Email
-                                    </a>
-
-                                    <button class="contact-btn copy-email-btn" data-email="mdlabibarefin@gmail.com">
-
-                                        Copy
-                                    </button>
+                                    <div class="contact-value">
+                                        mdlabibarefin@gmail.com
+                                    </div>
 
                                 </div>
 
                             </div>
 
-                            <!-- PHONE -->
-                            <div class="footer-contact-item">
+                            <div class="contact-actions">
 
-                                <div class="contact-left">
+                                <a href="mailto:mdlabibarefin@gmail.com" class="contact-btn">
 
-                                    <span class="contact-icon">
-                                        📞
-                                    </span>
-
-                                    <div>
-
-                                        <div class="contact-label">
-                                            Phone Number
-                                        </div>
-
-                                        <div class="contact-value">
-                                            +880 1776-197999
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="contact-actions">
-                                    <a href="https://wa.me/8801776197999" target="_blank"
-                                        class="contact-btn whatsapp-btn">
-
-                                        WhatsApp
-                                    </a>
-
-                                </div>
+                                    Email
+                                </a>
 
                             </div>
 
                         </div>
+
+                        <!-- PHONE -->
+                        <div class="footer-contact-item">
+
+                            <div class="contact-left">
+
+                                <span class="contact-icon">
+                                    📞
+                                </span>
+
+                                <div>
+
+                                    <div class="contact-label">
+                                        Phone
+                                    </div>
+
+                                    <div class="contact-value">
+                                        +880 1776-197999
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="contact-actions">
+
+                                <a href="https://wa.me/8801776197999" target="_blank" class="contact-btn whatsapp-btn">
+
+                                    WhatsApp
+                                </a>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
                     <p class="footer-note">
                         Available for freelance projects, remote opportunities,
-                        and full-time software engineering roles.
+                        and full-time engineering roles.
                     </p>
 
                     <div class="footer-social">
@@ -191,7 +173,6 @@
             </div>
 
         </div>
-
         <!-- =========================
              FOOTER BOTTOM
         ========================== -->

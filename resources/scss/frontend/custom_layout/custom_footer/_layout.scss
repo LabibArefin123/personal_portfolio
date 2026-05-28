@@ -1,5 +1,17 @@
 .footer-dev {
     background: #0f172a;
     color: #cbd5f5;
-padding: 28px 0 15px;
+    padding: 22px 0 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-dev::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, #6366f1, transparent);
 }
