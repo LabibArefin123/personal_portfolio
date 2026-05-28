@@ -28,25 +28,155 @@
     <div class="card">
         <div class="card-body">
             <!-- Add Permission Form -->
-            <form method="POST" action="{{ route('permissions.store') }}">
-                @csrf
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <h5 class="card-title mb-0">Add New Permission</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group mb-3">
-                            <label for="name">Permission Name <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="name" value="{{ old('name') }}"
-                                placeholder="Enter permission name" required>
+            <div class="card permission-generator-card mb-4">
+
+                <div class="card-header bg-white border-0">
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+                        <div>
+
+                            <h5 class="mb-1 fw-bold">
+
+                                Smart Permission Generator
+
+                            </h5>
+
+                            <small class="text-muted">
+
+                                Type resource name to auto generate permissions
+
+                            </small>
+
                         </div>
+
+                        <div class="permission-counter-badge">
+
+                            <span id="permissionSelectedCount">
+
+                                0
+
+                            </span>
+
+                            Selected
+
+                        </div>
+
                     </div>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Save Permission</button>
-                    </div>
+
                 </div>
+
+                <div class="card-body">
+
+                    <div class="form-group">
+
+                        <label class="fw-semibold">
+
+                            Resource Name
+
+                        </label>
+
+                        <input type="text" id="permissionResourceInput" class="form-control permission-input"
+                            placeholder="Example: users, roles, products">
+
+                    </div>
+
+                    <!-- SELECTED PERMISSIONS -->
+
+                    <div id="selectedPermissionWrapper" class="selected-permission-wrapper mt-4">
+
+                    </div>
+
+                </div>
+
+                <div class="card-footer bg-white border-0 text-end">
+
+                    <button type="button" id="saveAllPermissions" class="btn btn-primary save-final-btn d-none">
+
+                        <i class="fas fa-save"></i>
+
+                        Save Permissions
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- HIDDEN FORM -->
+
+            <form method="POST" action="{{ route('permissions.store') }}" id="permissionSaveForm">
+
+                @csrf
+
+                <div id="generatedPermissionInputs"></div>
+
             </form>
 
+            <!-- MODAL -->
+
+            <div class="modal fade" id="permissionGeneratorModal" tabindex="-1">
+
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+
+                    <div class="modal-content permission-modal-content">
+
+                        <div class="modal-header border-0">
+
+                            <div>
+
+                                <h5 class="modal-title fw-bold">
+
+                                    Generated Permissions
+
+                                </h5>
+
+                                <small class="text-muted">
+
+                                    Select permissions you want to add
+
+                                </small>
+
+                            </div>
+
+                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+
+                            </button>
+
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div id="generatedPermissionList" class="generated-permission-list">
+
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer border-0">
+
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+
+                                Cancel
+                            </button>
+
+                            <button type="button" class="btn btn-primary" id="addSelectedPermissions">
+
+                                <i class="fas fa-check-circle"></i>
+
+                                Add Selected Permissions
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <script>
+                window.existingPermissions = @json(\Spatie\Permission\Models\Permission::pluck('name'));
+            </script>
             <!-- Permissions Table -->
             <table id="dataTables" class="table table-bordered table-striped">
                 <thead>
@@ -86,13 +216,14 @@
             </table>
         </div>
     </div>
-    <div class="card mt-4">
-        <div class="card-body" style="height:50px;">
-            <!-- spacing card -->
-        </div>
-    </div>
 @stop
 @section('js')
+    <script src="{{ asset('js/custom_backend/setting_management/permission/create_page/generator-core.js') }}"></script>
+
+    <script src="{{ asset('js/custom_backend/setting_management/permission/create_page/generator-save.js') }}"></script>
+
+    <script src="{{ asset('js/custom_backend/setting_management/permission/create_page/generator-ui.js') }}"></script>
+
     <script>
         $(document).ready(function() {
             let lastChecked = null;

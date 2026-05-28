@@ -13,6 +13,7 @@ use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SystemProblemController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ProjectInformationController;
 
 
@@ -67,6 +68,7 @@ Route::group(['middleware' => ['auth', 'permission']], function () {
     // Gallery Routes
     Route::resource('galleries', GalleryController::class);
 
+    Route::resource('projects', ProjectController::class);
     Route::resource('project-informations', ProjectInformationController::class);
 
     //Profile Section
