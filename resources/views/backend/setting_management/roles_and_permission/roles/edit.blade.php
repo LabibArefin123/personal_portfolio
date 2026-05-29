@@ -1,248 +1,260 @@
+
 @extends('adminlte::page')
 
 @section('title', 'Edit Role')
 
-@section('css')
-
-<link rel="stylesheet"
-      href="{{ asset('css/backend/setting_management/roles/edit_page/edit.css') }}">
-
-@stop
-
 @section('content_header')
+    <div class="d-flex justify-content-between">
+        <h1>Edit Role</h1>
 
-<div class="role-header-wrapper">
+        <a href="{{ route('roles.index') }}" class="btn btn-sm btn-secondary d-flex align-items-center gap-2 back-btn">
 
-    <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
 
-        <h1 class="role-page-title">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
 
-            Edit Role
+                <polyline points="12 19 5 12 12 5"></polyline>
 
-        </h1>
+            </svg>
 
-        <p class="role-page-subtitle">
-
-            Manage role permissions and access access rules
-
-        </p>
-
+            Back
+        </a>
     </div>
-
-    <a href="{{ route('roles.index') }}"
-       class="btn btn-dark back-role-btn">
-
-        <i class="fas fa-arrow-left"></i>
-
-        Back
-    </a>
-
-</div>
-
 @stop
 
 @section('content')
 
-@if ($errors->any())
+    @if ($errors->any())
 
-    <div class="alert alert-danger shadow-sm border-0">
+        <div class="alert alert-danger">
 
-        <ul class="mb-0">
+            <ul class="mb-0">
 
-            @foreach ($errors->all() as $error)
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
 
-                <li>{{ $error }}</li>
+            </ul>
 
-            @endforeach
+        </div>
 
-        </ul>
+    @endif
 
-    </div>
+    <form method="POST" action="{{ route('roles.update', $role->id) }}">
 
-@endif
+        @csrf
+        @method('PUT')
 
-<form method="POST"
-      action="{{ route('roles.update', $role->id) }}">
+        <!-- ROLE NAME -->
 
-    @csrf
-    @method('PUT')
+        <div class="form-group">
 
-    <!-- ROLE CARD -->
+            <label for="name">
 
-    <div class="card role-main-card border-0 shadow-sm">
+                Role Name
 
-        <div class="card-body">
+            </label>
 
-            <div class="mb-4">
+            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
+                value="{{ old('name', $role->name) }}">
 
-                <label class="form-label fw-semibold">
+            @error('name')
+                <small class="text-danger">
 
-                    Role Name
+                    {{ $message }}
 
-                </label>
+                </small>
+            @enderror
 
-                <input type="text"
-                       name="name"
-                       class="form-control role-input"
-                       value="{{ old('name', $role->name) }}">
+        </div>
 
-            </div>
+        <!-- PERMISSION GROUPS -->
 
-            <!-- TOOLBAR -->
+        @foreach ($groupedPermissions as $group => $groupPermissions)
+            <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-2">
 
-            <div class="permission-toolbar">
+                <h5 class="text-primary mb-0 text-uppercase">
 
-                <div class="permission-selected-info">
+                    {{ ucfirst($group) }}
 
-                    <span id="selectedCount">
+                </h5>
 
-                        0
+                <div class="d-flex gap-2">
 
-                    </span>
-
-                    permissions selected
-
-                </div>
-
-                <div class="permission-toolbar-actions">
-
-                    <button type="button"
-                            class="btn btn-primary btn-sm"
-                            id="selectAllPermissions">
-
-                        <i class="fas fa-check-circle"></i>
+                    <button type="button" class="btn btn-sm btn-outline-primary select-all-btn"
+                        data-group="{{ $group }}">
 
                         Select All
                     </button>
 
-                    <button type="button"
-                            class="btn btn-outline-danger btn-sm"
-                            id="unselectAllPermissions">
+                    <button type="button" class="btn btn-sm btn-outline-danger unselect-all-btn"
+                        data-group="{{ $group }}">
 
-                        <i class="fas fa-times-circle"></i>
-
-                        Clear
+                        Unselect All
                     </button>
 
                 </div>
 
             </div>
 
-          
+            <div class="card shadow-lg mt-2 border-0">
 
-            <!-- SCROLLABLE CONTAINER -->
+                <div class="card-body">
 
-            <div class="permission-scroll-container">
+                    <div class="row">
 
-                @foreach ($groupedPermissions as $group => $groupPermissions)
+                        @foreach ($groupPermissions as $permission)
+                            <div class="col-xl-3 col-lg-4 col-md-6 mb-2">
 
-                    <div class="permission-group">
+                                <div class="form-check permission-check-wrapper">
 
-                        <div class="permission-group-header">
+                                    <input type="checkbox" name="permissions[]" value="{{ $permission->name }}"
+                                        class="form-check-input perm-{{ $group }}"
+                                        id="permission_{{ md5($permission->name) }}"
+                                        {{ in_array($permission->name, $rolePermissions) ? 'checked' : '' }}>
 
-                            <div>
+                                    <label class="form-check-label permission-label"
+                                        for="permission_{{ md5($permission->name) }}">
 
-                                <h5>
-
-                                    {{ ucfirst($group) }}
-
-                                </h5>
-
-                                <small>
-
-                                    {{ count($groupPermissions) }} Permissions
-
-                                </small>
-
-                            </div>
-
-                            <div class="d-flex gap-2">
-
-                                <button type="button"
-                                        class="btn btn-sm btn-outline-primary select-group-btn"
-                                        data-group="{{ $group }}">
-
-                                    Select
-                                </button>
-
-                                <button type="button"
-                                        class="btn btn-sm btn-outline-danger unselect-group-btn"
-                                        data-group="{{ $group }}">
-
-                                    Clear
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-
-                            @foreach ($groupPermissions as $permission)
-
-                                <div class="col-xl-3 col-lg-4 col-md-6 mb-3">
-
-                                    <label class="permission-card">
-
-                                        <input type="checkbox"
-                                               name="permissions[]"
-                                               value="{{ $permission->name }}"
-                                               class="permission-checkbox perm-all perm-{{ $group }}"
-                                               data-name="{{ $permission->name }}"
-                                               {{ in_array($permission->name, $rolePermissions) ? 'checked' : '' }}>
-
-                                        <div class="permission-card-inner">
-
-                                           
-
-                                            <div class="permission-content">
-
-                                                <div class="permission-title">
-
-                                                    {{ $permission->name }}
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
+                                        {{ $permission->name }}
 
                                     </label>
 
                                 </div>
 
-                            @endforeach
-
-                        </div>
+                            </div>
+                        @endforeach
 
                     </div>
 
-                @endforeach
+                </div>
 
             </div>
+        @endforeach
 
-            <div class="text-end mt-4">
+        <div class="text-end mt-4">
 
-                <button type="submit"
-                        class="btn btn-success role-submit-btn">
+            <button type="submit" class="btn btn-success px-4">
 
-                    <i class="fas fa-save"></i>
+                <i class="fas fa-save me-1"></i>
 
-                    Update Role
-                </button>
-
-            </div>
+                Update Role
+            </button>
 
         </div>
 
-    </div>
+    </form>
 
-</form>
+@stop
+
+@section('css')
+
+    <style>
+        .back-btn {
+            border-radius: 10px;
+        }
+
+        .form-control {
+            height: 48px;
+            border-radius: 10px;
+        }
+
+        .card {
+            border-radius: 16px;
+        }
+
+        .permission-check-wrapper {
+
+            background: #f8fafc;
+
+            padding: 12px 14px;
+
+            border-radius: 12px;
+
+            border: 1px solid #e2e8f0;
+
+            transition: 0.25s ease;
+        }
+
+        .permission-check-wrapper:hover {
+
+            border-color: #0d6efd;
+
+            background: #eff6ff;
+        }
+
+        .permission-label {
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            cursor: pointer;
+
+            margin-left: 6px;
+
+            word-break: break-word;
+        }
+
+        .form-check-input {
+
+            cursor: pointer;
+        }
+
+        .btn {
+
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+
+            .permission-label {
+
+                font-size: 13px;
+            }
+
+            .permission-check-wrapper {
+
+                padding: 10px 12px;
+            }
+        }
+    </style>
 
 @stop
 
 @section('js')
 
-<script src="{{ asset('js/custom_backend/setting_management/roles/edit_page/edit.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelectorAll('.select-all-btn').forEach(btn => {
+
+                btn.addEventListener('click', function() {
+
+                    const group = this.getAttribute('data-group');
+
+                    document.querySelectorAll(`.perm-${group}`)
+                        .forEach(cb => cb.checked = true);
+
+                });
+
+            });
+
+            document.querySelectorAll('.unselect-all-btn').forEach(btn => {
+
+                btn.addEventListener('click', function() {
+
+                    const group = this.getAttribute('data-group');
+
+                    document.querySelectorAll(`.perm-${group}`)
+                        .forEach(cb => cb.checked = false);
+
+                });
+
+            });
+
+        });
+    </script>
 
 @stop

@@ -17,17 +17,27 @@ class PermissionController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:permissions,name',
-            'group' => 'nullable|string|max:255'
+            'permissions' => 'required|array',
+            'permissions.*' => 'required|string|unique:permissions,name'
         ]);
 
-        Permission::create([
-            'name' => $request->name,
-            'group' => $request->group,
-            'guard_name' => 'web',
-        ]);
+        $savedPermissions = [];
 
-        return redirect()->route('permissions.index')->with('success', 'Permission created successfully.');
+        foreach ($request->permissions as $permissionName) {
+
+            $permission = Permission::create([
+                'name' => $permissionName,
+                'guard_name' => 'web',
+            ]);
+
+            $savedPermissions[] = $permission->name;
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Permissions created successfully.',
+            'permissions' => $savedPermissions
+        ]);
     }
 
     public function assignPermissionToRole(Request $request)

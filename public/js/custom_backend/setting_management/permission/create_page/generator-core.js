@@ -2,17 +2,6 @@ window.selectedPermissions = [];
 
 window.generatedPermissions = [];
 
-const crudActions = [
-    "view",
-    "create",
-    "edit",
-    "delete",
-    "show",
-    "status",
-    "index",
-    "manage",
-];
-
 const resourceInput = document.getElementById("permissionResourceInput");
 
 const generatedPermissionList = document.getElementById(
@@ -23,10 +12,6 @@ const selectedPermissionWrapper = document.getElementById(
     "selectedPermissionWrapper",
 );
 
-const generatedPermissionInputs = document.getElementById(
-    "generatedPermissionInputs",
-);
-
 const selectedCount = document.getElementById("permissionSelectedCount");
 
 const saveAllButton = document.getElementById("saveAllPermissions");
@@ -35,15 +20,36 @@ const modal = new bootstrap.Modal(
     document.getElementById("permissionGeneratorModal"),
 );
 
-resourceInput.addEventListener("keyup", function () {
-    const value = this.value.trim().toLowerCase();
+/* =========================================
+   RESOURCE ACTIONS
+========================================= */
 
-    if (!value.endsWith("s")) {
+const resourceActions = [
+    "index",
+    "create",
+    "store",
+    "show",
+    "edit",
+    "update",
+    "destroy",
+    "delete",
+    "status",
+    "manage",
+];
+
+/* =========================================
+   GENERATE PERMISSIONS
+========================================= */
+
+resourceInput.addEventListener("keyup", function () {
+    const resource = this.value.trim().toLowerCase();
+
+    if (resource.length < 2) {
         return;
     }
 
-    generatedPermissions = crudActions.map((action) => {
-        return `${action} ${value}`;
+    generatedPermissions = resourceActions.map((action) => {
+        return `${resource}.${action}`;
     });
 
     generatedPermissions = generatedPermissions.filter((permission) => {
@@ -55,8 +61,26 @@ resourceInput.addEventListener("keyup", function () {
     modal.show();
 });
 
+/* =========================================
+   RENDER GENERATED
+========================================= */
+
 function renderGeneratedPermissions() {
     generatedPermissionList.innerHTML = "";
+
+    if (generatedPermissions.length === 0) {
+        generatedPermissionList.innerHTML = `
+
+            <div class="alert alert-warning mb-0">
+
+                All permissions already exist.
+
+            </div>
+
+        `;
+
+        return;
+    }
 
     generatedPermissions.forEach((permission) => {
         generatedPermissionList.innerHTML += `
@@ -71,11 +95,11 @@ function renderGeneratedPermissions() {
 
                     <div class="generated-circle"></div>
 
-                    <span>
+                    <div class="permission-text-group">
 
-                        ${permission}
+                        <strong>${permission}</strong>
 
-                    </span>
+                    </div>
 
                 </div>
 

@@ -35,7 +35,7 @@ Route::get('/skills', [WelcomePageController::class, 'skills'])->name('skills');
 Route::get('/service', [WelcomePageController::class, 'service'])->name('service');
 
 //Project Section
-Route::get('/projects', [WelcomePageController::class, 'projects'])->name('project');
+Route::get('/my_projects', [WelcomePageController::class, 'projects'])->name('project');
 Route::get('/project/{id}', [WelcomePageController::class, 'project_show'])->name('project.show');
 
 //Education Section

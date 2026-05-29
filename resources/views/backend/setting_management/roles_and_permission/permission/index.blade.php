@@ -216,12 +216,12 @@
             </table>
         </div>
     </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 @stop
 @section('js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="{{ asset('js/custom_backend/setting_management/permission/create_page/generator-core.js') }}"></script>
-
     <script src="{{ asset('js/custom_backend/setting_management/permission/create_page/generator-save.js') }}"></script>
-
     <script src="{{ asset('js/custom_backend/setting_management/permission/create_page/generator-ui.js') }}"></script>
 
     <script>
