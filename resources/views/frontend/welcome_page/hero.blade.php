@@ -1,75 +1,99 @@
-<!-- LEFT CONTENT -->
 <section class="hero-section">
     <div class="container">
-        <div class="row align-items-center">
-            <!-- LEFT CONTENT -->
-            <div class="col-lg-7 hero-content">
+        <div class="row align-items-center gy-5">
 
-                <h2 class="hero-title">
-                    Hi, I'm <span class="robot-text" id="robotText">Labib Arefin</span>
-                </h2>
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-7 order-2 order-lg-1 hero-content">
+
+                <span class="hero-badge">
+                    🚀 Available For Freelance & Full-Time Projects
+                </span>
+
+                <h1 class="hero-title">
+                    Hi, I'm
+                    <span class="robot-text" id="robotText">
+                        Labib Arefin
+                    </span>
+                </h1>
 
                 <h2 class="hero-subtitle">
-                    Full Stack Developer & Software Engineer
+                    Full Stack Developer &
+                    Software Engineer
                 </h2>
 
                 <p class="hero-description">
-                    I build scalable business applications using Laravel,
-                    with experience across frontend and backend technologies
-                    including React and API integration.
+                    I build modern web applications, enterprise solutions,
+                    biometric integrations and scalable APIs using Laravel,
+                    React, MySQL and modern development practices.
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="#projects" class="btn hero-btn-primary">
+                    <a href="#projects" class="hero-btn-primary">
                         🚀 View Projects
                     </a>
 
-                    <!-- CV WRAPPER -->
                     <div class="cv-wrapper">
-                        <a href="{{ asset('files/CV_Labib.pdf') }}" target="_blank" class="btn hero-btn-outline">
-                            👁️ View CV
+
+                        <a href="{{ asset('files/CV_Labib.pdf') }}"
+                            target="_blank"
+                            class="hero-btn-outline">
+                            👁 View CV
                         </a>
 
-                        <a href="{{ asset('files/CV_Labib.pdf') }}" download class="cv-download">
+                        <a href="{{ asset('files/CV_Labib.pdf') }}"
+                            download
+                            class="cv-download">
                             ⬇
                         </a>
+
                     </div>
 
                 </div>
 
-                <!-- TECH TAGS -->
                 <div class="hero-tech">
                     <span>Laravel</span>
+                    <span>React</span>
                     <span>API Integration</span>
                     <span>MySQL</span>
-                    <span>React (App Developer)</span>
+                    <span>Expo</span>
+                    <span>Biometric Systems</span>
                 </div>
 
             </div>
 
-            <!-- RIGHT CONTENT -->
-            <div class="col-lg-5 hero-image">
-                <div class="hero-card-stack">
+            <!-- RIGHT IMAGE -->
+            <div class="col-lg-5 order-1 order-lg-2">
 
-                    <div class="hero-card third-card">
-                        <img src="{{ asset('uploads/images/about/developer3.jpg') }}" alt="Developer 3">
-                    </div>
+                <div class="hero-image">
 
-                    <div class="hero-card second-card">
-                        <img src="{{ asset('uploads/images/about/developer.jpg') }}" alt="Developer">
-                    </div>
+                    <div class="hero-card-stack">
 
-                    <div class="hero-card main-card">
-                        <img src="{{ asset('uploads/images/about/developer2.jpg') }}" alt="Developer 2">
-                    </div>
+                        <div class="hero-card third-card">
+                            <img src="{{ asset('uploads/images/about/developer3.jpg') }}">
+                        </div>
 
-                    <div class="hero-floating-box">
-                        <h5>3+ Years Experience</h5>
-                        <p>Laravel systems • API integration • Exploring mobile apps with Expo</p>
+                        <div class="hero-card second-card">
+                            <img src="{{ asset('uploads/images/about/developer.jpg') }}">
+                        </div>
+
+                        <div class="hero-card main-card">
+                            <img src="{{ asset('uploads/images/about/developer2.jpg') }}">
+                        </div>
+
+                        <div class="hero-floating-box">
+                            <h5>3+ Years Experience</h5>
+                            <p>
+                                Laravel • APIs • React • Mobile Apps
+                            </p>
+                        </div>
+
                     </div>
 
                 </div>
+
             </div>
+
         </div>
+    </div>
 </section>
