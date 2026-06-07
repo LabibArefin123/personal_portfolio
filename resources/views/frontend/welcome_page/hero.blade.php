@@ -57,7 +57,6 @@
                     <span>API Integration</span>
                     <span>MySQL</span>
                     <span>Expo</span>
-                    <span>Biometric Systems</span>
                 </div>
 
             </div>

@@ -42,8 +42,24 @@ class WelcomePageController extends Controller
 
     public function project_show($id)
     {
-        $project = Project::with('information')
-            ->findOrFail($id);
+        $project = Project::with('information')->findOrFail($id);
+
+        $info = $project->information;
+
+        if ($info) {
+
+            $info->project_images = is_array($info->project_images)
+                ? $info->project_images
+                : json_decode($info->project_images ?? '[]', true);
+
+            $info->custom_features = is_array($info->custom_features)
+                ? $info->custom_features
+                : json_decode($info->custom_features ?? '[]', true);
+
+            $info->project_languages = is_array($info->project_languages)
+                ? $info->project_languages
+                : json_decode($info->project_languages ?? '[]', true);
+        }
 
         return view('frontend.project_page.show', compact('project'));
     }
