@@ -15,7 +15,7 @@
                 Projects
             </a>
 
-            <a href="{{ route('skills') }}">
+            <a href="{{ route('skill') }}">
                 Expertise
             </a>
 

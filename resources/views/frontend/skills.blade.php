@@ -26,69 +26,39 @@
 
             <div class="row g-4">
 
-                <!-- BACKEND -->
-                <div class="col-md-6">
-                    <div class="skill-card">
-                        <h3>Backend & Systems</h3>
+                @forelse($skills as $category => $categorySkills)
 
-                        @foreach ([['Laravel', 95], ['PHP', 90], ['API Development & Integration', 88], ['Authentication & Authorization', 85]] as $skill)
-                            <div class="skill">
-                                <span>{{ $skill[0] }}</span>
-                                <div class="progress">
-                                    <div style="width: {{ $skill[1] }}%"></div>
+                    <div class="col-md-6">
+
+                        <div class="skill-card">
+
+                            <h3>{{ $category }}</h3>
+
+                            @foreach ($categorySkills as $skill)
+                                <div class="skill">
+
+                                    <span>{{ $skill->name }}</span>
+
+                                    <div class="progress">
+
+                                        <div style="width: {{ $skill->percentage }}%"></div>
+
+                                    </div>
+
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+
+                        </div>
+
                     </div>
-                </div>
 
-                <!-- FRONTEND -->
-                <div class="col-md-6">
-                    <div class="skill-card">
-                        <h3>Frontend Development</h3>
+                @empty
 
-                        @foreach ([['JavaScript', 85], ['jQuery', 90], ['Bootstrap', 92], ['Tailwind CSS', 80]] as $skill)
-                            <div class="skill">
-                                <span>{{ $skill[0] }}</span>
-                                <div class="progress">
-                                    <div style="width: {{ $skill[1] }}%"></div>
-                                </div>
-                            </div>
-                        @endforeach
+                    <div class="col-12 text-center">
+                        <p>No skills found.</p>
                     </div>
-                </div>
 
-                <!-- DATABASE -->
-                <div class="col-md-6">
-                    <div class="skill-card">
-                        <h3>Database & Structure</h3>
-
-                        @foreach ([['MySQL', 90], ['Database Design', 85]] as $skill)
-                            <div class="skill">
-                                <span>{{ $skill[0] }}</span>
-                                <div class="progress">
-                                    <div style="width: {{ $skill[1] }}%"></div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-
-                <!-- TOOLS -->
-                <div class="col-md-6">
-                    <div class="skill-card">
-                        <h3>Tools & Engineering Practice</h3>
-
-                        @foreach ([['Git & GitHub', 85], ['AJAX', 88], ['System Testing & Debugging', 82], ['Basic Security (Validation & Flow Testing)', 75], ['SEO (Optional Implementation)', 70]] as $skill)
-                            <div class="skill">
-                                <span>{{ $skill[0] }}</span>
-                                <div class="progress">
-                                    <div style="width: {{ $skill[1] }}%"></div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
+                @endforelse
 
             </div>
 

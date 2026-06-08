@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use App\Models\Project;
 use App\Models\User;
 
 class DashboardController extends Controller
@@ -20,8 +21,16 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
 
-       
-        return view('backend.dashboard');
+        $projectCount = Project::count();
+
+        $featuredProjects = Project::where('is_highlight', 1)->count();
+
+        $activeProjects = Project::where('status', 1)->count();
+        return view('backend.dashboard', compact(
+            'projectCount',
+            'featuredProjects',
+            'activeProjects'
+        ));
     }
 
 

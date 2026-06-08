@@ -13,6 +13,7 @@ use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SystemProblemController;
+use App\Http\Controllers\SkillController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ProjectInformationController;
 
@@ -29,7 +30,7 @@ Route::get('/about', [WelcomePageController::class, 'about'])->name('about');
 Route::get('/faq', [WelcomePageController::class, 'faq'])->name('faq');
 
 //Skills Section
-Route::get('/skills', [WelcomePageController::class, 'skills'])->name('skills');
+Route::get('/skill', [WelcomePageController::class, 'skills'])->name('skill');
 
 //Service Section
 Route::get('/service', [WelcomePageController::class, 'service'])->name('service');
@@ -70,6 +71,7 @@ Route::group(['middleware' => ['auth', 'permission']], function () {
 
     Route::resource('projects', ProjectController::class);
     Route::resource('project-informations', ProjectInformationController::class);
+    Route::resource('skills', SkillController::class);
 
     //Profile Section
     Route::get('/user_profile', [ProfileController::class, 'user_profile_show'])->name('user_profile_show');

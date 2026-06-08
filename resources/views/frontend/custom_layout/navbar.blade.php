@@ -54,7 +54,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('skills') }}"
+                    <a href="{{ route('skill') }}"
                        class="nav-link">
 
                         Expertise

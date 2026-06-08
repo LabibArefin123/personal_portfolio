@@ -137,6 +137,8 @@ class ProjectController extends Controller
             'image'         => 'nullable|image|mimes:jpg,jpeg,png,webp|max:4096',
             'live_url'      => 'nullable|url',
             'github_url'    => 'nullable|url',
+            'is_highlight'  => 'required|boolean',
+            'status'        => 'required|boolean',
         ]);
 
         $imagePath = $project->image;
@@ -194,9 +196,10 @@ class ProjectController extends Controller
 
             'github_url'    => $request->github_url,
 
-            'is_highlight'  => $request->has('is_highlight'),
+            'is_highlight'  => (bool) $request->is_highlight,
 
-            'status'        => $request->has('status'),
+            'status'        => (bool) $request->status,
+
         ]);
 
         return redirect()

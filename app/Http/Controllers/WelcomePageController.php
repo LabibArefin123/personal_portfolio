@@ -11,6 +11,7 @@ use App\Models\Gallery;
 use App\Models\ContactRequest;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Models\Skill;
 use App\Models\Project;
 
 class WelcomePageController extends Controller
@@ -18,13 +19,20 @@ class WelcomePageController extends Controller
     public function index()
     {
         $projects = Project::where('status', 1)
-            ->orderByDesc('is_highlight') // highlight first
+            ->orderByDesc('is_highlight')
             ->orderBy('position')
             ->get();
 
-        return view('frontend.welcome', compact('projects'));
-    }
+        $skills = Skill::where('status', 1)
+            ->orderBy('position')
+            ->get()
+            ->groupBy('category');
 
+        return view('frontend.welcome', compact(
+            'projects',
+            'skills'
+        ));
+    }
     public function about()
     {
         return view('frontend.about');
@@ -71,7 +79,12 @@ class WelcomePageController extends Controller
 
     public function skills()
     {
-        return view('frontend.skills');
+        $skills = Skill::where('status', 1)
+            ->orderBy('position')
+            ->get()
+            ->groupBy('category');
+
+        return view('frontend.skills', compact('skills'));
     }
 
     public function faq()

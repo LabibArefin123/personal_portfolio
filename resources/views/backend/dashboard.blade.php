@@ -30,42 +30,69 @@
         </div>
 
         {{-- Quick Info Cards --}}
-        <div class="row g-4"> {{-- g-4 adds consistent spacing --}}
+        <div class="row">
 
             <div class="col-md-4">
-                <div class="card text-center shadow-sm h-100 card-hover">
-                    <div class="card-body d-flex flex-column justify-content-center">
-                        <h6 class="text-muted">Profile Management</h6>
-                        <p class="small mb-0 mt-2">
-                            Update biography, qualifications, and expertise areas.
-                        </p>
+                <div class="small-box bg-primary">
+                    <div class="inner">
+                        <h3>{{ $projectCount }}</h3>
+                        <p>Total Projects</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-project-diagram"></i>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="card text-center shadow-sm h-100 card-hover">
-                    <div class="card-body d-flex flex-column justify-content-center">
-                        <h6 class="text-muted">Publications & Achievements</h6>
-                        <p class="small mb-0 mt-2">
-                            Add or edit academic publications and professional milestones.
-                        </p>
+                <div class="small-box bg-success">
+                    <div class="inner">
+                        <h3>{{ $activeProjects }}</h3>
+                        <p>Published Projects</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="card text-center shadow-sm h-100 card-hover">
-                    <div class="card-body d-flex flex-column justify-content-center">
-                        <h6 class="text-muted">Gallery & Media</h6>
-                        <p class="small mb-0 mt-2">
-                            Manage images, videos, and media content displayed on the website.
-                        </p>
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3>{{ $featuredProjects }}</h3>
+                        <p>Featured Projects</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-star"></i>
                     </div>
                 </div>
             </div>
 
         </div>
+        <div class="card shadow-sm mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">Quick Actions</h5>
+            </div>
 
+            <div class="card-body">
+
+                <a href="{{ route('projects.index') }}" class="btn btn-primary mr-2">
+                    <i class="fas fa-project-diagram"></i>
+                    Manage Projects
+                </a>
+
+                {{-- <a href="{{ route('about_sections.index') }}" class="btn btn-success mr-2"> --}}
+                <a href="#" class="btn btn-success mr-2">
+                    <i class="fas fa-user"></i>
+                    About Section
+                </a>
+
+                <a href="{{ route('contact_requests.index') }}" class="btn btn-info">
+                    <i class="fas fa-envelope"></i>
+                    Contact Cards
+                </a>
+
+            </div>
+        </div>
     </div>
 @stop

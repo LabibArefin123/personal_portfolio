@@ -382,13 +382,36 @@ return [
             'active' => ['galleries*'],
         ],
         [
-            'text'    => 'Project Detail',
-            'icon'    => 'fas fa-file',
-            'route'  => 'project-informations.index',
-            'can'  => 'project-informations.index',
-            'active' => ['project-informations*'],
+            'text'    => 'Portfolio Projects',
+            'icon'    => 'fas fa-project-diagram',
+            'submenu' => [
+
+                [
+                    'text'   => 'Projects',
+                    'route'  => 'projects.index',
+                    'can'    => 'projects.index',
+                    'active' => ['projects*'],
+                    'icon'   => 'fas fa-folder-open',
+                ],
+
+                [
+                    'text'   => 'Project Details',
+                    'route'  => 'project-informations.index',
+                    'can'    => 'project-informations.index',
+                    'active' => ['project-informations*'],
+                    'icon'   => 'fas fa-info-circle',
+                ],
+
+                [
+                    'text' => 'Skills',
+                    'route' => 'skills.index',
+                    'can' => 'skills.index',
+                    'active' => ['skills*'],
+                    'icon' => 'fas fa-code',
+                ],
+
+            ],
         ],
-      
         [
             'text'    => 'Setting Management',
             'icon'    => 'fas fa-cogs',

@@ -12,86 +12,40 @@
 
         <div class="row g-4">
 
-            {{-- Backend --}}
-            <div class="col-lg-6">
-                <div class="modern-card">
-                    <h4>Backend Development</h4>
+            @foreach ($skills as $category => $categorySkills)
+                <div class="col-lg-6">
 
-                    @foreach ([['Laravel', 95], ['PHP', 90], ['REST API', 88]] as $skill)
-                        <div class="modern-skill" data-skill="{{ $skill[1] }}">
-                            <div class="skill-head">
-                                <span>{{ $skill[0] }}</span>
-                                <span>{{ $skill[1] }}%</span>
+                    <div class="modern-card">
+
+                        <h4>{{ $category }}</h4>
+
+                        @foreach ($categorySkills as $skill)
+                            <div class="modern-skill" data-skill="{{ $skill->percentage }}">
+
+                                <div class="skill-head">
+
+                                    <span>{{ $skill->name }}</span>
+
+                                    <span>{{ $skill->percentage }}%</span>
+
+                                </div>
+
+                                <div class="bar">
+                                    <div></div>
+                                </div>
+
                             </div>
-                            <div class="bar">
-                                <div></div>
-                            </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+
+                    </div>
+
                 </div>
-            </div>
-
-            {{-- Frontend --}}
-            <div class="col-lg-6">
-                <div class="modern-card">
-                    <h4>Frontend Development</h4>
-
-                    @foreach ([['JavaScript', 90], ['Bootstrap', 92], ['jQuery', 85]] as $skill)
-                        <div class="modern-skill" data-skill="{{ $skill[1] }}">
-                            <div class="skill-head">
-                                <span>{{ $skill[0] }}</span>
-                                <span>{{ $skill[1] }}%</span>
-                            </div>
-                            <div class="bar">
-                                <div></div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-
-            {{-- Database --}}
-            <div class="col-lg-6">
-                <div class="modern-card">
-                    <h4>Database</h4>
-
-                    @foreach ([['MySQL', 90], ['Database Design', 85]] as $skill)
-                        <div class="modern-skill" data-skill="{{ $skill[1] }}">
-                            <div class="skill-head">
-                                <span>{{ $skill[0] }}</span>
-                                <span>{{ $skill[1] }}%</span>
-                            </div>
-                            <div class="bar">
-                                <div></div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-
-            {{-- Tools --}}
-            <div class="col-lg-6">
-                <div class="modern-card">
-                    <h4>Tools & Systems</h4>
-
-                    @foreach ([['Git & GitHub', 85], ['AJAX', 88], ['System Architecture', 85]] as $skill)
-                        <div class="modern-skill" data-skill="{{ $skill[1] }}">
-                            <div class="skill-head">
-                                <span>{{ $skill[0] }}</span>
-                                <span>{{ $skill[1] }}%</span>
-                            </div>
-                            <div class="bar">
-                                <div></div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
+            @endforeach
 
         </div>
 
     </div>
-</section>  
+</section>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
 

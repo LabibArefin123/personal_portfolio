@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Skill extends Model
+{
+    protected $fillable = [
+
+        'category',
+
+        'name',
+
+        'percentage',
+
+        'position',
+
+        'status',
+
+    ];
+
+    protected $casts = [
+
+        'status' => 'boolean',
+
+    ];
+}
