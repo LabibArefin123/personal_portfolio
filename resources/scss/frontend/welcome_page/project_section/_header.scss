@@ -1,12 +1,18 @@
 .section-header {
+    margin-bottom: 60px;
 
     h2 {
-        font-size: 32px;
-        font-weight: 700;
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 15px;
+        letter-spacing: -1px;
     }
 
     p {
         color: #94a3b8;
-        margin-top: 10px;
+        font-size: 17px;
+        max-width: 600px;
+        margin: auto;
+        line-height: 1.8;
     }
 }

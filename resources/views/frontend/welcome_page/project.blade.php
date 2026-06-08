@@ -16,7 +16,7 @@
         <div class="row g-4">
 
             @foreach ($projects as $project)
-                <div class="col-lg-4 col-md-6">
+                <div class="col-xl-3 col-lg-4 col-md-6">
 
                     <div class="project-card {{ $project->is_highlight ? 'highlight' : '' }}">
 
