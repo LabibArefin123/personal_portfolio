@@ -10,102 +10,128 @@ class ProjectInformationSeeder extends Seeder
 {
     public function run(): void
     {
-        $susthoTrack = Project::where('title', 'SusthoTrack')->first();
+        /*
+        |--------------------------------------------------------------------------
+        | TechnoTech Engineering Limited
+        |--------------------------------------------------------------------------
+        */
 
-        if ($susthoTrack) {
+        $technotech = Project::where('title', 'TechnoTech Engineering Limited')->first();
+
+        if ($technotech) {
 
             ProjectInformation::create([
 
-                'project_id' => $susthoTrack->id,
+                'project_id' => $technotech->id,
 
-                'overview' => 'Healthcare platform with doctor consultation, appointments, patient tracking, and dashboard management.',
+                'overview' => 'A complete corporate construction and engineering management platform with dynamic CMS, SEO management, project showcase, news publishing, quote request system, security monitoring, and advanced administrative controls.',
 
                 'project_images' => [
-                    'uploads/images/project_page/susthocare/image1.jpg',
-                    'uploads/images/project_page/susthocare/image2.jpg',
-                    'uploads/images/project_page/susthocare/image3.jpg',
+                    'uploads/images/project_page/technotech/image1.jpg',
+                    'uploads/images/project_page/technotech/image2.jpg',
+                    'uploads/images/project_page/technotech/image3.jpg',
                 ],
 
                 'custom_features' => [
 
-                    'Google Login Authentication',
-                    'Doctor Consultation',
-                    'Appointment Booking',
-                    'Role-Based Dashboard',
-                    'Patient Status Tracking',
-                    'Doctor Earnings',
-                    'Admin Appointment Management',
+                    'Dynamic Homepage CMS',
+                    'Project Portfolio Management',
+                    'SEO Optimization System',
+                    'News & Article Management',
+                    'Quote Request Management',
+                    'System Problem Reporting',
+                    'Global Search Functionality',
+                    'Role & Permission Management',
+                    'Two-Factor Authentication (2FA)',
+                    'Security Log Monitoring',
+                    'Device Ban Management',
+                    'Database Backup System',
+                    'Organization Management',
+                    'AdminLTE Dashboard',
                 ],
 
                 'project_languages' => [
 
                     'Laravel',
+                    'PHP',
+                    'JavaScript',
                     'AJAX',
-                    'Bootstrap',
                     'MySQL',
-                    'Google OAuth',
+                    'Bootstrap',
+                    'AdminLTE',
+                    'Spatie Permission',
                 ],
 
-                'challenges' => 'Implemented secure role-based authentication and real-time appointment workflow.',
+                'challenges' => 'Building a secure enterprise-level CMS platform while maintaining scalability, role-based access control, security monitoring, and user-friendly content management.',
 
-                'solution' => 'Developed scalable dashboard management with optimized appointment handling.',
+                'solution' => 'Implemented a modular Laravel architecture with advanced authentication, permission management, SEO controls, monitoring tools, and dynamic content management.',
 
-                'conclusion' => 'Modern healthcare solution for patients, doctors, and administrators.',
+                'conclusion' => 'A comprehensive engineering and construction business management platform that combines corporate presentation, project management, security, and administration in a single system.',
 
-                'project_link' => 'https://google.com',
-
+                'project_link' => 'https://technotech.com',
                 'github_link' => null,
-
                 'status' => true,
             ]);
         }
 
-        $alamgirGallery = Project::where('title', 'Alamgir Art Gallery')->first();
+        /*
+        |--------------------------------------------------------------------------
+        | Portfolio Admin Panel
+        |--------------------------------------------------------------------------
+        */
 
-        if ($alamgirGallery) {
+        $portfolio = Project::where('title', 'Portfolio Admin Panel')->first();
+
+        if ($portfolio) {
 
             ProjectInformation::create([
 
-                'project_id' => $alamgirGallery->id,
+                'project_id' => $portfolio->id,
 
-                'overview' => 'AJAX-based gallery system with dynamic image filtering and smooth browsing experience.',
+                'overview' => 'A modern portfolio management system featuring dynamic content management, project showcase, skills management, contact management, and administrative analytics dashboard.',
 
                 'project_images' => [
-
-                    'uploads/images/project_page/alamgir_art/image1.jpg',
-                    'uploads/images/project_page/alamgir_art/image2.jpg',
-                    'uploads/images/project_page/alamgir_art/image3.jpg',
+                    'uploads/images/project_page/portfolio/image1.jpg',
+                    'uploads/images/project_page/portfolio/image2.jpg',
+                    'uploads/images/project_page/portfolio/image3.jpg',
                 ],
 
                 'custom_features' => [
 
-                    'AJAX Search',
-                    'Filter By Date',
-                    'Filter By Month',
-                    'Filter By Year',
-                    'No Page Reload',
-                    'Responsive Gallery',
+                    'Portfolio Project Management',
+                    'About Section Management',
+                    'Skills Management',
+                    'Contact Card Management',
+                    'News Management',
+                    'Project Category Management',
+                    'Dynamic CMS Dashboard',
+                    'Role-Based Authentication',
+                    'Permission Management',
+                    'Responsive Admin Panel',
+                    'Activity Log Tracking',
+                    'SEO Management',
+                    'Media Management',
+                    'Analytics Dashboard',
                 ],
 
                 'project_languages' => [
 
                     'Laravel',
-                    'AJAX',
+                    'PHP',
                     'JavaScript',
                     'MySQL',
                     'Bootstrap',
+                    'AdminLTE',
                 ],
 
-                'challenges' => 'Handling dynamic filtering without affecting user experience.',
+                'challenges' => 'Creating a flexible portfolio platform that allows administrators to manage content dynamically while maintaining excellent performance and user experience.',
 
-                'solution' => 'Used AJAX requests for fast image filtering and loading.',
+                'solution' => 'Developed a reusable CMS architecture with modular content management, role-based permissions, and responsive administration tools.',
 
-                'conclusion' => 'Smooth and responsive art gallery management platform.',
+                'conclusion' => 'An efficient portfolio management platform that enables easy content updates, project showcasing, and professional online presence management.',
 
-                'project_link' => 'https://alamgirart.labib.work',
-
+                'project_link' => 'https://portfolio.example.com',
                 'github_link' => null,
-
                 'status' => true,
             ]);
         }
