@@ -1,9 +1,9 @@
 <section class="hero-section">
     <div class="container">
-        <div class="row align-items-center gy-5">
+        <div class="row align-items-center gy-3">
 
             <!-- LEFT CONTENT -->
-            <div class="col-lg-7 order-2 order-lg-1 hero-content">
+            <div class="col-lg-7 hero-content">
 
                 <span class="hero-badge">
                     🚀 Available For Freelance & Full-Time Projects
@@ -35,15 +35,11 @@
 
                     <div class="cv-wrapper">
 
-                        <a href="{{ asset('files/CV_Labib.pdf') }}"
-                            target="_blank"
-                            class="hero-btn-outline">
+                        <a href="{{ asset('files/CV_Labib.pdf') }}" target="_blank" class="hero-btn-outline">
                             👁 View CV
                         </a>
 
-                        <a href="{{ asset('files/CV_Labib.pdf') }}"
-                            download
-                            class="cv-download">
+                        <a href="{{ asset('files/CV_Labib.pdf') }}" download class="cv-download">
                             ⬇
                         </a>
 
@@ -62,7 +58,7 @@
             </div>
 
             <!-- RIGHT IMAGE -->
-            <div class="col-lg-5 order-1 order-lg-2">
+            <div class="col-lg-5">
 
                 <div class="hero-image">
 

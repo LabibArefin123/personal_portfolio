@@ -1,12 +1,27 @@
-@import "variable";
-@import "mixin";
+// =====================================
+// PROJECT PAGE VARIABLES
+// =====================================
 
-@import "hero";
-@import "grid";
-@import "card";
-@import "detail";
-@import "tag";
-@import "highlight";
-@import "project_button";
-@import "project_gallery_image";
-@import "responsive";
+// Colors
+$project-bg-dark: #020617;
+$project-card-bg: #0f172a;
+$project-text-secondary: #94a3b8;
+$project-accent: #6366f1;
+$project-accent-hover: #4f46e5;
+
+// Effects
+$project-shadow-accent: 0 10px 30px rgba(99, 102, 241, 0.15);
+
+// Imports
+@import "project-mixins";
+
+@import "project-hero";
+@import "project-grid";
+@import "project-card";
+@import "project-detail";
+@import "project-tag";
+@import "project-button";
+@import "project-highlight";
+@import "project-button";
+@import "project-image";
+@import "project-responsive";
