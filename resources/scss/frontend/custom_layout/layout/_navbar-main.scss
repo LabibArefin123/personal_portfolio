@@ -1,0 +1,29 @@
+.navbar-brand {
+
+    text-decoration: none;
+
+    .brand-text {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .brand-name {
+
+        color: var(--white-color);
+
+        font-size: 18px;
+        font-weight: 800;
+
+        line-height: 1.2;
+    }
+
+    .brand-role {
+
+        color: var(--primary-color);
+
+        font-size: 12px;
+
+        line-height: 1.3;
+    }
+}

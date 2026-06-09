@@ -1,11 +1,32 @@
-@import "variables";
+:root {
+
+    /* Heights */
+    --topbar-height: 56px;
+    --navbar-height: 70px;
+
+    /* Colors */
+    --navbar-bg: rgba(15, 23, 42, .95);
+    --topbar-bg: rgba(2, 6, 23, .95);
+
+    --text-color: #cbd5e1;
+    --white-color: #ffffff;
+
+    --primary-color: #6366f1;
+    --secondary-color: #06b6d4;
+}
+
+@import "navbar-desktop";
+@import "navbar-main";
+@import "navbar-menu";
+@import "navbar-sidebar";
+@import "navbar-sidebar-header";
+@import "navbar-overlay";
+@import "navbar-toggle";
+@import "navbar-close";
 @import "topbar";
-@import "navbar";
-@import "menu";
 @import "buttons";
 @import "responsive";
 
-/* 🔥 GLOBAL FIX */
 body {
     padding-top: calc(var(--topbar-height) + var(--navbar-height));
 }

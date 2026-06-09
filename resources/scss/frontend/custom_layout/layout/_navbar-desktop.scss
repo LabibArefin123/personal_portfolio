@@ -1,0 +1,32 @@
+.navbar-dev {
+
+    position: fixed;
+
+    top: var(--topbar-height);
+    left: 0;
+
+    width: 100%;
+    height: var(--navbar-height);
+
+    display: flex;
+    align-items: center;
+
+    background: var(--navbar-bg);
+
+    backdrop-filter: blur(18px);
+
+    z-index: 1090;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .20);
+
+    transition: .3s ease;
+
+    &.scrolled {
+
+        top: 0;
+
+        background:
+            rgba(15, 23, 42, .98);
+    }
+}

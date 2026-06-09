@@ -1,64 +1,73 @@
 .portfolio-topbar {
+
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
 
     height: var(--topbar-height);
+
     display: flex;
     align-items: center;
 
-    background: rgba(2, 6, 23, 0.95);
-    backdrop-filter: blur(12px);
+    background: var(--topbar-bg);
 
-    // 🔥 remove border → fixes 1px gap illusion
-    border-bottom: none;
+    backdrop-filter: blur(12px);
 
     z-index: 1100;
 
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-
-    .top-info {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, .2);
 
     .topbar-inner {
+
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
     }
 
-    .top-link,
-    .top-location {
+    .top-info {
+
         display: flex;
         align-items: center;
+
+        gap: 16px;
+    }
+
+    .top-link {
+
+        display: flex;
+        align-items: center;
+
         gap: 6px;
-        color: var(--color-text);
+
+        color: var(--white-color);
+
         text-decoration: none;
+
         font-size: 13px;
         font-weight: 500;
 
+        transition: .3s;
+
         &:hover {
-            color: var(--color-primary);
+
+            color: var(--primary-color);
         }
 
         i {
-            color: var(--color-primary);
-            font-size: 12px;
+
+            color: var(--primary-color);
         }
     }
 
-    .divider {
-        color: rgba(255, 255, 255, 0.15);
-    }
-
     .top-social {
+
         display: flex;
         align-items: center;
+
         gap: 10px;
     }
 }

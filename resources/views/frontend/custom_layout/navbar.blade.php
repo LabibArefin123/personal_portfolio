@@ -1,10 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dev fixed-top">
+<nav class="navbar navbar-dev">
 
     <div class="container">
 
-        <!-- BRAND -->
-        <a class="navbar-brand d-flex align-items-center"
-           href="{{ route('welcome') }}">
+        <!-- Brand -->
+        <a href="{{ route('welcome') }}" class="navbar-brand">
 
             <div class="brand-text">
 
@@ -20,102 +19,146 @@
 
         </a>
 
-        <!-- MOBILE TOGGLER -->
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse"
-                aria-label="Toggle navigation">
+        <!-- Desktop Menu -->
+        <ul class="navbar-nav navbar-menu mx-auto">
 
-            <span class="navbar-toggler-icon"></span>
+            <li class="nav-item">
+                <a href="{{ route('welcome') }}" class="nav-link">
+                    Home
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('project') }}" class="nav-link">
+                    Projects
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('skill') }}" class="nav-link">
+                    Expertise
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('about') }}" class="nav-link">
+                    About
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('education') }}" class="nav-link">
+                    Education
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('faq') }}" class="nav-link">
+                    FAQ
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('contact') }}" class="nav-link">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- Desktop Button -->
+        <div class="d-none d-lg-block">
+
+            <a href="{{ route('contact') }}" class="btn nav-btn">
+
+                Hire Me
+
+            </a>
+
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggle" id="mobileMenuBtn">
+
+            <span></span>
+            <span></span>
+            <span></span>
 
         </button>
 
-        <!-- MENU -->
-        <div class="collapse navbar-collapse"
-             id="navbarCollapse">
+        <!-- Overlay -->
+        <div class="navbar-overlay"></div>
 
-            <ul class="navbar-nav navbar-menu mx-auto">
+        <!-- Sidebar -->
+        <div class="navbar-sidebar">
+
+            <div class="navbar-sidebar-header">
+
+                <h5>Menu</h5>
+
+                <button class="navbar-close-btn">
+
+                    <i class="fas fa-times"></i>
+
+                </button>
+
+            </div>
+
+            <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a href="{{ route('welcome') }}"
-                       class="nav-link">
-
+                    <a href="{{ route('welcome') }}" class="nav-link">
                         Home
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('project') }}"
-                       class="nav-link">
-
+                    <a href="{{ route('project') }}" class="nav-link">
                         Projects
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('skill') }}"
-                       class="nav-link">
-
+                    <a href="{{ route('skill') }}" class="nav-link">
                         Expertise
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('about') }}"
-                       class="nav-link">
-
+                    <a href="{{ route('about') }}" class="nav-link">
                         About
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('education') }}"
-                       class="nav-link">
-
+                    <a href="{{ route('education') }}" class="nav-link">
                         Education
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('faq') }}"
-                       class="nav-link">
-
+                    <a href="{{ route('faq') }}" class="nav-link">
                         FAQ
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('contact') }}"
-                       class="nav-link">
-
+                    <a href="{{ route('contact') }}" class="nav-link">
                         Contact
                     </a>
                 </li>
 
             </ul>
 
-            <!-- MOBILE CTA -->
-            <div class="mobile-nav-cta d-lg-none">
+            <div class="mt-4">
 
-                <a href="{{ route('contact') }}"
-                   class="btn nav-btn w-100">
+                <a href="{{ route('contact') }}" class="btn nav-btn w-100">
 
                     Hire Me
+
                 </a>
 
             </div>
-
-        </div>
-
-        <!-- DESKTOP CTA -->
-        <div class="d-none d-lg-block">
-
-            <a href="{{ route('contact') }}"
-               class="btn nav-btn">
-
-                Hire Me
-            </a>
 
         </div>
 

@@ -1,43 +1,51 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const navbarCollapse = document.getElementById("navbarCollapse");
+    const menuBtn = document.getElementById("mobileMenuBtn");
 
-    const navbarToggler = document.querySelector(".navbar-toggler");
+    const sidebar = document.querySelector(".navbar-sidebar");
 
-    const navLinks = document.querySelectorAll(".navbar-menu .nav-link");
+    const overlay = document.querySelector(".navbar-overlay");
 
-    if (!navbarCollapse) return;
+    const closeBtn = document.querySelector(".navbar-close-btn");
 
-    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-        toggle: false,
+    if (!menuBtn || !sidebar || !overlay) {
+        return;
+    }
+
+    function openMenu() {
+        sidebar.classList.add("show");
+
+        overlay.classList.add("show");
+
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+        sidebar.classList.remove("show");
+
+        overlay.classList.remove("show");
+
+        document.body.style.overflow = "";
+    }
+
+    menuBtn.addEventListener("click", openMenu);
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closeMenu);
+    }
+
+    overlay.addEventListener("click", closeMenu);
+
+    document.querySelectorAll(".navbar-sidebar .nav-link").forEach((link) => {
+        link.addEventListener("click", closeMenu);
     });
 
-    // CLOSE ON LINK CLICK
-    navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            if (window.innerWidth < 992) {
-                bsCollapse.hide();
-            }
-        });
-    });
-
-    // CLOSE WHEN CLICK OUTSIDE
-    document.addEventListener("click", (event) => {
-        const isInsideNavbar =
-            navbarCollapse.contains(event.target) ||
-            navbarToggler.contains(event.target);
-
-        if (!isInsideNavbar && navbarCollapse.classList.contains("show")) {
-            bsCollapse.hide();
-        }
-    });
-
-    // CLOSE ON ESC
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("touchstart", function (e) {
         if (
-            event.key === "Escape" &&
-            navbarCollapse.classList.contains("show")
+            sidebar.classList.contains("show") &&
+            !sidebar.contains(e.target) &&
+            !menuBtn.contains(e.target)
         ) {
-            bsCollapse.hide();
+            closeMenu();
         }
     });
 });

@@ -1,200 +1,72 @@
 @media (max-width: 991px) {
 
-    :root {
-        --topbar-height: 52px;
-        --navbar-height: 68px;
+    .navbar-toggle {
+        display: flex;
     }
 
-    /* TOPBAR */
-    .portfolio-topbar {
-
-        .topbar-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .top-info {
-            gap: 12px;
-        }
-
-        .top-link {
-            font-size: 12px;
-        }
+    .navbar-sidebar,
+    .navbar-overlay {
+        display: block;
     }
 
-    /* NAVBAR */
+    .navbar-menu,
+    .d-none.d-lg-block {
+        display: none !important;
+    }
+
     .navbar-dev {
 
-        .container {
-            position: relative;
-        }
-
-        .brand-name {
-            font-size: 17px;
-        }
-
-        .brand-role {
-            font-size: 11px;
-        }
+        height: 68px;
     }
 
-    /* TOGGLER */
-    .navbar-toggler {
-        border: none;
-        padding: 6px 10px;
-
-        &:focus {
-            box-shadow: none;
-        }
+    .brand-name {
+        font-size: 17px !important;
     }
 
-    .navbar-toggler-icon {
-        filter: invert(1);
-        width: 1.2rem;
-        height: 1.2rem;
-    }
-
-    /* MOBILE MENU */
-    .navbar-collapse {
-
-        margin-top: 14px;
-        animation: mobileMenuFade 0.3s ease;
-        background: rgba(15, 23, 42, 0.98);
-
-        border: 1px solid rgba(255, 255, 255, 0.05);
-
-        border-radius: 18px;
-
-        padding: 18px;
-
-        backdrop-filter: blur(18px);
-
-        box-shadow:
-            0 20px 40px rgba(0, 0, 0, 0.35);
-    }
-
-    .navbar-menu {
-
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 6px;
-
-        .nav-item {
-            width: 100%;
-        }
-
-        .nav-link {
-            width: 100%;
-            padding: 12px 14px;
-            border-radius: 12px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        
-            &::after {
-                display: none !important;
-            }
-        
-            &:hover {
-                transform: translateX(4px);
-                background: rgba(99, 102, 241, 0.12);
-            }
-        }
-    }
-
-    .mobile-nav-cta {
-        margin-top: 14px;
-    }
-
-    @keyframes mobileMenuFade {
-
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .brand-role {
+        font-size: 11px !important;
     }
 }
 
 @media (max-width: 767px) {
 
     :root {
+
         --topbar-height: 48px;
         --navbar-height: 64px;
     }
 
-    .portfolio-topbar {
-
-        .top-link {
-            font-size: 11px;
-        }
-
-        .social-icon {
-            width: 30px;
-            height: 30px;
-            font-size: 13px;
-        }
+    .brand-name {
+        font-size: 16px !important;
     }
 
-    .navbar-dev {
-
-        .brand-name {
-            font-size: 16px;
-        }
-
-        .brand-role {
-            font-size: 10px;
-        }
+    .brand-role {
+        font-size: 10px !important;
     }
 
     .nav-btn {
-        padding: 10px 16px;
+
         font-size: 13px;
+
+        padding: 10px 16px;
     }
 }
 
 @media (max-width: 480px) {
 
+    .brand-name {
+        font-size: 15px !important;
+    }
+
+    .brand-role {
+        font-size: 9px !important;
+    }
+
     .top-text {
         display: none;
     }
 
-    .portfolio-topbar {
-
-        .top-info {
-            gap: 8px;
-        }
-    }
-
-    .navbar-dev {
-
-        .brand-name {
-            font-size: 15px;
-        }
-
-        .brand-role {
-            font-size: 9px;
-            line-height: 1.2;
-            display: block;
-        }
-    }
-
-    .navbar-collapse {
-        padding: 16px;
-    }
-
-    .navbar-menu {
-
-        .nav-link {
-            font-size: 13px;
-            padding: 11px 12px;
-        }
+    .navbar-sidebar {
+        width: 280px;
     }
 }

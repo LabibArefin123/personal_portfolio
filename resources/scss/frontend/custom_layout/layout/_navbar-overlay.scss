@@ -1,0 +1,24 @@
+.navbar-overlay {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, .55);
+
+    z-index: 1098;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
+
+    &.show {
+
+        opacity: 1;
+        visibility: visible;
+    }
+}
