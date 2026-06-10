@@ -2,6 +2,7 @@
 // EXTRA SECTION
 // =============================
 @use 'about-page-variables' as *;
+@use "about-page-mixin" as *;
 .about-extra {
     margin-top: 70px;
 }

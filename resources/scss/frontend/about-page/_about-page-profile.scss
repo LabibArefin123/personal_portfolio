@@ -23,19 +23,19 @@
 
 // TEXT
 .about-name {
-    color: $text-primary;
+    color: $about-page-text-primary;
     font-size: 30px;
     font-weight: 700;
 }
 
 .about-role {
-    color: $accent;
+    color: $about-page-accent;
     margin-bottom: 15px;
     font-weight: 500;
 }
 
 .about-desc {
-    color: $text-secondary;
+    color: $about-page-text-secondary;
     line-height: 1.7;
     margin-bottom: 10px;
 }

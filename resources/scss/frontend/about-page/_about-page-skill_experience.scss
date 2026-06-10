@@ -1,7 +1,8 @@
 // =============================
 // TITLES
 // =============================
-@use 'about-page-variables' as *;
+@use "about-page-mixin" as *;
+@use "about-page-variables" as *;
 .section-title {
     color: $about-page-text-primary;
     margin-top: 25px;
