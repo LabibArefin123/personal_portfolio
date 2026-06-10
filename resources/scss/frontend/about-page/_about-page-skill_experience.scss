@@ -1,8 +1,9 @@
 // =============================
 // TITLES
 // =============================
+@use 'about-page-variables' as *;
 .section-title {
-    color: $text-primary;
+    color: $about-page-text-primary;
     margin-top: 25px;
     margin-bottom: 15px;
     font-weight: 600;
@@ -16,16 +17,16 @@
     gap: 10px;
 
     span {
-        background: $bg-card;
+        background: $about-page-bg-card;
         padding: 6px 14px;
-        border-radius: $radius-sm;
+        border-radius: $about-page-radius-sm;
         color: #cbd5f5;
         font-size: 13px;
-        border: 1px solid $border-color;
-        transition: $transition;
+        border: 1px solid $about-page-border-color;
+        transition: $about-page-transition;
 
         &:hover {
-            background: $accent;
+            background: $about-page-accent;
             color: white;
         }
     }
@@ -39,13 +40,13 @@
     margin-bottom: 15px;
 
     h6 {
-        color: $text-primary;
+        color: $about-page-text-primary;
         margin-bottom: 5px;
         font-weight: 600;
     }
 
     p {
-        color: $text-secondary;
+        color: $about-page-text-secondary;
         margin: 0;
         font-size: 14px;
     }

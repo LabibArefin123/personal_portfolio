@@ -1,6 +1,7 @@
 // =============================
 // PROJECT GRID
 // =============================
+@use 'project-variables' as *;
 .projects-section {
     padding: 70px 0;
     background: $project-bg-dark;

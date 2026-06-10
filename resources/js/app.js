@@ -23,10 +23,10 @@ import "../scss/frontend/welcome_page/project_section/project.scss";
 import "../scss/frontend/custom_layout/custom_footer/footer.scss";
 
 //About Page
-import "../scss/frontend/about/about.scss";
+import "../scss/frontend/about-page/about.scss";
 
 //Education Page
-import "../scss/frontend/education/education.scss";
+import "../scss/frontend/education-page/education.scss";
 
 //Project Page
 import "../scss/frontend/project_page/project.scss";

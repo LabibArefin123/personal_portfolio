@@ -1,7 +1,7 @@
 // Components
-@import "hero";
-@import "layout";
-@import "form";
-@import "info";
-@import "effects";
-@import "responsive";
+@use "contact-hero";
+@use "contact-layout";
+@use "contact-form";
+@use "contact-info";
+@use "contact-effects";
+@use "contact-responsive";

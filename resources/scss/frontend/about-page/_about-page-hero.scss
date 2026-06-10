@@ -1,11 +1,12 @@
 // =============================
 // HERO
 // =============================
+@use 'about-page-variables' as *;
 .about-hero {
     padding: 120px 0 80px;
     background: linear-gradient(135deg, #020617, #0f172a);
     text-align: center;
-    color: $text-primary;
+    color: $about-page-text-primary;
 
     h1 {
         font-size: 42px;
@@ -14,7 +15,7 @@
     }
 
     p {
-        color: $text-secondary;
+        color: $about-page-text-secondary;
         font-size: 16px;
     }
 }

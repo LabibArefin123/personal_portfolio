@@ -1,17 +1,18 @@
 // =============================
 // MIXINS
 // =============================
+@use 'about-page-variables' as *;
 @mixin flex-wrap {
     display: flex;
     flex-wrap: wrap;
 }
 
 @mixin card {
-    background: $bg-card;
-    border-radius: $radius-md;
+    background: $about-page-bg-card;
+    border-radius: $about-page-radius-md;
     padding: 20px;
-    border: 1px solid $border-color;
-    transition: $transition;
+    border: 1px solid $about-page-border-color;
+    transition: $about-page-transition;
 }
 
 @mixin hover-lift {
