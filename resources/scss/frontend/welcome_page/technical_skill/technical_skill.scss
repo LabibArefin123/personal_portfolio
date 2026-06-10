@@ -1,7 +1,23 @@
-@import 'variables';
-@import 'section';
-@import 'card';
-@import 'icon';
-@import 'image';
-@import 'effects';
-@import 'responsive';
+// =====================================
+// TECHNICAL SKILL SECTION VARIABLES
+// =====================================
+
+// Colors 
+$tech-skill-primary: #6366f1;
+$tech-skill-secondary: #06b6d4;
+
+$tech-skill-text-dark: #0f172a;
+$tech-skill-text-muted: #64748b;
+
+$tech-skill-bg-light: #f8fafc;
+$tech-skill-border: #e2e8f0;
+
+$tech-skill-radius: 24px;
+$tech-skill-transition: 0.35s;
+
+@use 'tech-skill-section';
+@use 'tech-skill-card';
+@use 'tech-skill-icon';
+@use 'tech-skill-image';
+@use 'tech-skill-effects';
+@use 'tech-skill-responsive';

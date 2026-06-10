@@ -1,14 +1,11 @@
-// Core
-@import "hero";
-@import "layout";
+@use "faq-hero";
+@use "faq-layout";
 
-// Components
-@import "sidebar";
-@import "ai";
-@import "filter";
-@import "search";
-@import "accordion";
-@import "effects";
+@use "faq-sidebar";
+@use "faq-ai";
+@use "faq-filter";
+@use "faq-search";
+@use "faq-accordion";
+@use "faq-effects";
 
-// Responsive
-@import "responsive";
+@use "faq-responsive";

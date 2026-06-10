@@ -1,12 +1,12 @@
 .modern-card {
-    background: $bg-card;
-    border: 1px solid rgba($primary, 0.2);
+    background: $skill-bg-card;
+    border: 1px solid rgba($skill-primary, 0.2);
     backdrop-filter: blur(12px);
-    border-radius: $radius;
+    border-radius: $skill-radius;
     padding: 25px;
     position: relative;
     overflow: hidden;
-    transition: $transition;
+    transition: $skill-transition;
 
     h4 {
         color: #fff;
@@ -20,7 +20,7 @@
     .skill-head {
         display: flex;
         justify-content: space-between;
-        color: $text-light;
+        color: $skill-text-light;
         font-size: 14px;
         margin-bottom: 6px;
     }

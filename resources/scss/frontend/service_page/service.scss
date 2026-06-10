@@ -1,5 +1,5 @@
-@import "hero";
-@import "layout";
-@import "grid";
-@import "card";
-@import "responsive";
+@use "service-hero";
+@use "service-layout";
+@use "service-grid";
+@use "service-card";
+@use "service-responsive";

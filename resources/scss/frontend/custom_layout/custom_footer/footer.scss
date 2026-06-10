@@ -1,7 +1,7 @@
-@import "layout";
-@import "brand";
-@import "links";
-@import "social";
-@import "bottom";
-@import "navigation";
-@import "responsive";
+@use "footer-layout";
+@use "footer-brand";
+@use "footer-links";
+@use "footer-social";
+@use "footer-bottom";
+@use "footer-navigation";
+@use "footer-responsive";

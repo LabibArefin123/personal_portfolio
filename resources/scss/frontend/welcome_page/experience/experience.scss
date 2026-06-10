@@ -1,4 +1,4 @@
-@import "layout";
-@import "timeline";
-@import "card";
-@import "responsive";
+@use "experience-layout";
+@use "experience-timeline";
+@use "experience-card";
+@use "experience-responsive";

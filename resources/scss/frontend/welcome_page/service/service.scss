@@ -1,4 +1,4 @@
-@import "layout";
-@import "card";
-@import "icon";
-@import "responsive";
+@use "service-layout";
+@use "service-card";
+@use "service-icon";
+@use "service-responsive";

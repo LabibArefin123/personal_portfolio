@@ -1,13 +1,13 @@
 // Layout
-@import "layout";
+@use "project-layout";
 
 // Components
-@import "header";
-@import "card";
-@import "content";
-@import "image";
-@import "buttons";
-@import "effects";
+@use "project-header";
+@use "project-card";
+@use "content";
+@use "project-image";
+@use "project-buttons";
+@use "project-effects";
 
 // Responsive
-@import "responsive";
+@use "project-responsive";

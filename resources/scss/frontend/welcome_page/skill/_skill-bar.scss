@@ -1,6 +1,6 @@
 .bar {
     height: 6px;
-    background: $bg-dark;
+    background: $skill-bg-dark;
     border-radius: 10px;
     overflow: hidden;
 
@@ -8,7 +8,7 @@
         height: 100%;
         width: 0;
         border-radius: 10px;
-        background: linear-gradient(90deg, $primary, $secondary);
+        background: linear-gradient(90deg, $skill-primary, $skill-secondary);
         transition: width 1.5s ease;
     }
 }

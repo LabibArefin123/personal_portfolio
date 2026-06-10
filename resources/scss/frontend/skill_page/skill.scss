@@ -1,11 +1,11 @@
 // Core
-@import "hero";
-@import "layout";
+@use "skill-hero";
+@use "skill-layout";
 
 // Components
-@import "card";
-@import "progress";
-@import "effects";
+@use "skill-card";
+@use "skill-progress";
+@use "skill-effects";
 
 // Responsive
-@import "responsive";
+@use "skill-responsive";

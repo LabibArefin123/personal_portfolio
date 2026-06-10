@@ -1,7 +1,7 @@
 // Components
-@import "section";
-@import "image";
-@import "typography";
-@import "highlights";
-@import "effects";
-@import "responsive";
+@use "about-section";
+@use "about-image";
+@use "about-typography";
+@use "about-highlights";
+@use "about-effects";
+@use "about-responsive";

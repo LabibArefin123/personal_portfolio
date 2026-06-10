@@ -1,5 +1,5 @@
-@import "section";
-@import "box";
-@import "text";
-@import "effects";
-@import "responsive";
+@use "quote-section";
+@use "quote-box";
+@use "quote-text";
+@use "quote-effects";
+@use "quote-responsive";
