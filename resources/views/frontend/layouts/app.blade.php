@@ -32,7 +32,7 @@
     <link rel="icon" type="image/png" href="{{ asset('uploads/images/icon.png') }}">
 
     <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
