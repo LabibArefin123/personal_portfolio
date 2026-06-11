@@ -18,8 +18,6 @@ return new class extends Migration
             $table->longText('challenges')->nullable();
             $table->longText('solution')->nullable();
             $table->longText('conclusion')->nullable();
-            $table->string('project_link')->nullable();
-            $table->string('github_link')->nullable();
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

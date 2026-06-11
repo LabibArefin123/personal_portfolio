@@ -18,8 +18,6 @@ class ProjectInformation extends Model
         'challenges',
         'solution',
         'conclusion',
-        'project_link',
-        'github_link',
         'status',
     ];
 
