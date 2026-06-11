@@ -51,7 +51,6 @@
                     <span>Laravel</span>
                     <span>React</span>
                     <span>API Integration</span>
-                    <span>MySQL</span>
                     <span>Expo</span>
                 </div>
 
