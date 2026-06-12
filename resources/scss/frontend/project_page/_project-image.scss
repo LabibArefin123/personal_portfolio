@@ -3,26 +3,18 @@
 ========================================= */
 
 .project-image {
-
     position: relative;
-
     overflow: hidden;
-
     background: #020617;
 }
 
 .project-image img {
-
     width: 100%;
-
     height: 190px;
-
     object-fit: cover;
-
     transition: 0.5s ease;
 }
 
 .project-card:hover .project-image img {
-
     transform: scale(1.06);
 }

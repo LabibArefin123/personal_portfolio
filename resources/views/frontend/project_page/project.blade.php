@@ -41,11 +41,13 @@
                 @forelse($projects as $project)
                     <div class="project-card {{ $project->is_highlight ? 'highlight' : '' }}">
 
-                        <!-- PROJECT IMAGE -->
-                        @if ($project->image)
+                        {{-- PROJECT IMAGE --}}
+                        @if (!$project->image && $project->live_url)
                             <div class="project-image">
 
-                                <img src="{{ asset($project->image) }}" alt="{{ $project->title }}">
+
+                                <img class="project-preview" data-url="{{ $project->live_url }}"
+                                    src="{{ asset('images/project-placeholder.jpg') }}" alt="{{ $project->title }}">
 
                             </div>
                         @endif

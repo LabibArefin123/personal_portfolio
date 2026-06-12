@@ -1,23 +1,12 @@
 .project-card {
-
     background: #0f172a;
-
     border: 1px solid rgba(255, 255, 255, 0.05);
-
-    border-radius: 18px;
-
     overflow: hidden;
-
     transition: 0.35s ease;
-
     position: relative;
-
     height: 100%;
-
     display: flex;
-
     flex-direction: column;
-
     &:hover {
 
         transform: translateY(-6px);
