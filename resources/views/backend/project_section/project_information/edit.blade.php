@@ -91,15 +91,6 @@
                             <button type="button" class="btn btn-outline-primary add-field" data-field="conclusion">
                                 Conclusion
                             </button>
-
-                            <button type="button" class="btn btn-outline-primary add-field" data-field="project_link">
-                                Project Link
-                            </button>
-
-                            <button type="button" class="btn btn-outline-primary add-field" data-field="github_link">
-                                GitHub Link
-                            </button>
-
                         </div>
 
                         <div id="dynamicFields"></div>

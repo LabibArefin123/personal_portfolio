@@ -63,25 +63,13 @@ class ProjectInformationController extends Controller
         ProjectInformation::create([
 
             'project_id' => $request->project_id,
-
             'overview' => $request->overview,
-
             'project_images' => $images,
-
             'custom_features' => $this->jsonify($request->custom_features),
-
             'project_languages' => $this->jsonify($request->project_languages),
-
             'challenges' => $request->challenges,
-
             'solution' => $request->solution,
-
             'conclusion' => $request->conclusion,
-
-            'project_link' => $request->project_link,
-
-            'github_link' => $request->github_link,
-
             'status' => 1,
         ]);
 
@@ -144,27 +132,14 @@ class ProjectInformationController extends Controller
         }
 
         $projectInformation->update([
-
             'project_id' => $request->project_id,
-
             'overview' => $request->overview,
-
             'project_images' => $images,
-
             'custom_features' => $this->jsonify($request->custom_features),
-
             'project_languages' => $this->jsonify($request->project_languages),
-
             'challenges' => $request->challenges,
-
             'solution' => $request->solution,
-
             'conclusion' => $request->conclusion,
-
-            'project_link' => $request->project_link,
-
-            'github_link' => $request->github_link,
-
             'status' => 1,
         ]);
 

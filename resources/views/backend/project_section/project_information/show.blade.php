@@ -137,7 +137,7 @@
 
                 @if ($projectInformation->project_link)
                     <p>
-                        <a href="{{ $projectInformation->project_link }}" target="_blank">
+                        <a href="{{ $projectInformation->project->project_link }}" target="_blank">
                             🔗 Project Link
                         </a>
                     </p>
@@ -145,7 +145,7 @@
 
                 @if ($projectInformation->github_link)
                     <p>
-                        <a href="{{ $projectInformation->github_link }}" target="_blank">
+                        <a href="{{ $projectInformation->project->github_link }}" target="_blank">
                             💻 GitHub Link
                         </a>
                     </p>

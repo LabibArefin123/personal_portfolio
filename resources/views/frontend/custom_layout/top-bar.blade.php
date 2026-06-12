@@ -23,27 +23,45 @@
                     </span>
                 </a>
 
-            </div>
+                <span class="top-link">
+                    <i class="fas fa-users"></i>
+                    Total:
+                    {{ number_format($visitorStats['total_visitors']) }}
+                </span>
 
-            <!-- RIGHT -->
-            <div class="top-social">
+                <span class="top-link">
+                    <i class="fas fa-user-check"></i>
+                    Online:
+                    {{ $visitorStats['online_users'] }}
+                </span>
 
-                <a href="https://www.linkedin.com/in/labib-arefin" target="_blank" class="social-icon">
+                <span class="top-link">
+                    <i class="fas fa-clock"></i>
+                    Last 5m:
+                    {{ $visitorStats['last_5_minutes'] }}
+                </span>
 
-                    <i class="fab fa-linkedin-in"></i>
+                </div>
 
-                </a>
+                    <!-- RIGHT -->
+                    <div class="top-social">
 
-                <a href="https://github.com/LabibArefin123" target="_blank" class="social-icon">
+                        <a href="https://www.linkedin.com/in/labib-arefin" target="_blank" class="social-icon">
 
-                    <i class="fab fa-github"></i>
+                            <i class="fab fa-linkedin-in"></i>
 
-                </a>
+                        </a>
+
+                        <a href="https://github.com/LabibArefin123" target="_blank" class="social-icon">
+
+                            <i class="fab fa-github"></i>
+
+                        </a>
+
+                    </div>
 
             </div>
 
         </div>
 
     </div>
-
-</div>
