@@ -110,6 +110,7 @@
     <script src="{{ asset('js/custom_frontend/toaster.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/copy_email.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/navbar-toggle.js') }}"></script>
+    <script src="{{ asset('js/custom_frontend/project-previews.js') }}"></script>
 </body>
 
 </html>
