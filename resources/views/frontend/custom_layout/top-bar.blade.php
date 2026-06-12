@@ -23,45 +23,47 @@
                     </span>
                 </a>
 
-                <span class="top-link">
-                    <i class="fas fa-users"></i>
-                    Total:
-                    {{ number_format($visitorStats['total_visitors']) }}
-                </span>
 
-                <span class="top-link">
-                    <i class="fas fa-user-check"></i>
-                    Online:
-                    {{ $visitorStats['online_users'] }}
-                </span>
+            </div>
 
-                <span class="top-link">
-                    <i class="fas fa-clock"></i>
-                    Last 5m:
-                    {{ $visitorStats['last_5_minutes'] }}
-                </span>
+            <!-- RIGHT -->
+            <div class="top-social">
+                @if ($showAnalytics)
+                    <div class="top-admin-stats">
 
-                </div>
+                        <span class="stat-item">
+                            <i class="fas fa-users"></i>
+                            {{ number_format($visitorStats['total_visitors']) }}
+                        </span>
 
-                    <!-- RIGHT -->
-                    <div class="top-social">
+                        <span class="stat-item">
+                            <i class="fas fa-user-check"></i>
+                            {{ $visitorStats['online_users'] }}
+                        </span>
 
-                        <a href="https://www.linkedin.com/in/labib-arefin" target="_blank" class="social-icon">
-
-                            <i class="fab fa-linkedin-in"></i>
-
-                        </a>
-
-                        <a href="https://github.com/LabibArefin123" target="_blank" class="social-icon">
-
-                            <i class="fab fa-github"></i>
-
-                        </a>
+                        <span class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            {{ $visitorStats['last_5_minutes'] }}
+                        </span>
 
                     </div>
+                @endif
+                <a href="https://www.linkedin.com/in/labib-arefin" target="_blank" class="social-icon">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+                <a href="https://github.com/LabibArefin123" target="_blank" class="social-icon">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
 
             </div>
 
         </div>
 
     </div>
+
+</div>
