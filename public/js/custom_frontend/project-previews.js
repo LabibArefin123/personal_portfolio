@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const previews = document.querySelectorAll(".project-preview");
-
     previews.forEach((image) => {
         const websiteUrl = image.dataset.url;
 
