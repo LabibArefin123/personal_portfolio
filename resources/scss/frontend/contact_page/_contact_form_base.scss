@@ -1,0 +1,62 @@
+/* =========================================================
+   CONTACT FORM BASE
+========================================================= */
+
+.contact-card {
+
+    .form-group {
+        margin-bottom: 22px;
+    }
+
+    /* LABELS */
+
+    label,
+    .contact-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        margin-bottom: 12px;
+
+        color: #e2e8f0;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        i {
+            color: #818cf8;
+        }
+    }
+
+    /* HEADER DESCRIPTION */
+
+    .text-muted {
+        color: #94a3b8 !important;
+    }
+}
+
+/* =========================================================
+   CONTACT HEADER ICON
+========================================================= */
+
+.contact-title-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: linear-gradient(135deg,
+            #6366f1,
+            #06b6d4);
+
+    color: white;
+
+    font-size: 24px;
+
+    box-shadow:
+        0 15px 30px rgba(99, 102, 241, 0.3);
+}

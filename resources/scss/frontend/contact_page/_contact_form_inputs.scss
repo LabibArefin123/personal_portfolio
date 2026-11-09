@@ -1,0 +1,78 @@
+/* =========================================================
+   CONTACT FORM INPUT GROUP
+========================================================= */
+
+.contact-card {
+
+    .input-icon-group {
+        position: relative;
+    }
+
+    .input-icon {
+        position: absolute;
+
+        top: 50%;
+        left: 18px;
+
+        transform: translateY(-50%);
+
+        color: #64748b;
+
+        font-size: 16px;
+
+        z-index: 2;
+    }
+
+    /* TEXTAREA ICON */
+
+    .textarea-group .textarea-icon {
+        top: 22px;
+        transform: none;
+    }
+
+    /* =====================================================
+       FORM CONTROLS
+    ===================================================== */
+
+    .form-control {
+        width: 100%;
+        height: 58px;
+
+        padding: 0 18px 0 52px;
+
+        border-radius: 16px;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        background: rgba(255, 255, 255, 0.04);
+
+        color: #fff;
+
+        transition: 0.3s ease;
+
+        &::placeholder {
+            color: #64748b;
+        }
+
+        &:focus {
+            border-color: #6366f1;
+
+            background: rgba(255, 255, 255, 0.06);
+
+            color: #fff;
+
+            box-shadow:
+                0 0 0 4px rgba(99, 102, 241, 0.15);
+        }
+    }
+
+    /* TEXTAREA */
+
+    textarea.form-control {
+        height: auto;
+
+        min-height: 150px;
+
+        padding-top: 18px;
+    }
+}
