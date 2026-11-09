@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             image.src = `https://api.microlink.io/?url=${encodedUrl}&screenshot=true&meta=false&embed=screenshot.url`;
 
             image.onerror = () => {
-                image.src = "/images/project-placeholder.jpg";
+                image.src = "/uploads/images/default.jpg";
             };
         } catch (error) {
             console.error("Project preview failed:", websiteUrl);

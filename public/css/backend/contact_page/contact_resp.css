@@ -1,0 +1,147 @@
+
+/* =========================================================
+   CONTACT REQUESTS RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .cr-stat-card {
+        padding: 21px;
+    }
+
+    .cr-table-wrapper {
+        padding: 15px 18px 20px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .cr-page-header h1 {
+        font-size: 23px;
+    }
+
+    .cr-card-header {
+        padding: 21px;
+    }
+
+    .cr-table-wrapper {
+        overflow-x: auto;
+    }
+
+    #contactRequestTable {
+        min-width: 1050px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .cr-page-header {
+        align-items: flex-start;
+    }
+
+    .cr-page-header h1 {
+        font-size: 19px;
+        flex-wrap: wrap;
+    }
+
+    .cr-heading-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .cr-header-date {
+        padding: 9px 13px;
+    }
+
+    .cr-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .cr-live-indicator {
+        align-self: flex-start;
+    }
+
+    .cr-table-toolbar {
+        padding: 15px 17px 0;
+    }
+
+    .cr-table-wrapper {
+        padding: 14px;
+    }
+
+    .cr-table-footer {
+        line-height: 1.8;
+        padding: 14px 17px;
+    }
+
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_filter {
+        float: none !important;
+        text-align: left !important;
+        width: 100%;
+    }
+
+    .dataTables_wrapper .dataTables_filter input {
+        width: calc(100% - 85px);
+        min-width: 0;
+    }
+
+    .dataTables_wrapper .dataTables_info,
+    .dataTables_wrapper .dataTables_paginate {
+        float: none !important;
+        text-align: center !important;
+    }
+
+    .cr-error-toast {
+        left: 12px;
+        right: 12px;
+        top: 12px;
+        min-width: 0;
+        max-width: none;
+    }
+
+    .cr-message-modal .modal-dialog {
+        margin: 12px;
+    }
+
+    .cr-message-modal .modal-header,
+    .cr-message-modal .modal-body {
+        padding: 18px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .cr-page-header h1 {
+        font-size: 17px;
+        gap: 9px;
+    }
+
+    .cr-page-header p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .cr-breadcrumb {
+        font-size: 10px;
+    }
+
+    .cr-stat-content h3 {
+        font-size: 25px;
+    }
+
+    .cr-stat-card {
+        border-radius: 15px;
+    }
+
+    .cr-full-message {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+}

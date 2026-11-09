@@ -45,7 +45,7 @@
                         @if (!$project->image && $project->live_url)
                             <div class="project-image">
                                 <img class="project-preview" data-url="{{ $project->live_url }}"
-                                    src="{{ asset('images/project-placeholder.jpg') }}" alt="{{ $project->title }}">
+                                    src="{{ asset('uploads/images/default.jpg') }}" alt="{{ $project->title }}">
                             </div>
                         @endif
 

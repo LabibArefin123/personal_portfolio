@@ -15,36 +15,63 @@ class ContactRequestController extends Controller
 
     public function index(Request $request)
     {
-        if ($request->ajax()) {
-            $totalContactRequests = ContactRequest::latest();
+        /*
+    |--------------------------------------------------------------------------
+    | CONTACT REQUESTS
+    |--------------------------------------------------------------------------
+    */
 
-            return DataTables::of($totalContactRequests)
-                ->addIndexColumn()
-                ->addColumn('message', function ($row) {
-                    $words = explode(' ', $row->message);
-                    if (count($words) > 5) {
-                        $shortMessage = implode(' ', array_slice($words, 0, 5)) . '...';
-                        return '<span title="Click to view full message" class="text-primary view-full-message" style="cursor:pointer;" data-message="' . htmlspecialchars($row->message) . '">' . $shortMessage . '</span>';
-                    }
-                    return $row->message;
-                })
-                ->addColumn('total_today', function ($row) {
-                    return ContactRequest::where('ip_address', $row->ip_address)
-      
-                        ->count();
-                })
-                ->addColumn('created_at', function ($row) {
-                    return Carbon::parse($row->created_at)->format('d F Y (g:i A)');
-                })
-                ->addColumn('action', function ($row) {
-                    return '<a href="' . route('contact_requests.show', $row->id) . '" class="btn btn-sm btn-primary">View</a>';
-                })
-                ->rawColumns(['message', 'action'])
-                ->make(true);
-        }
+        $requests = ContactRequest::query()
+            ->select('contact_requests.*')
+            ->selectSub(
+                ContactRequest::query()
+                    ->from('contact_requests as cr2')
+                    ->selectRaw('COUNT(*)')
+                    ->whereColumn(
+                        'cr2.ip_address',
+                        'contact_requests.ip_address'
+                    ),
+                'ip_submissions'
+            )
+            ->latest('created_at')
+            ->paginate(10)
+            ->withQueryString();
 
-        return view('backend.setting_management.contact_requests.index');
+        /*
+    |--------------------------------------------------------------------------
+    | DASHBOARD STATISTICS
+    |--------------------------------------------------------------------------
+    */
+
+        $totalRequests = ContactRequest::count();
+
+        $contactCount = ContactRequest::where(
+            'type',
+            'contact'
+        )->count();
+
+        $appointmentCount = ContactRequest::where(
+            'type',
+            'appointment'
+        )->count();
+
+        $todayCount = ContactRequest::whereDate(
+            'created_at',
+            Carbon::today()
+        )->count();
+
+        return view(
+            'backend.setting_management.contact_requests.index',
+            compact(
+                'requests',
+                'totalRequests',
+                'contactCount',
+                'appointmentCount',
+                'todayCount'
+            )
+        );
     }
+
     /**
      * Show the form for creating a new request (optional – usually frontend).
      */

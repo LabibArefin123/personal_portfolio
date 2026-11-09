@@ -3,9 +3,10 @@
 namespace App\Providers;
 
 use App\Models\Organization;
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\View;
 use App\Models\VisitorTrack;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,14 +17,21 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        app('router')->aliasMiddleware('permission', \App\Http\Middleware\CheckPermission::class);
+        app('router')->aliasMiddleware(
+            'permission',
+            \App\Http\Middleware\CheckPermission::class
+        );
+
+        // Use Bootstrap pagination views
+        Paginator::useBootstrap();
+
         View::composer('*', function ($view) {
 
-
-            $adminIps = explode(',', env('ADMIN_IPS', ''));
+            $adminIps = array_filter(
+                array_map('trim', explode(',', env('ADMIN_IPS', '')))
+            );
 
             $view->with('visitorStats', [
-
                 'total_visitors' => VisitorTrack::count(),
 
                 'online_users' => VisitorTrack::where(
@@ -37,12 +45,11 @@ class AppServiceProvider extends ServiceProvider
                     '>=',
                     now()->subMinutes(5)
                 )->count(),
-
             ]);
 
             $view->with(
                 'showAnalytics',
-                in_array(request()->ip(), $adminIps)
+                in_array(request()->ip(), $adminIps, true)
             );
         });
     }
