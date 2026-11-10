@@ -3,12 +3,12 @@
 @section('title', 'Contact Requests')
 
 @section('adminlte_css')
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_base.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_stats.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_table.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_modal.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_pagination.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_resp.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/index_page/contact_base.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/index_page/contact_stats.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/index_page/contact_table.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/index_page/contact_modal.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/index_page/contact_pagination.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/index_page/contact_resp.css') }}">
 @stop
 
 @section('content_header')
