@@ -1,18 +1,46 @@
+
 @keyframes swingLamp {
-    0% {
-        transform: rotate(7deg);
+    0%, 100% {
+        transform: rotate(5deg);
     }
 
     50% {
-        transform: rotate(-7deg);
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes softPulse {
+    0%, 100% {
+        opacity: .65;
     }
 
-    100% {
-        transform: rotate(7deg);
+    50% {
+        opacity: 1;
     }
 }
 
 .switch-chain.pull {
-    transform: translateY(20px);
-    transition: 0.2s ease;
+    transform: translateY(16px);
+    transition: transform .2s ease;
+}
+
+.chain-ball {
+    animation: softPulse 3s ease-in-out infinite;
+}
+
+.lamp.active {
+    animation-duration: 7s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lamp,
+    .chain-ball {
+        animation: none;
+    }
+
+    .login-card,
+    .login-btn,
+    .lamp-glow {
+        transition: none;
+    }
 }

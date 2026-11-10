@@ -2,6 +2,15 @@
 
 @section('title', 'Contact Requests')
 
+@section('adminlte_css')
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_base.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_stats.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_table.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_modal.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_pagination.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_resp.css') }}">
+@stop
+
 @section('content_header')
     <div class="cr-page-header">
         <div>
@@ -30,67 +39,11 @@
 @stop
 
 @section('content')
-
     {{-- STATISTICS --}}
-    <div class="row cr-stats-row">
-
-        <div class="col-xl-3 col-md-6">
-            <div class="cr-stat-card cr-stat-blue">
-                <div class="cr-stat-content">
-                    <span>Total Requests</span>
-                    <h3>{{ number_format($totalRequests) }}</h3>
-                    <small>All incoming requests</small>
-                </div>
-                <div class="cr-stat-icon">
-                    <i class="fas fa-inbox"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-3 col-md-6">
-            <div class="cr-stat-card cr-stat-green">
-                <div class="cr-stat-content">
-                    <span>Contact Requests</span>
-                    <h3>{{ number_format($contactCount) }}</h3>
-                    <small>General inquiries</small>
-                </div>
-                <div class="cr-stat-icon">
-                    <i class="fas fa-comments"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-3 col-md-6">
-            <div class="cr-stat-card cr-stat-purple">
-                <div class="cr-stat-content">
-                    <span>Appointments</span>
-                    <h3>{{ number_format($appointmentCount) }}</h3>
-                    <small>Appointment inquiries</small>
-                </div>
-                <div class="cr-stat-icon">
-                    <i class="fas fa-calendar-check"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-3 col-md-6">
-            <div class="cr-stat-card cr-stat-orange">
-                <div class="cr-stat-content">
-                    <span>Today's Requests</span>
-                    <h3>{{ number_format($todayCount) }}</h3>
-                    <small>Received today</small>
-                </div>
-                <div class="cr-stat-icon">
-                    <i class="fas fa-calendar-day"></i>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    @include('backend.setting_management.contact_requests.partial_pages.index_page.part_1')
 
     {{-- MAIN TABLE --}}
     <div class="cr-main-card">
-
         <div class="cr-card-header">
             <div>
                 <h4>
@@ -362,14 +315,6 @@
 @stop
 
 
-@section('adminlte_css')
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_base.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_stats.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_table.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_modal.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_pagination.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/contact_page/contact_resp.css') }}">
-@stop
 
 @section('js')
 

@@ -1,0 +1,133 @@
+
+/* ==========================================
+   CONTACT INFORMATION
+========================================== */
+
+.contact-information-list {
+    padding-top: 7px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.contact-info-item:last-child {
+    border-bottom: none;
+    padding-bottom: 5px;
+}
+
+.contact-info-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    font-size: 15px;
+}
+
+.name-icon {
+    color: #3b82f6;
+    background: #eff6ff;
+}
+
+.email-icon {
+    color: #8b5cf6;
+    background: #f5f3ff;
+}
+
+.phone-icon {
+    color: #059669;
+    background: #ecfdf5;
+}
+
+.type-icon {
+    color: #d97706;
+    background: #fffbeb;
+}
+
+.contact-info-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-info-content span {
+    display: block;
+    margin-bottom: 5px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.contact-info-content strong,
+.contact-info-content a {
+    display: block;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-info-content a:hover {
+    color: #2563eb;
+}
+
+.info-action {
+    width: 31px;
+    height: 31px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 11px;
+    text-decoration: none !important;
+    transition: .2s ease;
+}
+
+.info-action:hover {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+/* ==========================================
+   SUBMISSION DETAILS
+========================================== */
+
+.submission-card {
+    margin-top: 0;
+}
+
+.submission-details {
+    padding-top: 10px;
+}
+
+.submission-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.submission-detail-item:last-child {
+    border-bottom: none;
+}
+
+.submission-detail-item span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.submission-detail-item strong {
+    color: #334155;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+}

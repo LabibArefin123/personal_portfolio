@@ -1,19 +1,152 @@
-@media (max-width: 992px) {
-    body {
-        overflow-y: auto;
+
+@media (max-width: 1200px) {
+    .lamp-side {
+        width: 48%;
+        padding: 40px 30px;
     }
 
-    .portfolio-login-wrapper {
-        flex-direction: column;
-    }
-
-    .lamp-side,
     .login-side {
-        width: 100%;
+        width: 52%;
+        padding: 35px 25px;
     }
 
     .login-card {
-        width: 90%;
-        margin: 50px auto;
+        padding: 34px;
+    }
+
+    .intro-content h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 992px) {
+    body:has(.auth-login-page) {
+        overflow-y: auto;
+    }
+
+    .auth-login-page {
+        position: relative;
+        min-height: 100vh;
+        height: auto;
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .lamp-side {
+        width: 100%;
+        min-height: 550px;
+        padding: 100px 25px 45px;
+    }
+
+    .login-side {
+        width: 100%;
+        min-height: auto;
+        padding: 55px 25px 65px;
+    }
+
+    .login-brand {
+        top: 25px;
+        left: 25px;
+    }
+
+    .lamp-scene {
+        height: 270px;
+    }
+
+    .lamp-wire {
+        height: 85px;
+    }
+
+    .intro-content {
+        margin-top: 0;
+    }
+
+    .intro-content h1 {
+        font-size: 46px;
+    }
+
+    .login-copyright {
+        display: none;
+    }
+
+    .mobile-copyright {
+        display: block;
+        position: absolute;
+        bottom: 18px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: #64748b;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 576px) {
+    .lamp-side {
+        min-height: 470px;
+        padding: 85px 20px 35px;
+    }
+
+    .lamp-scene {
+        height: 230px;
+    }
+
+    .lamp-wire {
+        height: 65px;
+    }
+
+    .lamp {
+        transform: scale(.85);
+        transform-origin: top center;
+    }
+
+    .intro-content h1 {
+        font-size: 37px;
+        letter-spacing: -1px;
+    }
+
+    .intro-content p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .developer-badge {
+        font-size: 9px;
+        padding: 9px 13px;
+    }
+
+    .intro-footer {
+        gap: 9px;
+        font-size: 10px;
+        flex-wrap: wrap;
+    }
+
+    .login-side {
+        padding: 35px 16px 65px;
+    }
+
+    .login-card {
+        padding: 27px 22px;
+        border-radius: 21px;
+    }
+
+    .login-header h2 {
+        font-size: 28px;
+    }
+
+    .login-card-top {
+        margin-bottom: 24px;
+    }
+
+    .secure-indicator {
+        font-size: 10px;
+    }
+
+    .login-options {
+        gap: 8px;
+    }
+
+    .login-security {
+        font-size: 10px;
     }
 }
