@@ -60,7 +60,7 @@ import "../js/custom_frontend/contact_success.js";
 import "../js/custom_frontend/sweet_alert.js";
 import "../js/custom_frontend/welcome_page/hero_section/card_swap.js";
 import "../js/custom_frontend/welcome_page/hero_section/text_animation.js";
-import "../js/custom_frontend/contact_page/contact_form.js";
+
 
 //FAQ Page
 import "../js/custom_frontend/faq_page/index.js";

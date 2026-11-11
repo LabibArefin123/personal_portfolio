@@ -269,6 +269,10 @@
             </div>
         </div>
     </section>
+    <script src="{{ asset('js/custom_frontend/contact_page/contact_form_validation.js') }}"></script>
+    <script src="{{ asset('js/custom_frontend/contact_page/contact_form_counter.js') }}"></script>
+    <script src="{{ asset('js/custom_frontend/contact_page/contact_form_submit.js') }}"></script>
+    <script src="{{ asset('js/custom_frontend/contact_page/contact_form_init.js') }}"></script>
 
     {{-- FOOTER --}}
     @include('frontend.custom_layout.footer')
