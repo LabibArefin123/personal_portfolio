@@ -1,0 +1,56 @@
+// ==========================================
+// GitHub Activity - Base
+// ==========================================
+
+.git-subtitle {
+    color: #94a3b8;
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+// Profile Button
+.github-profile-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+    color: #fff;
+
+    border: 1px solid rgba(129, 140, 248, 0.25);
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        color: #fff;
+        box-shadow: 0 16px 35px rgba(99, 102, 241, 0.35);
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+
+    &:focus-visible {
+        outline: 3px solid rgba(6, 182, 212, 0.5);
+        outline-offset: 4px;
+    }
+}
+
+// Stats Wrapper
+.github-stats-wrapper {
+    margin-top: 30px;
+}

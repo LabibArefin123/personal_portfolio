@@ -1,0 +1,41 @@
+// ==========================================
+// GitHub Activity - Responsive
+// ==========================================
+
+@media (max-width: 991px) {
+
+    .github-info-card,
+    .github-image-card {
+        padding: 20px;
+    }
+
+    .github-profile-btn {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .git-subtitle {
+        font-size: 14px;
+    }
+
+    .github-info-card,
+    .github-image-card {
+        padding: 17px;
+        border-radius: 14px;
+    }
+
+    .github-info-card h5 {
+        font-size: 19px;
+    }
+
+    .github-image-card {
+        min-height: 140px;
+    }
+
+    .github-list li {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+}
