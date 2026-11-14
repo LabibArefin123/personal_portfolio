@@ -56,11 +56,12 @@ import "../scss/frontend/faq_page/faq.scss";
 import "../js/custom_frontend/global_variables/scroll_progress.js";
 import "../js/custom_frontend/global_variables/language.js";
 import "../js/custom_frontend/global_variables/custom_back_to_top.js";
+import "../js/custom_frontend/education_page/education_timeline.js";
+import "../js/custom_frontend/education_page/education_github.js";
 import "../js/custom_frontend/contact_page/contact_success.js";
 import "../js/custom_frontend/global_variables/sweet_alert.js";
 import "../js/custom_frontend/welcome_page/hero_section/card_swap.js";
 import "../js/custom_frontend/welcome_page/hero_section/text_animation.js";
-
 
 //FAQ Page
 import "../js/custom_frontend/faq_page/index.js";
