@@ -1,0 +1,48 @@
+
+/* ==========================================================
+   SKILLS INDEX - BASE
+========================================================== */
+
+.skills-index-page {
+    --skills-primary: #4f46e5;
+    --skills-primary-light: #eef2ff;
+    --skills-success: #16a34a;
+    --skills-info: #0891b2;
+    --skills-danger: #dc2626;
+    --skills-text: #1e293b;
+    --skills-muted: #64748b;
+    --skills-border: #e8edf4;
+    --skills-background: #f8fafc;
+    color: var(--skills-text);
+}
+
+.skills-index-page .card {
+    border: 1px solid var(--skills-border);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.045);
+}
+
+.skills-index-page .btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.skills-index-page .btn:focus {
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.skills-index-page .btn-primary {
+    background: var(--skills-primary);
+    border-color: var(--skills-primary);
+}
+
+.skills-index-page .btn-primary:hover {
+    background: #4338ca;
+    border-color: #4338ca;
+    transform: translateY(-1px);
+}
+
+.skills-index-page .text-muted {
+    color: var(--skills-muted) !important;
+}

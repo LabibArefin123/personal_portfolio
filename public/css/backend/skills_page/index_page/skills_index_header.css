@@ -1,0 +1,36 @@
+
+/* ==========================================================
+   SKILLS INDEX - PAGE HEADER
+========================================================== */
+
+.skills-index-header {
+    margin-bottom: 26px;
+}
+
+.skills-index-header h1 {
+    margin-bottom: 7px;
+    color: #172033;
+    font-size: 27px;
+    font-weight: 750;
+    letter-spacing: -0.7px;
+}
+
+.skills-index-header p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.skills-index-header .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 10px 18px;
+    font-size: 13px;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.16);
+}
+
+.skills-index-header .btn i {
+    font-size: 12px;
+}

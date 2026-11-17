@@ -2,155 +2,296 @@
 
 @section('title', 'Skill Details')
 
+@section('adminlte_css')
+    <link rel="stylesheet" href="{{ asset('css/backend/skills_page/show_page/skills_show.css') }}">
+@stop
+
 @section('content_header')
+    <div class="skills-show-header">
 
-    <h1>
-        <i class="fas fa-eye text-info"></i>
-        Skill Details
-    </h1>
+        <div class="skills-show-header-content">
+            <div class="skills-show-header-icon">
+                <i class="fas fa-layer-group"></i>
+            </div>
 
+            <div>
+                <h1>Skill Details</h1>
+                <p>View skill information and portfolio proficiency.</p>
+            </div>
+        </div>
+
+        <div class="skills-show-header-actions">
+            <a href="{{ route('skills.edit', $skill->id) }}" class="btn btn-primary">
+                <i class="fas fa-edit"></i>
+                Edit Skill
+            </a>
+
+            <a href="{{ route('skills.index') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i>
+                Back to Skills
+            </a>
+        </div>
+
+    </div>
 @stop
 
 @section('content')
+    <div class="skills-show-page">
 
-    <div class="row">
+        <div class="row">
 
-        <div class="col-md-8">
+            {{-- MAIN SKILL DETAILS --}}
+            <div class="col-lg-8">
 
-            <div class="card card-info card-outline">
+                <div class="card skills-detail-card">
 
-                <div class="card-header">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-info-circle mr-2 text-primary"></i>
+                            Skill Information
+                        </h3>
 
-                    <h3 class="card-title">
-                        {{ $skill->name }}
-                    </h3>
+                        @if ($skill->status)
+                            <span class="skill-status skill-status-active">
+                                Active
+                            </span>
+                        @else
+                            <span class="skill-status skill-status-inactive">
+                                Inactive
+                            </span>
+                        @endif
+                    </div>
 
-                </div>
+                    <div class="card-body">
 
-                <div class="card-body">
+                        {{-- SKILL IDENTITY --}}
+                        <div class="skill-identity">
 
-                    <table class="table table-bordered">
+                            <div class="skill-identity-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
 
-                        <tr>
-                            <th width="200">Category</th>
-                            <td>{{ $skill->category }}</td>
-                        </tr>
+                            <div class="skill-identity-content">
+                                <span class="show-section-label">
+                                    Portfolio Skill
+                                </span>
 
-                        <tr>
-                            <th>Skill Name</th>
-                            <td>{{ $skill->name }}</td>
-                        </tr>
+                                <h3>{{ $skill->name }}</h3>
 
-                        <tr>
-                            <th>Skill Level</th>
-                            <td>
+                                <span class="skill-category-label">
+                                    <i class="fas fa-folder mr-1"></i>
+                                    {{ $skill->category }}
+                                </span>
+                            </div>
 
-                                <div class="progress">
+                        </div>
 
-                                    <div class="progress-bar bg-success" style="width:{{ $skill->percentage }}%">
+                        {{-- SKILL DETAILS --}}
+                        <div class="show-section-label">
+                            General Information
+                        </div>
 
-                                        {{ $skill->percentage }}%
+                        <div class="skill-details-list mb-4">
 
-                                    </div>
-
+                            <div class="skill-detail-item">
+                                <div class="skill-detail-label">
+                                    <i class="fas fa-folder"></i>
+                                    Category
                                 </div>
 
-                            </td>
-                        </tr>
+                                <div class="skill-detail-value">
+                                    {{ $skill->category }}
+                                </div>
+                            </div>
 
-                        <tr>
-                            <th>Position</th>
-                            <td>{{ $skill->position }}</td>
-                        </tr>
+                            <div class="skill-detail-item">
+                                <div class="skill-detail-label">
+                                    <i class="fas fa-code"></i>
+                                    Skill Name
+                                </div>
 
-                        <tr>
-                            <th>Status</th>
+                                <div class="skill-detail-value">
+                                    {{ $skill->name }}
+                                </div>
+                            </div>
 
-                            <td>
+                            <div class="skill-detail-item">
+                                <div class="skill-detail-label">
+                                    <i class="fas fa-sort-numeric-down"></i>
+                                    Display Position
+                                </div>
 
-                                @if ($skill->status)
-                                    <span class="badge badge-success">
-                                        Active
-                                    </span>
-                                @else
-                                    <span class="badge badge-danger">
-                                        Inactive
-                                    </span>
-                                @endif
+                                <div class="skill-detail-value">
+                                    {{ $skill->position }}
+                                </div>
+                            </div>
 
-                            </td>
+                            <div class="skill-detail-item">
+                                <div class="skill-detail-label">
+                                    <i class="fas fa-toggle-on"></i>
+                                    Publication Status
+                                </div>
 
-                        </tr>
+                                <div class="skill-detail-value">
+                                    @if ($skill->status)
+                                        <span class="skill-status skill-status-active">
+                                            Active
+                                        </span>
+                                    @else
+                                        <span class="skill-status skill-status-inactive">
+                                            Inactive
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
 
-                        <tr>
-                            <th>Created At</th>
-                            <td>{{ $skill->created_at->format('d M Y h:i A') }}</td>
-                        </tr>
+                        </div>
 
-                        <tr>
-                            <th>Updated At</th>
-                            <td>{{ $skill->updated_at->format('d M Y h:i A') }}</td>
-                        </tr>
+                        {{-- SKILL LEVEL --}}
+                        <div class="show-section-label">
+                            Proficiency Level
+                        </div>
 
-                    </table>
+                        <div class="skill-level-panel">
 
-                </div>
+                            <div class="skill-level-heading">
+                                <span>
+                                    <i class="fas fa-chart-line mr-1"></i>
+                                    Skill Proficiency
+                                </span>
 
-                <div class="card-footer">
+                                <strong>
+                                    {{ $skill->percentage }}%
+                                </strong>
+                            </div>
 
-                    <a href="{{ route('skills.edit', $skill->id) }}" class="btn btn-primary">
+                            <div class="skill-level-track">
+                                <div class="skill-level-fill"
+                                    style="width: {{ max(0, min(100, (float) $skill->percentage)) }}%;">
+                                </div>
+                            </div>
 
-                        <i class="fas fa-edit"></i>
-                        Edit
+                            <div class="skill-level-caption">
+                                <span>Beginner</span>
+                                <span>Intermediate</span>
+                                <span>Advanced</span>
+                            </div>
 
-                    </a>
+                        </div>
 
-                    <a href="{{ route('skills.index') }}" class="btn btn-secondary">
+                        {{-- TIMESTAMPS --}}
+                        <div class="show-section-label mt-4">
+                            Record Information
+                        </div>
 
-                        <i class="fas fa-arrow-left"></i>
-                        Back
+                        <div class="skill-details-list">
 
-                    </a>
+                            <div class="skill-detail-item">
+                                <div class="skill-detail-label">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    Created At
+                                </div>
 
-                </div>
+                                <div class="skill-detail-value">
+                                    {{ $skill->created_at?->format('d M Y, h:i A') ?? 'Not available' }}
+                                </div>
+                            </div>
 
-            </div>
+                            <div class="skill-detail-item">
+                                <div class="skill-detail-label">
+                                    <i class="fas fa-clock"></i>
+                                    Last Updated
+                                </div>
 
-        </div>
-
-        <div class="col-md-4">
-
-            <div class="card">
-
-                <div class="card-header bg-info">
-                    <h3 class="card-title">
-                        Skill Preview
-                    </h3>
-                </div>
-
-                <div class="card-body">
-
-                    <h5>{{ $skill->name }}</h5>
-
-                    <small class="text-muted">
-                        {{ $skill->category }}
-                    </small>
-
-                    <hr>
-
-                    <div class="progress">
-
-                        <div class="progress-bar bg-success" style="width:{{ $skill->percentage }}%">
+                                <div class="skill-detail-value">
+                                    {{ $skill->updated_at?->format('d M Y, h:i A') ?? 'Not available' }}
+                                </div>
+                            </div>
 
                         </div>
 
                     </div>
 
-                    <div class="mt-2 text-right">
+                    <div class="card-footer">
 
-                        <strong>
-                            {{ $skill->percentage }}%
-                        </strong>
+                        <a href="{{ route('skills.edit', $skill->id) }}" class="btn btn-primary">
+                            <i class="fas fa-edit"></i>
+                            Edit Skill
+                        </a>
+
+                        <a href="{{ route('skills.index') }}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to List
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {{-- SKILL PREVIEW --}}
+            <div class="col-lg-4">
+
+                <div class="card skill-preview-card">
+
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-eye"></i>
+                            Skill Preview
+                        </h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="skill-preview-banner">
+
+                            <div class="skill-preview-symbol">
+                                <i class="fas fa-code"></i>
+                            </div>
+
+                            <h4>{{ $skill->name }}</h4>
+
+                            <p>{{ $skill->category }}</p>
+
+                        </div>
+
+                        <div class="skill-preview-meta">
+
+                            <div class="skill-preview-meta-row">
+                                <span>Category</span>
+                                <strong>{{ $skill->category }}</strong>
+                            </div>
+
+                            <div class="skill-preview-divider"></div>
+
+                            <div class="skill-preview-meta-row">
+                                <span>Position</span>
+                                <strong>{{ $skill->position }}</strong>
+                            </div>
+
+                            <div class="skill-preview-divider"></div>
+
+                            <div class="skill-preview-meta-row">
+                                <span>Status</span>
+
+                                @if ($skill->status)
+                                    <strong class="text-success">Published</strong>
+                                @else
+                                    <strong class="text-danger">Unpublished</strong>
+                                @endif
+                            </div>
+
+                        </div>
+
+                        <div class="skill-preview-note">
+                            <i class="fas fa-lightbulb"></i>
+
+                            <span>
+                                This is a visual preview of how the skill
+                                identity appears in your portfolio.
+                            </span>
+                        </div>
 
                     </div>
 
@@ -159,7 +300,9 @@
             </div>
 
         </div>
-
     </div>
+@stop
 
+@section('js')
+    <script src="{{ asset('js/custom_backend/skills_page/show_page/skills_show.js') }}"></script>
 @stop

@@ -1,0 +1,137 @@
+
+/* ==========================================================
+   SKILLS SHOW - PREMIUM PREVIEW
+========================================================== */
+
+.skill-preview-card {
+    position: relative;
+}
+
+.skill-preview-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.skill-preview-card .card-header i {
+    color: var(--show-primary);
+}
+
+.skill-preview-card .card-body {
+    padding: 24px 22px;
+}
+
+.skill-preview-banner {
+    position: relative;
+    padding: 25px 18px;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(145deg, #4941b5, #7068e8 65%, #928bfa);
+    border-radius: 14px;
+    text-align: center;
+}
+
+.skill-preview-banner::before,
+.skill-preview-banner::after {
+    position: absolute;
+    content: "";
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+.skill-preview-banner::before {
+    top: -55px;
+    right: -40px;
+    width: 155px;
+    height: 155px;
+}
+
+.skill-preview-banner::after {
+    bottom: -75px;
+    left: -45px;
+    width: 180px;
+    height: 180px;
+}
+
+.skill-preview-symbol {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 15px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 19px;
+    font-size: 25px;
+    backdrop-filter: blur(8px);
+}
+
+.skill-preview-banner h4 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 7px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.skill-preview-banner p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 12px;
+}
+
+.skill-preview-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 19px 3px 3px;
+}
+
+.skill-preview-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.skill-preview-meta-row span {
+    color: var(--show-muted);
+}
+
+.skill-preview-meta-row strong {
+    color: #263248;
+    font-weight: 700;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.skill-preview-divider {
+    height: 1px;
+    background: var(--show-border);
+}
+
+.skill-preview-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 13px;
+    margin-top: 17px;
+    color: #5b56a8;
+    background: #f3f2ff;
+    border-radius: 10px;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.skill-preview-note i {
+    margin-top: 2px;
+}

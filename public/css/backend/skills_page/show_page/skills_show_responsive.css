@@ -1,0 +1,106 @@
+
+/* ==========================================================
+   SKILLS SHOW - RESPONSIVE
+========================================================== */
+
+@media (max-width: 991.98px) {
+    .skills-show-header h1 {
+        font-size: 23px;
+    }
+
+    .skills-detail-card .card-body {
+        padding: 20px;
+    }
+
+    .skill-preview-card .card-body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .skills-show-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .skills-show-header-actions {
+        width: 100%;
+    }
+
+    .skills-show-header-actions .btn {
+        flex: 1;
+    }
+
+    .skill-details-list {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-detail-item-full {
+        grid-column: auto;
+    }
+
+    .skills-detail-card .card-footer {
+        flex-wrap: wrap;
+        padding: 15px 18px;
+    }
+
+    .skills-detail-card .card-footer .btn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .skills-show-header h1 {
+        font-size: 21px;
+    }
+
+    .skills-show-header p {
+        font-size: 12px;
+    }
+
+    .skills-detail-card .card-header {
+        padding: 16px;
+    }
+
+    .skills-detail-card .card-body {
+        padding: 15px;
+    }
+
+    .skill-identity {
+        gap: 12px;
+        padding: 17px 14px;
+    }
+
+    .skill-identity-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 13px;
+        font-size: 19px;
+    }
+
+    .skill-identity-content h3 {
+        font-size: 17px;
+    }
+
+    .skill-level-panel {
+        padding: 15px;
+    }
+
+    .skill-preview-banner {
+        padding: 23px 15px;
+    }
+
+    .skill-preview-meta-row {
+        font-size: 11px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-show-page *,
+    .skills-show-header * {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

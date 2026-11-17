@@ -1,0 +1,110 @@
+
+/* ==========================================================
+   SKILLS INDEX - RESPONSIVE
+========================================================== */
+
+@media (max-width: 991.98px) {
+    .skills-index-header h1 {
+        font-size: 24px;
+    }
+
+    .skills-index-page .small-box {
+        min-height: 125px;
+    }
+
+    .skills-index-page .small-box h3 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .skills-index-header {
+        align-items: flex-start !important;
+        gap: 15px;
+    }
+
+    .skills-index-header h1 {
+        font-size: 22px;
+    }
+
+    .skills-index-header p {
+        font-size: 13px;
+    }
+
+    .skills-index-header .btn {
+        flex-shrink: 0;
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .skills-index-page .small-box {
+        min-height: 112px;
+    }
+
+    .skills-index-page .small-box .inner {
+        padding: 18px;
+    }
+
+    .skills-index-page .small-box h3 {
+        font-size: 25px;
+    }
+
+    .skills-index-page .small-box .icon {
+        top: 18px;
+        right: 15px;
+    }
+
+    .skills-index-page .small-box .icon i {
+        font-size: 42px;
+    }
+
+    .skills-index-page .skills-table-card .card-header {
+        min-height: 56px;
+        padding: 15px 17px;
+    }
+
+    .skills-index-page .skills-table {
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .skills-index-header {
+        flex-wrap: wrap;
+    }
+
+    .skills-index-header > div {
+        width: 100%;
+    }
+
+    .skills-index-header .btn {
+        width: 100%;
+    }
+
+    .skills-index-page .small-box {
+        min-height: 105px;
+    }
+
+    .skills-index-page .small-box h3 {
+        font-size: 23px;
+    }
+
+    .skills-index-page .small-box p {
+        font-size: 12px;
+    }
+
+    .skills-index-page .skills-table tbody td,
+    .skills-index-page .skills-table thead th {
+        padding: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-index-page *,
+    .skills-index-header * {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

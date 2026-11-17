@@ -1,0 +1,75 @@
+/* ==========================================================
+   SKILLS SHOW - ANIMATION EFFECTS
+========================================================== */
+
+/* Smooth Reveal */
+
+.skills-show-page .skills-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--skills-reveal-delay, 0ms);
+}
+
+.skills-show-page .skills-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Progress Animation */
+
+.skills-show-page .skill-level-fill {
+    transition: width 1.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Identity Hover */
+
+.skills-show-page .skill-identity {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.skills-show-page .skill-identity-hover {
+    transform: translateY(-3px);
+    border-color: #c9c4ff;
+    box-shadow: 0 9px 22px rgba(99, 91, 219, 0.09);
+}
+
+/* Preview Animation */
+
+.skills-show-page .skill-preview-symbol {
+    transition: transform 0.35s ease;
+}
+
+.skills-show-page .skill-preview-banner:hover .skill-preview-symbol {
+    transform: translateY(-4px) rotate(-5deg);
+}
+
+/* Detail Item Hover */
+
+.skills-show-page .skill-detail-item {
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.skills-show-page .skill-detail-item:hover {
+    transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-show-page .skills-reveal,
+    .skills-show-page .skill-level-fill,
+    .skills-show-page .skill-identity,
+    .skills-show-page .skill-detail-item,
+    .skills-show-page .skill-preview-symbol {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}

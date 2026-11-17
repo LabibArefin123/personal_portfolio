@@ -1,0 +1,71 @@
+
+/* ==========================================================
+   SKILLS INDEX - STATISTICS
+========================================================== */
+
+.skills-index-page .skills-stats-row {
+    margin-bottom: 22px !important;
+}
+
+.skills-index-page .small-box {
+    position: relative;
+    min-height: 135px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skills-index-page .small-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.13);
+}
+
+.skills-index-page .small-box .inner {
+    position: relative;
+    z-index: 2;
+    padding: 23px 24px;
+}
+
+.skills-index-page .small-box h3 {
+    margin: 0 0 7px;
+    font-size: 30px;
+    font-weight: 750;
+    letter-spacing: -0.8px;
+}
+
+.skills-index-page .small-box p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.skills-index-page .small-box .icon {
+    top: 20px;
+    right: 20px;
+}
+
+.skills-index-page .small-box .icon i {
+    font-size: 54px;
+    opacity: 0.19;
+    transition: transform 0.25s ease;
+}
+
+.skills-index-page .small-box:hover .icon i {
+    transform: scale(1.12) rotate(-6deg);
+}
+
+.skills-index-page .small-box.bg-primary {
+    background: linear-gradient(135deg, #4f46e5, #6366f1) !important;
+}
+
+.skills-index-page .small-box.bg-success {
+    background: linear-gradient(135deg, #059669, #10b981) !important;
+}
+
+.skills-index-page .small-box.bg-info {
+    background: linear-gradient(135deg, #0284c7, #06b6d4) !important;
+}

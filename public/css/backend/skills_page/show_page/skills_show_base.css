@@ -1,0 +1,92 @@
+
+/* ==========================================================
+   SKILLS SHOW - BASE
+========================================================== */
+
+.skills-show-page {
+    --show-primary: #635bdb;
+    --show-primary-dark: #4941b5;
+    --show-primary-soft: #f0efff;
+    --show-success: #059669;
+    --show-success-soft: #dcfce7;
+    --show-danger: #dc2626;
+    --show-danger-soft: #fee2e2;
+    --show-info: #0891b2;
+    --show-text: #1e293b;
+    --show-muted: #64748b;
+    --show-border: #e9edf4;
+    --show-surface: #ffffff;
+    --show-background: #f7f8fc;
+    color: var(--show-text);
+}
+
+.skills-show-page .card {
+    overflow: hidden;
+    margin-bottom: 22px;
+    border: 1px solid var(--show-border);
+    border-radius: 17px;
+    background: var(--show-surface);
+    box-shadow: 0 7px 24px rgba(30, 41, 59, 0.045);
+}
+
+.skills-show-page .card-header {
+    padding: 19px 22px;
+    background: #fff;
+    border-bottom: 1px solid var(--show-border);
+}
+
+.skills-show-page .card-title {
+    margin: 0;
+    color: var(--show-text);
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.skills-show-page .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 39px;
+    padding: 9px 16px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 650;
+    transition: all 0.22s ease;
+}
+
+.skills-show-page .btn:hover {
+    transform: translateY(-2px);
+}
+
+.skills-show-page .btn-primary {
+    background: var(--show-primary);
+    border-color: var(--show-primary);
+}
+
+.skills-show-page .btn-primary:hover {
+    background: var(--show-primary-dark);
+    border-color: var(--show-primary-dark);
+}
+
+.skills-show-page .btn-secondary {
+    color: #475569;
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+}
+
+.skills-show-page .btn-secondary:hover {
+    color: #1e293b;
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+}
+
+.skills-show-page .show-section-label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--show-muted);
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}

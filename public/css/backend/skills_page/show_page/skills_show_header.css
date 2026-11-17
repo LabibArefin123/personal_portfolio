@@ -1,0 +1,51 @@
+
+/* ==========================================================
+   SKILLS SHOW - HEADER
+========================================================== */
+
+.skills-show-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.skills-show-header-content {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.skills-show-header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    color: var(--show-primary);
+    background: var(--show-primary-soft);
+    border-radius: 13px;
+    font-size: 17px;
+}
+
+.skills-show-header h1 {
+    margin: 0 0 5px;
+    color: #172033;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.65px;
+}
+
+.skills-show-header p {
+    margin: 0;
+    color: var(--show-muted);
+    font-size: 13px;
+}
+
+.skills-show-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
