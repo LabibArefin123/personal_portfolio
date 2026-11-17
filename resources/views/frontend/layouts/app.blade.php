@@ -52,6 +52,12 @@
 
 <body>
     <div id="app">
+        <!-- MAP MY VISITORS -->
+        <script
+            type="text/javascript"
+            id="mapmyvisitors"
+            src="//mapmyvisitors.com/map.js?d=z89XLfaLGMFTO4fYzfkHra84C8IrskJkWnX6AhXmiAQ&cl=ffffff&w=a">
+        </script>
 
         <!-- 🔥 Scroll Progress -->
         <div id="scrollProgress"
@@ -87,7 +93,6 @@
     </div>
 
     <!-- 🔥 GLOBAL MODALS (Keep only if needed) -->
-    {{-- Clean version: remove unused doctor-specific modals --}}
     @includeWhen(View::exists('frontend.modal.contact'), 'frontend.modal.contact')
     <!-- JS LIBS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

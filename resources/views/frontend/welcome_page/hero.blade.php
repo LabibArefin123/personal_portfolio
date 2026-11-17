@@ -35,11 +35,11 @@
 
                     <div class="cv-wrapper">
 
-                        <a href="{{ asset('files/CV_Labib.pdf') }}" target="_blank" class="hero-btn-outline">
+                        <a href="{{ asset('files/Md Labib Arefin CV.pdf') }}" target="_blank" class="hero-btn-outline">
                             👁 View CV
                         </a>
 
-                        <a href="{{ asset('files/CV_Labib.pdf') }}" download class="cv-download">
+                        <a href="{{ asset('files/Md Labib Arefin CV.pdf') }}" download class="cv-download">
                             ⬇
                         </a>
 

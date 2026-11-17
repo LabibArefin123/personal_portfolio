@@ -3,7 +3,6 @@
 @section('title', 'Services | Md. Labib Arefin - Full Stack Developer')
 
 @section('content')
-
     @include('frontend.custom_layout.top-bar')
     @include('frontend.custom_layout.navbar')
 
