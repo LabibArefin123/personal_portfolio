@@ -1,0 +1,44 @@
+/* ==========================================================
+   AUTHENTICATION BUTTONS
+========================================================== */
+
+.auth-notification-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 155px;
+    min-height: 45px;
+    padding: 11px 24px;
+    border: 0;
+    border-radius: 11px;
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    text-decoration: none !important;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        filter 0.22s ease;
+}
+
+.auth-notification-btn.success {
+    background: linear-gradient(135deg, #159b64, #0d8755);
+    box-shadow: 0 7px 18px rgba(22, 163, 106, 0.2);
+}
+
+.auth-notification-btn.logout {
+    background: linear-gradient(135deg, #64748b, #475569);
+    box-shadow: 0 7px 18px rgba(71, 85, 105, 0.18);
+}
+
+.auth-notification-btn:hover {
+    color: #ffffff !important;
+    filter: brightness(1.04);
+    transform: translateY(-2px);
+}
+
+.auth-notification-btn:active {
+    transform: translateY(0);
+}

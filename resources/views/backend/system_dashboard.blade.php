@@ -3,164 +3,278 @@
 @section('title', 'System Dashboard')
 
 @section('content_header')
-    <h3 class="fw-bold mb-1">
-        <i class="fas fa-server text-primary"></i> System Summary Dashboard
-    </h3>
-    <p class="text-muted mb-3">
-        Overview of system health, database statistics, and backup status.
-    </p>
+    <div class="system-page-heading">
+        <div>
+            <span class="system-eyebrow">
+                <i class="fas fa-shield-alt"></i>
+                SYSTEM MONITORING
+            </span>
 
-    <div class="p-3 bg-light rounded">
-        <p class="mb-1">
-            💡 This section provides a high-level overview of the system status.
-        </p>
-        <p class="mb-0 small text-muted">
-            Note: Database content is not editable or viewable from here for security reasons.
-        </p>
+            <h1>System Dashboard</h1>
+
+            <p>Monitor database statistics, user activity, and backup information.</p>
+        </div>
+
+        <div class="system-live-indicator">
+            <span class="system-live-dot"></span>
+            Monitoring Overview
+        </div>
     </div>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/backend/admin_page/dashboard_system.css') }}">
+@stop
 
 @section('content')
+    <div class="container-fluid system-dashboard-container">
 
-    {{-- =======================
-        SUMMARY INFO BOXES
-    ======================= --}}
-    <div class="row g-4 mt-1">
+        {{-- Welcome Banner --}}
+        <section class="system-welcome system-reveal">
+            <div class="system-welcome-content">
+                <span class="system-welcome-label">
+                    <i class="fas fa-server"></i>
+                    INFRASTRUCTURE OVERVIEW
+                </span>
 
-        {{-- Total Users --}}
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="small-box bg-info text-white shadow-sm dashboard-box">
-                <div class="inner">
-                    <h3>{{ $totalUsers }}</h3>
-                    <p>Total Users</p>
-                </div>
-                <div class="icon">
-                    <i class="fas fa-users"></i>
+                <h2>Your system at a glance.</h2>
+
+                <p>
+                    Review important system statistics, database records,
+                    storage information, and backup status from one place.
+                </p>
+
+                <div class="system-security-note">
+                    <i class="fas fa-lock"></i>
+                    Database information is read-only and protected.
                 </div>
             </div>
-        </div>
 
-        {{-- Total Records --}}
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="small-box bg-success text-white shadow-sm dashboard-box">
-                <div class="inner">
-                    <h3>{{ number_format($totalRecords) }}</h3>
-                    <p>Total Records</p>
-                </div>
-                <div class="icon">
-                    <i class="fas fa-database"></i>
+            <div class="system-welcome-decoration">
+                <div class="system-circle circle-one"></div>
+                <div class="system-circle circle-two"></div>
+
+                <div class="system-server-icon">
+                    <i class="fas fa-server"></i>
                 </div>
             </div>
-        </div>
+        </section>
 
-        {{-- Database Size --}}
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="small-box bg-warning text-white shadow-sm dashboard-box">
-                <div class="inner">
-                    <h3>{{ $databaseSize }} MB</h3>
-                    <p>Database Size</p>
-                </div>
-                <div class="icon">
-                    <i class="fas fa-hdd"></i>
+        {{-- System Statistics --}}
+        <section class="system-section system-reveal">
+            <div class="system-section-heading">
+                <div>
+                    <span class="system-section-eyebrow">SYSTEM METRICS</span>
+                    <h3>Database Overview</h3>
+                    <p>Key statistics from your application database.</p>
                 </div>
             </div>
-        </div>
 
-        {{-- Last Backup Time --}}
-        <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="small-box bg-secondary text-white shadow-sm dashboard-box">
-                <div class="inner">
-                    <h5 class="mb-1">{{ $lastBackupTime }}</h5>
-                    <p>Last Backup</p>
+            <div class="row g-3">
+
+                {{-- Total Users --}}
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="system-stat-card system-stat-blue">
+                        <div class="system-stat-top">
+                            <div class="system-stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span class="system-stat-label">USER ACCOUNTS</span>
+                        </div>
+
+                        <div class="system-stat-bottom">
+                            <h2 class="system-counter" data-count="{{ $totalUsers }}">0</h2>
+                            <span>Total Users</span>
+                        </div>
+
+                        <div class="system-stat-decoration">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="icon">
-                    <i class="fas fa-clock"></i>
+
+                {{-- Total Records --}}
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="system-stat-card system-stat-green">
+                        <div class="system-stat-top">
+                            <div class="system-stat-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="system-stat-label">DATABASE</span>
+                        </div>
+
+                        <div class="system-stat-bottom">
+                            <h2 class="system-counter" data-count="{{ $totalRecords }}">0</h2>
+                            <span>Total Records</span>
+                        </div>
+
+                        <div class="system-stat-decoration">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
                 </div>
+
+                {{-- Database Size --}}
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="system-stat-card system-stat-orange">
+                        <div class="system-stat-top">
+                            <div class="system-stat-icon">
+                                <i class="fas fa-hdd"></i>
+                            </div>
+                            <span class="system-stat-label">STORAGE</span>
+                        </div>
+
+                        <div class="system-stat-bottom">
+                            <h2 class="system-counter" data-count="{{ $databaseSize }}" data-decimals="2">0</h2>
+                            <span>Database Size (MB)</span>
+                        </div>
+
+                        <div class="system-stat-decoration">
+                            <i class="fas fa-hdd"></i>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Last Backup --}}
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="system-stat-card system-stat-purple">
+                        <div class="system-stat-top">
+                            <div class="system-stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span class="system-stat-label">BACKUP STATUS</span>
+                        </div>
+
+                        <div class="system-stat-backup">
+                            <h5>{{ $lastBackupTime }}</h5>
+                            <span>Last Backup</span>
+                        </div>
+
+                        <div class="system-stat-decoration">
+                            <i class="fas fa-history"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        {{-- Database Table Summary --}}
+        <section class="system-section system-reveal">
+            <div class="system-section-heading system-table-heading">
+                <div>
+                    <span class="system-section-eyebrow">DATABASE STRUCTURE</span>
+                    <h3>Database Table Summary</h3>
+                    <p>Record counts and latest update information for each table.</p>
+                </div>
+
+                <div class="system-table-count">
+                    <i class="fas fa-table"></i>
+                    {{ count($tableCounts) }} Tables
+                </div>
+            </div>
+
+            <div class="system-table-card">
+                <div class="system-table-topbar">
+                    <div>
+                        <h5>
+                            <i class="fas fa-layer-group"></i>
+                            Table Information
+                        </h5>
+                        <p>Read-only database statistics</p>
+                    </div>
+
+                    <span class="system-readonly-label">
+                        <i class="fas fa-lock"></i>
+                        Read Only
+                    </span>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table system-database-table mb-0">
+                        <thead>
+                            <tr>
+                                <th>TABLE NAME</th>
+                                <th class="text-end">RECORD COUNT</th>
+                                <th class="text-end">LAST UPDATED</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @forelse ($tableCounts as $table => $data)
+                                <tr>
+                                    <td>
+                                        <div class="system-table-name">
+                                            <span class="system-table-icon">
+                                                <i class="fas fa-table"></i>
+                                            </span>
+                                            <span>{{ $table }}</span>
+                                        </div>
+                                    </td>
+
+                                    <td class="text-end">
+                                        <span class="system-record-count">
+                                            {{ number_format($data['count']) }}
+                                        </span>
+                                    </td>
+
+                                    <td class="text-end">
+                                        @if ($data['updated_at'])
+                                            <span class="system-updated-time">
+                                                <i class="far fa-clock"></i>
+                                                {{ \Carbon\Carbon::parse($data['updated_at'])->diffForHumans() }}
+                                            </span>
+                                        @else
+                                            <span class="system-na-label">N/A</span>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="system-empty-state">
+                                            <i class="fas fa-database"></i>
+                                            <h6>No database table data</h6>
+                                            <p>No table statistics are currently available.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="system-table-footer">
+                    <div class="system-footer-security">
+                        <i class="fas fa-shield-alt"></i>
+                        Database information is displayed for monitoring only.
+                    </div>
+
+                    <span>
+                        {{ count($tableCounts) }} tables monitored
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        {{-- Security Notice --}}
+        <div class="system-security-footer system-reveal">
+            <div class="system-security-footer-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+
+            <div>
+                <h6>System security and data protection</h6>
+                <p>
+                    This dashboard provides read-only monitoring information.
+                    Database records cannot be modified or viewed directly from this page.
+                </p>
             </div>
         </div>
 
     </div>
+@stop
 
-    {{-- =======================
-        TABLE ROW COUNTS
-    ======================= --}}
-    <div class="card mt-4 shadow-sm">
-        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">
-                <i class="fas fa-table"></i> Database Table Summary
-            </h5>
-            <span class="badge bg-info">
-                {{ count($tableCounts) }} Tables
-            </span>
-        </div>
-
-        <div class="card-body p-0">
-            <div class="table-responsive">
-                <table class="table table-striped table-hover mb-0">
-                    <thead class="table-light">
-                        <tr>
-                            <th style="width: 50%">Table Name</th>
-                            <th class="text-end">Record Count</th>
-                            <th class="text-end">Last Updated</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse ($tableCounts as $table => $data)
-                            <tr>
-                                <td>{{ $table }}</td>
-
-                                <td class="text-end">
-                                    {{ number_format($data['count']) }}
-                                </td>
-
-                                <td class="text-end">
-                                    @if ($data['updated_at'])
-                                        {{ \Carbon\Carbon::parse($data['updated_at'])->diffForHumans() }}
-                                    @else
-                                        <span class="text-muted">N/A</span>
-                                    @endif
-                                </td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="3" class="text-center text-muted py-3">
-                                    No table data found.
-                                </td>
-                            </tr>
-                        @endforelse
-                    </tbody>
-
-                </table>
-            </div>
-        </div>
-
-        <div class="card-footer text-muted small">
-            <i class="fas fa-shield-alt"></i>
-            This view is read-only and intended for monitoring purposes only.
-        </div>
-    </div>
-
-    {{-- =======================
-        STYLES
-    ======================= --}}
-    <style>
-        .dashboard-box {
-            border-radius: 8px;
-            transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
-        }
-
-        .dashboard-box:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .small-box .icon i {
-            opacity: 0.25;
-            font-size: 70px;
-            position: absolute;
-            top: 15px;
-            right: 15px;
-        }
-    </style>
-
-@endsection
+@section('js')
+    <script src="{{ asset('js/custom_backend/dashboard_page/dashboard_system.js') }}"></script>
+@stop

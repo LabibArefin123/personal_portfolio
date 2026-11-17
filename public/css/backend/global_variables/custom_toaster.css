@@ -1,119 +1,24 @@
-/* ==========================================
-   Backend Custom SweetAlert Notifications
-========================================== */
+/*  GLOBAL BACKEND TOASTER SYSTEM */
+/* 01. Base */
+@import url("./custom_toaster/toaster_base.css");
 
-.backend-swal-popup {
-    border-radius: 16px !important;
-    padding: 26px 24px !important;
-    font-family: inherit !important;
-    box-shadow: 0 12px 45px rgba(15, 23, 42, 0.14) !important;
-}
+/* 02. SweetAlert */
+@import url("./custom_toaster/toaster_sweetalert.css");
 
-.backend-swal-title {
-    color: #1e293b !important;
-    font-size: 20px !important;
-    font-weight: 700 !important;
-}
+/* 03. Authentication Modal */
+@import url("./custom_toaster/toaster_auth_modal.css");
 
-.backend-swal-message {
-    color: #64748b !important;
-    font-size: 14px !important;
-    line-height: 1.7 !important;
-}
+/* 04. Authentication Icons */
+@import url("./custom_toaster/toaster_auth_icon.css");
 
-.backend-swal-progress {
-    background: #e2e8f0 !important;
-}
+/* 05. Authentication Content */
+@import url("./custom_toaster/toaster_auth_content.css");
 
-.backend-swal-popup .swal2-icon {
-    margin-top: 8px !important;
-}
+/* 06. Authentication Buttons */
+@import url("./custom_toaster/toaster_auth_buttons.css");
 
-/* ==========================================
-   Welcome / Logout Notification
-========================================== */
+/* 07. Legacy Notifications */
+@import url("./custom_toaster/toaster_legacy.css");
 
-.backend-welcome-box {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 15px 20px;
-    margin: 12px 0;
-    overflow: hidden;
-    background: linear-gradient(135deg, #ffffff, #f8fafc);
-    border: 1px solid #e2e8f0;
-    border-left: 4px solid #2563eb;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.045);
-}
-
-.backend-welcome-box.success {
-    border-left-color: #16a34a;
-}
-
-.backend-welcome-box.logout {
-    border-left-color: #64748b;
-}
-
-.backend-welcome-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 43px;
-    height: 43px;
-    color: #2563eb;
-    background: #eff6ff;
-    border-radius: 11px;
-    font-size: 19px;
-}
-
-.backend-welcome-box.success .backend-welcome-icon {
-    color: #16a34a;
-    background: #f0fdf4;
-}
-
-.backend-welcome-box.logout .backend-welcome-icon {
-    color: #64748b;
-    background: #f1f5f9;
-}
-
-.backend-welcome-content {
-    min-width: 0;
-}
-
-.backend-welcome-title {
-    margin: 0 0 4px;
-    color: #1e293b;
-    font-size: 15px;
-    font-weight: 700;
-}
-
-.backend-welcome-text {
-    margin: 0;
-    color: #64748b;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-/* ==========================================
-   Responsive Design
-========================================== */
-
-@media (max-width: 576px) {
-    .backend-swal-popup {
-        width: calc(100% - 30px) !important;
-        padding: 22px 16px !important;
-    }
-
-    .backend-welcome-box {
-        padding: 13px;
-        gap: 11px;
-    }
-
-    .backend-welcome-icon {
-        width: 38px;
-        height: 38px;
-    }
-}
+/* 08. Responsive & Accessibility */
+@import url("./custom_toaster/toaster_responsive.css");

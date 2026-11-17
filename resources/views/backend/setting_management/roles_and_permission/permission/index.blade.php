@@ -2,7 +2,6 @@
 
 @section('title', 'Permissions List')
 
-
 @section('adminlte_css')
     {{-- Permission Generator --}}
     <link rel="stylesheet"

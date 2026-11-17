@@ -1,0 +1,22 @@
+/* ==========================================================
+   GLOBAL BACKEND TOASTER BASE
+========================================================== */
+
+.auth-notification-modal {
+    z-index: 1090;
+}
+
+.backend-welcome-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 12px 0;
+    padding: 17px 20px;
+    overflow: hidden;
+    border: 1px solid #e8edf5;
+    border-left: 4px solid #2563eb;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.045);
+}

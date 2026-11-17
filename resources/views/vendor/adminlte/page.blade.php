@@ -3,26 +3,52 @@
 @inject('layoutHelper', 'JeroenNoten\LaravelAdminLte\Helpers\LayoutHelper')
 @inject('preloaderHelper', 'JeroenNoten\LaravelAdminLte\Helpers\PreloaderHelper')
 
-<link rel="icon" type="image/png" href="{{ asset('uploads/images/icon.png') }}">
-<link rel="stylesheet" href="{{ asset('css/custom_backend.css') }}">
-<link rel="stylesheet" href="{{ asset('css/backend/global_variables/custom_toaster.css') }}">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+{{-- Body configuration --}}
 @section('classes_body', $layoutHelper->makeBodyClasses())
 @section('body_data', $layoutHelper->makeBodyData())
 
+{{-- Favicon and styles --}}
+@section('adminlte_css')
+    @parent
+    <link rel="icon" type="image/png" href="{{ asset('uploads/images/icon.png') }}">
+    {{-- Bootstrap 5.3.9 --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+
+
+    {{-- DataTables 3.1.5 - Bootstrap 5 Integration --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.1.5/css/dataTables.bootstrap5.min.css">
+
+    {{-- Page-specific CSS --}}
+    @stack('css')
+    @yield('css')
+@stop
+
+
+{{-- Main Body --}}
 @section('body')
     <div class="wrapper">
-        <!-- Validation modal -->
+        {{-- Custom Backend Styles --}}
+        <link rel="stylesheet" href="{{ asset('css/custom_backend.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/custom_toaster.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/auth_notification_modal.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/premium_user_menu.css') }}">
+
+        {{-- Global Modals --}}
+
+        @if (session()->has('login_success'))
+            @include('backend.global_modal.user_welcome_modal')
+        @endif
+
+        @if (session()->has('logout_success'))
+            @include('backend.global_modal.user_logout_modal')
+        @endif
         @include('backend.global_modal.validation_modal')
-        <!-- Create animation modal -->
         @include('backend.global_modal.create_modal')
-        <!-- Edit animation model -->
         @include('backend.global_modal.edit_modal')
-        <!-- Delete animation model -->
         @include('backend.global_modal.delete_modal')
-        <!-- Global Error Modal -->
         @include('backend.global_modal.global_error_modal')
+
         {{-- Preloader --}}
         @if ($preloaderHelper->isPreloaderEnabled())
             @include('adminlte::partials.common.preloader')
@@ -40,7 +66,7 @@
             @include('adminlte::partials.sidebar.left-sidebar')
         @endunless
 
-        {{-- Content --}}
+        {{-- Main Content --}}
         @empty($iFrameEnabled)
             @include('adminlte::partials.cwrapper.cwrapper-default')
         @else
@@ -49,6 +75,7 @@
 
         {{-- Footer --}}
         @include('frontend.layouts.footer')
+
         @hasSection('footer')
             @yield('footer')
         @endif
@@ -57,39 +84,32 @@
         @if ($layoutHelper->isRightSidebarEnabled())
             @include('adminlte::partials.sidebar.right-sidebar')
         @endif
+
     </div>
+
 @stop
 
+
+{{-- JavaScript --}}
 @section('adminlte_js')
-    @stack('js')
-    @yield('js')
-    <!-- start of time top right  -->
+    @parent
 
-    <!-- start of data table format table -->
-    <script>
-        $(document).ready(function() {
-            $('#dataTables').DataTable();
-        });
-    </script>
-    <!-- end of data table format table -->
+    {{-- jQuery --}}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- start of jquery and bootstrap table -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- end of jquery and bootstrap table -->
-
-    {{-- start of validation --}}
+    {{-- Bootstrap 5.3.9 Bundle --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+    {{-- DataTables 3.1.5 --}}
+    <script src="https://cdn.datatables.net/3.1.5/js/dataTables.min.js"></script>
+    {{-- DataTables Bootstrap 5 Integration --}}
+    <script src="https://cdn.datatables.net/3.1.5/js/dataTables.bootstrap5.min.js"></script>
+    {{-- Global Backend Functions --}}
     <script src="{{ asset('js/custom_backend/global_functions/global_validation.js') }}"></script>
-    {{-- start of global page error logger --}}
     <script src="{{ asset('js/custom_backend/global_functions/global_logger.js') }}"></script>
-    {{-- showing password eye --}}
     <script src="{{ asset('js/custom_backend/global_functions/password_eye.js') }}"></script>
-    {{-- custom date format --}}
     <script src="{{ asset('js/custom_backend/global_functions/custom_date.js') }}"></script>
-    {{-- Backend Session Notifications --}}
-    <script src="{{ asset('js/custom_backend/global_functions/custom_toaster.js') }}"></script>
+
+    {{-- Backend Notifications --}}
     <script>
         window.backendNotification = {
             success: @json(session('success')),
@@ -98,5 +118,49 @@
             info: @json(session('info'))
         };
     </script>
-@section('plugins.Datatables', true)
+
+    <script src="{{ asset('js/custom_backend/global_functions/custom_toaster.js') }}"></script>
+    <script src="{{ asset('js/custom_backend/global_functions/auth_notification_modal.js') }}"></script>
+
+    {{-- Page-specific JavaScript --}}
+    @stack('js')
+    @yield('js')
+
+    {{-- Global DataTables Initialization --}}
+    <script>
+        $(function() {
+            const table = document.getElementById('dataTables');
+
+            if (!table) {
+                return;
+            }
+
+            if (!$.fn.DataTable.isDataTable(table)) {
+                $(table).DataTable({
+                    paging: true,
+                    searching: true,
+                    ordering: true,
+                    info: true,
+                    autoWidth: false,
+                    responsive: true,
+                    pageLength: 10,
+                    lengthMenu: [10, 25, 50, 100],
+                    language: {
+                        search: '',
+                        searchPlaceholder: 'Search records...',
+                        lengthMenu: 'Show _MENU_ entries',
+                        info: 'Showing _START_ to _END_ of _TOTAL_ entries',
+                        infoEmpty: 'No records available',
+                        zeroRecords: 'No matching records found',
+                        emptyTable: 'No data available',
+                        paginate: {
+                            previous: '&laquo;',
+                            next: '&raquo;'
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
 @stop

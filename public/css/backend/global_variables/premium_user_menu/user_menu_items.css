@@ -1,0 +1,88 @@
+/* ==========================================================
+   USER MENU ITEMS
+========================================================== */
+
+.premium-user-menu-items {
+    padding: 10px;
+    background: #ffffff;
+}
+
+.premium-user-menu-item {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    min-height: 66px;
+    margin: 3px 0;
+    padding: 10px 11px !important;
+    border-radius: 10px;
+    color: #334155 !important;
+    text-decoration: none !important;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.premium-user-menu-item:hover {
+    background: #f8fafc;
+    transform: translateX(3px);
+}
+
+/* Menu Icons */
+
+.premium-menu-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 11px;
+    font-size: 15px;
+}
+
+.premium-menu-icon.profile {
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.premium-menu-icon.settings {
+    color: #64748b;
+    background: #f1f5f9;
+}
+
+/* Menu Content */
+
+.premium-menu-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    gap: 3px;
+}
+
+.premium-menu-content strong {
+    color: #1e293b;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.premium-menu-content small {
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* Menu Arrow */
+
+.premium-menu-arrow {
+    color: #cbd5e1;
+    font-size: 13px;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.premium-user-menu-item:hover .premium-menu-arrow {
+    color: #64748b;
+    transform: translateX(2px);
+}

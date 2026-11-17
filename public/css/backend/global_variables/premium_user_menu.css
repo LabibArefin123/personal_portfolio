@@ -1,0 +1,22 @@
+/* PREMIUM ADMINLTE USER MENU */
+
+/* 01. Base */
+@import url("./premium_user_menu/user_menu_base.css");
+
+/* 02. User Toggle */
+@import url("./premium_user_menu/user_menu_toggle.css");
+
+/* 03. Dropdown */
+@import url("./premium_user_menu/user_menu_dropdown.css");
+
+/* 04. Profile Header */
+@import url("./premium_user_menu/user_menu_header.css");
+
+/* 05. Menu Items */
+@import url("./premium_user_menu/user_menu_items.css");
+
+/* 06. Logout */
+@import url("./premium_user_menu/user_menu_logout.css");
+
+/* 07. Responsive & Accessibility */
+@import url("./premium_user_menu/user_menu_responsive.css");

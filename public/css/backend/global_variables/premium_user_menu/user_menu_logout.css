@@ -1,0 +1,35 @@
+/* ==========================================================
+   USER LOGOUT SECTION
+========================================================== */
+
+.premium-user-logout-wrapper {
+    padding: 10px;
+    border-top: 1px solid #edf1f6;
+    background: #ffffff;
+}
+
+.premium-user-logout {
+    min-height: 64px;
+    margin: 0;
+}
+
+.premium-user-logout:hover {
+    background: #fff5f5;
+}
+
+.premium-menu-icon.logout {
+    color: #dc2626;
+    background: #fef2f2;
+}
+
+.premium-user-logout .premium-menu-content strong {
+    color: #dc2626;
+}
+
+.premium-user-logout .premium-menu-content small {
+    color: #a1a1aa;
+}
+
+.premium-user-logout:hover .premium-menu-arrow {
+    color: #dc2626;
+}

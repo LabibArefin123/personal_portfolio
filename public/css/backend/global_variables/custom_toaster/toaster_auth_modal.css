@@ -1,0 +1,55 @@
+/* ==========================================================
+   AUTHENTICATION MODAL
+========================================================== */
+
+.auth-notification-modal .modal-dialog {
+    width: calc(100% - 32px);
+    max-width: 440px;
+    margin: 1.75rem auto;
+
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.3s ease-out;
+}
+
+.auth-notification-modal .modal-content {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow:
+        0 30px 90px rgba(15, 23, 42, 0.18),
+        0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* Top accent line */
+
+.auth-notification-modal .modal-content::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #16a36a, #34d399);
+    content: "";
+}
+
+.auth-notification-modal:has(.auth-notification-icon.logout)
+    .modal-content::before {
+    background: linear-gradient(90deg, #64748b, #94a3b8);
+}
+
+.auth-notification-modal .modal-body {
+    padding: 42px 34px 36px !important;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(22, 163, 106, 0.055),
+            transparent 48%
+        ),
+        #ffffff;
+}
+
+.auth-notification-modal.show .modal-dialog {
+    transform: translateY(0) scale(1);
+}

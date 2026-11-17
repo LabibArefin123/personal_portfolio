@@ -1,0 +1,59 @@
+/* ==========================================================
+   SWEETALERT NOTIFICATION STYLES
+========================================================== */
+
+.backend-swal-popup {
+    width: min(420px, calc(100% - 30px)) !important;
+    padding: 30px 28px !important;
+    overflow: hidden !important;
+    border: 1px solid #e8edf5 !important;
+    border-radius: 20px !important;
+    background: #ffffff !important;
+    font-family: inherit !important;
+    box-shadow:
+        0 24px 65px rgba(15, 23, 42, 0.12),
+        0 4px 14px rgba(15, 23, 42, 0.04) !important;
+}
+
+.backend-swal-title {
+    margin-top: 14px !important;
+    color: #172033 !important;
+    font-size: 21px !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.45px !important;
+}
+
+.backend-swal-message {
+    color: #64748b !important;
+    font-size: 14px !important;
+    line-height: 1.75 !important;
+}
+
+.backend-swal-progress {
+    background: #e8edf5 !important;
+}
+
+.backend-swal-popup .swal2-icon {
+    margin: 10px auto 14px !important;
+}
+
+.backend-swal-popup .swal2-confirm,
+.backend-swal-popup .swal2-cancel,
+.backend-swal-popup .swal2-deny {
+    min-width: 105px;
+    padding: 10px 22px !important;
+    border-radius: 10px !important;
+    font-size: 13px !important;
+    font-weight: 650 !important;
+    box-shadow: none !important;
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease !important;
+}
+
+.backend-swal-popup .swal2-confirm:hover,
+.backend-swal-popup .swal2-cancel:hover,
+.backend-swal-popup .swal2-deny:hover {
+    filter: brightness(0.95);
+    transform: translateY(-1px);
+}

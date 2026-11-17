@@ -347,28 +347,7 @@ return [
             'icon' => 'fas fa-home',
         ],
 
-        [
-            'text'    => 'Organization Menu',
-            'icon'    => 'fas fa-cogs',
-            // 'route'    => 'organization_menu',
-            'submenu' => [
-
-                [
-                    'text' => 'Organization List',
-                    'route' => 'organizations.index',
-                    'can' => 'organizations.index',
-                    'icon' => 'fas fa-sliders-h',  // settings sliders icon
-                ],
-            ],
-        ],
-
-        [
-            'text'    => 'Gallery Management',
-            'icon'    => 'fas fa-school',
-            'route'  => 'galleries.index',
-            'can'  => 'galleries.index',
-            'active' => ['galleries*'],
-        ],
+       
         [
             'text'    => 'Portfolio Projects',
             'icon'    => 'fas fa-project-diagram',

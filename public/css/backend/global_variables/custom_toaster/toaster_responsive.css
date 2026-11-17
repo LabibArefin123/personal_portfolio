@@ -1,0 +1,70 @@
+/* ==========================================================
+   RESPONSIVE DESIGN
+========================================================== */
+
+@media (max-width: 575.98px) {
+
+    .backend-swal-popup {
+        width: calc(100% - 28px) !important;
+        padding: 24px 18px !important;
+    }
+
+    .auth-notification-modal .modal-dialog {
+        width: calc(100% - 28px);
+        margin: 14px auto;
+    }
+
+    .auth-notification-modal .modal-content {
+        border-radius: 20px;
+    }
+
+    .auth-notification-modal .modal-body {
+        padding: 36px 22px 28px !important;
+    }
+
+    .auth-notification-icon {
+        width: 76px;
+        height: 76px;
+        margin-bottom: 22px;
+        border-radius: 23px;
+        font-size: 29px;
+    }
+
+    .auth-notification-title {
+        font-size: 21px;
+    }
+
+    .auth-notification-message {
+        font-size: 13px;
+    }
+
+    .backend-welcome-box {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .backend-welcome-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .auth-notification-icon {
+        animation: none !important;
+    }
+
+    .auth-notification-modal .modal-dialog,
+    .auth-notification-btn,
+    .backend-swal-popup .swal2-confirm,
+    .backend-swal-popup .swal2-cancel,
+    .backend-swal-popup .swal2-deny {
+        transition: none !important;
+    }
+}

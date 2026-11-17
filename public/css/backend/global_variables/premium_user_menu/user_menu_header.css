@@ -1,0 +1,86 @@
+/* ==========================================================
+   PREMIUM PROFILE HEADER
+========================================================== */
+
+.premium-user-header {
+    position: relative;
+    padding: 23px 20px;
+    overflow: hidden;
+    background: linear-gradient(125deg, #172554, #1e40af 65%, #2563eb);
+}
+
+.premium-user-header::after {
+    position: absolute;
+    top: -50px;
+    right: -35px;
+    width: 145px;
+    height: 145px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+    content: "";
+}
+
+.premium-user-header::before {
+    position: absolute;
+    right: 35px;
+    bottom: -85px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    content: "";
+}
+
+.premium-user-header-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.premium-user-header-image,
+.premium-user-header-avatar {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    border: 3px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    color: #ffffff;
+    background: linear-gradient(135deg, #60a5fa, #818cf8);
+    object-fit: cover;
+    font-size: 21px;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.premium-user-header-info {
+    min-width: 0;
+}
+
+.premium-user-header-info h6 {
+    margin: 0 0 7px;
+    overflow: hidden;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.premium-user-header-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #dbeafe;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.premium-user-header-info span i {
+    color: #4ade80;
+    font-size: 7px;
+}
