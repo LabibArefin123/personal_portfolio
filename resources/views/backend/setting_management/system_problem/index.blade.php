@@ -79,11 +79,7 @@
     <script>
     function showDtToast(message) {
         $('#dtErrorMessage').text(message);
-        $('#dtErrorToast').addClass('show');
-    }
-
-    function closeDtToast() {
-        $('#dtErrorToast').removeClass('show');
+  
     }
 
     $(function () {

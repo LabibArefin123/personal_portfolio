@@ -322,7 +322,6 @@
         function showDtToast(message) {
             $('#dtErrorMessage').text(message);
 
-            $('#dtErrorToast').addClass('show');
 
             clearTimeout(window.crToastTimer);
 
@@ -331,9 +330,6 @@
             }, 5000);
         }
 
-        function closeDtToast() {
-            $('#dtErrorToast').removeClass('show');
-        }
 
         $(function() {
 
