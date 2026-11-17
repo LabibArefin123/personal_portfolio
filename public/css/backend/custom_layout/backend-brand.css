@@ -1,0 +1,12 @@
+/* =========================================================
+   FILE: backend-brand.css
+========================================================= */
+
+/* HIDE BRAND TEXT */
+
+.brand-text-hidden {
+    visibility: hidden;
+    white-space: nowrap;
+}
+
+/* BRAND CONTAINER */

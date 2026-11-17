@@ -311,18 +311,6 @@ return [
 
 
     'menu' => [
-        // Navbar items:
-        [
-            'type' => 'navbar-search',
-            'text' => 'Search tenders...',
-            'id' => 'globalTenderSearch',
-            'topnav_right' => true,
-            'method' => 'GET',
-            'href' => 'global.search', // ✅ Use route name as plain string
-            // <== Redirect to your actual search route
-            'input_name' => 'term',
-        ],
-
 
         [
             'type' => 'fullscreen-widget',

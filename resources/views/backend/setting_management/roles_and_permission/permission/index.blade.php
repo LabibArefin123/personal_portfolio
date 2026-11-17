@@ -7,16 +7,14 @@
     {{-- Permission Generator --}}
     <link rel="stylesheet"
         href="{{ asset('css/backend/setting_management/permission/index_page/permission_generator.css') }}">
-
     {{-- Permission Modal --}}
     <link rel="stylesheet" href="{{ asset('css/backend/setting_management/permission/index_page/permission_modal.css') }}">
-
     {{-- Permission Table --}}
     <link rel="stylesheet" href="{{ asset('css/backend/setting_management/permission/index_page/permission_table.css') }}">
-
     {{-- Permission Buttons --}}
     <link rel="stylesheet" href="{{ asset('css/backend/setting_management/permission/index_page/permission_buttons.css') }}">
-
+    {{-- Permission Pagination --}}
+    <link rel="stylesheet" href="{{ asset('css/backend/setting_management/permission/index_page/permission_pagination.css') }}">
     {{-- Permission Responsive --}}
     <link rel="stylesheet" href="{{ asset('css/backend/setting_management/permission/index_page/permission_resp.css') }}">
 @stop
