@@ -1,0 +1,220 @@
+
+/* ==========================================
+   SIDEBAR HEADINGS
+========================================== */
+
+.profile-sidebar-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.profile-sidebar-heading > i {
+    color: #2563eb;
+    font-size: 16px;
+}
+
+.profile-sidebar-heading h5 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 750;
+}
+
+/* ==========================================
+   PROFILE STRENGTH
+========================================== */
+
+.profile-strength-content {
+    text-align: center;
+}
+
+.profile-strength-circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 132px;
+    height: 132px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #2563eb 0deg,
+        #2563eb 0deg,
+        #edf1f7 0deg
+    );
+    transition: background 1.2s ease;
+}
+
+.profile-strength-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.profile-strength-inner strong {
+    color: #1e293b;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.profile-strength-inner span {
+    margin-top: 3px;
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.profile-strength-content > p {
+    margin: 0 auto 20px;
+    color: #8491a5;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+/* Checklist */
+
+.profile-completion-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 17px;
+    border-top: 1px solid #eef1f6;
+}
+
+.profile-completion-checklist > div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.profile-completion-checklist > div i {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.profile-completion-checklist > div.completed {
+    color: #475569;
+}
+
+.profile-completion-checklist > div.completed i {
+    color: #16a36a;
+}
+
+/* ==========================================
+   QUICK ACTIONS
+========================================== */
+
+.profile-quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.profile-quick-action {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 9px;
+    border-radius: 10px;
+    text-decoration: none !important;
+    transition: background 0.2s ease;
+}
+
+.profile-quick-action:hover {
+    background: #f8fafc;
+}
+
+.profile-quick-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.profile-quick-icon.edit {
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.profile-quick-icon.security {
+    color: #0891b2;
+    background: #ecfeff;
+}
+
+.profile-quick-action > span:nth-child(2) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.profile-quick-action strong {
+    color: #334155;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.profile-quick-action small {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.profile-quick-action > i {
+    color: #cbd5e1;
+    font-size: 11px;
+}
+
+/* ==========================================
+   SECURITY NOTE
+========================================== */
+
+.profile-security-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 17px;
+    border: 1px solid #dbeafe;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #eff6ff, #f8fbff);
+}
+
+.profile-security-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    color: #2563eb;
+    background: #ffffff;
+}
+
+.profile-security-note strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e40af;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.profile-security-note p {
+    margin: 0;
+    color: #64748b;
+    font-size: 10px;
+    line-height: 1.7;
+}

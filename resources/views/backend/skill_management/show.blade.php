@@ -37,14 +37,10 @@
 
 @section('content')
     <div class="skills-show-page">
-
         <div class="row">
-
             {{-- MAIN SKILL DETAILS --}}
             <div class="col-lg-8">
-
                 <div class="card skills-detail-card">
-
                     <div class="card-header">
                         <h3 class="card-title">
                             <i class="fas fa-info-circle mr-2 text-primary"></i>
@@ -61,12 +57,10 @@
                             </span>
                         @endif
                     </div>
-
                     <div class="card-body">
 
                         {{-- SKILL IDENTITY --}}
                         <div class="skill-identity">
-
                             <div class="skill-identity-icon">
                                 <i class="fas fa-code"></i>
                             </div>
@@ -83,7 +77,6 @@
                                     {{ $skill->category }}
                                 </span>
                             </div>
-
                         </div>
 
                         {{-- SKILL DETAILS --}}
@@ -92,16 +85,13 @@
                         </div>
 
                         <div class="skill-details-list mb-4">
-
                             <div class="skill-detail-item">
                                 <div class="skill-detail-label">
                                     <i class="fas fa-folder"></i>
                                     Category
                                 </div>
 
-                                <div class="skill-detail-value">
-                                    {{ $skill->category }}
-                                </div>
+                                <div class="skill-detail-value"> {{ $skill->category }}</div>
                             </div>
 
                             <div class="skill-detail-item">
@@ -110,9 +100,7 @@
                                     Skill Name
                                 </div>
 
-                                <div class="skill-detail-value">
-                                    {{ $skill->name }}
-                                </div>
+                                <div class="skill-detail-value"> {{ $skill->name }}</div>
                             </div>
 
                             <div class="skill-detail-item">
@@ -121,9 +109,7 @@
                                     Display Position
                                 </div>
 
-                                <div class="skill-detail-value">
-                                    {{ $skill->position }}
-                                </div>
+                                <div class="skill-detail-value"> {{ $skill->position }} </div>
                             </div>
 
                             <div class="skill-detail-item">
@@ -144,25 +130,19 @@
                                     @endif
                                 </div>
                             </div>
-
                         </div>
 
                         {{-- SKILL LEVEL --}}
-                        <div class="show-section-label">
-                            Proficiency Level
-                        </div>
+                        <div class="show-section-label"> Proficiency Level </div>
 
                         <div class="skill-level-panel">
-
                             <div class="skill-level-heading">
                                 <span>
                                     <i class="fas fa-chart-line mr-1"></i>
                                     Skill Proficiency
                                 </span>
 
-                                <strong>
-                                    {{ $skill->percentage }}%
-                                </strong>
+                                <strong> {{ $skill->percentage }}%</strong>
                             </div>
 
                             <div class="skill-level-track">
@@ -180,12 +160,9 @@
                         </div>
 
                         {{-- TIMESTAMPS --}}
-                        <div class="show-section-label mt-4">
-                            Record Information
-                        </div>
+                        <div class="show-section-label mt-4"> Record Information </div>
 
                         <div class="skill-details-list">
-
                             <div class="skill-detail-item">
                                 <div class="skill-detail-label">
                                     <i class="fas fa-calendar-plus"></i>
@@ -207,9 +184,7 @@
                                     {{ $skill->updated_at?->format('d M Y, h:i A') ?? 'Not available' }}
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
 
                     <div class="card-footer">
@@ -257,31 +232,24 @@
                         </div>
 
                         <div class="skill-preview-meta">
-
                             <div class="skill-preview-meta-row">
                                 <span>Category</span>
                                 <strong>{{ $skill->category }}</strong>
                             </div>
-
                             <div class="skill-preview-divider"></div>
-
                             <div class="skill-preview-meta-row">
                                 <span>Position</span>
                                 <strong>{{ $skill->position }}</strong>
                             </div>
-
                             <div class="skill-preview-divider"></div>
-
                             <div class="skill-preview-meta-row">
                                 <span>Status</span>
-
                                 @if ($skill->status)
                                     <strong class="text-success">Published</strong>
                                 @else
                                     <strong class="text-danger">Unpublished</strong>
                                 @endif
                             </div>
-
                         </div>
 
                         <div class="skill-preview-note">
@@ -292,13 +260,9 @@
                                 identity appears in your portfolio.
                             </span>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     </div>
 @stop

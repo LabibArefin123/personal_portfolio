@@ -1,0 +1,112 @@
+
+/* ==========================================
+   PROFILE EDIT HERO
+========================================== */
+
+.profile-edit-hero {
+    position: relative;
+    margin-bottom: 22px;
+    padding: 26px 30px;
+    overflow: hidden;
+    border-radius: 17px;
+    color: #ffffff;
+    background: linear-gradient(120deg, #101d3a, #18366c 60%, #2456a6);
+    box-shadow: 0 12px 32px rgba(15, 35, 75, 0.12);
+}
+
+.profile-edit-hero-decoration {
+    position: absolute;
+    top: -130px;
+    right: -45px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.profile-edit-hero-decoration::before {
+    position: absolute;
+    inset: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    content: "";
+}
+
+.profile-edit-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.profile-edit-avatar-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-edit-avatar {
+    display: block;
+    width: 95px;
+    height: 95px;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    border-radius: 21px;
+    background: #ffffff;
+    object-fit: cover;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.profile-edit-avatar-badge {
+    position: absolute;
+    right: -7px;
+    bottom: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    color: #2563eb;
+    background: #eff6ff;
+    font-size: 11px;
+}
+
+.profile-edit-hero-info {
+    min-width: 0;
+}
+
+.profile-edit-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+    color: #bfdbfe;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.profile-edit-hero-info h2 {
+    margin: 0 0 6px;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+    overflow-wrap: anywhere;
+}
+
+.profile-edit-hero-info p {
+    margin: 0;
+    color: #dbeafe;
+    font-size: 12px;
+}
+
+.profile-edit-hero-hint {
+    display: block;
+    margin-top: 12px;
+    color: #bfdbfe;
+    font-size: 11px;
+    line-height: 1.6;
+}

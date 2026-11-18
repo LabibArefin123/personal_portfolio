@@ -52,13 +52,6 @@
 
 <body>
     <div id="app">
-        <!-- MAP MY VISITORS -->
-        <script
-            type="text/javascript"
-            id="mapmyvisitors"
-            src="//mapmyvisitors.com/map.js?d=z89XLfaLGMFTO4fYzfkHra84C8IrskJkWnX6AhXmiAQ&cl=ffffff&w=a">
-        </script>
-
         <!-- 🔥 Scroll Progress -->
         <div id="scrollProgress"
             style="position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: linear-gradient(90deg,#6366f1,#06b6d4); z-index: 9999; transition: width 0.25s;">

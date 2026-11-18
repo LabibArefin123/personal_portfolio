@@ -1,0 +1,216 @@
+
+/* ==========================================
+   PROFILE HERO
+========================================== */
+
+.profile-hero {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 30px 32px 22px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    color: #ffffff;
+    background: linear-gradient(120deg, #101d3a 0%, #18366c 55%, #2456a6 100%);
+    box-shadow: 0 12px 32px rgba(15, 35, 75, 0.13);
+}
+
+.profile-hero-decoration {
+    position: absolute;
+    top: -130px;
+    right: -55px;
+    width: 330px;
+    height: 330px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.profile-hero-decoration::before,
+.profile-hero-decoration::after {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    content: "";
+}
+
+.profile-hero-decoration::before {
+    inset: 30px;
+}
+
+.profile-hero-decoration::after {
+    inset: 65px;
+}
+
+.profile-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    min-height: 145px;
+}
+
+.profile-avatar-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-avatar {
+    display: block;
+    width: 112px;
+    height: 112px;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    background: #ffffff;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.profile-avatar-status {
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 22px;
+    height: 22px;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    background: #22c55e;
+}
+
+.profile-hero-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.profile-account-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 9px;
+    color: #bfdbfe;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.profile-hero-info h2 {
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 750;
+    letter-spacing: -0.6px;
+    overflow-wrap: anywhere;
+}
+
+.profile-hero-info > p {
+    margin: 0;
+    color: #dbeafe;
+    font-size: 13px;
+}
+
+.profile-hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 15px;
+}
+
+.profile-hero-tags span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 7px;
+    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.09);
+    font-size: 11px;
+}
+
+.profile-hero-action {
+    align-self: flex-start;
+}
+
+.profile-hero-edit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 9px;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.profile-hero-edit:hover {
+    color: #17366d !important;
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Hero footer */
+
+.profile-hero-footer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 24px;
+    padding-top: 19px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.profile-hero-footer > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-footer-label {
+    color: #bfdbfe;
+    font-size: 11px;
+}
+
+.profile-hero-footer strong {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.profile-completion {
+    width: min(270px, 45%);
+}
+
+.profile-completion-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 9px;
+    color: #dbeafe;
+    font-size: 11px;
+}
+
+.profile-completion-info strong {
+    font-size: 12px;
+}
+
+.profile-progress-track {
+    height: 7px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.profile-progress-bar {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #38bdf8, #6ee7b7);
+    transition: width 1.2s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
