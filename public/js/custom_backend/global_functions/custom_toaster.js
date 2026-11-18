@@ -1,10 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    // ==========================================
-    // Custom Toast Notification Configuration
-    // ==========================================
-
     const notification = window.backendNotification || {};
 
     if (typeof Swal === "undefined") {
@@ -13,52 +9,78 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const notificationConfig = {
+        login_success: {
+            icon: "success",
+            title: "Welcome Back!",
+        },
+
+        logout_success: {
+            icon: "success",
+            title: "Successfully Logged Out",
+        },
+
         success: {
             icon: "success",
             title: "Success",
-            timer: 2000,
         },
+
         error: {
             icon: "error",
-            title: "Oops...",
-            timer: 2500,
+            title: "Something Went Wrong",
         },
+
         warning: {
             icon: "warning",
             title: "Warning",
-            timer: 2500,
         },
+
         info: {
             icon: "info",
             title: "Information",
-            timer: 2500,
         },
     };
 
-    // ==========================================
-    // Display Session Notifications
-    // ==========================================
+    // Find the first available notification.
+    const activeNotification = Object.entries(notificationConfig).find(
+        ([type]) => notification[type],
+    );
 
-    Object.entries(notificationConfig).forEach(([type, config]) => {
-        const message = notification[type];
+    if (!activeNotification) {
+        return;
+    }
 
-        if (!message) return;
+    const [type, config] = activeNotification;
+    const message = notification[type];
 
-        Swal.fire({
-            icon: config.icon,
-            title: config.title,
-            text: message,
-            timer: config.timer,
-            timerProgressBar: true,
-            showConfirmButton: false,
-            customClass: {
-                popup: "backend-swal-popup",
-                title: "backend-swal-title",
-                htmlContainer: "backend-swal-message",
-                timerProgressBar: "backend-swal-progress",
-            },
-        });
+    Swal.fire({
+        toast: true,
+        position: "top-end",
+
+        icon: config.icon,
+        title: config.title,
+        text: message,
+
+        timer: 5000,
+        timerProgressBar: true,
+        showConfirmButton: false,
+
+        showCloseButton: true,
+        allowOutsideClick: true,
+        allowEscapeKey: true,
+
+        customClass: {
+            popup: "backend-swal-popup",
+            title: "backend-swal-title",
+            htmlContainer: "backend-swal-message",
+            timerProgressBar: "backend-swal-progress",
+            closeButton: "backend-swal-close",
+        },
+
+        didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
     });
 
-    console.log("[Custom Toaster] Notification module loaded.");
+    console.log(`[Custom Toaster] ${type} notification displayed.`);
 });

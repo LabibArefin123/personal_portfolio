@@ -98,10 +98,12 @@
         </li>
 
         {{-- Logout --}}
+
+        {{-- Logout --}}
         <li class="premium-user-logout-wrapper">
 
             <a href="#" class="premium-user-menu-item premium-user-logout"
-                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                onclick="event.preventDefault(); this.classList.add('is-logging-out'); this.querySelector('.premium-menu-content strong').textContent = 'Signing Out...'; this.querySelector('.premium-menu-icon i').className = 'fas fa-spinner fa-spin'; document.getElementById('logout-form').requestSubmit();">
 
                 <span class="premium-menu-icon logout">
                     <i class="fas fa-power-off"></i>
@@ -116,15 +118,16 @@
             </a>
 
             <form id="logout-form" action="{{ $logout_url }}" method="POST" class="d-none">
+
                 @if (config('adminlte.logout_method'))
                     {{ method_field(config('adminlte.logout_method')) }}
                 @endif
 
                 {{ csrf_field() }}
+
             </form>
 
         </li>
-
     </ul>
 
 </li>

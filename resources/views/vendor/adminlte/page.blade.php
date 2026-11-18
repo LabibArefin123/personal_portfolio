@@ -34,13 +34,6 @@
 
         {{-- Global Modals --}}
 
-        @if (session()->has('login_success'))
-            @include('backend.global_modal.user_welcome_modal')
-        @endif
-
-        @if (session()->has('logout_success'))
-            @include('backend.global_modal.user_logout_modal')
-        @endif
         @include('backend.global_modal.validation_modal')
         @include('backend.global_modal.create_modal')
         @include('backend.global_modal.edit_modal')
@@ -110,6 +103,9 @@
     {{-- Backend Notifications --}}
     <script>
         window.backendNotification = {
+            login_success: @json(session('login_success')),
+            logout_success: @json(session('logout_success')),
+
             success: @json(session('success')),
             error: @json(session('error')),
             warning: @json(session('warning')),
@@ -118,7 +114,7 @@
     </script>
 
     <script src="{{ asset('js/custom_backend/global_functions/custom_toaster.js') }}"></script>
-    <script src="{{ asset('js/custom_backend/global_functions/auth_notification_modal.js') }}"></script>
+    {{-- <script src="{{ asset('js/custom_backend/global_functions/auth_notification_modal.js') }}"></script> --}}
 
     {{-- Page-specific JavaScript --}}
     @stack('js')
