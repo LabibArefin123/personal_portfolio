@@ -39,11 +39,13 @@
 @stop
 
 @section('content')
+
     {{-- STATISTICS --}}
     @include('backend.setting_management.contact_requests.partial_pages.index_page.part_1')
 
     {{-- MAIN TABLE --}}
     <div class="cr-main-card">
+
         <div class="cr-card-header">
             <div>
                 <h4>
@@ -55,26 +57,26 @@
 
             <div class="cr-live-indicator">
                 <span></span>
-                Paginated Records
+                DataTables Records
             </div>
         </div>
 
         <div class="cr-table-toolbar">
+
             <div class="cr-table-description">
                 <i class="fas fa-shield-alt"></i>
                 Secure request management
             </div>
 
             <div class="cr-table-description">
-                Showing {{ $requests->firstItem() ?? 0 }}
-                – {{ $requests->lastItem() ?? 0 }}
-                of {{ number_format($requests->total()) }} requests
+                Total {{ number_format($requests->count()) }} requests
             </div>
+
         </div>
 
         <div class="cr-table-wrapper">
 
-            <table class="table w-100" id="contactRequestTable">
+            <table class="table w-100" id="dataTables">
 
                 <thead>
                     <tr>
@@ -94,7 +96,6 @@
                     @forelse($requests as $requestItem)
                         @php
                             $isContact = $requestItem->type === 'contact';
-
                             $submissionCount = (int) $requestItem->ip_submissions;
                         @endphp
 
@@ -103,7 +104,7 @@
                             {{-- NUMBER --}}
                             <td>
                                 <span class="cr-row-number">
-                                    {{ $requests->firstItem() + $loop->index }}
+                                    {{ $loop->iteration }}
                                 </span>
                             </td>
 
@@ -122,7 +123,7 @@
 
                                         <span>
                                             <i class="far fa-envelope"></i>
-                                            {{ $requestItem->email }}
+                                            {{ $requestItem->email ?: 'No email provided' }}
                                         </span>
                                     </div>
 
@@ -145,14 +146,9 @@
 
                             {{-- REQUEST TYPE --}}
                             <td>
-                                <span
-                                    class="cr-type-badge
-                                    {{ $isContact ? 'cr-type-contact' : 'cr-type-appointment' }}">
+                                <span class="cr-type-badge {{ $isContact ? 'cr-type-contact' : 'cr-type-appointment' }}">
 
-                                    <i
-                                        class="fas
-                                        {{ $isContact ? 'fa-comment-dots' : 'fa-calendar-check' }}">
-                                    </i>
+                                    <i class="fas {{ $isContact ? 'fa-comment-dots' : 'fa-calendar-check' }}"></i>
 
                                     {{ ucfirst($requestItem->type) }}
 
@@ -179,16 +175,22 @@
 
                             {{-- IP SUBMISSIONS --}}
                             <td>
+                                @php
+                                    $submissionCount = (int) $requestItem->total_count;
+                                @endphp
+
                                 <span
                                     class="cr-submission-count
-                                    {{ $submissionCount >= 5 ? 'cr-count-warning' : 'cr-count-normal' }}">
+        {{ $submissionCount >= 5 ? 'cr-count-warning' : 'cr-count-normal' }}">
 
                                     <i class="fas fa-layer-group"></i>
-                                    {{ $submissionCount }}
+
+                                    <span class="cr-count-value" data-count="{{ $submissionCount }}">
+                                        {{ $submissionCount }}
+                                    </span>
 
                                 </span>
                             </td>
-
                             {{-- CREATED DATE --}}
                             <td>
                                 <div class="cr-date-info">
@@ -237,38 +239,18 @@
 
         </div>
 
-        {{-- PAGINATION FOOTER --}}
-        @if ($requests->hasPages())
-            <div class="cr-pagination-wrapper">
-
-                <div class="cr-pagination-info">
-                    Showing
-                    <strong>{{ $requests->firstItem() }}</strong>
-                    to
-                    <strong>{{ $requests->lastItem() }}</strong>
-                    of
-                    <strong>{{ $requests->total() }}</strong>
-                    requests
-                </div>
-
-                <div class="cr-pagination-links">
-                    {{ $requests->links() }}
-                </div>
-
-            </div>
-        @endif
-
         <div class="cr-table-footer">
             <span>
                 <i class="fas fa-info-circle"></i>
-                Request information is displayed using Laravel pagination.
+                Search, sorting and pagination are powered by DataTables.
             </span>
         </div>
 
     </div>
 
     {{-- FULL MESSAGE MODAL --}}
-    <div class="modal fade cr-message-modal" id="fullMessageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade cr-message-modal" id="fullMessageModal" tabindex="-1" aria-labelledby="fullMessageModalLabel"
+        aria-hidden="true">
 
         <div class="modal-dialog modal-dialog-centered modal-lg">
 
@@ -283,16 +265,13 @@
                         </div>
 
                         <div>
-                            <h5>Full Message</h5>
+                            <h5 id="fullMessageModalLabel">Full Message</h5>
                             <span>Client inquiry details</span>
                         </div>
 
                     </div>
 
-                    <button type="button" class="close cr-modal-close" data-dismiss="modal" aria-label="Close">
-
-                        <span>&times;</span>
-
+                    <button type="button" class="btn-close cr-modal-close" data-bs-dismiss="modal" aria-label="Close">
                     </button>
 
                 </div>
@@ -302,176 +281,23 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn cr-modal-close-btn" data-dismiss="modal">
 
-                        <i class="fas fa-times mr-1"></i>
+                    <button type="button" class="btn cr-modal-close-btn" data-bs-dismiss="modal">
+
+                        <i class="fas fa-times me-1"></i>
                         Close
 
                     </button>
+
                 </div>
+
             </div>
+
         </div>
     </div>
-@stop
-
-
-
-@section('js')
-
-    <script>
-        function showDtToast(message) {
-            $('#dtErrorMessage').text(message);
-
-
-            clearTimeout(window.crToastTimer);
-
-            window.crToastTimer = setTimeout(() => {
-                closeDtToast();
-            }, 5000);
-        }
-
-
-        $(function() {
-
-            $.fn.dataTable.ext.errMode = 'none';
-
-            const table = $('#contactRequestTable').DataTable({
-
-                processing: true,
-                serverSide: true,
-                responsive: true,
-
-                ajax: {
-                    url: "{{ route('contact_requests.index') }}",
-                    type: "GET",
-                    error: function() {
-                        showDtToast(
-                            'Unable to load requests. Please try again.'
-                        );
-                    }
-                },
-
-                columns: [
-
-                    {
-                        data: 'DT_RowIndex',
-                        name: 'DT_RowIndex',
-                        orderable: false,
-                        searchable: false
-                    },
-
-                    {
-                        data: 'client',
-                        name: 'name'
-                    },
-
-                    {
-                        data: 'phone',
-                        name: 'phone'
-                    },
-
-                    {
-                        data: 'type',
-                        name: 'type',
-                        orderable: true,
-                        searchable: true
-                    },
-
-                    {
-                        data: 'message',
-                        name: 'message',
-                        orderable: false,
-                        searchable: false
-                    },
-
-                    {
-                        data: 'total_today',
-                        name: 'total_today',
-                        searchable: false
-                    },
-
-                    {
-                        data: 'created_at',
-                        name: 'created_at'
-                    },
-
-                    {
-                        data: 'action',
-                        name: 'action',
-                        orderable: false,
-                        searchable: false
-                    }
-
-                ],
-
-                order: [
-                    [6, 'desc']
-                ],
-
-                pageLength: 10,
-
-                lengthMenu: [
-                    [10, 25, 50, 100],
-                    [10, 25, 50, 100]
-                ],
-
-                language: {
-
-                    processing: '<div class="cr-loader"><span></span> Loading requests...</div>',
-
-                    emptyTable: 'No contact or appointment requests found.',
-
-                    zeroRecords: 'No matching requests found.',
-
-                    search: '',
-
-                    searchPlaceholder: 'Search requests...',
-
-                    lengthMenu: 'Show _MENU_ entries',
-
-                    info: 'Showing _START_ to _END_ of _TOTAL_ requests',
-
-                    infoEmpty: 'No requests available',
-
-                    paginate: {
-                        previous: '<i class="fas fa-chevron-left"></i>',
-                        next: '<i class="fas fa-chevron-right"></i>'
-                    }
-                },
-
-                drawCallback: function() {
-                    $('.dataTables_paginate .paginate_button')
-                        .addClass('cr-page-button');
-                }
-
-            });
-
-            // FULL MESSAGE MODAL
-            $('#contactRequestTable').on(
-                'click',
-                '.view-full-message',
-                function() {
-
-                    const message = $(this).attr('data-message') || '';
-
-                    // Text insertion prevents HTML injection.
-                    $('#fullMessageContent').text(message);
-
-                    $('#fullMessageModal').modal('show');
-                }
-            );
-
-            table.on('error.dt', function(e, settings, techNote, message) {
-
-                console.error('Contact DataTable Error:', message);
-
-                showDtToast(
-                    'A technical issue occurred while loading requests.'
-                );
-
-            });
-
-        });
-    </script>
 
 @stop
+
+@push('js')
+    <script src="{{ asset('js/custom_backend/contact_page/contact_request_index.js') }}"></script>
+@endpush

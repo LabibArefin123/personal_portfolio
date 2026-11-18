@@ -102,12 +102,7 @@ class WelcomePageController extends Controller
         return view('frontend.service');
     }
 
-    public function gallery()
-    {
-        $galleries = Gallery::all();
-        return view('frontend.gallery', compact('galleries'));
-    }
-
+  
     public function contact()
     {
         return view('frontend.contact');
@@ -123,7 +118,7 @@ class WelcomePageController extends Controller
         ]);
 
         // Generate readable unique ID
-        $uid = 'DFCH-PROB-' . strtoupper(Str::random(6));
+        $uid = 'LP-PROB-' . strtoupper(Str::random(6));
 
         $fileName = null;
 

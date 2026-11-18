@@ -29,7 +29,7 @@
     @endif
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('uploads/images/icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('uploads/images/Logo.jpg') }}">
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
