@@ -22,7 +22,7 @@
             @include('backend.setting_management.user_management.profile.partial.edit_page.part_2')
             {{-- Sticky Form Actions --}}
             @include('backend.setting_management.user_management.profile.partial.edit_page.part_3')
-          
+
 
         </form>
 
@@ -38,5 +38,9 @@
 @stop
 
 @push('js')
-    <script src="{{ asset('js/custom_backend/profile_page/edit_page/profile_edit.js') }}"></script>
+    <script src="{{ asset('js/custom_backend/profile_page/edit_page/profile_edit_init.js') }}"></script>
+    <script src="{{ asset('js/custom_backend/profile_page/edit_page/profile_edit_changes.js') }}"></script>
+    <script src="{{ asset('js/custom_backend/profile_page/edit_page/profile_edit_image.js') }}"></script>
+    <script src="{{ asset('js/custom_backend/profile_page/edit_page/profile_edit_password.js') }}"></script>
+    <script src="{{ asset('js/custom_backend/profile_page/edit_page/profile_edit_form.js') }}"></script>
 @endpush
