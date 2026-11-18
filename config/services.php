@@ -39,5 +39,7 @@ return [
         'key' => env('OPENAI_API_KEY'),
     ],
 
-
+    'google_analytics' => [
+        'measurement_id' => env('GOOGLE_ANALYTICS_ID'),
+    ],
 ];
