@@ -31,7 +31,6 @@
     <div class="profile-page-container">
         {{-- Profile Overview --}}
        @include('backend.setting_management.user_management.profile.partial.show_page.part_1')
-
         {{-- Profile Information --}}
         <div class="profile-content-grid">
             <div class="profile-main-column">

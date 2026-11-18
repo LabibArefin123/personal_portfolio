@@ -1,0 +1,88 @@
+
+/* =========================================================
+   PROJECT FORM - RESPONSIVE
+========================================================= */
+
+@media (max-width: 767.98px) {
+    .project-form-page-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .project-form-heading h1 {
+        font-size: 23px;
+    }
+
+    .project-back-btn {
+        width: 100%;
+    }
+
+    .project-form-card-header {
+        padding: 19px;
+    }
+
+    .project-form-card-body {
+        padding: 22px 18px;
+    }
+
+    .project-form-card-footer {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        padding: 18px;
+    }
+
+    .project-submit-btn,
+    .project-cancel-btn {
+        width: 100%;
+    }
+
+    .project-form-divider {
+        margin: 20px 0;
+    }
+
+    .project-image-edit-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .project-current-image {
+        min-height: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-form-page-header {
+        padding: 19px;
+        border-radius: 14px;
+    }
+
+    .project-form-heading h1 {
+        font-size: 21px;
+    }
+
+    .project-form-card {
+        border-radius: 14px;
+    }
+
+    .project-form-card-header {
+        align-items: flex-start;
+    }
+
+    .project-form-card-header h3 {
+        font-size: 15px;
+    }
+
+    .project-form-section-heading {
+        align-items: flex-start;
+    }
+
+    .project-section-number {
+        width: 34px;
+        height: 34px;
+    }
+
+    .project-upload-area {
+        min-height: 185px;
+        padding: 17px;
+    }
+}

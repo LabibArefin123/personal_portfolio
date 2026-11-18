@@ -1,0 +1,194 @@
+
+/* =========================================================
+   PROJECT SHOW - INFORMATION & RESOURCES
+========================================================= */
+
+.project-show-info-body {
+    padding: 8px 24px 15px;
+}
+
+.project-show-detail-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 17px 0;
+    border-bottom: 1px solid #edf1f6;
+}
+
+.project-show-detail-item:last-child {
+    border-bottom: 0;
+}
+
+.project-show-detail-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 145px;
+    color: #8995a8;
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.project-show-detail-label i {
+    width: 15px;
+    color: #8aa4ce;
+    text-align: center;
+}
+
+.project-show-detail-value,
+.project-show-tech-value {
+    color: #344158;
+    font-size: 12px;
+    font-weight: 750;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.project-show-not-available {
+    color: #a4adbb;
+    font-weight: 500;
+}
+
+.project-show-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.project-show-badge-published {
+    color: #16875f;
+    background: #e8f8f1;
+}
+
+.project-show-badge-draft {
+    color: #c34f57;
+    background: #fff0f0;
+}
+
+.project-show-badge-featured {
+    color: #956d16;
+    background: #fff5dc;
+}
+
+.project-show-badge-normal {
+    color: #778397;
+    background: #f0f2f6;
+}
+
+/* Resource card */
+
+.project-show-links-icon {
+    color: #7955c7;
+    background: #f0eaff;
+}
+
+.project-show-links-body {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 20px 23px;
+}
+
+.project-show-resource-link {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+    padding: 14px;
+    background: #fbfcfe;
+    border: 1px solid #edf1f6;
+    border-radius: 12px;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+}
+
+a.project-show-resource-link:hover {
+    background: #f4f7ff;
+    border-color: #d8e4fa;
+    box-shadow: 0 5px 14px rgba(31, 52, 91, 0.055);
+    transform: translateY(-2px);
+}
+
+.project-show-resource-link.is-unavailable {
+    opacity: 0.65;
+    cursor: default;
+}
+
+.project-show-resource-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    flex-shrink: 0;
+    border-radius: 11px;
+    font-size: 15px;
+}
+
+.project-show-live-icon {
+    color: #2872d9;
+    background: #eaf2ff;
+}
+
+.project-show-github-icon {
+    color: #384255;
+    background: #edf0f5;
+}
+
+.project-show-resource-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 5px;
+}
+
+.project-show-resource-text strong {
+    color: #344158;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.project-show-resource-text small {
+    display: block;
+    max-width: 100%;
+    color: #929daf;
+    font-size: 9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.project-show-resource-arrow {
+    margin-left: auto;
+    color: #9aa7ba;
+    font-size: 10px;
+}
+
+/* Description */
+
+.project-show-description-icon {
+    color: #168b76;
+    background: #e8f8f4;
+}
+
+.project-show-empty-description {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    color: #97a2b3;
+    background: #f8fafc;
+    border: 1px dashed #e1e7ef;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.project-show-empty-description i {
+    font-size: 18px;
+}

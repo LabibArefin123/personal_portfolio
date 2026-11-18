@@ -1,0 +1,186 @@
+/* =========================================================
+   PROJECT FORM - IMAGE UPLOAD
+========================================================= */
+
+.project-upload-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 205px;
+    padding: 25px;
+    overflow: hidden;
+    background: #f9fbff;
+    border: 1.5px dashed #cbd8ed;
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.project-upload-area:hover,
+.project-upload-area.is-dragging {
+    background: #f0f6ff;
+    border-color: #5d91ed;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.06);
+}
+
+.project-upload-content {
+    width: 100%;
+}
+
+.project-upload-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 13px;
+    color: #3978e7;
+    background: #e8f0ff;
+    border-radius: 16px;
+    font-size: 21px;
+}
+
+.project-upload-content h5 {
+    margin: 0 0 7px;
+    color: #344158;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.project-upload-content p {
+    margin: 0 0 9px;
+    color: #8793a6;
+    font-size: 11px;
+}
+
+.project-upload-content > span {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #6481ad;
+    background: #edf3fc;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.project-image-preview {
+    position: relative;
+    display: none;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.project-image-preview.is-active {
+    display: block;
+    animation: projectPreviewIn 0.35s ease;
+}
+
+.project-image-preview img {
+    display: block;
+    width: 100%;
+    max-height: 210px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.project-image-preview > span {
+    display: block;
+    margin-top: 9px;
+    color: #6680a5;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.project-remove-image {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    background: #e34d5a;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.project-remove-image:hover {
+    background: #c92e3d;
+    transform: scale(1.08);
+}
+
+.project-image-edit-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(200px, 0.8fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.project-current-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 205px;
+    padding: 17px;
+    background: #fbfcfe;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+}
+
+.project-current-image-label {
+    align-self: flex-start;
+    margin-bottom: 12px;
+    color: #8492a8;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.project-current-image img {
+    width: 100%;
+    max-width: 190px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.project-current-image > p {
+    margin: 12px 0 0;
+    color: #8995a8;
+    font-size: 10px;
+}
+
+.project-no-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    color: #9ba8ba;
+    font-size: 11px;
+}
+
+.project-no-image i {
+    font-size: 32px;
+}
+
+@keyframes projectPreviewIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

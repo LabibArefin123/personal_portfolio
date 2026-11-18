@@ -1,0 +1,150 @@
+
+/* ==========================================================
+   PROJECT INDEX - RESPONSIVE DESIGN
+========================================================== */
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991.98px) {
+
+    .project-index-header {
+        align-items: flex-start;
+    }
+
+    .project-header-content h1 {
+        font-size: 24px;
+    }
+
+    .project-stat-card {
+        min-height: 155px;
+    }
+
+    .project-table-header {
+        padding: 18px;
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767.98px) {
+
+    .project-index-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        padding-bottom: 20px;
+    }
+
+    .project-header-content h1 {
+        font-size: 22px;
+    }
+
+    .project-header-content p {
+        font-size: 12px;
+    }
+
+    .project-header-actions {
+        width: 100%;
+    }
+
+    .project-add-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .project-stats-row {
+        margin-bottom: 12px;
+    }
+
+    .project-stat-card {
+        min-height: 145px;
+        padding: 19px;
+    }
+
+    .project-stat-content h2 {
+        font-size: 28px;
+    }
+
+    .project-table-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 17px;
+    }
+
+    .project-table-meta {
+        width: 100%;
+    }
+
+    .project-total-badge {
+        width: fit-content;
+    }
+
+    .project-table-wrapper {
+        padding: 0 12px;
+    }
+
+    .project-management-table {
+        min-width: 800px;
+    }
+
+    .project-table-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 17px;
+    }
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 420px) {
+
+    .project-header-content h1 {
+        font-size: 20px;
+    }
+
+    .project-header-label {
+        font-size: 9px;
+    }
+
+    .project-stat-card {
+        min-height: 138px;
+    }
+
+    .project-table-heading h4 {
+        font-size: 14px;
+    }
+
+    .project-table-heading p {
+        font-size: 10px;
+    }
+
+    .project-empty-state {
+        min-height: 270px;
+        padding: 25px 12px;
+    }
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-index-page *,
+    .project-index-header * {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

@@ -1,0 +1,107 @@
+/* =========================================================
+   PROJECT SHOW - BASE LAYOUT
+========================================================= */
+
+.project-show-layout {
+    display: grid;
+    grid-template-columns: minmax(270px, 0.85fr) minmax(0, 1.65fr);
+    gap: 22px;
+    align-items: start;
+    margin-bottom: 22px;
+}
+
+.project-show-image-column,
+.project-show-info-column {
+    min-width: 0;
+}
+
+.project-show-image-card,
+.project-show-info-card,
+.project-show-links-card,
+.project-show-description-card,
+.project-show-status-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e9edf4;
+    border-radius: 17px;
+    box-shadow: 0 9px 30px rgba(31, 52, 91, 0.05);
+    animation: projectShowFadeIn 0.65s ease both;
+}
+
+.project-show-info-card {
+    animation-delay: 0.08s;
+}
+
+.project-show-links-card {
+    margin-top: 20px;
+    animation-delay: 0.16s;
+}
+
+.project-show-description-card {
+    animation-delay: 0.24s;
+}
+
+.project-show-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 21px 24px;
+    background: linear-gradient(120deg, #ffffff, #f8faff);
+    border-bottom: 1px solid #edf1f7;
+}
+
+.project-show-card-heading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    color: #2563eb;
+    background: #eaf1ff;
+    border-radius: 13px;
+    font-size: 16px;
+}
+
+.project-show-card-heading h3 {
+    margin: 0;
+    color: #25334b;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.project-show-card-heading p {
+    margin: 5px 0 0;
+    color: #929daf;
+    font-size: 11px;
+}
+
+.project-show-description-content {
+    padding: 25px 27px;
+    color: #59677d;
+    font-size: 13px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+@keyframes projectShowFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-show-image-card,
+    .project-show-info-card,
+    .project-show-links-card,
+    .project-show-description-card,
+    .project-show-status-card {
+        animation: none;
+    }
+}

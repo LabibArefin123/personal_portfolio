@@ -1,0 +1,111 @@
+/* =========================================================
+   PROJECT SHOW - RESPONSIVE
+========================================================= */
+
+@media (max-width: 991.98px) {
+    .project-show-layout {
+        grid-template-columns: minmax(230px, 0.8fr) minmax(0, 1.2fr);
+        gap: 16px;
+    }
+
+    .project-show-links-body {
+        grid-template-columns: 1fr;
+    }
+
+    .project-show-detail-item {
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .project-show-detail-value,
+    .project-show-tech-value {
+        text-align: left;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .project-show-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .project-show-heading h1 {
+        font-size: 23px;
+    }
+
+    .project-show-header-actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .project-show-edit-btn,
+    .project-show-back-btn {
+        flex: 1;
+    }
+
+    .project-show-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .project-show-image-wrapper {
+        min-height: 220px;
+    }
+
+    .project-show-main-image {
+        max-height: 300px;
+    }
+
+    .project-show-info-body {
+        padding-right: 19px;
+        padding-left: 19px;
+    }
+
+    .project-show-links-body {
+        padding: 17px;
+    }
+
+    .project-show-description-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-show-header {
+        padding: 19px;
+        border-radius: 14px;
+    }
+
+    .project-show-heading h1 {
+        font-size: 21px;
+    }
+
+    .project-show-header-actions {
+        flex-direction: column;
+    }
+
+    .project-show-edit-btn,
+    .project-show-back-btn {
+        width: 100%;
+        flex: auto;
+    }
+
+    .project-show-card-heading {
+        padding: 17px;
+    }
+
+    .project-show-card-heading h3 {
+        font-size: 14px;
+    }
+
+    .project-show-detail-item {
+        padding: 14px 0;
+    }
+
+    .project-show-description-card,
+    .project-show-info-card,
+    .project-show-links-card,
+    .project-show-image-card {
+        border-radius: 14px;
+    }
+}

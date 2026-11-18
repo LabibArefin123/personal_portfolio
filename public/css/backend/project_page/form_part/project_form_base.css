@@ -1,0 +1,162 @@
+/* =========================================================
+   PROJECT FORM - BASE
+========================================================= */
+
+.project-form-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 8px 0 28px;
+    padding: 28px 30px;
+    background: linear-gradient(120deg, #ffffff, #f3f7ff);
+    border: 1px solid #e8eef8;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(31, 52, 91, 0.045);
+}
+
+.project-form-heading {
+    min-width: 0;
+}
+
+.project-form-eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #3973df;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.project-form-heading h1 {
+    margin: 0;
+    color: #17243a;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.project-form-heading p {
+    margin: 8px 0 0;
+    color: #7b879b;
+    font-size: 13px;
+}
+
+.project-back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    flex-shrink: 0;
+    padding: 11px 17px;
+    color: #42516a;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+}
+
+.project-back-btn:hover {
+    color: #ffffff;
+    background: #2563eb;
+    border-color: #2563eb;
+    box-shadow: 0 7px 16px rgba(37, 99, 235, 0.2);
+    transform: translateY(-2px);
+}
+
+.project-form {
+    margin-bottom: 30px;
+}
+
+.project-form-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e9edf4;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(31, 52, 91, 0.055);
+}
+
+.project-form-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 24px 28px;
+    background: linear-gradient(120deg, #ffffff, #f8faff);
+    border-bottom: 1px solid #edf1f7;
+}
+
+.project-form-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    color: #2563eb;
+    background: #eaf1ff;
+    border-radius: 14px;
+    font-size: 18px;
+}
+
+.project-form-card-header h3 {
+    margin: 0;
+    color: #1e2b43;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.project-form-card-header p {
+    margin: 5px 0 0;
+    color: #8792a5;
+    font-size: 12px;
+}
+
+.project-form-card-body {
+    padding: 30px;
+}
+
+.project-form-divider {
+    height: 1px;
+    margin: 27px 0;
+    background: linear-gradient(to right, #e9eef6, transparent);
+}
+
+.project-form-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 20px 28px;
+    background: #fbfcfe;
+    border-top: 1px solid #edf1f7;
+}
+
+.project-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.project-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .project-back-btn,
+    .project-submit-btn,
+    .project-cancel-btn {
+        transition: none;
+    }
+}

@@ -1,0 +1,81 @@
+
+/* ==========================================================
+   PROJECT INDEX - BASE STYLES
+========================================================== */
+
+.project-index-page {
+    --project-primary: #4361ee;
+    --project-primary-dark: #3451d1;
+    --project-text: #26334d;
+    --project-muted: #8993a7;
+    --project-border: #e9edf5;
+    --project-surface: #ffffff;
+    --project-background: #f6f8fc;
+
+    color: var(--project-text);
+    padding-bottom: 30px;
+}
+
+.project-index-page *,
+.project-index-header * {
+    box-sizing: border-box;
+}
+
+.project-index-page .row {
+    margin-bottom: 0;
+}
+
+/* Main card base */
+
+.project-table-card {
+    position: relative;
+    background: var(--project-surface);
+    border: 1px solid var(--project-border);
+    border-radius: 18px;
+    box-shadow:
+        0 4px 18px rgba(31, 45, 75, 0.035),
+        0 1px 3px rgba(31, 45, 75, 0.025);
+    overflow: hidden;
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project-table-card:hover {
+    box-shadow:
+        0 12px 35px rgba(31, 45, 75, 0.07),
+        0 3px 8px rgba(31, 45, 75, 0.025);
+}
+
+/* Common icon styling */
+
+.project-stat-icon,
+.project-table-heading-icon,
+.project-title-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Common button reset */
+
+.project-add-btn,
+.project-empty-btn,
+.project-action-btn {
+    text-decoration: none !important;
+}
+
+/* Smooth interactions */
+
+.project-index-page a,
+.project-index-page button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove unwanted AdminLTE card styling */
+
+.project-index-page .card {
+    border: 0;
+    box-shadow: none;
+}

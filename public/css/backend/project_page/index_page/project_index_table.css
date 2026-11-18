@@ -1,0 +1,529 @@
+
+/* ==========================================================
+   PROJECT INDEX - TABLE DESIGN
+========================================================== */
+
+/* ==========================================
+   01. TABLE CARD HEADER
+========================================== */
+
+.project-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 21px 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.project-table-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.project-table-heading-icon {
+    width: 43px;
+    height: 43px;
+
+    color: #4361ee;
+    background: #edf1ff;
+    border-radius: 12px;
+
+    font-size: 17px;
+}
+
+.project-table-heading h4 {
+    margin: 0 0 4px;
+    color: #293750;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.project-table-heading p {
+    margin: 0;
+    color: #929caf;
+    font-size: 11px;
+}
+
+.project-total-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    color: #586a88;
+    background: #f5f7fb;
+    border: 1px solid #e9edf4;
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   02. TABLE WRAPPER
+========================================== */
+
+.project-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 0 20px;
+}
+
+.project-management-table {
+    width: 100%;
+    min-width: 850px;
+    margin: 0;
+
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #42506a;
+}
+
+/* ==========================================
+   03. TABLE HEADER
+========================================== */
+
+.project-management-table thead th {
+    padding: 17px 13px;
+
+    color: #8b96aa;
+    background: #f9fafe;
+
+    border-top: 0;
+    border-bottom: 1px solid #edf0f5;
+    border-left: 0;
+    border-right: 0;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.project-management-table thead th:first-child {
+    border-radius: 9px 0 0 9px;
+}
+
+.project-management-table thead th:last-child {
+    border-radius: 0 9px 9px 0;
+}
+
+/* ==========================================
+   04. TABLE BODY
+========================================== */
+
+.project-management-table tbody td {
+    padding: 16px 13px;
+
+    background: #ffffff;
+    border-top: 0;
+    border-bottom: 1px solid #f0f2f7;
+    border-left: 0;
+    border-right: 0;
+
+    font-size: 12px;
+    vertical-align: middle;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.project-management-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.project-table-row {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-table-row:hover {
+    transform: translateY(-2px);
+}
+
+.project-table-row:hover td {
+    background: #f8faff;
+    border-bottom-color: #e7ecfb;
+}
+
+/* Serial number */
+
+.project-serial span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    color: #7b8aa5;
+    background: #f2f5fa;
+    border-radius: 9px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    transition: all 0.25s ease;
+}
+
+.project-table-row:hover .project-serial span {
+    color: #4361ee;
+    background: #eaf0ff;
+    transform: scale(1.08);
+}
+
+/* ==========================================
+   05. PROJECT DETAILS
+========================================== */
+
+.project-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 210px;
+}
+
+.project-title-icon {
+    width: 39px;
+    height: 39px;
+
+    color: #4361ee;
+    background: #edf1ff;
+    border-radius: 11px;
+
+    font-size: 15px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.project-table-row:hover .project-title-icon {
+    background: #e1e9ff;
+    transform: rotate(-7deg);
+}
+
+.project-title-content {
+    min-width: 0;
+}
+
+.project-title-content strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #34425d;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.project-title-content p {
+    max-width: 290px;
+    margin: 0;
+
+    color: #929caf;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   06. TECHNOLOGY BADGE
+========================================== */
+
+.project-tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    max-width: 200px;
+    padding: 7px 10px;
+
+    color: #526b9d;
+    background: #f1f5ff;
+    border: 1px solid #e7edff;
+    border-radius: 7px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.project-tech-badge i {
+    color: #6484e8;
+    flex-shrink: 0;
+}
+
+.project-no-tech {
+    color: #a3acbb;
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* ==========================================
+   07. STATUS BADGES
+========================================== */
+
+.project-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 10px;
+    border-radius: 30px;
+
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.status-published {
+    color: #168658;
+    background: #eaf8f1;
+}
+
+.status-published .status-dot {
+    background: #1aaf70;
+    box-shadow: 0 0 0 3px rgba(26, 175, 112, 0.12);
+}
+
+.status-draft {
+    color: #d05b5b;
+    background: #fff0f0;
+}
+
+.status-draft .status-dot {
+    background: #e76d6d;
+}
+
+/* ==========================================
+   08. FEATURED BADGES
+========================================== */
+
+.project-featured-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    color: #b47a17;
+    background: #fff7e8;
+    border: 1px solid #ffedc7;
+    border-radius: 30px;
+
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.project-featured-badge i {
+    color: #e6a329;
+}
+
+.project-not-featured {
+    color: #9ba4b3;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.project-not-featured i {
+    margin-right: 4px;
+}
+
+/* ==========================================
+   09. ACTION BUTTONS
+========================================== */
+
+.project-action-group {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.project-delete-form {
+    display: inline-flex;
+    margin: 0;
+}
+
+.project-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 33px;
+    height: 33px;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    font-size: 12px;
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-action-btn:hover {
+    transform: translateY(-3px);
+}
+
+.action-view {
+    color: #3476d8 !important;
+    background: #edf5ff;
+    border-color: #e0edff;
+}
+
+.action-view:hover {
+    color: #ffffff !important;
+    background: #3476d8;
+    box-shadow: 0 5px 12px rgba(52, 118, 216, 0.2);
+}
+
+.action-edit {
+    color: #b47b20 !important;
+    background: #fff7e9;
+    border-color: #ffefcf;
+}
+
+.action-edit:hover {
+    color: #ffffff !important;
+    background: #e5a12a;
+    box-shadow: 0 5px 12px rgba(229, 161, 42, 0.2);
+}
+
+.action-delete {
+    color: #dc5b65;
+    background: #fff0f1;
+    border-color: #ffe4e6;
+}
+
+.action-delete:hover {
+    color: #ffffff;
+    background: #dc5b65;
+    box-shadow: 0 5px 12px rgba(220, 91, 101, 0.2);
+}
+
+/* ==========================================
+   10. EMPTY STATE
+========================================== */
+
+.project-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 300px;
+    padding: 35px 20px;
+
+    text-align: center;
+}
+
+.project-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75px;
+    height: 75px;
+    margin-bottom: 17px;
+
+    color: #6d83e9;
+    background: #eef2ff;
+    border: 1px solid #e3eaff;
+    border-radius: 22px;
+
+    font-size: 29px;
+}
+
+.project-empty-state h4 {
+    margin: 0 0 9px;
+    color: #34425d;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.project-empty-state p {
+    max-width: 390px;
+    margin: 0 0 19px;
+
+    color: #929caf;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.project-empty-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    color: #ffffff !important;
+    background: #4361ee;
+    border-radius: 9px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: all 0.25s ease;
+}
+
+.project-empty-btn:hover {
+    color: #ffffff !important;
+    background: #3451d1;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(67, 97, 238, 0.2);
+}
+
+/* ==========================================
+   11. TABLE FOOTER
+========================================== */
+
+.project-table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 15px 23px;
+
+    background: #fbfcfe;
+    border-top: 1px solid #edf0f5;
+
+    color: #909bad;
+    font-size: 10px;
+}
+
+.project-table-footer i {
+    margin-right: 5px;
+    color: #91a1bc;
+}
+
+.project-footer-status {
+    color: #73849e;
+    font-weight: 700;
+}
+
+.project-footer-status i {
+    color: #1aaf70;
+    font-size: 8px;
+}

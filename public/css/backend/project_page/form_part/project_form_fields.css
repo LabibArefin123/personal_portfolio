@@ -1,0 +1,142 @@
+/* =========================================================
+   PROJECT FORM - INPUT FIELDS
+========================================================= */
+
+.project-form-group {
+    margin-bottom: 23px;
+}
+
+.project-form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #39465c;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.project-form-group label span {
+    color: #ef4444;
+}
+
+.project-form-group .form-control {
+    width: 100%;
+    min-height: 45px;
+    padding: 11px 14px;
+    color: #344158;
+    background-color: #fbfcfe;
+    border: 1px solid #e3e9f1;
+    border-radius: 10px;
+    box-shadow: none;
+    font-size: 12px;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.project-form-group .form-control::placeholder {
+    color: #aab3c1;
+}
+
+.project-form-group .form-control:hover {
+    border-color: #cbd8eb;
+}
+
+.project-form-group .form-control:focus {
+    color: #26364e;
+    background: #ffffff;
+    border-color: #6b9cf5;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.09);
+    outline: none;
+}
+
+.project-form-group textarea.form-control {
+    min-height: 145px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.project-form-group select.form-control {
+    cursor: pointer;
+}
+
+.project-input-icon {
+    position: relative;
+}
+
+.project-input-icon > i {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 14px;
+    color: #8b9ab1;
+    font-size: 13px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.project-input-icon .form-control {
+    padding-left: 39px;
+}
+
+.project-field-error {
+    display: block;
+    margin-top: 7px;
+    color: #dc4545;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.project-form-group .form-control.is-invalid {
+    border-color: #e76a6a;
+    box-shadow: 0 0 0 3px rgba(231, 106, 106, 0.08);
+}
+
+/* Action buttons */
+
+.project-submit-btn,
+.project-cancel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 43px;
+    padding: 11px 19px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 750;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+}
+
+.project-submit-btn {
+    color: #ffffff;
+    background: linear-gradient(135deg, #3478ed, #245bd0);
+    border: 1px solid #2866dc;
+    box-shadow: 0 5px 13px rgba(37, 99, 235, 0.17);
+}
+
+.project-submit-btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #194db9);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+    transform: translateY(-2px);
+}
+
+.project-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.project-cancel-btn {
+    color: #657187;
+    background: #ffffff;
+    border: 1px solid #e1e7ef;
+}
+
+.project-cancel-btn:hover {
+    color: #344158;
+    background: #f1f4f8;
+    border-color: #d4dce8;
+}
