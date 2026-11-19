@@ -13,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
 
-    <link rel="icon" type="image/png" href="{{ asset('uploads/images/Logo.jpg') }}">
     {{-- DataTables 3.1.5 - Bootstrap 5 Integration --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/3.1.5/css/dataTables.bootstrap5.min.css">
 
@@ -32,6 +31,7 @@
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/auth_notification_modal.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/premium_user_menu.css') }}">
 
+        <link rel="icon" type="image/png" href="{{ asset('uploads/images/Logo.png') }}">
         {{-- Global Modals --}}
 
         @include('backend.global_modal.validation_modal')

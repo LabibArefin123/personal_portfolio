@@ -63,12 +63,6 @@ Route::group(['middleware' => ['auth', 'permission']], function () {
     Route::get('/global-search', [DashboardController::class, 'globalSearch'])->name('global.search');
     Route::get('/search/result', [DashboardController::class, 'searchResult'])->name('search.result');
 
-    // Organization Routes
-    Route::resource('organizations', OrganizationController::class);
-
-    // Gallery Routes
-    Route::resource('galleries', GalleryController::class);
-
     Route::resource('projects', ProjectController::class);
     Route::resource('project-informations', ProjectInformationController::class);
     Route::resource('skills', SkillController::class);
