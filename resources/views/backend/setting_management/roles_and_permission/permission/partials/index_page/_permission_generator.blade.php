@@ -29,11 +29,15 @@
 
         <div class="form-group">
             <label for="permissionResourceInput" class="fw-semibold">
-                Resource Name
+                Resource / Route Permission
             </label>
 
             <input type="text" id="permissionResourceInput" class="form-control permission-input"
-                placeholder="Example: users, roles, products" autocomplete="off">
+                placeholder="Example: doctors or project-informations.search_items" autocomplete="off">
+
+            <small class="text-muted d-block mt-2">
+                Enter a plural resource name or a complete single-route permission.
+            </small>
         </div>
 
         {{-- Selected Permissions --}}

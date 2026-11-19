@@ -13,7 +13,8 @@
     {{-- Permission Buttons --}}
     <link rel="stylesheet" href="{{ asset('css/backend/setting_management/permission/index_page/permission_buttons.css') }}">
     {{-- Permission Pagination --}}
-    <link rel="stylesheet" href="{{ asset('css/backend/setting_management/permission/index_page/permission_pagination.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('css/backend/setting_management/permission/index_page/permission_pagination.css') }}">
     {{-- Permission Responsive --}}
     <link rel="stylesheet" href="{{ asset('css/backend/setting_management/permission/index_page/permission_resp.css') }}">
 @stop
@@ -54,9 +55,7 @@
             {{-- Hidden Permission Save Form --}}
             <form method="POST" action="{{ route('permissions.store') }}" id="permissionSaveForm">
                 @csrf
-                <div id="generatedPermissionInputs"></div>
             </form>
-
             {{-- Permission Generator Modal --}}
             @include('backend.setting_management.roles_and_permission.permission.partials.index_page._permission_generator_modal')
 

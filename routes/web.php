@@ -64,6 +64,8 @@ Route::group(['middleware' => ['auth', 'permission']], function () {
     Route::get('/search/result', [DashboardController::class, 'searchResult'])->name('search.result');
 
     Route::resource('projects', ProjectController::class);
+    Route::get('project-information/{projectInformation}/search-items',[ProjectInformationController::class, 'searchItems']
+    )->name('project-informations.search_items');
     Route::resource('project-informations', ProjectInformationController::class);
     Route::resource('skills', SkillController::class);
 

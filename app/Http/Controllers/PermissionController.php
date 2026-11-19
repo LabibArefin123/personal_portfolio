@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\DB;
 
 class PermissionController extends Controller
 {
@@ -16,43 +17,80 @@ class PermissionController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'permissions' => 'required|array',
-            'permissions.*' => 'required|string|unique:permissions,name'
+        $validated = $request->validate([
+            'permissions' => ['required', 'array', 'min:1'],
+            'permissions.*' => ['required', 'string', 'max:255', 'distinct'],
         ]);
 
         $savedPermissions = [];
+        $existingPermissions = [];
 
-        foreach ($request->permissions as $permissionName) {
+        try {
+            DB::transaction(function () use (
+                $validated,
+                &$savedPermissions,
+                &$existingPermissions
+            ) {
+                foreach ($validated['permissions'] as $permissionName) {
 
-            $permission = Permission::create([
-                'name' => $permissionName,
-                'guard_name' => 'web',
+                    $permissionName = trim($permissionName);
+
+                    if ($permissionName === '') {
+                        continue;
+                    }
+
+                    $permission = Permission::firstOrCreate([
+                        'name' => $permissionName,
+                        'guard_name' => 'web',
+                    ]);
+
+                    if ($permission->wasRecentlyCreated) {
+                        $savedPermissions[] = $permission->name;
+                    } else {
+                        $existingPermissions[] = $permission->name;
+                    }
+                }
+            });
+
+            app(\Spatie\Permission\PermissionRegistrar::class)
+                ->forgetCachedPermissions();
+
+            return response()->json([
+                'success' => true,
+                'message' => count($savedPermissions) > 0
+                    ? 'Permissions created successfully.'
+                    : 'All selected permissions already exist.',
+                'permissions' => $savedPermissions,
+                'existing' => $existingPermissions,
             ]);
+        } catch (\Throwable $e) {
 
-            $savedPermissions[] = $permission->name;
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to create permissions.',
+                'error' => config('app.debug') ? $e->getMessage() : null,
+            ], 500);
         }
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Permissions created successfully.',
-            'permissions' => $savedPermissions
-        ]);
     }
+
 
     public function assignPermissionToRole(Request $request)
     {
-        $request->validate([
-            'role_id' => 'required|exists:roles,id',
-            'permissions' => 'array',
+        $validated = $request->validate([
+            'role_id' => ['required', 'exists:roles,id'],
+            'permissions' => ['nullable', 'array'],
+            'permissions.*' => ['string', 'exists:permissions,name'],
         ]);
 
-        $role = Role::findOrFail($request->role_id);
-        $role->syncPermissions($request->permissions);
+        $role = Role::findOrFail($validated['role_id']);
 
-        return redirect()->back()->with('success', 'Permissions updated for the role.');
+        $role->syncPermissions($validated['permissions'] ?? []);
+
+        return redirect()->back()->with(
+            'success',
+            'Permissions updated for the role.'
+        );
     }
-
     public function edit($id)
     {
         $permission = Permission::findOrFail($id);

@@ -1,131 +1,65 @@
 document.addEventListener("DOMContentLoaded", function () {
-    /* =========================================
-       ADD SELECTED PERMISSIONS
-    ========================================= */
+    "use strict";
 
-    document
-        .getElementById("addSelectedPermissions")
-        .addEventListener("click", function () {
-            document
-                .querySelectorAll(".generated-checkbox:checked")
-                .forEach((checkbox) => {
-                    if (!window.selectedPermissions.includes(checkbox.value)) {
-                        window.selectedPermissions.push(checkbox.value);
-                    }
-                });
+    const saveButton = document.getElementById("saveAllPermissions");
+    const saveForm = document.getElementById("permissionSaveForm");
 
-            renderSelectedPermissions();
+    if (!saveButton || !saveForm) return;
 
-            bootstrap.Modal.getInstance(
-                document.getElementById("permissionGeneratorModal"),
-            ).hide();
-        });
+    saveButton.addEventListener("click", savePermissionsAjax);
 
-    /* =========================================
-       SAVE ALL
-    ========================================= */
+    async function savePermissionsAjax() {
+        const permissions = window.selectedPermissions || [];
 
-    document
-        .getElementById("saveAllPermissions")
-        .addEventListener("click", savePermissionsAjax);
-});
+        if (!permissions.length) {
+            toastr.warning("Please select permissions first.");
+            return;
+        }
 
-/* =========================================
-   RENDER SELECTED
-========================================= */
+        const originalHTML = saveButton.innerHTML;
 
-function renderSelectedPermissions() {
-    selectedPermissionWrapper.innerHTML = "";
+        saveButton.disabled = true;
+        saveButton.innerHTML =
+            '<i class="fas fa-spinner fa-spin mr-1"></i> Saving...';
 
-    selectedCount.innerText = window.selectedPermissions.length;
+        try {
+            const response = await fetch(saveForm.action, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": saveForm.querySelector(
+                        'input[name="_token"]',
+                    ).value,
+                    Accept: "application/json",
+                    "X-Requested-With": "XMLHttpRequest",
+                },
+                body: JSON.stringify({
+                    permissions: permissions,
+                }),
+            });
 
-    if (window.selectedPermissions.length > 0) {
-        saveAllButton.classList.remove("d-none");
-    } else {
-        saveAllButton.classList.add("d-none");
-    }
+            const data = await response.json();
 
-    window.selectedPermissions.forEach((permission) => {
-        selectedPermissionWrapper.innerHTML += `
-
-            <div class="selected-permission-badge"
-                 data-name="${permission}">
-
-                <span>${permission}</span>
-
-                <i class="fas fa-times remove-permission"></i>
-
-            </div>
-
-        `;
-    });
-
-    bindRemovePermission();
-}
-
-/* =========================================
-   REMOVE PERMISSION
-========================================= */
-
-function bindRemovePermission() {
-    document.querySelectorAll(".remove-permission").forEach((button) => {
-        button.addEventListener("click", function () {
-            const permission = this.parentElement.dataset.name;
-
-            window.selectedPermissions = window.selectedPermissions.filter(
-                (item) => item !== permission,
-            );
-
-            renderSelectedPermissions();
-        });
-    });
-}
-
-/* =========================================
-   SAVE AJAX
-========================================= */
-
-function savePermissionsAjax() {
-    if (window.selectedPermissions.length === 0) {
-        toastr.warning("Please select permissions first.");
-
-        return;
-    }
-
-    fetch("/permissions", {
-        method: "POST",
-
-        headers: {
-            "Content-Type": "application/json",
-
-            "X-CSRF-TOKEN": document
-                .querySelector('meta[name="csrf-token"]')
-                .getAttribute("content"),
-
-            Accept: "application/json",
-        },
-
-        body: JSON.stringify({
-            permissions: window.selectedPermissions,
-        }),
-    })
-        .then((response) => response.json())
-
-        .then((data) => {
-            if (data.success) {
-                data.permissions.forEach((permission) => {
-                    toastr.success(permission + " created successfully");
-                });
-
-                setTimeout(() => {
-                    window.location.reload();
-                }, 1200);
-            } else {
-                toastr.error("Something went wrong.");
+            if (!response.ok || !data.success) {
+                throw new Error(data.message || "Unable to save permissions.");
             }
-        })
 
-        .catch(() => {
-            toastr.error("Server error occurred.");
-        });
-}
+            (data.permissions || permissions).forEach((permission) => {
+                toastr.success(permission + " created successfully.");
+            });
+
+            window.selectedPermissions = [];
+
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+        } catch (error) {
+            console.error("Permission save error:", error);
+
+            toastr.error(error.message || "Server error occurred.");
+
+            saveButton.disabled = false;
+            saveButton.innerHTML = originalHTML;
+        }
+    }
+});

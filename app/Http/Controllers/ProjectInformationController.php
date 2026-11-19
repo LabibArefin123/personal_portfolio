@@ -88,7 +88,45 @@ class ProjectInformationController extends Controller
         );
     }
 
+    public function searchItems(Request $request, ProjectInformation $projectInformation)
+    {
+        $validated = $request->validate([
+            'type' => 'required|in:features,languages',
+            'q' => 'nullable|string|max:150',
+        ]);
 
+        $type = $validated['type'];
+        $query = trim($validated['q'] ?? '');
+
+        $column = $type === 'features'
+            ? 'custom_features'
+            : 'project_languages';
+
+        $items = $projectInformation->{$column};
+
+        if (!is_array($items)) {
+            $items = json_decode($items ?? '[]', true) ?: [];
+        }
+
+        $items = collect($items)
+            ->filter(fn($item) => is_string($item) || is_numeric($item))
+            ->map(fn($item) => trim((string) $item))
+            ->filter(fn($item) => $item !== '')
+            ->values();
+
+        if ($query !== '') {
+            $items = $items->filter(function ($item) use ($query) {
+                return stripos($item, $query) !== false;
+            })->values();
+        }
+
+        return response()->json([
+            'success' => true,
+            'items' => $items->values(),
+            'count' => $items->count(),
+            'query' => $query,
+        ]);
+    }
     /* =====================================================
         EDIT
     ===================================================== */
