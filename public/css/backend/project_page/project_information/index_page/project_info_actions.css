@@ -1,0 +1,156 @@
+
+/* ==========================================
+   PROJECT INFORMATION - ACTIONS
+========================================== */
+
+.pi-action-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.pi-delete-form {
+    display: inline-flex;
+    margin: 0;
+}
+
+.pi-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 63px;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: all .22s ease;
+}
+
+.pi-action-btn:hover {
+    transform: translateY(-2px);
+}
+
+.pi-action-btn i {
+    font-size: 10px;
+}
+
+.pi-view-btn {
+    color: #3975dc !important;
+    background: #edf4ff;
+    border-color: #dce9ff;
+}
+
+.pi-view-btn:hover {
+    color: #fff !important;
+    background: #3975dc;
+    border-color: #3975dc;
+}
+
+.pi-edit-btn {
+    color: #b98225 !important;
+    background: #fff7e8;
+    border-color: #f6e6c2;
+}
+
+.pi-edit-btn:hover {
+    color: #fff !important;
+    background: #d99b35;
+    border-color: #d99b35;
+}
+
+.pi-delete-btn {
+    color: #d34b5c !important;
+    background: #fff0f2;
+    border-color: #ffdee3;
+}
+
+.pi-delete-btn:hover {
+    color: #fff !important;
+    background: #dc5364;
+    border-color: #dc5364;
+}
+
+/* Pagination */
+
+.pi-pagination-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.pi-pagination-wrapper nav {
+    display: flex;
+    align-items: center;
+}
+
+.pi-pagination-wrapper .pagination {
+    gap: 4px;
+    margin-bottom: 0;
+}
+
+.pi-pagination-wrapper .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 35px;
+    height: 35px;
+    padding: 6px 11px;
+    color: #708097;
+    background: #fff;
+    border: 1px solid #e6ebf2;
+    border-radius: 8px !important;
+    font-size: 11px;
+    transition: all .2s ease;
+}
+
+.pi-pagination-wrapper .page-link:hover {
+    color: #3975dc;
+    background: #edf4ff;
+    border-color: #dce9ff;
+}
+
+.pi-pagination-wrapper .page-item.active .page-link {
+    color: #fff;
+    background: #3975dc;
+    border-color: #3975dc;
+}
+
+.pi-pagination-wrapper .page-item.disabled .page-link {
+    color: #b9c1cd;
+    background: #f7f9fc;
+}
+
+/* Entrance Animation */
+
+.pi-table-card {
+    animation: piFadeUp .45s ease both;
+}
+
+.pi-table-row {
+    animation: piRowFade .4s ease both;
+}
+
+@keyframes piFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes piRowFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

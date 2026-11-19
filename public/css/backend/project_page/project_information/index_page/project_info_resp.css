@@ -1,0 +1,141 @@
+/* ==========================================
+   PROJECT INFORMATION - RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+    .pi-page-header {
+        padding: 17px;
+    }
+
+    .pi-table-card-header {
+        padding: 16px;
+    }
+
+    .pi-table-wrapper {
+        padding: 14px;
+    }
+
+    .pi-table-header-label {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .pi-page-container {
+        padding: 3px 0 20px;
+    }
+
+    .pi-page-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px;
+        gap: 15px;
+    }
+
+    .pi-header-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 17px;
+    }
+
+    .pi-header-text h1 {
+        font-size: 19px;
+    }
+
+    .pi-header-text p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .pi-create-btn {
+        width: 100%;
+        padding: 11px;
+    }
+
+    .pi-section-intro {
+        align-items: flex-start;
+    }
+
+    .pi-section-intro h5 {
+        font-size: 15px;
+    }
+
+    .pi-section-intro p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .pi-record-count {
+        padding: 7px 9px;
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    .pi-table-card {
+        border-radius: 12px;
+    }
+
+    .pi-table-card-header {
+        padding: 14px;
+    }
+
+    .pi-table-heading-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .pi-table-heading h6 {
+        font-size: 12px;
+    }
+
+    .pi-table-heading span {
+        font-size: 10px;
+    }
+
+    .pi-table-wrapper {
+        padding: 10px;
+    }
+
+    #projectInformationTable {
+        min-width: 720px;
+    }
+
+    .pi-table-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 15px;
+        line-height: 1.6;
+    }
+
+    .pi-pagination-wrapper {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .pi-section-intro {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pi-table-footer {
+        font-size: 9px;
+    }
+
+    .pi-pagination-wrapper .page-link {
+        min-width: 30px;
+        height: 32px;
+        padding: 5px 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pi-page-container *,
+    .pi-page-container *::before,
+    .pi-page-container *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

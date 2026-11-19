@@ -1,0 +1,183 @@
+.pi-show-page {
+    --pis-primary: #4361ee;
+    --pis-primary-dark: #3048c7;
+    --pis-text: #25324b;
+    --pis-muted: #8490a5;
+    --pis-border: #e8edf5;
+    --pis-bg: #f7f9fd;
+    padding: 8px 8px 35px;
+    color: var(--pis-text);
+}
+.pi-show-page section {
+    margin-bottom: 25px;
+}
+.pi-show-page .pi-show-overview-card,
+.pi-show-page .pi-show-gallery-card,
+.pi-show-page .pi-show-detail-card,
+.pi-show-page .pi-show-links-card {
+    border: 1px solid var(--pis-border);
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 5px 22px rgba(31, 45, 75, 0.045);
+    overflow: hidden;
+}
+.pi-show-page .pi-show-overview-card {
+    padding: 27px;
+}
+.pi-show-page .pi-show-overview-top {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+.pi-show-page .pi-show-project-icon {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #4361ee, #3048c7);
+    color: #fff;
+    font-size: 23px;
+    box-shadow: 0 7px 17px rgba(67, 97, 238, 0.2);
+}
+.pi-show-page .pi-show-project-heading {
+    flex: 1;
+    min-width: 0;
+}
+.pi-show-page .pi-show-eyebrow,
+.pi-show-page .pi-show-section-kicker,
+.pi-show-page .pi-show-story-label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--pis-primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+.pi-show-page .pi-show-project-heading h2 {
+    margin: 0 0 5px;
+    color: var(--pis-text);
+    font-size: 22px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+.pi-show-page .pi-show-project-subtitle {
+    color: var(--pis-muted);
+    font-size: 12px;
+}
+.pi-show-page .pi-show-overview-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 13px;
+    border: 1px solid #dcefe6;
+    border-radius: 30px;
+    background: #f0faf5;
+    color: #16845b;
+    font-size: 11px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+.pi-show-page .pi-show-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #16a36a;
+    box-shadow: 0 0 0 4px rgba(22, 163, 106, 0.1);
+}
+.pi-show-page .pi-show-overview-divider {
+    height: 1px;
+    margin: 24px 0;
+    background: var(--pis-border);
+}
+.pi-show-page .pi-show-section-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 11px;
+    color: #34415a;
+    font-size: 13px;
+    font-weight: 800;
+}
+.pi-show-page .pi-show-section-label i {
+    color: var(--pis-primary);
+}
+.pi-show-page .pi-show-overview-content p {
+    margin: 0;
+    color: #657188;
+    font-size: 13px;
+    line-height: 1.9;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+.pi-show-page .pi-show-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.pi-show-page .pi-show-section-heading h3 {
+    margin: 0 0 5px;
+    color: var(--pis-text);
+    font-size: 18px;
+    font-weight: 800;
+}
+.pi-show-page .pi-show-section-heading h3 i {
+    margin-right: 7px;
+    color: var(--pis-primary);
+}
+.pi-show-page .pi-show-section-heading p {
+    margin: 0;
+    color: var(--pis-muted);
+    font-size: 12px;
+}
+.pi-show-page .pi-show-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 35px;
+    padding: 7px 11px;
+    border: 1px solid #e2e8ff;
+    border-radius: 20px;
+    background: #f1f4ff;
+    color: var(--pis-primary);
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+.pi-show-page .pi-show-empty {
+    padding: 45px 20px;
+    text-align: center;
+}
+.pi-show-page .pi-show-empty > i {
+    margin-bottom: 13px;
+    color: #aab5c9;
+    font-size: 35px;
+}
+.pi-show-page .pi-show-empty h5 {
+    margin-bottom: 7px;
+    color: #46536b;
+    font-size: 14px;
+    font-weight: 750;
+}
+.pi-show-page .pi-show-empty p {
+    margin: 0;
+    color: var(--pis-muted);
+    font-size: 12px;
+}
+.pi-show-page .pi-show-inline-empty {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 15px;
+    border: 1px dashed #e0e6ef;
+    border-radius: 9px;
+    color: #929db0;
+    font-size: 12px;
+}
+.pi-show-page .pi-show-inline-empty i {
+    color: #a4afc1;
+}

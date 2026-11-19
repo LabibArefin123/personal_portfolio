@@ -1,0 +1,130 @@
+.pi-form-page {
+    --pi-primary: #4361ee;
+    --pi-primary-dark: #3048c7;
+    --pi-success: #16a36a;
+    --pi-danger: #e05260;
+    --pi-text: #25324b;
+    --pi-muted: #8490a5;
+    --pi-border: #e8edf5;
+    --pi-surface: #ffffff;
+    --pi-background: #f5f7fc;
+    padding: 12px 8px 35px;
+    color: var(--pi-text);
+}
+.pi-form-page .pi-form-card {
+    border: 1px solid var(--pi-border);
+    border-radius: 15px;
+    background: var(--pi-surface);
+    box-shadow: 0 5px 22px rgba(31, 45, 75, 0.045);
+    overflow: hidden;
+    margin-bottom: 24px;
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+.pi-form-page .pi-form-card:hover {
+    box-shadow: 0 10px 30px rgba(31, 45, 75, 0.075);
+}
+.pi-form-page .pi-form-card .card-body {
+    padding: 25px;
+}
+.pi-form-page .pi-form-card-header {
+    padding: 19px 25px;
+    border-bottom: 1px solid var(--pi-border);
+    background: #fff;
+}
+.pi-form-page .pi-form-step {
+    width: 39px;
+    height: 39px;
+    flex: 0 0 39px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #edf1ff;
+    color: var(--pi-primary);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+.pi-form-page .pi-form-card-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.pi-form-page .pi-form-card-title h5 {
+    margin: 0 0 5px;
+    color: var(--pi-text);
+    font-size: 16px;
+    font-weight: 750;
+}
+.pi-form-page .pi-form-card-title p {
+    margin: 0;
+    color: var(--pi-muted);
+    font-size: 12px;
+}
+.pi-form-page .pi-project-selection {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 22px;
+}
+.pi-form-page .pi-project-select {
+    flex: 1;
+    max-width: 760px;
+}
+.pi-form-page .pi-project-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.pi-form-page .pi-btn {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 19px;
+    border: 0;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.22s ease;
+}
+.pi-form-page .pi-btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    filter: brightness(0.96);
+}
+.pi-form-page .pi-btn-confirm {
+    background: linear-gradient(135deg, #16a36a, #0c8756);
+    box-shadow: 0 4px 12px rgba(22, 163, 106, 0.17);
+}
+.pi-form-page .pi-btn-cancel {
+    background: #f0f2f6;
+    color: #69758a;
+}
+.pi-form-page .pi-btn-cancel:hover {
+    color: #455168;
+    background: #e5e9f0;
+}
+.pi-form-page .pi-step-two {
+    animation: pi-section-enter 0.4s ease both;
+}
+.pi-form-page .pi-form-submit-area {
+    display: flex;
+    justify-content: flex-end;
+    padding: 4px 0 10px;
+}
+@keyframes pi-section-enter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

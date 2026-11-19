@@ -1,0 +1,120 @@
+@media (max-width: 991.98px) {
+    .pi-form-page {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+    .pi-form-page .pi-form-card .card-body {
+        padding: 20px;
+    }
+    .pi-form-page .pi-project-selection {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .pi-form-page .pi-project-select {
+        max-width: 100%;
+    }
+    .pi-form-page .pi-project-controls {
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 767.98px) {
+    .pi-form-page .pi-form-heading {
+        align-items: flex-start;
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+    .pi-form-page .pi-form-heading-icon {
+        width: 46px;
+        height: 46px;
+        flex-basis: 46px;
+        font-size: 19px;
+    }
+    .pi-form-page .pi-form-heading h1 {
+        font-size: 19px;
+    }
+    .pi-form-page .pi-form-heading p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    .pi-form-page .pi-form-card {
+        margin-bottom: 17px;
+    }
+    .pi-form-page .pi-form-card-header {
+        padding: 16px;
+    }
+    .pi-form-page .pi-form-card .card-body {
+        padding: 17px;
+    }
+    .pi-form-page .pi-form-card-title {
+        gap: 11px;
+    }
+    .pi-form-page .pi-form-card-title h5 {
+        font-size: 14px;
+    }
+    .pi-form-page .pi-form-card-title p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+    .pi-form-page .pi-form-step {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        font-size: 11px;
+    }
+    .pi-form-page .pi-project-controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .pi-form-page .pi-btn {
+        padding: 0 12px;
+    }
+    .pi-form-page .pi-builder-toolbar {
+        padding: 13px;
+    }
+    .pi-form-page .pi-builder-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+    .pi-form-page .pi-builder-btn {
+        padding: 0 8px;
+        font-size: 11px;
+    }
+    .pi-form-page .pi-submit-btn {
+        width: 100%;
+    }
+    .pi-form-page .pi-form-submit-area {
+        display: block;
+    }
+    .pi-form-page .pi-existing-image-card {
+        height: 105px;
+    }
+}
+@media (max-width: 420px) {
+    .pi-form-page .pi-form-heading {
+        gap: 12px;
+    }
+    .pi-form-page .pi-form-heading h1 {
+        font-size: 17px;
+    }
+    .pi-form-page .pi-form-heading-icon {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        font-size: 17px;
+    }
+    .pi-form-page .pi-builder-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+    .pi-form-page .pi-builder-btn {
+        min-height: 37px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .pi-form-page *,
+    .pi-form-page *::before,
+    .pi-form-page *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}

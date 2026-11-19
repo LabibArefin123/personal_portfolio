@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\Organization;
 use App\Models\VisitorTrack;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;

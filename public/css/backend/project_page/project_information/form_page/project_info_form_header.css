@@ -1,0 +1,51 @@
+.pi-form-page .pi-form-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 5px 0 28px;
+    padding: 22px 25px;
+    border: 1px solid #e5eafe;
+    border-radius: 15px;
+    background: linear-gradient(115deg, #f0f3ff 0%, #ffffff 75%);
+    position: relative;
+    overflow: hidden;
+}
+.pi-form-page .pi-form-heading::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    right: -45px;
+    top: -75px;
+    border-radius: 50%;
+    background: rgba(67, 97, 238, 0.055);
+}
+.pi-form-page .pi-form-heading-icon {
+    width: 55px;
+    height: 55px;
+    flex: 0 0 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #4361ee, #3048c7);
+    color: #fff;
+    font-size: 22px;
+    box-shadow: 0 7px 17px rgba(67, 97, 238, 0.22);
+}
+.pi-form-page .pi-edit-heading-icon {
+    background: linear-gradient(135deg, #0d9b83, #087766);
+    box-shadow: 0 7px 17px rgba(13, 155, 131, 0.2);
+}
+.pi-form-page .pi-form-heading h1 {
+    margin: 0 0 6px;
+    color: #25324b;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+}
+.pi-form-page .pi-form-heading p {
+    margin: 0;
+    color: #8490a5;
+    font-size: 13px;
+}

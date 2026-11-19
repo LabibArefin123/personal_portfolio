@@ -1,0 +1,84 @@
+.pi-form-page .pi-builder-toolbar {
+    padding: 17px;
+    border: 1px solid #e9edf6;
+    border-radius: 11px;
+    background: #fafbfe;
+}
+.pi-form-page .pi-builder-label {
+    display: block;
+    margin-bottom: 13px;
+    color: #66738a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+.pi-form-page .pi-builder-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.pi-form-page .pi-builder-btn {
+    min-height: 39px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+    border: 1px solid #dce4fb;
+    border-radius: 8px;
+    background: #fff;
+    color: #4560cb;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .22s ease;
+}
+.pi-form-page .pi-builder-btn i {
+    font-size: 12px;
+}
+.pi-form-page .pi-builder-btn:hover {
+    border-color: #4361ee;
+    background: #4361ee;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(67, 97, 238, .18);
+    transform: translateY(-2px);
+}
+.pi-form-page .pi-dynamic-fields {
+    margin-top: 20px;
+}
+.pi-form-page .pi-submit-btn {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 25px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4361ee, #3048c7);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 750;
+    box-shadow: 0 6px 17px rgba(67, 97, 238, .2);
+    cursor: pointer;
+    transition: all .25s ease;
+}
+.pi-form-page .pi-submit-btn:hover {
+    color: #fff;
+    background: linear-gradient(135deg, #3048c7, #263ba8);
+    box-shadow: 0 9px 22px rgba(67, 97, 238, .28);
+    transform: translateY(-2px);
+}
+.pi-form-page .pi-update-btn {
+    background: linear-gradient(135deg, #0d9b83, #087766);
+    box-shadow: 0 6px 17px rgba(13, 155, 131, .2);
+}
+.pi-form-page .pi-update-btn:hover {
+    background: linear-gradient(135deg, #087766, #065d50);
+}
+.pi-form-page .pi-submit-btn:active,
+.pi-form-page .pi-builder-btn:active,
+.pi-form-page .pi-btn:active {
+    transform: translateY(0);
+}

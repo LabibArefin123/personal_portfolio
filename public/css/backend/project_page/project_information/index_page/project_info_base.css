@@ -1,0 +1,140 @@
+/* ==========================================
+   PROJECT INFORMATION - BASE
+========================================== */
+
+.pi-page-container {
+    --pi-primary: #3975dc;
+    --pi-primary-light: #edf4ff;
+    --pi-dark: #293950;
+    --pi-muted: #8996a9;
+    --pi-border: #e9edf3;
+    --pi-radius: 15px;
+    padding: 8px 2px 30px;
+    color: var(--pi-dark);
+}
+
+.pi-table-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--pi-border);
+    border-radius: var(--pi-radius);
+    box-shadow: 0 5px 24px rgba(35, 52, 80, 0.045);
+    transition: box-shadow 0.25s ease;
+}
+
+.pi-table-card:hover {
+    box-shadow: 0 9px 28px rgba(35, 52, 80, 0.07);
+}
+
+.pi-section-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.pi-section-intro h5 {
+    margin: 0 0 5px;
+    color: #293950;
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.pi-section-intro h5 i {
+    margin-right: 7px;
+    color: var(--pi-primary);
+}
+
+.pi-section-intro p {
+    margin: 0;
+    color: var(--pi-muted);
+    font-size: 12px;
+}
+
+.pi-record-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 13px;
+    color: #3975dc;
+    background: #edf4ff;
+    border: 1px solid #dce9ff;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.pi-table-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 19px 23px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.pi-table-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pi-table-heading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    color: #3975dc;
+    background: #edf4ff;
+    border-radius: 12px;
+    font-size: 17px;
+}
+
+.pi-table-heading h6 {
+    margin: 0 0 5px;
+    color: #293950;
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.pi-table-heading span {
+    color: #929daf;
+    font-size: 11px;
+}
+
+.pi-table-header-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #1b9b6b;
+    background: #edfaf4;
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.pi-table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 22px;
+    color: #8996a9;
+    background: #fcfdff;
+    border-top: 1px solid #edf0f5;
+    font-size: 10px;
+}
+
+.pi-table-footer i {
+    margin-right: 5px;
+    color: #3975dc;
+}
+
+.pi-table-footer span {
+    font-weight: 700;
+    white-space: nowrap;
+}

@@ -1,0 +1,116 @@
+.pi-form-page .pi-form-group {
+    width: 100%;
+}
+.pi-form-page .pi-form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #34415a;
+    font-size: 13px;
+    font-weight: 700;
+}
+.pi-form-page .pi-form-group label span {
+    color: #e05260;
+}
+.pi-form-page .form-control {
+    min-height: 44px;
+    border: 1px solid #e1e7f0;
+    border-radius: 9px;
+    background-color: #fbfcfe;
+    color: #34415a;
+    font-size: 13px;
+    box-shadow: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+.pi-form-page .form-control:focus {
+    border-color: #8095ff;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+.pi-form-page textarea.form-control {
+    min-height: 125px;
+    padding: 13px 15px;
+    line-height: 1.7;
+    resize: vertical;
+}
+.pi-form-page .form-control::placeholder {
+    color: #a7b0c0;
+}
+.pi-form-page .pi-upload-label {
+    min-height: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+    border: 1.5px dashed #b9c6f5;
+    border-radius: 12px;
+    background: #f8f9ff;
+    color: #4361ee;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.pi-form-page .pi-upload-label:hover {
+    border-color: #4361ee;
+    background: #f0f3ff;
+}
+.pi-form-page .pi-upload-label > i {
+    font-size: 29px;
+}
+.pi-form-page .pi-upload-label span {
+    font-size: 14px;
+    font-weight: 750;
+}
+.pi-form-page .pi-upload-label small {
+    color: #8994aa;
+    font-size: 11px;
+}
+.pi-form-page .pi-file-input {
+    margin-top: 12px;
+    padding: 6px;
+    background: #fff;
+}
+.pi-form-page .pi-existing-images {
+    margin-bottom: 25px;
+}
+.pi-form-page .pi-existing-images-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 15px;
+    color: #34415a;
+    font-size: 13px;
+    font-weight: 750;
+}
+.pi-form-page .pi-existing-images-heading i {
+    color: #4361ee;
+}
+.pi-form-page .pi-existing-image-card {
+    height: 120px;
+    padding: 5px;
+    overflow: hidden;
+    border: 1px solid #e7ebf3;
+    border-radius: 10px;
+    background: #fff;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+.pi-form-page .pi-existing-image-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(31, 45, 75, 0.12);
+}
+.pi-form-page .pi-existing-image-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 7px;
+    object-fit: cover;
+}
+.pi-form-page .pi-image-preview {
+    margin-top: 18px;
+}
