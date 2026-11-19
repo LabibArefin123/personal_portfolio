@@ -30,7 +30,10 @@
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/custom_toaster.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/auth_notification_modal.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/premium_user_menu.css') }}">
-
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_layout.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_branding.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_effects.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_resp.css') }}">
         <link rel="icon" type="image/png" href="{{ asset('uploads/images/Logo.png') }}">
         {{-- Global Modals --}}
 

@@ -1,0 +1,26 @@
+
+/* FOOTER HOVER EFFECTS */
+.premium-footer-branding{
+    transition:all .25s ease;
+}
+.premium-developer-link{
+    transition:all .25s ease;
+}
+.premium-developer-link:hover{
+    background:#eff4ff;
+    border-color:#cbdcff;
+    color:#2563eb;
+    text-decoration:none;
+    transform:translateY(-2px);
+    box-shadow:0 6px 16px rgba(37,99,235,.09);
+}
+.premium-developer-link:hover .developer-name{
+    color:#2563eb;
+}
+.premium-developer-link:hover .developer-link-icon{
+    color:#2563eb;
+    transform:translate(2px,-2px);
+}
+.developer-link-icon{
+    transition:transform .25s ease,color .25s ease;
+}

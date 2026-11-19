@@ -1,0 +1,35 @@
+/* FOOTER RESPONSIVE */
+@media (max-width: 767.98px) {
+    .premium-footer-inner {
+        min-height: auto;
+        padding: 16px 18px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+    }
+    .premium-footer-copyright,
+    .premium-footer-branding {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 420px) {
+    .premium-footer-inner {
+        padding: 14px 10px;
+        gap: 10px;
+    }
+    .premium-footer-copyright {
+        font-size: 11px;
+        gap: 6px;
+    }
+    .footer-crafted-label {
+        font-size: 11px;
+    }
+    .premium-developer-link {
+        padding: 6px 10px;
+    }
+    .developer-name {
+        font-size: 16px;
+    }
+}

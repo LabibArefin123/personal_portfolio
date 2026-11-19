@@ -1,8 +1,14 @@
+
 @php
     $logout_url = View::getSection('logout_url') ?? config('adminlte.logout_url', 'logout');
     $profile_url = View::getSection('profile_url') ?? 'user_profile';
 
     $user = Auth::user();
+
+    $profileImage = $user && $user->profile_picture
+        && file_exists(public_path($user->profile_picture))
+        ? asset($user->profile_picture)
+        : asset('uploads/images/default.jpg');
 
     if (config('adminlte.usermenu_profile_url', false)) {
         $profile_url = $user->adminlte_profile_url();
@@ -20,15 +26,12 @@
 <li class="nav-item dropdown user-menu premium-user-menu">
 
     {{-- User Menu Toggle --}}
-    <a href="#" class="nav-link dropdown-toggle premium-user-toggle" data-toggle="dropdown" aria-expanded="false">
+    <a href="#" class="nav-link dropdown-toggle premium-user-toggle"
+        data-toggle="dropdown" aria-expanded="false">
 
-        @if (config('adminlte.usermenu_image'))
-            <img src="{{ $user->adminlte_image() }}" class="user-image premium-user-image" alt="{{ $user->name }}">
-        @else
-            <span class="premium-user-avatar">
-                {{ strtoupper(substr($user->name, 0, 1)) }}
-            </span>
-        @endif
+        <img src="{{ $profileImage }}"
+            class="user-image premium-user-image"
+            alt="{{ $user->name }}">
 
         <span class="premium-user-name">
             {{ $user->name }}
@@ -44,14 +47,9 @@
         <li class="premium-user-header">
             <div class="premium-user-header-content">
 
-                @if (config('adminlte.usermenu_image'))
-                    <img src="{{ $user->adminlte_image() }}" class="premium-user-header-image"
-                        alt="{{ $user->name }}">
-                @else
-                    <div class="premium-user-header-avatar">
-                        {{ strtoupper(substr($user->name, 0, 1)) }}
-                    </div>
-                @endif
+                <img src="{{ $profileImage }}"
+                    class="premium-user-header-image"
+                    alt="{{ $user->name }}">
 
                 <div class="premium-user-header-info">
                     <h6>{{ $user->name }}</h6>
@@ -96,8 +94,6 @@
             </a>
 
         </li>
-
-        {{-- Logout --}}
 
         {{-- Logout --}}
         <li class="premium-user-logout-wrapper">

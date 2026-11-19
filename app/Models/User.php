@@ -59,29 +59,4 @@ class User extends Authenticatable
         $this->two_factor_expires_at = null;
         $this->save();
     }
-
-    /* =========================
-       Profile Image Helpers
-    ========================== */
-
-    public function getProfilePictureUrl()
-    {
-        return $this->profile_picture
-            ? asset('images/' . $this->profile_picture)
-            : asset('uploads/images/default.jpg');
-    }
-
-    public function getProfileImageAttribute()
-    {
-        return $this->profile_picture
-            ? Storage::url($this->profile_picture)
-            : asset('uploads/images/default.jpg');
-    }
-
-    public function adminlte_image()
-    {
-        return $this->profile_picture
-            ? Storage::url($this->profile_picture)
-            : asset('uploads/images/default.jpg');
-    }
 }
