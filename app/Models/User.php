@@ -84,17 +84,4 @@ class User extends Authenticatable
             ? Storage::url($this->profile_picture)
             : asset('uploads/images/default.jpg');
     }
-
-    /* =========================
-       Password Decryption
-    ========================== */
-
-    public function getDecryptedPasswordAttribute()
-    {
-        try {
-            return Crypt::decryptString($this->password);
-        } catch (\Exception $e) {
-            return null;
-        }
-    }
 }

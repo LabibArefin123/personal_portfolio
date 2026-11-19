@@ -4,38 +4,47 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Role;
+use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Crypt;
 
 class SystemUserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display all system users.
      */
     public function index()
     {
-        $users = User::all(); // Paginate with 10 items per page
-        return view('backend.setting_management.user_management.system_user.index', compact('users'));
+        $users = User::with('roles')->get();
+
+        return view(
+            'backend.setting_management.user_management.system_user.index',
+            compact('users')
+        );
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the create user form.
      */
     public function create()
     {
-        return view('backend.setting_management.user_management.system_user.create');
+        $roles = Role::all();
+
+        return view(
+            'backend.setting_management.user_management.system_user.create',
+            compact('roles')
+        );
     }
 
+
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created user.
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string',
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users,username',
-            'email' => 'required|email|unique:users,email',
+            'email' => 'required|email|max:255|unique:users,email',
             'phone' => 'required|string|max:15',
             'phone_2' => 'nullable|string|max:15',
             'role' => 'required|string|exists:roles,name',
@@ -43,17 +52,16 @@ class SystemUserController extends Controller
         ]);
 
         $user = User::create([
-            'name' => $request->name,
-            'username' => $request->username,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'phone_2' => $request->phone_2,
-
-            // 🔐 ENCRYPT (reversible)
-            'password' => Crypt::encryptString($request->password),
+            'name' => $validated['name'],
+            'username' => $validated['username'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'phone_2' => $validated['phone_2'] ?? null,
+            'password' => Hash::make($validated['password']),
         ]);
 
-        $user->assignRole($request->role);
+        // Assign user role
+        $user->assignRole($validated['role']);
 
         return redirect()
             ->route('system_users.index')
@@ -61,89 +69,127 @@ class SystemUserController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display a specific user.
      */
     public function show($id)
     {
-        $user = User::findOrFail($id);
-        return view('backend.setting_management.user_management.system_user.show', compact('user'));
+        $user = User::with('roles')->findOrFail($id);
+
+        return view(
+            'backend.setting_management.user_management.system_user.show',
+            compact('user')
+        );
     }
 
-
     /**
-     * Show the form for editing the specified resource.
+     * Show the edit user form.
      */
 
     public function edit($id)
     {
-        $user = User::findOrFail($id);
+        $user = User::with('roles')->findOrFail($id);
+
         $roles = Role::all();
-        return view('backend.setting_management.user_management.system_user.edit', compact('user', 'roles'));
+
+        return view(
+            'backend.setting_management.user_management.system_user.edit',
+            compact('user', 'roles')
+        );
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update an existing user.
      */
     public function update(Request $request, $id)
     {
         $user = User::findOrFail($id);
 
-        // Validate the request data
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users,username,' . $user->id,
-            'email' => 'required|email|unique:users,email,' . $user->id,
+            'email' => 'required|email|max:255|unique:users,email,' . $user->id,
             'phone' => 'required|string|max:15',
             'phone_2' => 'nullable|string|max:15',
-            'role' => 'required|string|exists:roles,name', // Ensure the role exists
+            'role' => 'required|string|exists:roles,name',
         ]);
 
-        // Update user data
+        // Update user information
         $user->update([
-            'name' => $request->name,
-            'username' => $request->username,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'phone_2' => $request->phone_2 ?? null,
+            'name' => $validated['name'],
+            'username' => $validated['username'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'phone_2' => $validated['phone_2'] ?? null,
         ]);
 
-        // Update the user's role
-        $role = Role::where('name', $request->role)->first();
-        $user->roles()->sync([$role->id]);
+        // Synchronize user role
+        $user->syncRoles([$validated['role']]);
 
-        return redirect()->route('system_users.index')
-            ->with('success', 'User updated successfully updated!');
+        return redirect()
+            ->route('system_users.index')
+            ->with('success', 'User updated successfully.');
     }
 
+    /**
+     * Show the change password page.
+     */
     public function editPassword(User $user)
     {
-        // Optional extra safety
         abort_unless(auth()->user()->hasRole('admin'), 403);
 
-        return view('backend.system_users.change_password', compact('user'));
+        return view(
+            'backend.system_users.change_password',
+            compact('user')
+        );
     }
 
+    /**
+     * Update a user's password.
+     */
     public function updatePassword(Request $request, User $user)
     {
-        $request->validate([
-            'password' => 'required|min:6|confirmed',
+        // Only administrators can change user passwords
+        abort_unless(auth()->user()->hasRole('admin'), 403);
+
+        $validated = $request->validate([
+            'password' => 'required|string|min:6|confirmed',
         ]);
 
+        // Hash password using Laravel Hash
         $user->update([
-            // 🔐 ENCRYPT (reversible)
-            'password' => Crypt::encryptString($request->password),
+            'password' => Hash::make($validated['password']),
         ]);
 
-        return back()->with('success', 'Password updated successfully.');
+        return redirect()
+            ->route('system_users.index')
+            ->with('success', 'Password updated successfully.');
     }
+
     /**
-     * Remove the specified resource from storage.
+     * Delete a system user.
      */
     public function destroy($id)
     {
+        // Only administrators can delete users
+        abort_unless(auth()->user()->hasRole('admin'), 403);
+
         $user = User::findOrFail($id);
+
+        // Prevent deleting the authenticated account
+        if ((int) $user->id === (int) auth()->id()) {
+            return redirect()
+                ->route('system_users.index')
+                ->with('error', 'You cannot delete your own account.');
+        }
+
+        // Remove assigned Spatie roles
+        $user->syncRoles([]);
+
+        // Delete user
         $user->delete();
 
-        return redirect()->route('system_users.index')->with('success', 'User deleted successfully!');
+        return redirect()
+            ->route('system_users.index')
+            ->with('success', 'System user deleted successfully.');
     }
 }
