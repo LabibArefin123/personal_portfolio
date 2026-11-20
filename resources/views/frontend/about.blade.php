@@ -14,11 +14,16 @@
     <meta property="og:url" content="{{ url()->current() }}">
 @endsection
 
+@extends('frontend.layouts.app')
+
+@section('title', 'About Me')
+
 @section('content')
 
     @include('frontend.custom_layout.top-bar')
     @include('frontend.custom_layout.navbar')
 
+    {{-- ABOUT HERO --}}
     <section class="about-hero">
         <div class="container">
             <h1>About Me</h1>
@@ -26,146 +31,130 @@
         </div>
     </section>
 
-    <section class="about-section">
-        <div class="container">
+    @if ($about)
 
-            <div class="about-profile-card">
-                <div class="row align-items-center g-4">
+        <section class="about-section">
+            <div class="container">
 
-                    <!-- IMAGE -->
-                    <div class="col-lg-3 text-center">
-                        <div class="about-image">
-                            <img src="{{ asset('uploads/images/about/developer.jpg') }}" alt="Labib Arefin">
+                {{-- PROFILE --}}
+                <div class="about-profile-card">
+                    <div class="row align-items-center g-4">
+
+                        {{-- PROFILE IMAGE --}}
+                        <div class="col-lg-3 text-center">
+                            <div class="about-image">
+                                <img src="{{ asset($about->image ?: 'uploads/images/default.jpg') }}"
+                                    alt="{{ $about->name }}" loading="lazy">
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- INFO -->
-                    <div class="col-lg-9">
-                        <h2 class="about-name">Md. Labib Arefin</h2>
-                        <p class="about-role">Full Stack Developer & Software Engineer</p>
+                        {{-- PROFILE INFORMATION --}}
+                        <div class="col-lg-9">
 
-                        <p class="about-desc">
-                            I build scalable business applications using Laravel and modern web technologies, focusing on
-                            clean architecture,
-                            maintainable code, and real-world usability. My work includes full system development — from
-                            database design to UI implementation.
-                        </p>
+                            <h2 class="about-name">
+                                {{ $about->name }}
+                            </h2>
 
-                        <p class="about-desc">
-                            I have experience developing POS systems, CMS platforms, tender management systems, and
-                            biometric integrations.
-                            I also apply SEO best practices when required, ensuring systems are not only functional but also
-                            optimized for visibility and performance.
-                        </p>
+                            <p class="about-role">
+                                {{ $about->role }}
+                            </p>
 
-                        <p class="about-desc">
-                            Alongside development, I test and refine systems to ensure reliability, smooth user experience,
-                            and production readiness.
-                        </p>
-                    </div>
+                            @foreach ($about->bio ?? [] as $paragraph)
+                                <p class="about-desc">
+                                    {{ $paragraph }}
+                                </p>
+                            @endforeach
 
-                </div>
-            </div>
-
-            <!-- TECH STACK -->
-            <div class="about-block">
-                <h4 class="section-title">Tech Stack</h4>
-
-                <div class="skills">
-                    <span>Laravel</span>
-                    <span>PHP</span>
-                    <span>JavaScript</span>
-                    <span>jQuery</span>
-                    <span>MySQL</span>
-                    <span>API Integration</span>
-                    <span>Bootstrap</span>
-                </div>
-            </div>
-
-            <!-- EXPERIENCE -->
-            <div class="about-block">
-                <h4 class="section-title">Experience</h4>
-
-                <div class="exp-box">
-                    <h6>Software Engineer</h6>
-                    <p>
-                        Building real-world business software including attendance tracking systems in collaboration.
-                        Focused on backend architecture, API design, and production-ready systems.
-                    </p>
-                </div>
-
-                <div class="exp-box">
-                    <h6>Software Developer (Full Stack)</h6>
-                    <p>
-                        Developed CMS platforms, portfolio systems, and business tools with full frontend-backend
-                        integration.
-                        Worked on structured application design and real-world requirements.
-                    </p>
-                </div>
-
-                <div class="exp-box">
-                    <h6>Application Development Practice</h6>
-                    <p>
-                        Built small applications such as chat systems, clocks, and company websites to strengthen
-                        development fundamentals.
-                        Explored mobile app development using React Native (Expo).
-                    </p>
-                </div>
-
-                <div class="exp-box">
-                    <h6>System Integration & Functional Testing</h6>
-                    <p>
-                        Worked with biometric devices, APIs, and real-time systems. Performed workflow-based testing
-                        including login/logout flows, form submissions, and validation processes. Designed step-by-step
-                        logic to verify system behavior and ensure reliability in real-world usage.
-                    </p>
-                </div>
-
-                <div class="exp-box">
-                    <h6>Basic Security & Penetration Testing</h6>
-                    <p>
-                        Conducted basic security checks on authentication systems, input handling, and user flows.
-                        Identified potential issues in access control and form handling to improve system safety.
-                    </p>
-                </div>
-
-                <div class="exp-box">
-                    <h6>UI/UX & SEO Implementation</h6>
-                    <p>
-                        Designed responsive user interfaces and improved usability.
-                        Applied SEO techniques when required to enhance performance and visibility.
-                    </p>
-                </div>
-            </div>
-
-            <!-- EXTRA -->
-            <div class="about-extra">
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="about-card">
-                            <h5>🚀 Systems</h5>
-                            <p>Built real-world platforms including POS, CMS, and tender management systems.</p>
                         </div>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="about-card">
-                            <h5>⚡ Approach</h5>
-                            <p>Focus on clean architecture, scalability, and maintainable code.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="about-card">
-                            <h5>🔍 Quality</h5>
-                            <p>Testing, debugging, and optimizing systems for real-world reliability.</p>
-                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-    </section>
+
+                {{-- TECH STACK --}}
+                @if (!empty($about->skills))
+                    <div class="about-block">
+
+                        <h4 class="section-title">
+                            Tech Stack
+                        </h4>
+
+                        <div class="skills">
+                            @foreach ($about->skills as $skill)
+                                <span>{{ $skill }}</span>
+                            @endforeach
+                        </div>
+
+                    </div>
+                @endif
+
+
+                {{-- EXPERIENCE --}}
+                @if (!empty($about->experiences))
+                    <div class="about-block">
+
+                        <h4 class="section-title">
+                            Experience
+                        </h4>
+
+                        @foreach ($about->experiences as $experience)
+                            <div class="exp-box">
+
+                                <h6>
+                                    {{ $experience['title'] ?? '' }}
+                                </h6>
+
+                                <p>
+                                    {{ $experience['description'] ?? '' }}
+                                </p>
+
+                            </div>
+                        @endforeach
+
+                    </div>
+                @endif
+
+
+                {{-- HIGHLIGHTS --}}
+                @if (!empty($about->highlights))
+                    <div class="about-extra">
+
+                        <div class="row g-4">
+
+                            @foreach ($about->highlights as $highlight)
+                                <div class="col-md-4">
+
+                                    <div class="about-card">
+
+                                        <h5>
+                                            {{ $highlight['icon'] ?? '' }}
+                                            {{ $highlight['title'] ?? '' }}
+                                        </h5>
+
+                                        <p>
+                                            {{ $highlight['description'] ?? '' }}
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                            @endforeach
+
+                        </div>
+
+                    </div>
+                @endif
+
+            </div>
+        </section>
+    @else
+        <section class="about-section">
+            <div class="container">
+                <p>About information is currently unavailable.</p>
+            </div>
+        </section>
+
+    @endif
 
     @include('frontend.custom_layout.footer')
 

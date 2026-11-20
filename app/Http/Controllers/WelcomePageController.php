@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactConfirmationMail;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use App\Models\SystemProblem;
+use Carbon\Carbon;
 use App\Models\ContactRequest;
 use App\Models\ContactScammer;
 use App\Models\ContactWaiter;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\RateLimiter;
-use Illuminate\Support\Facades\DB;
-use Carbon\Carbon;
+use App\Models\AboutPage;
 use App\Models\Skill;
 use App\Models\Project;
 
@@ -71,7 +72,8 @@ class WelcomePageController extends Controller
 
     public function about()
     {
-        return view('frontend.about');
+        $about = AboutPage::first();
+        return view('frontend.about', compact('about'));
     }
 
 
@@ -209,7 +211,7 @@ class WelcomePageController extends Controller
         return view('frontend.service');
     }
 
-  
+
     public function contact()
     {
         return view('frontend.contact');
@@ -599,9 +601,9 @@ class WelcomePageController extends Controller
         $scammer->hits = ($scammer->hits ?? 0) + 1;
 
         $scammer->email = $request->input('email') ?: $scammer->email;
-        $scammer->phone = $request->input('phone')?: $scammer->phone;
+        $scammer->phone = $request->input('phone') ?: $scammer->phone;
         $scammer->reason = $reason;
-        $scammer->user_agent = Str::limit($request->userAgent() ?? '',500);
+        $scammer->user_agent = Str::limit($request->userAgent() ?? '', 500);
 
         if ($request->filled('message')) {
             $scammer->message_hash = hash(
