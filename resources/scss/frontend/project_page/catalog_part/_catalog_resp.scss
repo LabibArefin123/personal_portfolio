@@ -44,7 +44,7 @@
     }
 
     .portfolio-project-image {
-        height: 195px;
+        height: 210px;
     }
 
     .portfolio-project-content {
@@ -70,16 +70,32 @@
     }
 
     .portfolio-project-categories {
+        flex-wrap: nowrap;
+        overflow-x: auto;
         gap: 7px;
+        padding-bottom: 10px;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     .portfolio-category-btn {
+        flex: 0 0 auto;
         padding: 8px 12px;
         font-size: 10px;
     }
 
     .portfolio-project-count {
         font-size: 11px;
+    }
+
+    .portfolio-project-featured,
+    .portfolio-project-live,
+    .portfolio-project-category {
+        padding: 7px 9px;
+        font-size: 9px;
     }
 
     .portfolio-project-pagination .page-link {

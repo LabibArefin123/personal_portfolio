@@ -1,5 +1,10 @@
+/* =========================================================
+   PROJECT CONTENT
+========================================================= */
+
 .home-project-content {
     display: flex;
+    flex: 1;
     flex-direction: column;
     min-height: 255px;
     padding: 23px;
@@ -42,6 +47,10 @@
     line-height: 1.7;
 }
 
+/* =========================================================
+   PROJECT LINKS
+========================================================= */
+
 .home-project-links {
     display: flex;
     flex-wrap: wrap;
@@ -60,24 +69,21 @@
     font-size: 11px;
     font-weight: 700;
     text-decoration: none;
-    transition: .3s ease;
+    transition:
+        border-color .3s ease,
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
 }
 
 .home-project-links a:hover {
+    transform: translateY(-2px);
     border-color: #6366f1;
     background: #6366f1;
     color: #fff;
 }
 
-.home-project-card [data-project-reveal] {
-    opacity: 1;
-}
-
-.home-project-card.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.home-project-card.is-visible:hover {
-    transform: translateY(-7px);
+.home-project-links a:focus-visible {
+    outline: 2px solid #818cf8;
+    outline-offset: 3px;
 }

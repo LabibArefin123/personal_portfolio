@@ -33,7 +33,7 @@
         box-shadow: $catalog-shadow;
 
         .portfolio-project-image img {
-            transform: scale(1.07);
+            transform: scale(1.06);
         }
 
         .portfolio-project-details {
@@ -55,8 +55,9 @@
 
     &::after {
         position: absolute;
-        inset: 45% 0 0;
-        background: linear-gradient(transparent, rgba(8, 13, 27, .35));
+        z-index: 1;
+        inset: 40% 0 0;
+        background: linear-gradient(transparent, rgba(8, 13, 27, .4));
         content: "";
         pointer-events: none;
     }
@@ -66,21 +67,26 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: top center;
         transition: transform .7s cubic-bezier(.2, .7, .2, 1);
     }
 }
 
+/* IMAGE BADGES */
+
 .portfolio-project-featured,
-.portfolio-project-category {
+.portfolio-project-category,
+.portfolio-project-live {
     position: absolute;
     z-index: 2;
     display: inline-flex;
     align-items: center;
     gap: 7px;
+    max-width: calc(100% - 28px);
     padding: 8px 12px;
     border: 1px solid rgba(255, 255, 255, .12);
     border-radius: 50px;
-    background: rgba(8, 13, 27, .82);
+    background: rgba(8, 13, 27, .84);
     color: #e0e7ff;
     font-size: 10px;
     font-weight: 700;
@@ -96,10 +102,32 @@
     }
 }
 
+.portfolio-project-live {
+    top: 14px;
+    right: 14px;
+    border-color: rgba(74, 222, 128, .22);
+    background: rgba(5, 35, 28, .88);
+    color: #86efac;
+
+    i {
+        font-size: 10px;
+    }
+
+    .live-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #4ade80;
+        box-shadow: 0 0 9px rgba(74, 222, 128, .8);
+    }
+}
+
 .portfolio-project-category {
     right: 14px;
     bottom: 14px;
-    max-width: calc(100% - 28px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .portfolio-project-content {
@@ -163,12 +191,23 @@
             color: #fff;
             transform: translateY(-2px);
         }
+
+        &.portfolio-project-live-link {
+            border-color: rgba(74, 222, 128, .2);
+            color: #86efac;
+
+            &:hover {
+                border-color: #16a34a;
+                background: #16a34a;
+                color: #fff;
+            }
+        }
     }
 }
 
 .portfolio-project-empty,
 .portfolio-project-error {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
     padding: 75px 20px;
     border: 1px dashed rgba(255, 255, 255, .14);
     border-radius: $catalog-radius;

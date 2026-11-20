@@ -1,20 +1,57 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const previews = document.querySelectorAll(".project-preview");
-    previews.forEach((image) => {
-        const websiteUrl = image.dataset.url;
+document.addEventListener("DOMContentLoaded", function () {
+    function initializeProjectPreviews(root = document) {
+        const previews = root.querySelectorAll(".project-preview");
 
-        if (!websiteUrl) return;
+        previews.forEach(function (image) {
+            if (image.dataset.previewInitialized === "true") return;
 
-        try {
-            const encodedUrl = encodeURIComponent(websiteUrl);
+            image.dataset.previewInitialized = "true";
 
-            image.src = `https://api.microlink.io/?url=${encodedUrl}&screenshot=true&meta=false&embed=screenshot.url`;
+            const websiteUrl = image.dataset.url?.trim();
+            const fallbackImage =
+                image.dataset.fallback || "/uploads/images/default.jpg";
+            const defaultImage = "/uploads/images/default.jpg";
 
-            image.onerror = () => {
-                image.src = "/uploads/images/default.jpg";
+            if (!websiteUrl) return;
+
+            let fallbackUsed = false;
+
+            image.onerror = function () {
+                if (!fallbackUsed) {
+                    fallbackUsed = true;
+                    image.src = fallbackImage;
+                    return;
+                }
+
+                image.onerror = null;
+
+                if (!image.src.endsWith(defaultImage)) {
+                    image.src = defaultImage;
+                }
             };
-        } catch (error) {
-            console.error("Project preview failed:", websiteUrl);
-        }
-    });
+
+            image.src = `https://api.microlink.io/?url=${encodeURIComponent(websiteUrl)}&screenshot=true&meta=false&embed=screenshot.url`;
+        });
+    }
+
+    initializeProjectPreviews();
+
+    const results = document.getElementById("projectResults");
+
+    if (results) {
+        const observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                mutation.addedNodes.forEach(function (node) {
+                    if (node.nodeType === Node.ELEMENT_NODE) {
+                        initializeProjectPreviews(node);
+                    }
+                });
+            });
+        });
+
+        observer.observe(results, {
+            childList: true,
+            subtree: true,
+        });
+    }
 });

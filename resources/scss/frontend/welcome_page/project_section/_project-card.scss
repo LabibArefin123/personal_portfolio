@@ -1,13 +1,22 @@
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
 .home-project-card {
     position: relative;
-    flex: 0 0 calc((100% - 44px)/3);
+    display: flex;
+    flex: 0 0 clamp(280px, 34vw, 390px);
+    flex-direction: column;
     min-width: 0;
     overflow: hidden;
-    scroll-snap-align: start;
     border: 1px solid rgba(255, 255, 255, .08);
     border-radius: 20px;
     background: linear-gradient(145deg, #111c32, #0b1222);
-    transition: border-color .35s ease, box-shadow .35s ease, transform .35s ease;
+    opacity: 1;
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease,
+        transform .35s ease;
 }
 
 .home-project-card:hover {
@@ -20,18 +29,34 @@
     border-color: rgba(99, 102, 241, .35);
 }
 
+.home-project-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.home-project-card.is-visible:hover {
+    transform: translateY(-7px);
+}
+
+/* =========================================================
+   PROJECT IMAGE
+========================================================= */
+
 .home-project-image {
     position: relative;
+    width: 100%;
     height: 215px;
+    flex-shrink: 0;
     overflow: hidden;
     background: #0b1222;
 }
 
 .home-project-image img {
+    display: block;
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
+    object-position: top center;
     transition: transform .65s cubic-bezier(.2, .7, .2, 1);
 }
 
@@ -39,10 +64,15 @@
     transform: scale(1.07);
 }
 
+/* =========================================================
+   FEATURED BADGE
+========================================================= */
+
 .home-project-badge {
     position: absolute;
     top: 14px;
     left: 14px;
+    z-index: 2;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -54,4 +84,32 @@
     font-size: 10px;
     font-weight: 700;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* =========================================================
+   LIVE WEBSITE INDICATOR
+========================================================= */
+
+.home-project-live-indicator {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 12px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    background: rgba(15, 23, 42, .85);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.home-project-live-indicator i {
+    color: #4ade80;
 }
