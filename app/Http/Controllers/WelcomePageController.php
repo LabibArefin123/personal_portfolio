@@ -19,14 +19,45 @@ use App\Models\Project;
 
 class WelcomePageController extends Controller
 {
+
     public function index()
     {
-        $projects = Project::where('status', 1)
-            ->orderByDesc('is_highlight')
+        // Get all active projects with their information.
+        $allProjects = Project::query()
+            ->where('status', 1)
+            ->with('information')
             ->orderBy('position')
-            ->take(5)
             ->get();
 
+        // Select the 1st, 2nd and 5th Web Applications.
+        $webApplications = $allProjects
+            ->filter(function ($project) {
+                return strtolower(trim($project->category ?? '')) === 'web application';
+            })
+            ->values()
+            ->only([0, 1, 2]);
+
+        // Select one Corporate Website.
+        $corporateWebsite = $allProjects
+            ->first(function ($project) {
+                return strtolower(trim($project->category ?? '')) === 'corporate website';
+            });
+
+        // Select one Gallery Website.
+        $galleryWebsite = $allProjects
+            ->first(function ($project) {
+                return strtolower(trim($project->category ?? '')) === 'gallery website';
+            });
+
+        // Combine selected projects.
+        $projects = $webApplications
+            ->concat(collect([
+                $corporateWebsite,
+                $galleryWebsite,
+            ])->filter())
+            ->values();
+
+        // Get active skills.
         $skills = Skill::where('status', 1)
             ->orderBy('position')
             ->get()
