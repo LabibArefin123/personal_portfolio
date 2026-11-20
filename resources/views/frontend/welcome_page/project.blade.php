@@ -1,81 +1,88 @@
-<section id="projects" class="projects-section">
+<section id="projects" class="home-project-section">
 
     <div class="container">
 
-        <!-- TITLE -->
-        <div class="section-header text-center">
+        <div class="home-project-heading">
 
-            <h2>🚀 My Projects</h2>
+            <div class="home-project-heading-content">
+                <span>MY SELECTED WORK</span>
+                <h2>Featured Projects</h2>
+                <p>
+                    A selection of software systems and applications
+                    I've designed and developed.
+                </p>
+            </div>
 
-            <p>
-                Real-world systems I’ve designed and developed
-            </p>
+            <div class="home-project-controls">
+
+                <a href="{{ route('project') }}" class="home-project-all">
+                    Explore All Projects
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <button type="button" class="home-project-prev" aria-label="Previous projects">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <button type="button" class="home-project-next" aria-label="Next projects">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+            </div>
 
         </div>
 
-        <div class="row g-4">
+        <div class="home-project-slider">
 
-            @foreach ($projects as $project)
-                <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="home-project-track" data-home-project-track>
 
-                    <div class="project-card {{ $project->is_highlight ? 'highlight' : '' }}">
+                @forelse ($projects as $project)
+                    <article class="home-project-card {{ $project->is_highlight ? 'is-featured' : '' }}"
+                        data-project-reveal>
 
-                        {{-- PROJECT IMAGE --}}
-                        @if (!$project->image && $project->live_url)
-                            <div class="project-image">
+                        <div class="home-project-image">
 
+                            <img src="{{ $project->image ? asset($project->image) : asset('uploads/images/default.jpg') }}"
+                                alt="{{ $project->title }}" loading="lazy">
 
-                                <img class="project-preview" data-url="{{ $project->live_url }}"
-                                    src="{{ asset('uploads/images/default.jpg') }}" alt="{{ $project->title }}">
+                            @if ($project->is_highlight)
+                                <span class="home-project-badge">
+                                    <i class="fas fa-star"></i>
+                                    Featured
+                                </span>
+                            @endif
 
-                            </div>
-                        @endif
+                        </div>
 
+                        <div class="home-project-content">
 
-                        <div class="project-content">
+                            <span class="home-project-category">
+                                {{ $project->category ?: 'Software Project' }}
+                            </span>
 
-                            {{-- TITLE --}}
-                            <h4>{{ $project->title }}</h4>
+                            <h3>{{ $project->title }}</h3>
 
-                            {{-- DESCRIPTION --}}
                             <p>{{ $project->description }}</p>
 
-                            {{-- TECH --}}
                             @if ($project->tech_stack)
-                                <div class="tech">
-
+                                <div class="home-project-tech">
                                     {{ $project->tech_stack }}
-
                                 </div>
                             @endif
 
-                            {{-- BUTTONS --}}
-                            <div class="project-links mt-3">
+                            <div class="home-project-links">
 
-                                {{-- LIVE --}}
                                 @if ($project->live_url)
-                                    <a href="{{ $project->live_url }}" target="_blank" class="live-btn">
-
+                                    <a href="{{ $project->live_url }}" target="_blank" rel="noopener noreferrer">
                                         Live Preview
-
+                                        <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 @endif
 
-                                {{-- GITHUB --}}
-                                @if ($project->github_url)
-                                    <a href="{{ $project->github_url }}" target="_blank" class="github-btn">
-
-                                        GitHub
-
-                                    </a>
-                                @endif
-
-                                {{-- VIEW PROJECT --}}
                                 @if ($project->information)
-                                    <a href="{{ route('project.show', $project->id) }}" class="view-project-btn">
-
-                                        View Project
-
+                                    <a href="{{ route('project.show', $project->id) }}">
+                                        Details
+                                        <i class="fas fa-arrow-right"></i>
                                     </a>
                                 @endif
 
@@ -83,13 +90,29 @@
 
                         </div>
 
-                    </div>
+                    </article>
 
-                </div>
-            @endforeach
+                @empty
 
+                    <p>No featured projects available.</p>
+                @endforelse
+
+            </div>
+
+        </div>
+
+        <div class="home-project-footer">
+            <span>Discover more of my work</span>
+
+            <a href="{{ route('project') }}">
+                View All Projects
+                <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
 
     </div>
 
 </section>
+
+<script src="{{ asset('js/frontend/welcome_page/project_animation.js') }}" defer></script>
+<script src="{{ asset('js/frontend/welcome_page/project_slide.js') }}" defer></script>

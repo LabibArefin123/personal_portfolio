@@ -10,6 +10,7 @@ class Project extends Model
         'title',
         'description',
         'tech_stack',
+        'category',
         'image',
         'live_url',
         'github_url',

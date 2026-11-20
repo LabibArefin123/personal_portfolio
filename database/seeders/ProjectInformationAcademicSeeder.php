@@ -24,8 +24,6 @@ class ProjectInformationAcademicSeeder extends Seeder
                 'challenges' => 'Providing an administration interface for maintaining portfolio content and website data.',
                 'solution' => 'Built a custom administration panel focused on portfolio and website content management.',
                 'conclusion' => 'The panel provides a centralized way to manage the portfolio website\'s content and data.',
-
-
                 'status' => true,
             ],
             [

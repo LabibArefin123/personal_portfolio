@@ -7,14 +7,12 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use App\Models\SystemProblem;
-use App\Models\Gallery;
 use App\Models\ContactRequest;
 use App\Models\ContactScammer;
 use App\Models\ContactWaiter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Validation\ValidationException;
 use Carbon\Carbon;
 use App\Models\Skill;
 use App\Models\Project;
@@ -26,6 +24,7 @@ class WelcomePageController extends Controller
         $projects = Project::where('status', 1)
             ->orderByDesc('is_highlight')
             ->orderBy('position')
+            ->take(5)
             ->get();
 
         $skills = Skill::where('status', 1)
@@ -38,19 +37,96 @@ class WelcomePageController extends Controller
             'skills'
         ));
     }
+
     public function about()
     {
         return view('frontend.about');
     }
 
-    public function projects()
+
+    public function projects(Request $request)
     {
-        $projects = Project::where('status', 1)
+        $query = Project::query()
+            ->where('status', 1)
+            ->with('information');
+
+        /*
+    |--------------------------------------------------------------------------
+    | Search Projects
+    |--------------------------------------------------------------------------
+    */
+
+        if ($request->filled('search')) {
+            $search = trim($request->input('search'));
+
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'LIKE', "%{$search}%")
+                    ->orWhere('description', 'LIKE', "%{$search}%")
+                    ->orWhere('tech_stack', 'LIKE', "%{$search}%");
+            });
+        }
+
+        /*
+    |--------------------------------------------------------------------------
+    | Filter By Category
+    |--------------------------------------------------------------------------
+    */
+
+        if ($request->filled('category')) {
+            $query->where('category', trim($request->input('category')));
+        }
+
+        /*
+    |--------------------------------------------------------------------------
+    | Project Pagination
+    |--------------------------------------------------------------------------
+    */
+
+        $projects = $query
             ->orderByDesc('is_highlight')
             ->orderBy('position')
-            ->get();
+            ->paginate(9)
+            ->withQueryString();
 
-        return view('frontend.project_page.project', compact('projects'));
+        /*
+    |--------------------------------------------------------------------------
+    | Available Categories
+    |--------------------------------------------------------------------------
+    */
+
+        $categories = Project::query()
+            ->where('status', 1)
+            ->whereNotNull('category')
+            ->where('category', '!=', '')
+            ->distinct()
+            ->orderBy('category')
+            ->pluck('category');
+
+        /*
+    |--------------------------------------------------------------------------
+    | AJAX Response
+    |--------------------------------------------------------------------------
+    */
+
+        if ($request->ajax() || $request->expectsJson()) {
+            return response()->json([
+                'html' => view(
+                    'frontend.project_page.partials.project_results',
+                    compact('projects')
+                )->render(),
+            ]);
+        }
+
+        /*
+    |--------------------------------------------------------------------------
+    | Normal Page Response
+    |--------------------------------------------------------------------------
+    */
+
+        return view('frontend.project_page.project', compact(
+            'projects',
+            'categories'
+        ));
     }
 
     public function project_show($id)

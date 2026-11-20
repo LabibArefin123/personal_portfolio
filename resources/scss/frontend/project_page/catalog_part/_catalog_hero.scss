@@ -1,0 +1,89 @@
+@use "catalog_variables" as *;
+
+.portfolio-project-page {
+    min-height: 100vh;
+    overflow: hidden;
+    background: $catalog-bg;
+    color: $catalog-text;
+}
+
+.portfolio-project-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 115px 0 105px;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 50% -10%, rgba(99, 102, 241, .25), transparent 65%),
+        linear-gradient(135deg, #050a17, #101a30 55%, #080d1b);
+
+    &::before,
+    &::after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        width: 360px;
+        height: 360px;
+        border: 1px solid rgba(129, 140, 248, .08);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    &::before {
+        top: -230px;
+        left: -100px;
+        box-shadow: 0 0 0 45px rgba(129, 140, 248, .025), 0 0 0 90px rgba(129, 140, 248, .02);
+    }
+
+    &::after {
+        right: -170px;
+        bottom: -260px;
+        box-shadow: 0 0 0 45px rgba(129, 140, 248, .025), 0 0 0 90px rgba(129, 140, 248, .02);
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.portfolio-project-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 15px;
+    border: 1px solid rgba(129, 140, 248, .2);
+    border-radius: 50px;
+    background: rgba(99, 102, 241, .09);
+    color: $catalog-primary-light;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    backdrop-filter: blur(12px);
+
+    &::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #818cf8;
+        box-shadow: 0 0 12px #818cf8;
+        content: "";
+    }
+}
+
+.portfolio-project-hero h1 {
+    margin: 24px 0 16px;
+    color: #fff;
+    font-size: clamp(38px, 5.5vw, 65px);
+    font-weight: 850;
+    line-height: 1.12;
+    letter-spacing: -2.5px;
+}
+
+.portfolio-project-hero p {
+    max-width: 660px;
+    margin: 0 auto;
+    color: #a2aec2;
+    font-size: 16px;
+    line-height: 1.9;
+}

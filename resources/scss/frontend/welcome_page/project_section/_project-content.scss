@@ -1,47 +1,83 @@
-.project-content {
-
-    h4 {
-
-        font-size: 20px;
-
-        font-weight: 700;
-
-        margin-bottom: 10px;
-
-        color: #fff;
-    }
-
-    p {
-
-        font-size: 14px;
-
-        line-height: 1.7;
-
-        color: #94a3b8;
-
-        display: -webkit-box;
-
-        -webkit-line-clamp: 3;
-
-        -webkit-box-orient: vertical;
-
-        overflow: hidden;
-
-        text-overflow: ellipsis;
-
-        margin-bottom: 14px;
-
-        min-height: auto;
-    }
+.home-project-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 255px;
+    padding: 23px;
 }
 
-.tech {
+.home-project-category {
+    align-self: flex-start;
+    padding: 6px 10px;
+    border: 1px solid rgba(129, 140, 248, .2);
+    border-radius: 30px;
+    background: rgba(99, 102, 241, .1);
+    color: #a5b4fc;
+    font-size: 10px;
+    font-weight: 700;
+}
 
-    margin-top: auto;
+.home-project-content h3 {
+    margin: 16px 0 10px;
+    color: #f8fafc;
+    font-size: 19px;
+    font-weight: 750;
+    line-height: 1.4;
+}
 
+.home-project-content p {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0 0 16px;
+    color: #94a3b8;
     font-size: 13px;
+    line-height: 1.75;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 
-    line-height: 1.7;
-
+.home-project-tech {
+    margin-top: auto;
     color: #818cf8;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.home-project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.home-project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 9px;
+    color: #cbd5e1;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.home-project-links a:hover {
+    border-color: #6366f1;
+    background: #6366f1;
+    color: #fff;
+}
+
+.home-project-card [data-project-reveal] {
+    opacity: 1;
+}
+
+.home-project-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.home-project-card.is-visible:hover {
+    transform: translateY(-7px);
 }

@@ -113,6 +113,10 @@
     <script src="{{ asset('js/custom_frontend/copy_email.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/navbar-toggle.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/project-previews.js') }}"></script>
+    <script src="{{ asset('js/custom_frontend/welcome_page/project_slide.js') }}"></script>
+
+    {{-- Project Page AJAX --}}
+    <script src="{{ asset('js/custom_frontend/project_page/project_ajax.js') }}"></script>
 </body>
 
 </html>

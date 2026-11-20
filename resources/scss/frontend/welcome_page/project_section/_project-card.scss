@@ -1,56 +1,57 @@
-.project-card {
-    background: rgba(15, 23, 42, 0.95);
-
-    border-radius: 18px;
-
-    height: 100%;
-
+.home-project-card {
     position: relative;
+    flex: 0 0 calc((100% - 44px)/3);
+    min-width: 0;
     overflow: hidden;
+    scroll-snap-align: start;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    background: linear-gradient(145deg, #111c32, #0b1222);
+    transition: border-color .35s ease, box-shadow .35s ease, transform .35s ease;
+}
 
+.home-project-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(129, 140, 248, .55);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, .3);
+}
+
+.home-project-card.is-featured {
+    border-color: rgba(99, 102, 241, .35);
+}
+
+.home-project-image {
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+    background: #0b1222;
+}
+
+.home-project-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .65s cubic-bezier(.2, .7, .2, 1);
+}
+
+.home-project-card:hover .home-project-image img {
+    transform: scale(1.07);
+}
+
+.home-project-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
     display: flex;
-    flex-direction: column;
-
+    align-items: center;
+    gap: 6px;
+    padding: 7px 11px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 30px;
+    background: rgba(15, 23, 42, .85);
+    color: #c7d2fe;
+    font-size: 10px;
+    font-weight: 700;
     backdrop-filter: blur(10px);
-
-    transition: all .4s ease;
-
-    border: 1px solid rgba(255, 255, 255, .05);
-
-    &::before {
-
-        content: "";
-
-        position: absolute;
-
-        inset: 0;
-
-        border-radius: 18px;
-
-        padding: 1px;
-
-        background: linear-gradient(135deg,
-                #6366f1,
-                #06b6d4,
-                #8b5cf6);
-
-        -webkit-mask:
-            linear-gradient(#000 0 0) content-box,
-            linear-gradient(#000 0 0);
-
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-
-        opacity: .5;
-    }
-
-    &.highlight {
-
-        background:
-            linear-gradient(145deg,
-                rgba(99, 102, 241, .15),
-                rgba(15, 23, 42, .95));
-
-        border-color: rgba(99, 102, 241, .3);
-    }
 }

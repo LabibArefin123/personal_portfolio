@@ -4,10 +4,11 @@
 
 @section('meta')
     <meta name="description"
-        content="Explore projects by Md. Labib Arefin including POS systems, CRM platforms, tender management systems, and modern web applications.">
+        content="Explore software projects developed by Md. Labib Arefin, including Laravel applications, CRM systems, business platforms, and mobile applications.">
 
     <meta property="og:title" content="Projects | Labib Arefin">
-    <meta property="og:description" content="Real-world software systems built with Laravel, React, and modern technologies.">
+    <meta property="og:description"
+        content="Explore software applications and websites designed and developed by Labib Arefin.">
     <meta property="og:image" content="{{ asset('images/portfolio/preview.png') }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
@@ -18,94 +19,90 @@
     @include('frontend.custom_layout.top-bar')
     @include('frontend.custom_layout.navbar')
 
-    <section class="project-hero">
+    <main class="portfolio-project-page">
 
-        <div class="container">
+        <section class="portfolio-project-hero">
+            <div class="container">
+                <span class="portfolio-project-eyebrow">
+                    MY WORK & EXPERIENCE
+                </span>
 
-            <h1>🚀 My Projects</h1>
+                <h1>Explore My Projects</h1>
 
-            <p>
-                Real-world systems designed, developed, and delivered
-            </p>
+                <p>
+                    A collection of software applications, business systems,
+                    websites, and mobile projects I've worked on.
+                </p>
+            </div>
+        </section>
 
-        </div>
+        <section class="portfolio-project-listing">
+            <div class="container">
 
-    </section>
-
-    <section class="projects-section">
-
-        <div class="container">
-
-            <div class="project-grid">
-
-                @forelse($projects as $project)
-                    <div class="project-card {{ $project->is_highlight ? 'highlight' : '' }}">
-
-                        {{-- PROJECT IMAGE --}}
-                        @if (!$project->image && $project->live_url)
-                            <div class="project-image">
-                                <img class="project-preview" data-url="{{ $project->live_url }}"
-                                    src="{{ asset('uploads/images/default.jpg') }}" alt="{{ $project->title }}">
-                            </div>
-                        @endif
-
-                        <!-- CONTENT -->
-                        <div class="project-content">
-
-                            <!-- TITLE -->
-                            <h4>{{ $project->title }}</h4>
-
-                            <!-- TAG -->
-                            @if ($project->title === 'BD Karber')
-                                <span class="project-tag">
-                                    Team Contribution
-                                </span>
-
-                                <span class="project-tag">
-                                    University Project
-                                </span>
-                            @endif
-
-                            <!-- DESCRIPTION -->
-                            <p>{{ $project->description }}</p>
-
-                            <!-- TECH -->
-                            @if ($project->tech_stack)
-                                <div class="tech">
-
-                                    {{ $project->tech_stack }}
-
-                                </div>
-                            @endif
-
-                        </div>
-
-                        <!-- HOVER BUTTON -->
-                        @if ($project->information)
-                            <div class="project-hover-btn">
-
-                                <a href="{{ route('project.show', $project->id) }}" class="view-project-btn">
-
-                                    View Project
-
-                                </a>
-
-                            </div>
-                        @endif
-
+                {{-- FILTER HEADER --}}
+                <div class="portfolio-project-heading">
+                    <div>
+                        <span>PROJECT COLLECTION</span>
+                        <h2>Things I've Built</h2>
                     </div>
-                @empty
 
-                    <p class="text-center text-muted">
-                        No projects available.
-                    </p>
-                @endforelse
+                    <div class="portfolio-project-count">
+                        {{ $projects->total() }} Projects
+                    </div>
+                </div>
+
+                {{-- SEARCH --}}
+                <div class="portfolio-project-toolbar">
+
+                    <div class="portfolio-project-search">
+                        <i class="fas fa-search"></i>
+
+                        <input type="search" id="projectSearch" placeholder="Search projects, technologies..."
+                            autocomplete="off">
+
+                        <span id="projectSearchLoading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </div>
+
+                    <div class="portfolio-project-filter">
+                        <select id="projectCategory">
+                            <option value="">All Categories</option>
+
+                            @foreach ($categories as $category)
+                                <option value="{{ $category }}">
+                                    {{ $category }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                </div>
+
+                {{-- CATEGORY CHIPS --}}
+                <div class="portfolio-project-categories">
+
+                    <button type="button" class="portfolio-category-btn active" data-category="">
+                        All Projects
+                    </button>
+
+                    @foreach ($categories as $category)
+                        <button type="button" class="portfolio-category-btn" data-category="{{ $category }}">
+                            {{ $category }}
+                        </button>
+                    @endforeach
+
+                </div>
+
+                {{-- AJAX RESULTS --}}
+                <div id="projectResults" data-url="{{ route('project') }}">
+                    @include('frontend.project_page.partials.project_results')
+                </div>
 
             </div>
+        </section>
 
-        </div>
-
-    </section>
+    </main>
 
     @include('frontend.custom_layout.footer')
 

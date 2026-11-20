@@ -29,7 +29,7 @@ import "../scss/frontend/about-page/about.scss";
 import "../scss/frontend/education-page/education.scss";
 
 //Project Page
-import "../scss/frontend/project_page/project.scss";
+import "../scss/frontend/project_page/project_catalog.scss";
 
 //Project Show Page
 import "../scss/frontend/project_page/show/_project_show.scss";
