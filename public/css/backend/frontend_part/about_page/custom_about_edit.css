@@ -1,0 +1,225 @@
+.about-edit-wrapper {
+    padding-bottom: 35px;
+}
+.about-edit-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+.about-edit-heading h1 {
+    margin: 5px 0;
+    color: #17243a;
+    font-size: 27px;
+    font-weight: 750;
+}
+.about-edit-heading p {
+    margin: 5px 0 0;
+    color: #8490a2;
+    font-size: 13px;
+}
+.about-edit-eyebrow {
+    color: #4778df;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+.about-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 16px;
+    color: #475569;
+    background: #fff;
+    border: 1px solid #e8edf4;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: 0.25s ease;
+}
+.about-back-btn:hover {
+    color: #2563eb;
+    border-color: #b9cdf8;
+    transform: translateY(-2px);
+}
+.about-edit-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    align-items: start;
+    gap: 22px;
+}
+.about-edit-main,
+.about-edit-sidebar {
+    min-width: 0;
+}
+.about-edit-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-edit-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 20px;
+}
+.about-form-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e9edf4;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(24, 39, 75, 0.035);
+}
+.about-form-card-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 19px 22px;
+    border-bottom: 1px solid #f0f2f6;
+}
+.about-form-card-header h4 {
+    margin: 0 0 4px;
+    color: #25334a;
+    font-size: 14px;
+    font-weight: 750;
+}
+.about-form-card-header p {
+    margin: 0;
+    color: #98a2b3;
+    font-size: 11px;
+}
+.about-form-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 39px;
+    width: 39px;
+    height: 39px;
+    color: #3975e5;
+    background: #edf3ff;
+    border-radius: 11px;
+}
+.about-form-icon.skill-icon {
+    color: #0d9488;
+    background: #e8f8f5;
+}
+.about-form-icon.experience-icon {
+    color: #8b5cf6;
+    background: #f3edff;
+}
+.about-form-icon.highlight-icon {
+    color: #d97706;
+    background: #fff5e5;
+}
+.about-form-icon.image-icon {
+    color: #db5c8b;
+    background: #fff0f5;
+}
+.about-form-card-body {
+    padding: 22px;
+}
+.about-image-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 190px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f7f9fc;
+    border: 1px dashed #dce3ee;
+    border-radius: 13px;
+}
+.about-image-preview img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(25, 45, 80, 0.12);
+}
+.about-guideline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.about-guideline-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #65738a;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.about-guideline-list i {
+    margin-top: 3px;
+    color: #16a37a;
+}
+.about-form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about-save-btn,
+.about-cancel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    min-height: 45px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 750;
+    text-decoration: none !important;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+.about-save-btn {
+    color: #fff;
+    background: linear-gradient(120deg, #3478ed, #2459ce);
+    box-shadow: 0 7px 16px rgba(37, 99, 235, 0.2);
+}
+.about-save-btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.27);
+}
+.about-cancel-btn {
+    color: #64748b;
+    background: #f1f4f8;
+}
+.about-cancel-btn:hover {
+    color: #334155;
+    background: #e8edf4;
+}
+.about-form-alert {
+    display: flex;
+    gap: 13px;
+    margin-bottom: 20px;
+    padding: 16px 18px;
+    color: #9f2935;
+    background: #fff3f3;
+    border: 1px solid #f7d5d8;
+    border-radius: 12px;
+}
+.about-alert-icon {
+    font-size: 20px;
+}
+.about-form-alert strong {
+    display: block;
+    margin-bottom: 5px;
+}
+.about-form-alert ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 12px;
+}

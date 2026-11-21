@@ -1,0 +1,70 @@
+
+.about-form-group {
+    margin-bottom: 20px;
+}
+.about-form-group:last-child {
+    margin-bottom: 0;
+}
+.about-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #344258;
+    font-size: 12px;
+    font-weight: 750;
+}
+.about-form-group label span {
+    color: #e05260;
+}
+.about-form-group .form-control {
+    width: 100%;
+    min-height: 43px;
+    padding: 11px 13px;
+    color: #344258;
+    background: #fbfcfe;
+    border: 1px solid #e4eaf2;
+    border-radius: 9px;
+    box-shadow: none;
+    font-size: 12px;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.about-form-group .form-control:focus {
+    background: #fff;
+    border-color: #7da5f4;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, .1);
+}
+.about-form-group textarea.form-control {
+    resize: vertical;
+    line-height: 1.8;
+}
+.about-form-group .about-large-textarea {
+    min-height: 165px;
+}
+.about-form-group .about-medium-textarea {
+    min-height: 125px;
+}
+.about-form-group small {
+    display: block;
+    margin-top: 7px;
+    color: #98a2b3;
+    font-size: 10px;
+    line-height: 1.6;
+}
+.about-form-group input[type="file"] {
+    padding: 9px;
+    background: #fff;
+    font-size: 11px;
+}
+.about-form-group input[type="file"]::file-selector-button {
+    margin-right: 10px;
+    padding: 7px 11px;
+    color: #356bd2;
+    background: #edf3ff;
+    border: 0;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.about-form-group .is-invalid {
+    border-color: #e05260;
+}
