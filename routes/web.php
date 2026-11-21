@@ -1,11 +1,10 @@
 <?php
 
 use App\Http\Controllers\WelcomePageController;
-use App\Http\Controllers\OrganizationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\AboutPageController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\SystemUserController;
 use App\Http\Controllers\BanUserController;
@@ -63,6 +62,7 @@ Route::group(['middleware' => ['auth', 'permission']], function () {
     Route::get('/global-search', [DashboardController::class, 'globalSearch'])->name('global.search');
     Route::get('/search/result', [DashboardController::class, 'searchResult'])->name('search.result');
 
+    Route::resource('about_pages', AboutPageController::class);
     Route::resource('projects', ProjectController::class);
     Route::get('project-information/{projectInformation}/search-items',[ProjectInformationController::class, 'searchItems']
     )->name('project-informations.search_items');

@@ -347,38 +347,54 @@ return [
             'icon' => 'fas fa-home',
         ],
 
-       
         [
-            'text'    => 'Portfolio Projects',
-            'icon'    => 'fas fa-project-diagram',
+            'text'    => 'Frontend Content',
+            'icon'    => 'fas fa-layer-group',
             'submenu' => [
 
                 [
-                    'text'   => 'Projects',
-                    'route'  => 'projects.index',
-                    'can'    => 'projects.index',
-                    'active' => ['projects*'],
-                    'icon'   => 'fas fa-folder-open',
+                    'text'   => 'About Page',
+                    'route'  => 'about_pages.index',
+                    'can'    => 'about_pages.index',
+                    'active' => ['about_pages*'],
+                    'icon'   => 'fas fa-user-circle',
                 ],
 
                 [
-                    'text'   => 'Project Details',
-                    'route'  => 'project-informations.index',
-                    'can'    => 'project-informations.index',
-                    'active' => ['project-informations*'],
-                    'icon'   => 'fas fa-info-circle',
-                ],
+                    'text'    => 'Portfolio Projects',
+                    'icon'    => 'fas fa-project-diagram',
+                    'submenu' => [
 
-                [
-                    'text' => 'Skills',
-                    'route' => 'skills.index',
-                    'can' => 'skills.index',
-                    'active' => ['skills*'],
-                    'icon' => 'fas fa-code',
+                        [
+                            'text'   => 'Projects',
+                            'route'  => 'projects.index',
+                            'can'    => 'projects.index',
+                            'active' => ['projects*'],
+                            'icon'   => 'fas fa-folder-open',
+                        ],
+
+                        [
+                            'text'   => 'Project Details',
+                            'route'  => 'project-informations.index',
+                            'can'    => 'project-informations.index',
+                            'active' => ['project-informations*'],
+                            'icon'   => 'fas fa-info-circle',
+                        ],
+
+                        [
+                            'text'   => 'Skills',
+                            'route'  => 'skills.index',
+                            'can'    => 'skills.index',
+                            'active' => ['skills*'],
+                            'icon'   => 'fas fa-code',
+                        ],
+
+                    ],
                 ],
 
             ],
         ],
+
         [
             'text'    => 'Setting Management',
             'icon'    => 'fas fa-cogs',

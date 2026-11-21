@@ -1,0 +1,222 @@
+/* =========================================
+   ABOUT MANAGEMENT - SHOW
+========================================= */
+
+.about-show-hero {
+    position: relative;
+    padding: 30px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: linear-gradient(120deg, #172554, #3049a5 65%, #6555c9);
+    color: #fff;
+    margin-bottom: 22px;
+}
+
+.about-show-hero::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    right: -65px;
+    top: -115px;
+    box-shadow:
+        0 0 0 30px rgba(255, 255, 255, 0.035),
+        0 0 0 65px rgba(255, 255, 255, 0.025);
+}
+
+.about-show-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.about-show-avatar {
+    width: 125px;
+    height: 125px;
+    flex-shrink: 0;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 25px;
+}
+
+.about-show-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+.about-show-identity h2 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.about-show-identity p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 13px;
+    margin: 0 0 14px;
+}
+
+.about-show-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.about-show-card {
+    padding: 22px;
+    height: 100%;
+}
+
+.about-show-bio {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.95;
+    margin-bottom: 14px;
+}
+
+.about-show-bio:last-child {
+    margin-bottom: 0;
+}
+
+.about-show-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.about-show-skill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f3f6ff;
+    border: 1px solid #e4eaff;
+    color: #3f5ed8;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.about-show-skill:hover {
+    background: #4361ee;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.about-show-skill i {
+    font-size: 10px;
+}
+
+.about-timeline {
+    position: relative;
+    padding-left: 27px;
+    margin-top: 23px;
+}
+
+.about-timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 12px;
+    width: 2px;
+    background: linear-gradient(#4361ee, #dce4ff);
+}
+
+.about-timeline-item {
+    position: relative;
+    padding: 0 0 25px 18px;
+}
+
+.about-timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.about-timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    width: 13px;
+    height: 13px;
+    border: 3px solid #4361ee;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #edf1ff;
+}
+
+.about-timeline-item h5 {
+    color: #172033;
+    font-size: 14px;
+    font-weight: 750;
+    margin-bottom: 8px;
+}
+
+.about-timeline-item p {
+    color: #8490a5;
+    font-size: 12px;
+    line-height: 1.85;
+    margin: 0;
+}
+
+.about-show-highlight {
+    height: 100%;
+    padding: 22px;
+    border-radius: 15px;
+    background: #fff;
+    border: 1px solid #e9edf4;
+    transition: all 0.25s ease;
+}
+
+.about-show-highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(30, 45, 75, 0.08);
+    border-color: #d8e0ff;
+}
+
+.about-highlight-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #edf2ff;
+    border-radius: 13px;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.about-show-highlight h5 {
+    color: #172033;
+    font-size: 14px;
+    font-weight: 750;
+    margin-bottom: 9px;
+}
+
+.about-show-highlight p {
+    color: #8490a5;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.about-show-section {
+    margin-bottom: 22px;
+}

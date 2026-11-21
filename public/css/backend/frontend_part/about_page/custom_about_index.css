@@ -1,0 +1,210 @@
+
+/* =========================================
+   ABOUT MANAGEMENT - INDEX
+========================================= */
+
+.about-index-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.about-index-header p {
+    font-size: 13px;
+    color: #8490a5;
+    margin: 6px 0 0;
+}
+
+.about-index-profile {
+    position: relative;
+    padding: 25px;
+    background: #fff;
+}
+
+.about-index-profile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #4361ee, #7c6cf5, #20b8a6);
+}
+
+.about-index-profile-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.about-index-image {
+    width: 115px;
+    height: 115px;
+    flex-shrink: 0;
+    padding: 5px;
+    border-radius: 23px;
+    background: linear-gradient(135deg, #4361ee, #a5b4fc);
+}
+
+.about-index-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 19px;
+    border: 3px solid #fff;
+}
+
+.about-index-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-index-info h3 {
+    font-size: 21px;
+    font-weight: 800;
+    color: #172033;
+    margin-bottom: 6px;
+}
+
+.about-index-info .role {
+    color: #4361ee;
+    font-size: 13px;
+    font-weight: 650;
+    margin-bottom: 12px;
+}
+
+.about-index-info .description {
+    color: #8490a5;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.about-index-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.about-index-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.about-stat-card {
+    background: #fff;
+    border: 1px solid #e9edf4;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.about-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(30, 45, 75, .08);
+}
+
+.about-stat-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    font-size: 19px;
+    flex-shrink: 0;
+}
+
+.about-stat-icon.blue {
+    background: #edf2ff;
+    color: #4361ee;
+}
+
+.about-stat-icon.purple {
+    background: #f2edff;
+    color: #8864df;
+}
+
+.about-stat-icon.green {
+    background: #e7f8f1;
+    color: #18a779;
+}
+
+.about-stat-card small {
+    display: block;
+    color: #8490a5;
+    font-size: 11px;
+    font-weight: 650;
+    margin-bottom: 4px;
+}
+
+.about-stat-card h4 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #172033;
+    margin: 0;
+}
+
+.about-index-summary {
+    padding: 22px;
+}
+
+.about-index-summary p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.about-index-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.about-index-skills span {
+    padding: 7px 13px;
+    background: #f0f4ff;
+    color: #4361ee;
+    border: 1px solid #e1e8ff;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.about-index-experience {
+    padding: 20px 22px;
+}
+
+.about-index-experience-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid #f0f2f7;
+}
+
+.about-index-experience-item:last-child {
+    border-bottom: 0;
+}
+
+.about-index-experience-item h6 {
+    color: #172033;
+    font-weight: 700;
+    font-size: 13px;
+    margin: 0;
+}
+
+.about-index-experience-item span {
+    color: #8490a5;
+    font-size: 11px;
+}
