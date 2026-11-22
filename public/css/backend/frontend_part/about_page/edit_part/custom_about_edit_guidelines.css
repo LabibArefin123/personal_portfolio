@@ -1,0 +1,22 @@
+.about-guideline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.about-guideline-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #65738a;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.about-guideline-list i {
+    margin-top: 3px;
+    color: #16a37a;
+}

@@ -1,0 +1,44 @@
+/* =========================================
+   ABOUT SHOW - HIGHLIGHTS
+========================================= */
+
+.about-show-highlight {
+    height: 100%;
+    padding: 22px;
+    border-radius: 15px;
+    background: #fff;
+    border: 1px solid #e9edf4;
+    transition: all 0.25s ease;
+}
+
+.about-show-highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(30, 45, 75, 0.08);
+    border-color: #d8e0ff;
+}
+
+.about-highlight-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #edf2ff;
+    border-radius: 13px;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.about-show-highlight h5 {
+    color: #172033;
+    font-size: 14px;
+    font-weight: 750;
+    margin-bottom: 9px;
+}
+
+.about-show-highlight p {
+    color: #8490a5;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 0;
+}

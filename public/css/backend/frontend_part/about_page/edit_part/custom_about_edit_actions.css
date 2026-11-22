@@ -1,0 +1,70 @@
+.about-form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-save-btn,
+.about-cancel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    min-height: 45px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 750;
+    text-decoration: none !important;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.about-save-btn {
+    color: #fff;
+    background: linear-gradient(120deg, #3478ed, #2459ce);
+    box-shadow: 0 7px 16px rgba(37, 99, 235, 0.2);
+}
+
+.about-save-btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.27);
+}
+
+.about-cancel-btn {
+    color: #64748b;
+    background: #f1f4f8;
+}
+
+.about-cancel-btn:hover {
+    color: #334155;
+    background: #e8edf4;
+}
+
+.about-form-alert {
+    display: flex;
+    gap: 13px;
+    margin-bottom: 20px;
+    padding: 16px 18px;
+    color: #9f2935;
+    background: #fff3f3;
+    border: 1px solid #f7d5d8;
+    border-radius: 12px;
+}
+
+.about-alert-icon {
+    font-size: 20px;
+}
+
+.about-form-alert strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.about-form-alert ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 12px;
+}

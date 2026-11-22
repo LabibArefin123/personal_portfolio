@@ -3,8 +3,12 @@
 @section('title', 'Edit About Page')
 
 @section('adminlte_css')
+<link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_layout.css') }}">
+<link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_card.css') }}">
+<link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_image.css') }}">
+<link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_actions.css') }}">
+<link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_guidelines.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_base.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_edit.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_form.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_components.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_resp.css') }}">

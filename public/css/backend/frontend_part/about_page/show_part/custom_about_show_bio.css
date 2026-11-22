@@ -1,0 +1,23 @@
+/* =========================================
+   ABOUT SHOW - BIO & CONTENT CARDS
+========================================= */
+
+.about-show-card {
+    padding: 22px;
+    height: 100%;
+}
+
+.about-show-bio {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.95;
+    margin-bottom: 14px;
+}
+
+.about-show-bio:last-child {
+    margin-bottom: 0;
+}
+
+.about-show-section {
+    margin-bottom: 22px;
+}

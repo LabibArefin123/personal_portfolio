@@ -2,58 +2,33 @@
 
 @section('title', 'About Details')
 
-@section('content_header')
-    <div class="d-flex justify-content-between align-items-center flex-wrap">
-
-        <div>
-            <h1 class="mb-1">
-                <i class="fas fa-id-card text-primary mr-2"></i>
-                About Details
-            </h1>
-            <p class="text-muted mb-0 small">
-                Complete professional profile information
-            </p>
-        </div>
-
-        <div class="about-action-group">
-            <a href="{{ route('about_pages.index') }}" class="about-btn about-btn-secondary">
-                <i class="fas fa-arrow-left"></i>
-                Back
-            </a>
-
-            <a href="{{ route('about_pages.edit', $about->id) }}" class="about-btn about-btn-primary">
-                <i class="fas fa-edit"></i>
-                Edit Profile
-            </a>
-        </div>
-
-    </div>
-@stop
-
 @section('adminlte_css')
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/show_page/custom_about_show_hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/show_page/custom_about_show_bio.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/show_page/custom_about_show_skills.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/show_page/custom_about_show_timeline.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/show_page/custom_about_show_highlights.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_base.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_index.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_show.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_components.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_responsive.css') }}">
 @stop
 
+@section('content_header')
+    @include('backend.frontend_part.about_page.partials.show_page.header_part')
+@stop
+
 @section('content')
-
     <div class="about-admin">
-
         {{-- PROFILE HERO --}}
         <div class="about-show-hero">
-
             <div class="about-show-hero-content">
-
                 <div class="about-show-avatar">
                     <img src="{{ asset($about->image ?: 'uploads/images/default.jpg') }}" alt="{{ $about->name }}"
                         onerror="this.onerror=null;this.src='{{ asset('uploads/images/default.jpg') }}';">
                 </div>
 
                 <div class="about-show-identity">
-
                     <span class="about-show-badge">
                         <i class="fas fa-user-check mr-2"></i>
                         PROFESSIONAL PROFILE

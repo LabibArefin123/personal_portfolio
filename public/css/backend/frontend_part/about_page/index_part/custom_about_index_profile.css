@@ -1,0 +1,75 @@
+/* =========================================
+   ABOUT INDEX - PROFILE
+========================================= */
+
+.about-index-profile {
+    position: relative;
+    padding: 25px;
+    background: #fff;
+}
+
+.about-index-profile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #4361ee, #7c6cf5, #20b8a6);
+}
+
+.about-index-profile-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.about-index-image {
+    width: 115px;
+    height: 115px;
+    flex-shrink: 0;
+    padding: 5px;
+    border-radius: 23px;
+    background: linear-gradient(135deg, #4361ee, #a5b4fc);
+}
+
+.about-index-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 19px;
+    border: 3px solid #fff;
+}
+
+.about-index-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-index-info h3 {
+    font-size: 21px;
+    font-weight: 800;
+    color: #172033;
+    margin-bottom: 6px;
+}
+
+.about-index-info .role {
+    color: #4361ee;
+    font-size: 13px;
+    font-weight: 650;
+    margin-bottom: 12px;
+}
+
+.about-index-info .description {
+    color: #8490a5;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.about-index-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}

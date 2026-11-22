@@ -21,10 +21,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             // ProjectSeeder::class,
             // ProjectInformationSeeder::class,
-            AboutPageSeeder::class,
+            // AboutPageSeeder::class,
+            EducationSeeder::class,
             // SkillSeeder::class,
             // PermissionSeeder::class,
-           
+
             // UserSeeder::class,
         ]);
     }

@@ -1,0 +1,31 @@
+/* =========================================
+   ABOUT INDEX - EXPERIENCE
+========================================= */
+
+.about-index-experience {
+    padding: 20px 22px;
+}
+
+.about-index-experience-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid #f0f2f7;
+}
+
+.about-index-experience-item:last-child {
+    border-bottom: 0;
+}
+
+.about-index-experience-item h6 {
+    color: #172033;
+    font-weight: 700;
+    font-size: 13px;
+    margin: 0;
+}
+
+.about-index-experience-item span {
+    color: #8490a5;
+    font-size: 11px;
+}

@@ -166,7 +166,7 @@
 
                 {{-- About Section --}}
                 <div class="col-12 col-md-6 col-xl-4">
-                    <div class="dashboard-action-card action-card-disabled">
+                    <a href="{{ route('about_pages.index') }}" class="dashboard-action-card">
                         <div class="action-icon action-purple">
                             <i class="fas fa-user-edit"></i>
                         </div>
@@ -174,13 +174,12 @@
                         <div class="action-content">
                             <h5>About Section</h5>
                             <p>Keep your professional profile and introduction updated.</p>
-                            <span class="action-coming-soon">Coming soon</span>
                         </div>
 
                         <span class="action-arrow">
-                            <i class="fas fa-lock"></i>
+                            <i class="fas fa-arrow-right"></i>
                         </span>
-                    </div>
+                    </a>
                 </div>
 
                 {{-- Contact Requests --}}

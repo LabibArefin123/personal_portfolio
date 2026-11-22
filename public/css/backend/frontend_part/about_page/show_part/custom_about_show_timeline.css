@@ -1,0 +1,55 @@
+/* =========================================
+   ABOUT SHOW - TIMELINE
+========================================= */
+
+.about-timeline {
+    position: relative;
+    padding-left: 27px;
+    margin-top: 23px;
+}
+
+.about-timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 12px;
+    width: 2px;
+    background: linear-gradient(#4361ee, #dce4ff);
+}
+
+.about-timeline-item {
+    position: relative;
+    padding: 0 0 25px 18px;
+}
+
+.about-timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.about-timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    width: 13px;
+    height: 13px;
+    border: 3px solid #4361ee;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #edf1ff;
+}
+
+.about-timeline-item h5 {
+    color: #172033;
+    font-size: 14px;
+    font-weight: 750;
+    margin-bottom: 8px;
+}
+
+.about-timeline-item p {
+    color: #8490a5;
+    font-size: 12px;
+    line-height: 1.85;
+    margin: 0;
+}

@@ -3,8 +3,12 @@
 @section('title', 'About Management')
 
 @section('adminlte_css')
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/index_page/custom_about_index_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/index_page/custom_about_index_profile.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/index_page/custom_about_index_stats.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/index_page/custom_about_index_summary.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/index_page/custom_about_index_experience.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_base.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_index.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_show.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_components.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_resp.css') }}">

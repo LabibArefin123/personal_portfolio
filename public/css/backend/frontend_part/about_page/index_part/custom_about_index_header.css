@@ -1,0 +1,18 @@
+/* =========================================
+   ABOUT INDEX - HEADER
+========================================= */
+
+.about-index-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.about-index-header p {
+    font-size: 13px;
+    color: #8490a5;
+    margin: 6px 0 0;
+}

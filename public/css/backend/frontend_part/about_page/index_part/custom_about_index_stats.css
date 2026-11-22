@@ -1,0 +1,67 @@
+/* =========================================
+   ABOUT INDEX - STATISTICS
+========================================= */
+
+.about-index-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.about-stat-card {
+    background: #fff;
+    border: 1px solid #e9edf4;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.about-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(30, 45, 75, .08);
+}
+
+.about-stat-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    font-size: 19px;
+    flex-shrink: 0;
+}
+
+.about-stat-icon.blue {
+    background: #edf2ff;
+    color: #4361ee;
+}
+
+.about-stat-icon.purple {
+    background: #f2edff;
+    color: #8864df;
+}
+
+.about-stat-icon.green {
+    background: #e7f8f1;
+    color: #18a779;
+}
+
+.about-stat-card small {
+    display: block;
+    color: #8490a5;
+    font-size: 11px;
+    font-weight: 650;
+    margin-bottom: 4px;
+}
+
+.about-stat-card h4 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #172033;
+    margin: 0;
+}

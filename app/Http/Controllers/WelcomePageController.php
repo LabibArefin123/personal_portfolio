@@ -15,6 +15,8 @@ use App\Models\ContactScammer;
 use App\Models\ContactWaiter;
 use Illuminate\Http\Request;
 use App\Models\AboutPage;
+use App\Models\Education;
+use App\Models\EducationProfile;
 use App\Models\Skill;
 use App\Models\Project;
 
@@ -188,7 +190,21 @@ class WelcomePageController extends Controller
 
     public function education()
     {
-        return view('frontend.education');
+        $profile = EducationProfile::active()->first();
+
+        $educations = Education::active()
+            ->ordered()
+            ->get();
+
+        $timeline = $educations
+            ->sortBy('year')
+            ->values();
+
+        return view('frontend.education', compact(
+            'profile',
+            'educations',
+            'timeline'
+        ));
     }
 
     public function skills()

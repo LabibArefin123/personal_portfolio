@@ -1,0 +1,21 @@
+.about-image-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 190px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f7f9fc;
+    border: 1px dashed #dce3ee;
+    border-radius: 13px;
+}
+
+.about-image-preview img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(25, 45, 80, 0.12);
+}

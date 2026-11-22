@@ -34,7 +34,6 @@
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_branding.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_effects.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_resp.css') }}">
-        <link rel="icon" type="image/png" href="{{ asset('uploads/images/Logo.png') }}">
         {{-- Global Modals --}}
 
         @include('backend.global_modal.validation_modal')
