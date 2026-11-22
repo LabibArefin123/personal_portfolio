@@ -1,0 +1,67 @@
+
+.edu-qualification-form {
+    padding: 20px;
+    margin-bottom: 17px;
+    background: #fbfcff;
+    border: 1px solid #e9edf5;
+    border-radius: 12px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.edu-qualification-form:hover {
+    border-color: #d9d1ff;
+    box-shadow: 0 5px 17px rgba(80,67,160,.045);
+}
+.edu-qualification-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #eceff5;
+}
+.edu-qualification-form-header strong {
+    display: block;
+    color: #344158;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.edu-row-index {
+    color: #8a7bdc;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.edu-remove-btn {
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 7px;
+    background: #fff0f0;
+    color: #d85e6c;
+    font-size: 10px;
+    font-weight: 750;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.edu-remove-btn:hover {
+    background: #d85e6c;
+    color: #fff;
+}
+.edu-no-records {
+    padding: 35px 15px;
+    text-align: center;
+    border: 1px dashed #ded9f5;
+    border-radius: 11px;
+    background: #fcfbff;
+}
+.edu-no-records > i {
+    display: block;
+    margin-bottom: 10px;
+    color: #a69be5;
+    font-size: 30px;
+}
+.edu-no-records p {
+    color: #929bad;
+    font-size: 12px;
+    margin-bottom: 15px;
+}

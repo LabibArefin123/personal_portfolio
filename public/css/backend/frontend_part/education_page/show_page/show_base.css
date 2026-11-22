@@ -1,0 +1,42 @@
+
+.edu-show-card {
+    background: #fff;
+    border: 1px solid #e9edf4;
+    border-radius: 15px;
+    margin-bottom: 22px;
+    overflow: hidden;
+    box-shadow: 0 5px 24px rgba(30,41,59,.04);
+}
+.edu-show-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 24px;
+    border-bottom: 1px solid #edf0f5;
+}
+.edu-show-card-header h4 {
+    margin: 5px 0 0;
+    color: #28344d;
+    font-size: 16px;
+    font-weight: 750;
+}
+.edu-show-card-header > i {
+    color: #8b7be2;
+    font-size: 20px;
+}
+.edu-section-label {
+    color: #8b7be2;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+.edu-show-empty {
+    padding: 35px;
+    text-align: center;
+    color: #a0a9b8;
+}
+.edu-show-empty i {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 28px;
+}

@@ -1,0 +1,40 @@
+
+.edu-edit-card {
+    background: #fff;
+    border: 1px solid #e9edf4;
+    border-radius: 15px;
+    margin-bottom: 22px;
+    overflow: hidden;
+    box-shadow: 0 5px 22px rgba(30,41,59,.04);
+}
+.edu-edit-card-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 20px 23px;
+    border-bottom: 1px solid #edf0f5;
+}
+.edu-edit-card-header > div:nth-child(2) {
+    flex: 1;
+}
+.edu-edit-card-header h4 {
+    color: #2d3952;
+    font-size: 15px;
+    font-weight: 800;
+    margin: 0 0 5px;
+}
+.edu-edit-card-header p {
+    color: #929bad;
+    font-size: 11px;
+    margin: 0;
+}
+.edu-edit-card-body {
+    padding: 24px;
+}
+.edu-validation-alert {
+    border-radius: 10px;
+    font-size: 12px;
+}
+.edu-validation-alert ul {
+    padding-left: 22px;
+}

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AboutPageController;
+use App\Http\Controllers\EducationPageController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\SystemUserController;
 use App\Http\Controllers\BanUserController;
@@ -63,6 +64,7 @@ Route::group(['middleware' => ['auth', 'permission']], function () {
     Route::get('/search/result', [DashboardController::class, 'searchResult'])->name('search.result');
 
     Route::resource('about_pages', AboutPageController::class);
+    Route::resource('education_pages', EducationPageController::class);
     Route::resource('projects', ProjectController::class);
     Route::get('project-information/{projectInformation}/search-items',[ProjectInformationController::class, 'searchItems']
     )->name('project-informations.search_items');

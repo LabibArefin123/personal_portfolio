@@ -1,0 +1,87 @@
+
+.edu-show-summary {
+    margin-bottom: 10px;
+}
+.edu-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 19px;
+    margin-bottom: 18px;
+    background: #fff;
+    border: 1px solid #edf0f5;
+    border-radius: 13px;
+}
+.edu-summary-icon {
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 13px;
+    font-size: 19px;
+}
+.edu-summary-card.purple .edu-summary-icon {
+    background: #f0edff;
+    color: #7564d9;
+}
+.edu-summary-card.green .edu-summary-icon {
+    background: #e9f8f0;
+    color: #1aab76;
+}
+.edu-summary-card.blue .edu-summary-icon {
+    background: #eaf3ff;
+    color: #4489df;
+}
+.edu-summary-card span {
+    color: #8993a5;
+    font-size: 11px;
+}
+.edu-summary-card h3 {
+    color: #26334c;
+    font-size: 21px;
+    font-weight: 800;
+    margin: 3px 0;
+}
+.edu-summary-card small {
+    color: #a0a8b6;
+    font-size: 10px;
+}
+.edu-profile-content {
+    padding: 26px;
+}
+.edu-profile-content h3 {
+    color: #303d56;
+    font-size: 20px;
+    font-weight: 750;
+}
+.edu-profile-content > .row > .col-lg-8 > p {
+    color: #8792a4;
+    line-height: 1.9;
+    font-size: 13px;
+    margin: 12px 0;
+}
+.edu-cgpa-box {
+    padding: 22px;
+    text-align: center;
+    background: linear-gradient(145deg, #f1efff, #f8f7ff);
+    border: 1px solid #e7e2ff;
+    border-radius: 13px;
+}
+.edu-cgpa-box span {
+    color: #8779cb;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.edu-cgpa-box h2 {
+    color: #5545bd;
+    font-size: 27px;
+    font-weight: 850;
+    margin: 9px 0 5px;
+}
+.edu-cgpa-box p {
+    color: #8b83b6;
+    font-size: 11px;
+    margin: 0;
+}

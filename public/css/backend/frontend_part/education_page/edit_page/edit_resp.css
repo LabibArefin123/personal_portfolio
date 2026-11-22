@@ -1,0 +1,54 @@
+
+@media (max-width: 767px) {
+    .edu-edit-heading {
+        align-items: flex-start;
+    }
+    .edu-edit-heading h1 {
+        font-size: 22px;
+    }
+    .edu-edit-card-header {
+        padding: 17px;
+        flex-wrap: wrap;
+    }
+    .edu-edit-card-body {
+        padding: 17px;
+    }
+    .edu-qualification-form {
+        padding: 15px;
+    }
+    .edu-edit-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 17px;
+    }
+    .edu-edit-footer-actions {
+        width: 100%;
+    }
+    .edu-edit-footer-actions a,
+    .edu-edit-footer-actions button {
+        flex: 1;
+    }
+}
+@media (max-width: 480px) {
+    .edu-edit-card-header {
+        gap: 10px;
+    }
+    .edu-edit-card-header .edu-add-btn {
+        width: 100%;
+    }
+    .edu-qualification-form-header {
+        align-items: flex-start;
+    }
+    .edu-remove-btn {
+        white-space: nowrap;
+    }
+    .edu-dynamic-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .edu-edit-back {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

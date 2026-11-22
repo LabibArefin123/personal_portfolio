@@ -1,0 +1,71 @@
+
+.edu-edit-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 12px 2px 24px;
+}
+.edu-edit-eyebrow {
+    color: #806cdd;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+.edu-edit-heading h1 {
+    color: #26324b;
+    font-size: 26px;
+    font-weight: 800;
+    margin: 7px 0;
+}
+.edu-edit-heading p {
+    color: #929bad;
+    font-size: 12px;
+    margin: 0;
+}
+.edu-edit-back {
+    padding: 10px 15px;
+    background: #fff;
+    border: 1px solid #e7eaf1;
+    color: #68758a;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: .2s ease;
+}
+.edu-edit-back:hover {
+    color: #7564d9;
+    border-color: #d8d0ff;
+    transform: translateY(-2px);
+}
+.edu-edit-card-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    font-size: 18px;
+}
+.edu-edit-card-icon.purple {
+    color: #7564d9;
+    background: #f0edff;
+}
+.edu-edit-card-icon.blue {
+    color: #3f86d7;
+    background: #eaf4ff;
+}
+.edu-edit-card-icon.green {
+    color: #1ba879;
+    background: #e9f8f1;
+}
+.edu-edit-card-icon.dark {
+    color: #fff;
+    background: #303b50;
+}
+.edu-edit-card-icon.orange {
+    color: #db873b;
+    background: #fff2e6;
+}

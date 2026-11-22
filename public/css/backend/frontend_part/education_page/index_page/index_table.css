@@ -1,0 +1,163 @@
+
+.edu-index-table {
+    margin: 0;
+    min-width: 850px;
+}
+.edu-index-table thead th {
+    padding: 16px 15px;
+    background: #f9faff;
+    color: #929bad;
+    border: 0;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.edu-index-table tbody td {
+    padding: 17px 15px;
+    vertical-align: middle;
+    color: #536078;
+    border-top: 1px solid #f0f2f7;
+    font-size: 12px;
+}
+.edu-index-table tbody tr {
+    transition: background .2s ease;
+}
+.edu-index-table tbody tr:hover {
+    background: #fafaff;
+}
+.edu-row-number {
+    color: #a0a8b8;
+    font-weight: 700;
+}
+.edu-profile-cell {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 190px;
+}
+.edu-profile-avatar {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background: #efedff;
+    color: #7564d9;
+    border-radius: 11px;
+    font-size: 15px;
+}
+.edu-profile-cell strong {
+    display: block;
+    color: #29344c;
+    font-size: 12px;
+    font-weight: 750;
+}
+.edu-profile-cell small {
+    display: block;
+    margin-top: 4px;
+    color: #9ba3b1;
+    font-size: 10px;
+}
+.edu-highlight-value {
+    color: #5545bd;
+    font-size: 12px;
+}
+.edu-github-label {
+    color: #45536b;
+    font-size: 11px;
+    font-weight: 650;
+}
+.edu-github-label i {
+    margin-right: 4px;
+}
+.edu-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 750;
+}
+.edu-status.active {
+    background: #e8f8ef;
+    color: #15945d;
+}
+.edu-status.inactive {
+    background: #fff2e8;
+    color: #d97732;
+}
+.edu-date {
+    color: #8490a4;
+    font-size: 11px;
+    white-space: nowrap;
+}
+.edu-action-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+}
+.edu-action-btn {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    text-decoration: none !important;
+    transition: .2s ease;
+}
+.edu-action-btn.view {
+    color: #3983d9;
+    background: #edf5ff;
+}
+.edu-action-btn.edit {
+    color: #7762d8;
+    background: #f0edff;
+}
+.edu-action-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(.96);
+}
+.edu-empty-state {
+    padding: 50px 15px;
+    text-align: center;
+}
+.edu-empty-state > i {
+    color: #b8b0ed;
+    font-size: 38px;
+    margin-bottom: 13px;
+}
+.edu-empty-state h5 {
+    color: #34415a;
+    font-weight: 750;
+}
+.edu-empty-state p {
+    color: #9aa3b3;
+    font-size: 12px;
+}
+.edu-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 17px 22px;
+    border-top: 1px solid #edf0f5;
+    color: #929bad;
+    font-size: 11px;
+}
+.edu-pagination .pagination {
+    margin: 0;
+}
+.edu-pagination .page-link {
+    color: #7564d9;
+    border-color: #eceaf6;
+    font-size: 11px;
+}
+.edu-pagination .page-item.active .page-link {
+    background: #7564d9;
+    border-color: #7564d9;
+    color: #fff;
+}

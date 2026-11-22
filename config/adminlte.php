@@ -347,6 +347,7 @@ return [
             'icon' => 'fas fa-home',
         ],
 
+
         [
             'text'    => 'Frontend Content',
             'icon'    => 'fas fa-layer-group',
@@ -358,6 +359,14 @@ return [
                     'can'    => 'about_pages.index',
                     'active' => ['about_pages*'],
                     'icon'   => 'fas fa-user-circle',
+                ],
+
+                [
+                    'text'   => 'Education Page',
+                    'route'  => 'education_pages.index',
+                    'can'    => 'education_pages.index',
+                    'active' => ['education_pages*'],
+                    'icon'   => 'fas fa-graduation-cap',
                 ],
 
                 [

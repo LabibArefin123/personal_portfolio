@@ -1,0 +1,86 @@
+
+.edu-stat-row {
+    margin-bottom: 12px;
+}
+.edu-stat-card {
+    min-height: 125px;
+    padding: 22px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    background: #fff;
+    border: 1px solid #edf0f6;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(30,41,59,.04);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.edu-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(30,41,59,.08);
+}
+.edu-stat-icon {
+    width: 53px;
+    height: 53px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    font-size: 21px;
+}
+.stat-purple .edu-stat-icon {
+    color: #765ee8;
+    background: #f0edff;
+}
+.stat-blue .edu-stat-icon {
+    color: #3486df;
+    background: #eaf4ff;
+}
+.stat-green .edu-stat-icon {
+    color: #1ca879;
+    background: #e8f8f1;
+}
+.edu-stat-card span {
+    color: #8993a5;
+    font-size: 12px;
+    font-weight: 600;
+}
+.edu-stat-card h3 {
+    color: #202b45;
+    font-size: 27px;
+    font-weight: 800;
+    margin: 4px 0;
+}
+.edu-stat-card small {
+    color: #a0a8b7;
+    font-size: 11px;
+}
+.edu-card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 24px;
+    border-bottom: 1px solid #edf0f5;
+}
+.edu-card-heading h4 {
+    color: #27334d;
+    font-size: 16px;
+    font-weight: 750;
+    margin: 0 0 6px;
+}
+.edu-card-heading h4 i {
+    color: #7564d9;
+}
+.edu-card-heading p {
+    color: #939daf;
+    font-size: 12px;
+    margin: 0;
+}
+.edu-record-count {
+    padding: 7px 12px;
+    background: #f0eeff;
+    color: #7564d9;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 8px;
+}

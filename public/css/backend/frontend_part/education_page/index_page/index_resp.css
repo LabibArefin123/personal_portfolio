@@ -1,0 +1,38 @@
+
+@media (max-width: 767px) {
+    .edu-index-heading {
+        padding-bottom: 18px;
+    }
+    .edu-index-heading h1 {
+        font-size: 22px;
+    }
+    .edu-heading-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 19px;
+    }
+    .edu-stat-card {
+        min-height: 105px;
+        padding: 17px;
+    }
+    .edu-card-heading {
+        padding: 17px;
+        gap: 10px;
+    }
+    .edu-pagination {
+        padding: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .edu-index-heading {
+        align-items: flex-start;
+    }
+    .edu-card-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .edu-pagination {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

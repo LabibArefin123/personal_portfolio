@@ -1,0 +1,112 @@
+
+.edu-show-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 12px 2px 24px;
+}
+.edu-show-eyebrow {
+    color: #806cdd;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+.edu-show-heading h1 {
+    color: #26324b;
+    font-size: 26px;
+    font-weight: 800;
+    margin: 7px 0;
+}
+.edu-show-heading p {
+    color: #929bad;
+    font-size: 12px;
+    margin: 0;
+}
+.edu-show-actions {
+    display: flex;
+    gap: 9px;
+}
+.edu-show-actions a {
+    padding: 10px 15px;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: .2s ease;
+}
+.edu-show-back {
+    background: #fff;
+    color: #637087;
+    border: 1px solid #e5e9f0;
+}
+.edu-show-edit {
+    background: #7564d9;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(117,100,217,.2);
+}
+.edu-show-actions a:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
+.edu-show-hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 27px;
+    margin-bottom: 22px;
+    background: linear-gradient(120deg, #302a5b, #5c4eaa 65%, #7767d4);
+    border-radius: 16px;
+    color: #fff;
+    box-shadow: 0 9px 25px rgba(67,56,132,.17);
+}
+.edu-show-hero-icon {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 17px;
+    font-size: 27px;
+}
+.edu-show-hero-content {
+    flex: 1;
+    min-width: 0;
+}
+.edu-show-label {
+    color: #d7d0ff;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+.edu-show-hero h2 {
+    margin: 7px 0;
+    font-size: 22px;
+    font-weight: 800;
+}
+.edu-show-hero p {
+    margin: 0;
+    color: #e2ddff;
+    font-size: 12px;
+}
+.edu-show-active,
+.edu-show-inactive {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 750;
+}
+.edu-show-active {
+    color: #d8ffed;
+    background: rgba(22,180,116,.2);
+}
+.edu-show-inactive {
+    color: #ffe5cf;
+    background: rgba(239,140,69,.2);
+}

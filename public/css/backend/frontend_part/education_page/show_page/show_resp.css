@@ -1,0 +1,69 @@
+
+@media (max-width: 767px) {
+    .edu-show-heading {
+        align-items: flex-start;
+    }
+    .edu-show-heading h1 {
+        font-size: 22px;
+    }
+    .edu-show-hero {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .edu-show-hero h2 {
+        font-size: 18px;
+    }
+    .edu-show-hero-status {
+        width: 100%;
+    }
+    .edu-profile-content {
+        padding: 19px;
+    }
+    .edu-cgpa-box {
+        margin-top: 15px;
+    }
+    .edu-qualification-list {
+        padding: 8px 15px;
+    }
+    .edu-qualification-item {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .edu-qualification-status {
+        width: 100%;
+        text-align: left;
+        padding-left: 60px;
+    }
+    .edu-qualification-status small {
+        display: inline-block;
+        margin-left: 7px;
+    }
+    .edu-show-timeline,
+    .edu-github-content {
+        padding: 19px;
+    }
+}
+@media (max-width: 480px) {
+    .edu-show-actions {
+        width: 100%;
+    }
+    .edu-show-actions a {
+        flex: 1;
+        text-align: center;
+    }
+    .edu-show-hero-icon {
+        width: 48px;
+        height: 48px;
+    }
+    .edu-show-hero-content {
+        flex-basis: 70%;
+    }
+    .edu-qualification-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .edu-show-footer {
+        flex-direction: column;
+    }
+}
