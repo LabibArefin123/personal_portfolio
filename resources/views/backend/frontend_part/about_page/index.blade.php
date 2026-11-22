@@ -52,7 +52,8 @@
                 <div class="about-index-profile-inner">
                     <div class="about-index-image">
                         <img src="{{ asset($about->image ?: 'uploads/images/default.jpg') }}" alt="{{ $about->name }}"
-                            onerror="this.onerror=null;this.src='{{ asset('uploads/images/default.jpg') }}';">
+                            data-global-image="{{ asset($about->image ?: 'uploads/images/default.jpg') }}"
+                            data-caption="{{ $about->name }}" style="cursor: pointer;">
                     </div>
 
                     <div class="about-index-info">

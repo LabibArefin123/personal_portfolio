@@ -2,7 +2,8 @@
      <div class="about-show-hero-content">
          <div class="about-show-avatar">
              <img src="{{ asset($about->image ?: 'uploads/images/default.jpg') }}" alt="{{ $about->name }}"
-                 onerror="this.onerror=null;this.src='{{ asset('uploads/images/default.jpg') }}';">
+                 data-global-image="{{ asset($about->image ?: 'uploads/images/default.jpg') }}"
+                 data-caption="{{ $about->name }}" style="cursor: pointer;">
          </div>
 
          <div class="about-show-identity">

@@ -30,12 +30,19 @@
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/custom_toaster.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/auth_notification_modal.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/premium_user_menu.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/image_modal/image_modal_base.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/image_modal/image_modal_content.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/image_modal/image_modal_resp.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/image_modal/image_modal_info.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/image_modal/image_modal_animation.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/backend/global_variables/image_modal/image_modal_toolbar.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_layout.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_branding.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_effects.css') }}">
         <link rel="stylesheet" href="{{ asset('css/backend/global_variables/footer_part/footer_resp.css') }}">
         {{-- Global Modals --}}
 
+        @include('backend.global_modal.image_modal')
         @include('backend.global_modal.validation_modal')
         @include('backend.global_modal.create_modal')
         @include('backend.global_modal.edit_modal')
@@ -101,7 +108,9 @@
     <script src="{{ asset('js/custom_backend/global_functions/global_logger.js') }}"></script>
     <script src="{{ asset('js/custom_backend/global_functions/password_eye.js') }}"></script>
     <script src="{{ asset('js/custom_backend/global_functions/custom_date.js') }}"></script>
-
+    <script src="{{ asset('js/custom_backend/global_functions/image_modal/image_modal.js') }}"></script>
+    <script src="{{ asset('js/custom_backend/global_functions/image_modal/image_modal_info.js') }}"></script>
+    <script src="{{ asset('js/custom_backend/global_functions/image_modal/image_modal_load.js') }}"></script>
     {{-- Backend Notifications --}}
     <script>
         window.backendNotification = {
