@@ -1,18 +1,201 @@
+
 /* =========================================
-   ABOUT INDEX - HEADER
+   ABOUT INDEX - PREMIUM HEADER
 ========================================= */
 
 .about-index-header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     flex-wrap: wrap;
-    margin-bottom: 22px;
+    overflow: hidden;
+    margin-bottom: 26px;
+    padding: 28px 30px;
+    background: linear-gradient(120deg, #ffffff 0%, #f5f8ff 55%, #edf3ff 100%);
+    border: 1px solid #e3eaf8;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(36, 67, 120, .055);
+    isolation: isolate;
+}
+
+.about-index-header::before {
+    position: absolute;
+    content: "";
+    width: 230px;
+    height: 230px;
+    top: -125px;
+    right: 13%;
+    background: rgba(76, 125, 232, .07);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.about-index-header::after {
+    position: absolute;
+    content: "";
+    width: 160px;
+    height: 160px;
+    right: -65px;
+    bottom: -100px;
+    background: rgba(103, 80, 220, .07);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.about-index-header > div:first-child {
+    position: relative;
+    z-index: 1;
+    min-width: 240px;
+}
+
+.about-index-header h1 {
+    display: flex;
+    align-items: center;
+    color: #1e2d46;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -.65px;
+    line-height: 1.35;
+}
+
+.about-index-header h1 i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin-right: 13px !important;
+    color: #3974df !important;
+    background: linear-gradient(145deg, #e9f1ff, #dce8ff);
+    border: 1px solid #d7e4ff;
+    border-radius: 13px;
+    font-size: 19px;
+    box-shadow: 0 5px 12px rgba(57, 116, 223, .09);
 }
 
 .about-index-header p {
-    font-size: 13px;
-    color: #8490a5;
-    margin: 6px 0 0;
+    position: relative;
+    margin: 9px 0 0;
+    padding-left: 58px;
+    color: #8290a7;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.about-index-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 11px;
+    flex-wrap: wrap;
+}
+
+.about-index-actions .about-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 0 17px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: .1px;
+    text-decoration: none !important;
+    transition: all .25s ease;
+}
+
+.about-index-actions .about-btn i {
+    font-size: 12px;
+}
+
+.about-index-actions .about-btn-secondary {
+    color: #52647f;
+    background: rgba(255, 255, 255, .85);
+    border-color: #dfe6f1;
+    box-shadow: 0 3px 9px rgba(32, 55, 90, .035);
+}
+
+.about-index-actions .about-btn-secondary:hover {
+    color: #2867d7;
+    background: #fff;
+    border-color: #a9c4f7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(47, 104, 208, .09);
+}
+
+.about-index-actions .about-btn-primary {
+    color: #fff;
+    background: linear-gradient(120deg, #3979eb, #285acb);
+    box-shadow: 0 5px 13px rgba(45, 101, 211, .2);
+}
+
+.about-index-actions .about-btn-primary:hover {
+    color: #fff;
+    background: linear-gradient(120deg, #2868dc, #1d4fb9);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 19px rgba(45, 101, 211, .28);
+}
+
+.about-index-actions .about-btn:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   RESPONSIVE HEADER
+========================================= */
+
+@media (max-width: 768px) {
+    .about-index-header {
+        align-items: flex-start;
+        padding: 23px;
+    }
+
+    .about-index-header > div:first-child {
+        width: 100%;
+    }
+
+    .about-index-actions {
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-index-header {
+        padding: 19px;
+        border-radius: 14px;
+    }
+
+    .about-index-header h1 {
+        font-size: 20px;
+    }
+
+    .about-index-header h1 i {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .about-index-header p {
+        padding-left: 0;
+        font-size: 11px;
+    }
+
+    .about-index-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .about-index-actions .about-btn {
+        padding: 0 10px;
+        font-size: 10px;
+    }
 }

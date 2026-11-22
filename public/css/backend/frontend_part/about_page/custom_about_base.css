@@ -1,0 +1,108 @@
+
+/* =========================================
+   ABOUT MANAGEMENT - BASE
+========================================= */
+
+.about-admin {
+    --about-primary: #4361ee;
+    --about-primary-dark: #3451d1;
+    --about-secondary: #64748b;
+    --about-dark: #172033;
+    --about-muted: #8490a5;
+    --about-border: #e9edf4;
+    --about-bg: #f5f7fb;
+    --about-white: #ffffff;
+    --about-radius: 16px;
+    --about-shadow: 0 5px 24px rgba(30, 45, 75, .055);
+    color: var(--about-dark);
+    padding-bottom: 25px;
+}
+
+.about-admin .content-header h1 {
+    font-size: 23px;
+    font-weight: 750;
+    color: var(--about-dark);
+    letter-spacing: -.5px;
+}
+
+.about-admin .breadcrumb {
+    font-size: 12px;
+}
+
+.about-admin .breadcrumb-item a {
+    color: var(--about-primary);
+    text-decoration: none;
+}
+
+.about-admin .card {
+    border: 1px solid var(--about-border);
+    border-radius: var(--about-radius);
+    box-shadow: var(--about-shadow);
+    overflow: hidden;
+}
+
+.about-admin .card-header {
+    background: var(--about-white);
+    border-bottom: 1px solid var(--about-border);
+    padding: 18px 22px;
+}
+
+.about-admin .card-title {
+    font-size: 15px;
+    font-weight: 750;
+    color: var(--about-dark);
+    margin: 0;
+}
+
+.about-admin .text-muted {
+    color: var(--about-muted) !important;
+}
+
+.about-admin .about-section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--about-primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+}
+
+.about-admin .about-section-title {
+    font-size: 18px;
+    font-weight: 750;
+    color: var(--about-dark);
+    margin: 0;
+}
+
+.about-admin .about-section-subtitle {
+    color: var(--about-muted);
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.about-admin .about-divider {
+    height: 1px;
+    background: var(--about-border);
+    margin: 22px 0;
+}
+
+.about-admin .about-empty {
+    padding: 45px 20px;
+    text-align: center;
+    color: var(--about-muted);
+}
+
+.about-admin .about-empty i {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 13px;
+    color: #c5cede;
+}
+
+.about-admin .about-empty h5 {
+    color: var(--about-dark);
+    font-weight: 700;
+}

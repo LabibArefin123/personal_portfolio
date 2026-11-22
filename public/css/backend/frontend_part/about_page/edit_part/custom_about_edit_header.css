@@ -1,0 +1,186 @@
+
+/* =========================================
+   ABOUT EDIT - PREMIUM HEADER
+========================================= */
+
+.about-edit-heading {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 26px;
+    padding: 27px 30px;
+    background: linear-gradient(120deg, #ffffff 0%, #f7f6ff 55%, #eff3ff 100%);
+    border: 1px solid #e7e7f7;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(48, 42, 100, .055);
+    isolation: isolate;
+}
+
+.about-edit-heading::before {
+    position: absolute;
+    content: "";
+    top: -115px;
+    right: 13%;
+    width: 225px;
+    height: 225px;
+    background: rgba(124, 104, 235, .075);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.about-edit-heading::after {
+    position: absolute;
+    content: "";
+    right: -65px;
+    bottom: -105px;
+    width: 175px;
+    height: 175px;
+    background: rgba(57, 116, 223, .075);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.about-edit-heading > div:first-child {
+    position: relative;
+    z-index: 1;
+    min-width: 240px;
+}
+
+.about-edit-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+    padding: 6px 11px;
+    color: #7059d6;
+    background: #f0edff;
+    border: 1px solid #e5dfff;
+    border-radius: 30px;
+    font-size: 9px;
+    font-weight: 850;
+    letter-spacing: 1.5px;
+}
+
+.about-edit-eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #8068e8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(128, 104, 232, .12);
+}
+
+.about-edit-heading h1 {
+    margin: 0;
+    color: #202c46;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -.7px;
+    line-height: 1.4;
+}
+
+.about-edit-heading p {
+    margin: 7px 0 0;
+    color: #8490a6;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.about-back-btn {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 43px;
+    padding: 0 17px;
+    color: #5e58a0;
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid #e1def5;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(65, 55, 130, .055);
+    font-size: 11px;
+    font-weight: 750;
+    text-decoration: none !important;
+    transition: all .25s ease;
+}
+
+.about-back-btn i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    color: #7865d8;
+    background: #f0edff;
+    border-radius: 7px;
+    font-size: 10px;
+    transition: transform .25s ease;
+}
+
+.about-back-btn:hover {
+    color: #fff;
+    background: linear-gradient(120deg, #7865dc, #526edb);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(100, 87, 205, .2);
+}
+
+.about-back-btn:hover i {
+    color: #fff;
+    background: rgba(255, 255, 255, .18);
+    transform: translateX(-3px);
+}
+
+.about-back-btn:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   RESPONSIVE HEADER
+========================================= */
+
+@media (max-width: 768px) {
+    .about-edit-heading {
+        align-items: flex-start;
+        padding: 23px;
+    }
+
+    .about-edit-heading > div:first-child {
+        width: 100%;
+    }
+
+    .about-back-btn {
+        margin-top: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-edit-heading {
+        padding: 19px;
+        border-radius: 14px;
+    }
+
+    .about-edit-heading h1 {
+        font-size: 21px;
+    }
+
+    .about-edit-heading p {
+        font-size: 11px;
+    }
+
+    .about-edit-eyebrow {
+        font-size: 8px;
+    }
+
+    .about-back-btn {
+        width: 100%;
+        min-height: 41px;
+    }
+}
