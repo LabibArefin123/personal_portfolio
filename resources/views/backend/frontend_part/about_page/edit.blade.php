@@ -3,13 +3,15 @@
 @section('title', 'Edit About Page')
 
 @section('adminlte_css')
+    {{-- Start of Edit About Page CSS --}}
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_layout.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_card.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_image.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_actions.css') }}">
     <link rel="stylesheet"
-        href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_guidelines.css') }}">
+    href="{{ asset('css/backend/frontend_part/about_page/edit_part/custom_about_edit_guidelines.css') }}">
+    {{-- End of Edit About Page CSS --}}
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_base.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_form.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/shared_part/component_part/custom_about_buttons.css') }}">

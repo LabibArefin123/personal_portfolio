@@ -3,14 +3,14 @@
 @section('title', 'About Details')
 
 @section('adminlte_css')
+    {{-- Start of Show About Page CSS --}}
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/show_part/custom_about_show_header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/show_part/custom_about_show_hero.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/show_part/custom_about_show_bio.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/show_part/custom_about_show_skills.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('css/backend/frontend_part/about_page/show_part/custom_about_show_timeline.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('css/backend/frontend_part/about_page/show_part/custom_about_show_highlights.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/show_part/custom_about_show_timeline.css') }}">
+    <link rel="stylesheet"  href="{{ asset('css/backend/frontend_part/about_page/show_part/custom_about_show_highlights.css') }}">
+    {{-- End of Show About Page CSS --}}
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/custom_about_base.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/shared_part/component_part/custom_about_buttons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/backend/frontend_part/about_page/shared_part/component_part/custom_about_badges.css') }}">
