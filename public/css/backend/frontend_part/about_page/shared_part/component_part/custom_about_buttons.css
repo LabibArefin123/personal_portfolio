@@ -1,0 +1,68 @@
+/* =========================================
+   ABOUT MANAGEMENT - BUTTONS
+========================================= */
+
+.about-admin .about-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 9px;
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all .25s ease;
+}
+
+.about-admin .about-btn:hover {
+    transform: translateY(-2px);
+}
+
+.about-admin .about-btn-primary {
+    background: #4361ee;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(67,97,238,.2);
+}
+
+.about-admin .about-btn-primary:hover {
+    background: #3451d1;
+    color: #fff !important;
+    box-shadow: 0 7px 16px rgba(67,97,238,.28);
+}
+
+.about-admin .about-btn-secondary {
+    background: #f0f2f7;
+    color: #64748b !important;
+}
+
+.about-admin .about-btn-secondary:hover {
+    background: #e5e9f1;
+    color: #172033 !important;
+}
+
+.about-admin .about-btn-success {
+    background: #e7f8f1;
+    color: #15976d !important;
+}
+
+.about-admin .about-btn-success:hover {
+    background: #d3f3e6;
+}
+
+.about-admin .about-btn-danger {
+    background: #fff0f0;
+    color: #e05252 !important;
+}
+
+.about-admin .about-btn-danger:hover {
+    background: #ffe0e0;
+}
+
+.about-admin .about-action-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}

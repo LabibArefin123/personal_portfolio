@@ -1,0 +1,27 @@
+/* =========================================
+   ABOUT MANAGEMENT - INFORMATION ROWS
+========================================= */
+
+.about-admin .about-info-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f2f7;
+}
+
+.about-admin .about-info-line:last-child {
+    border-bottom: 0;
+}
+
+.about-admin .about-info-line span {
+    color: #8490a5;
+    font-size: 12px;
+}
+
+.about-admin .about-info-line strong {
+    color: #172033;
+    font-size: 12px;
+    font-weight: 700;
+}
